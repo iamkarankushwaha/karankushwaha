@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create A New Account</title>
+    <link rel="stylesheet" href="../pages-style/createaccount.css">
+</head>
+<body>
+    <div class="container">
+        <div class="big-box">
+            <h3>Create an Account</h3>
+            <div class="wrapper">
+                <div class="left-box">
+                    <form action="../pages/userinterface.html">
+                        <input type="text" placeholder="Your Name" required autocapitalize="words">
+                        <input type="email" placeholder="Email Id" required>
+                        <input type="tel" placeholder="Contact Number" required>
+                        <input type="password" placeholder="Create Strong Password" required>
+                        <div class="input">
+                            <input class="checkbox" type="checkbox" id="terms" required>
+                            <label class="checkbox" for="terms">I accept all the <a href="">Terms & Conditions.</a></label>
+                        </div>
+                        <button type="submit">Sign Up <span>&#X2192</span></button>
+                    </form>
+                </div>
+                <hr class="hr">
+                <div class="right-box">
+                    <div class="right-box-up">
+                        <div class="card">
+                            <a href=""><p><img src="images/google.png" alt="">Continue With Google</p></a>
+                        </div>
+                        <div class="card">
+                            <a href=""><p><img src="images/instagram.png" alt="">Continue With Instagram</p></a>
+                        </div>
+                        <div class="card">
+                            <a href=""><p><img src="images/facebook.png" alt="">Continue With Facebook</p></a>
+                        </div>
+                    </div>
+                    <hr class="hr">
+                    <div class="right-box-down">
+                        <p>I already have an Account.<a href="../pages/login.html"> Click to Login</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In to your account</title>
+    <link rel="stylesheet" href="../pages-style/logininaccount.css">
+</head>
+<body>
+    <div class="container">
+        <div class="big-box">
+            <h3>Login to your Account</h3>
+            <div class="wrapper">
+                <div class="left-box">
+                    <form name="login-form" id="loginform">
+                        <input type="email" placeholder="Registered Email" id="email" required>
+                        <input type="password" placeholder="Password" id="password" required>
+                        <div class="input">
+                            <input class="checkbox" type="checkbox" id="terms" style="width: 13px;">
+                            <label class="checkbox" for="terms">Keep me sign in.</label>
+                        </div>
+                        <div id="errorbox">*wrong Email or Password.</div>
+                        <button type="submit" >Sign In<span>&#X2192</span></button>
+                    </form>
+                </div>
+                <hr class="hr">
+                <div class="right-box">
+                    <div class="right-box-up">
+                        <div class="card">
+                            <a href=""><p><img src="../img_assets/google" alt="">Login With Google</p></a>
+                        </div>
+                        <div class="card">
+                            <a href=""><p><img src="images/instagram.png" alt="">Login With Instagram</p></a>
+                        </div>
+                        <div class="card">
+                            <a href=""><p><img src="images/facebook.png" alt="">Login With Facebook</p></a>
+                        </div>
+                    </div>
+                    <hr class="hr">
+                    <div class="right-box-down">
+                        <p>I have forgotten my Password.<a href="#">Click to Reset</a></p>
+                        <p>New User ?? Sign Up instead.<a href="../pages/createaccount.html">Click to Sign Up</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="login.js"></script> -->
+</body>
+</html>

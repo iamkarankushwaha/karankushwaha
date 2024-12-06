@@ -1,0 +1,353 @@
+html {
+    font-size: 16px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+    background-color: var(--black);
+}
+
+:root {
+    --black: rgb(22, 25, 44);
+    --white: #ffffff;
+    --darkwhite: #f5f5dc;
+    --whitesmoke: #f5f5f5;
+    --green: #04aa6d;
+    --skyblue: #00b0f0;
+    --cyan: #124760;
+    --blue: #303d6c;
+    --lightcyan: #2caee6;
+    --red: #e65593;
+    --gray: #e7eaf0;
+    --text-gray: #e7eaf0bd;
+    --lightheadbg: rgba(240, 248, 255, 0.85);
+    --darkheadbg: rgba(181, 218, 250, 0.947);
+    --lightboxbg: #f0f8ffa6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 4.5rem auto;
+}
+
+.big-box {
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+}
+
+.wrapper {
+    width: 60vw;
+    height: fit-content;
+    margin: auto auto;
+    border-radius: 1rem;
+    background-color: var(--gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+h3 {
+    width: 60vw;
+    height: fit-content;
+    margin: 0.5rem auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--whitesmoke);
+}
+
+.right-box,
+.left-box,
+form {
+    width: 30vw;
+    height: fit-content;
+    background-color: var(--gray);
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+.input,
+button {
+    display: block;
+    width: 22vw;
+    height: 2.5rem;
+    margin: 2rem auto;
+    outline: none;
+    padding: 0.15rem 0.45rem;
+    border: 1px solid var(--gray);
+    border-radius: 0.25rem;
+    color: white;
+    background-color: var(--black);
+    font-size: 0.95rem;
+    box-shadow: var(--skyblue) 0px 2px 4px;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border: 1px solid var(--green);
+    box-shadow: var(--green) 0px 2px 6px 1px;
+}
+
+input:-webkit-autofill {
+    border: 1px solid var(--gray);
+    background-color: var(--black);
+}
+
+div.input {
+    display: flex;
+    justify-content: flex-start !important;
+    align-items: center;
+}
+
+label.checkbox,
+label.checkbox a {
+    background-color: transparent;
+    color: var(--white);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 00.95rem;
+    display: inline;
+}
+
+label.checkbox a {
+    font-size: 0.99rem;
+    color: var(--gray);
+    font-weight: 500;
+}
+
+input.checkbox {
+    width: 0.999rem;
+    height: 0.999rem;
+    cursor: pointer;
+    margin-right: 00.35rem;
+}
+
+input::placeholder {
+    color: var(--text-gray);
+    background-color: transparent;
+    font-size: 0.91rem;
+    text-transform: capitalize;
+}
+
+#errorbox {
+    width: 22vw;
+    height: fit-content;
+    margin: -1.5rem auto;
+    background-color: var(--gray);
+    color: red;
+    font-size: 0.8rem;
+    display: none;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form button {
+    color: var(--text-gray);
+    background-color: var(--black);
+    font-size: 0.99rem;
+    transition: color 0.5s;
+}
+
+form button:hover {
+    color: var(--whitesmoke);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+form button span {
+    display: inline-block;
+    width: 0px;
+    overflow: hidden;
+    transition: width 0.5s;
+}
+
+form button:hover span {
+    width: 1.04rem;
+    overflow: visible;
+}
+
+.right-box {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-box-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30vw;
+    height: 15rem;
+    padding: 0.2rem 0rem;
+    background-color: var(--gray);
+}
+
+.card {
+    width: 22vw;
+    height: 2.5rem;
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    box-shadow: var(--skyblue) 0px 2px 4px;
+}
+
+.card p {
+    display: flex;
+    width: 22vw;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0rem;
+    font-size: 0.95rem;
+    color: var(--whitesmoke);
+}
+
+.card p img {
+    width: 1.5rem;
+    margin: 0rem 0.55rem;
+}
+
+.card a {
+    text-decoration: none;
+    padding: 0.5rem 0rem;
+}
+
+.hr {
+    width: 28vw;
+    background-color: var(--black);
+    height: 0.2rem;
+    border: 1px solid white;
+    border-radius: 3rem;
+}
+
+.right-box-down {
+    margin: 1rem 0rem;
+}
+
+.right-box-down p {
+    font-size: 0.99rem;
+    color: var(--black);
+    background-color: var(--gray);
+    text-align: center;
+}
+
+.right-box-down p a {
+    text-decoration: none;
+    font-size: 0.99rem;
+    color: var(--blue);
+    font-weight: 600;
+    background-color: var(--gray);
+}
+
+/* ------------------media queries------------ */
+@media (min-width: 421px) and (max-width: 890px) {
+    html {
+        font-size: 14px;
+    }
+
+    .wrapper {
+        width: 70vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right-box,
+    .left-box,
+    form,
+    .right-box-up {
+        width: 65vw;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"],
+    .input,
+    button {
+        width: 60vw;
+        height: 2.8rem;
+    }
+
+    #errorbox {
+        width: 60vw;
+    }
+
+    .card,
+    .card p {
+        width: 60vw;
+    }
+
+    hr {
+        width: 65vw;
+    }
+}
+
+@media (max-width: 420px) {
+    html {
+        font-size: 12px;
+    }
+
+    .wrapper {
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right-box,
+    .left-box,
+    form,
+    .right-box-up {
+        width: 70vw;
+    }
+
+    .right-box-up {
+        margin-bottom: 0.5rem;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"],
+    .input,
+    button {
+        width: 65vw;
+        height: 2.8rem;
+    }
+
+    #errorbox {
+        width: 65vw;
+    }
+
+    .card,
+    .card p {
+        width: 65vw;
+        margin-bottom: 1rem;
+    }
+
+    .hr {
+        width: 65vw;
+    }
+}

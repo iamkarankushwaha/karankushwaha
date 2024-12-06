@@ -1,0 +1,210 @@
+@media screen and (min-width: 768px) and (max-width: 920px) {
+    html {
+        font-size: 15px;
+    }
+
+    .tagline_wrapper p {
+        font-size: 1.6rem;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 769px) {
+    html {
+        font-size: 13px;
+    }
+
+    .menubox {
+        flex-wrap: wrap;
+    }
+
+    .loginbox {
+        /* border: solid red; */
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .important_links {
+        flex-wrap: wrap;
+    }
+
+    .photo_about_box {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 556px) {
+    html {
+        font-size: 13px;
+    }
+    .leftside {
+        padding-left: 0rem;
+    }
+    .rightside {
+        padding-right: 0rem;
+    }
+    .ham_section {
+        margin: 5px;
+        padding: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        width: 50px;
+        background-color: var(--darkwhite);
+        border: solid var(--bgblack) 2px;
+    }
+
+    .ham_section svg {
+        fill: var(--bgblack);
+        width: 25px;
+    }
+
+    .logo_section {
+        width: 20vw;
+        /* border: solid red; */
+    }
+    
+    .logo_section .logobox img {
+        width: 5rem;
+    }
+    
+    .navbox {
+        position: relative;
+        height: 6rem;
+    }
+    
+    .menu_section {
+        position: fixed;
+        top: 0;
+        left: -101vw;
+        z-index: 700;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        justify-content: center;
+        border: solid 3px var(--bgblack);
+        background-color: var(--darkwhite);
+        align-items: flex-start;
+        box-shadow: 0px 0px 5px 8px rgba(0, 0, 0, 0.087);
+        transition: left 0.5s ease;
+    }
+
+    .menu_section.menuon {
+        left: 0;
+    }
+    .menu_section.menuoff {
+        left: -101vw;
+    }
+
+    .menubox {
+        width: 100vw;
+        height: fit-content;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding: 1.5rem;
+        margin-top: 2rem;
+        /* border: solid red; */
+    }
+    #crossbox{
+        /* border: solid red; */
+        display: block !important;
+        width: 100%;
+        position: relative;
+    }
+    #crossbox div{
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--darkwhite);
+        border: solid var(--bgblack) 2px;
+        border-radius: 10px;
+        font-size: 1.8rem;
+        padding: 8px;
+    }
+    .menubox a {
+        text-align: center;
+        font-size: 2rem;
+        border: none;
+        margin: 0.5rem 0;
+    }
+
+    .loginbox {
+        /* border: solid red; */
+        width: 60vw;
+        padding-left: unset;
+        padding-right: 0.5rem;
+        justify-content: flex-end;
+    }
+
+    .topline {
+        flex-direction: column;
+    }
+
+    .heading {
+        margin-bottom: 1rem;
+    }
+
+    .name_tag_box {
+        flex-direction: column;
+    }
+
+    .tag_box h3 {
+        padding-top: 10px;
+    }
+
+    .imgholder .logopic {
+        position: absolute;
+        right: -20px;
+        bottom: -20px;
+        z-index: 400;
+        width: 180px;
+        background-color: #d5d6ff;
+        border-radius: 15px;
+        border: solid 8px white;
+        box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    .photo_about_box {
+        padding: 8px;
+        font-size: 1.3rem;
+    }
+
+    .about_box ul {
+        padding: 0 1rem;
+    }
+    .about_box li {
+        font-size: 1.3rem;
+    }
+    .tagline_container {
+        padding: 0.25rem 0;
+    }
+    
+    .tagline_wrapper {
+        width: 95vw;
+    }
+
+    .tagline_wrapper p {
+        font-size: 1.2rem;
+    }
+
+    .tagline_wrapper p svg {
+        width: 15px;
+        margin: 0 0.5rem;
+    }
+.footer_links ul {
+    display: flex;
+flex-direction: column;
+}
+
+    .popup {
+        width: 90vw;
+       }
+}
