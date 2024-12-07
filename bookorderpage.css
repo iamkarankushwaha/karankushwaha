@@ -5,6 +5,7 @@
 .ff-form {
     padding-bottom: unset !important;
     position: relative !important;
+    font-family: "Parkinsans", sans-serif !important;
 }
 
 .ff-secfields {
@@ -26,13 +27,14 @@
 .ff-section h3 {
     display: none;
 }
-
+.ff-item-qs{
+    font-family: "Parkinsans", sans-serif !important;
+}
 .ff-item input,
 select {
     background-color: #faf8fd !important;
     border: solid 1px black !important;
 }
-
 .ff-item input:focus,
 select:focus {
     background-color: white !important;
@@ -49,8 +51,9 @@ a.ff-powered-img {
 
 .ff-form p {
     color: var(--primary) !important;
-    font-size: 1.2rem !important;
-    font-weight: normal !important;
+    font-size: 1.1rem !important;
+    font-weight: 300 !important;
+    font-family: "Parkinsans", sans-serif !important;
 }
 
 .ff-watermark {
@@ -61,75 +64,85 @@ a.ff-powered-img {
 .ff-watermark::before {
     content: "Now you may leave this page by clicking 'Home' option given in 'Menubar'.";
     background-color: var(--darkwhite);
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
+    width: 110%;
+    height: 110%;
+    border-radius: 25px;
     z-index: 900;
     position: absolute !important;
-    top: 0;
+    top: -10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--textblack);
     font-weight: 500;
+    font-family: "Parkinsans", sans-serif !important;
 }
 
 /* ------------ After form content------------ */
-.page-headingxyz    {
+.page-heading{
     width: fit-content;
     margin: 1.5rem;
-    font-size: 1.75rem;
+    font-size: 2.3rem;
     color: var(--primary);
     font-weight: 600;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Acme", sans-serif !important;
     margin-left: 2rem;
-margin-bottom: 5px;
-position: relative;
+    margin-bottom: 5px;
+    position: relative;
 }
 
-main p::after{
+.page-heading::after{
     content: "";
     width: 100%;
     height: 3px;
     background-color: var(--secondary);
-    border-radius: 10px;
+    border-radius: 20px;
     position: absolute;
     bottom: -5px;
     left: 10px;
 }
 .container {
-    width: 100vw;
+    width: 95vw;
+    margin: 1rem auto;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
-    padding-bottom: 1rem;
+    padding: 1rem 0.5rem;
+    background-color: var(--gray);
+    border-radius: 40px;
 }
 
 #order-details {
-    padding: 1rem;
-    border-radius: 15px;
+    padding: 8px;
+    border-radius: 30px;
     box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 0.437);
     background-color: white;
     text-align: center;
     margin: 1rem;
-    border: solid;
 }
 
 #order-details img {
-    width: 250px;
-    border-radius: 10px;
+    width: 270px;
+    border-radius: 20px;
 }
 
-.book-details {
+.book_title {
     margin-top: 1.5rem;
     text-align: left;
+    width: 100% !important;
+}
+.pricebox{
+    background-color: var(--gray);
+    padding: 1rem;
+    border-radius: 20px;
+    font-size: 1.3rem !important;
 }
 
 .formbox {
     padding: 1rem;
-    border-radius: 15px;
+    border-radius: 35px;
     box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 0.437);
     background-color: white;
     margin: 1rem;

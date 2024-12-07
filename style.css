@@ -13,8 +13,8 @@
     border-radius: 10px;
     width: 98vw;
     overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;    
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.421);
 }
 
 .slides {
@@ -35,24 +35,25 @@
 
 /* ------Important Links Start Here---------- */
 .important_links {
-    width: 100vw;
+    width: 98vw;
     height: fit-content;
-    background-color: var(--darkwhite);
+    background-color: var(--gray);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    padding: 2rem 0rem;
-    margin: 1rem 0;
+    border-radius: 20px;
+    padding: 2rem 0.5rem;
+    margin: 1rem auto;
     margin-bottom: 2.5rem;
-    box-shadow: inset -4px -4px 15px rgba(0, 0, 0, 0.198);
 }
+
 
 .important_links a {
     text-decoration: none;
     color: var(--white);
-    padding: 0.7rem 1rem;
-    border-radius: 10px;
+    padding: 0.65rem 1rem;
+    border-radius:  8px;
     background-color: var(--primary);
     font-size: 1rem;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 5px;
@@ -68,11 +69,13 @@
 
 /* ------Topline Starts Here---------- */
 .topline {
-    width: 100vw;
+    width: 98vw;
+    margin: auto;
     height: fit-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* border: solid red; */
 }
 
 .heading {
@@ -82,12 +85,23 @@
 }
 
 h2 {
+    width: fit-content;
     color: var(--primary);
     font-family: "Acme", sans-serif;
-    font-size: 3.25rem;
-    margin-left: 2rem;
+    font-size: 3rem;
+    margin-left: 1rem;
+    position: relative;
 }
-
+h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    width: 100%;
+    height: 3px;
+    border-radius: 10px;
+    background-color: var(--secondary);
+}
 .buttonholder {
     width: 100%;
     /* border: solid red; */
@@ -100,10 +114,10 @@ h2 {
     width: fit-content;
     height: fit-content;
     background-color: var(--white);
-    padding: 1.2rem 1rem;
-    border-radius: 10px;
-    box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.085);
+    padding: 1rem 0.45rem;
+    border-radius: 30px;
     border: solid 2px var(--primary);
+    box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.085);
 }
 
 .buttonwrapper input {
@@ -112,12 +126,11 @@ h2 {
 
 .buttonwrapper label {
     /* display: block; */
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     background-color: var(--white);
-    border-radius: 10px;
-    padding: 0.8rem 3rem;
-    /* margin: 1.2rem auto; */
+    border-radius: 20px;
+    padding: 0.65rem 1.5rem;
     cursor: pointer;
     transition: background ease-in-out 0.5s;
 }
@@ -138,7 +151,7 @@ h2 {
 /* ------Bottomline Starts Here---------- */
 .rackholder {
     /* border: solid red; */
-    width: 95vw;
+    width: 98vw;
     margin: 1.5rem auto;
     height: fit-content;
     overflow-x: scroll;
@@ -161,56 +174,61 @@ h2 {
 /* ------Book box/card CSS Starts Here---------- */
 .bookbox,
 .classbox {
-    width: 206px;
-    padding: 8px;
+    width: fit-content;
     border-radius: 10px;
-    border: solid 1px var(--darkgray);
+    padding: 8px;
+    overflow: hidden;
     background-color: var(--white);
-    margin: 0.25rem 2rem;
-    box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 0.25rem 1rem;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
+    transition: position 0.4s ease-in-out;
+}
+.bookbox:hover,
+.classbox:hover {
+    position: relative;
+    top: -3px;
 }
 
 .bookbox .bookcard,
 .bookimage,
 .bookimage img {
-    width: 190px;
-    border-radius: 10px;
-
+    border-radius: 5px;
+    width: 160px;
 }
 
 .classbox .classcard,
 .classimage,
 .classimage img {
-    width: 190px;
-    border-radius: 10px;
-    /* border: solid red; */
+    width: 160px;
 }
 
 .bookbox a,
 .classbox a {
     text-decoration: none;
     color: var(--textblack);
-    font-weight: 400;
 }
 
 .book_title,
 .class_title {
-    border-radius: 10px;
+    width: 160px;
+}
+.book_title p,
+.class_title p {
     font-size: 1.1rem;
     line-height: 20px;
     color: var(--bgblack);
-    padding: 0.45rem 0;
+    text-wrap: wrap;
 }
 
 .pricebox {
     color: var(--primary);
-    font-weight: bold;
+    font-weight: 600;
     margin: 0.25rem auto;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .pricebox span {
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-decoration: line-through;
     color: var(--darkgray);
 }
@@ -219,11 +237,11 @@ h2 {
     display: block;
     text-align: center;
     color: var(--white) !important;
-    padding: 0.6rem 1.5rem;
-    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
     background-color: var(--primary);
-    font-size: 1.2rem !important;
-    font-weight: bold !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
     transition: background 0.3s ease;
 }
 
@@ -240,7 +258,7 @@ h2 {
     width: 80vw;
     height: 3px;
     background-color: var(--darkgray);
-    border-radius: 50%;
+    border-radius: 50px;
 }
 
 /* ------About section Starts Here---------- */
@@ -252,13 +270,20 @@ h2 {
 
 .name_tag_box,
 .photo_about_box {
-    width: 100vw;
+    width: 98vw;
+    margin: auto;
     height: fit-content;
-    padding: 1rem 3.5rem;
+    padding: 1rem 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     overflow: hidden;
+}
+.name_box{
+    margin-left: 1rem;
+}
+.tag_box{
+    margin-right: 1rem;
 }
 
 .name_box,
@@ -270,27 +295,40 @@ h2 {
     width: 100%;
     height: fit-content;
 }
-
 .name_box p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
     color: var(--textblack);
     font-weight: 600;
+    position: relative;
+    width: fit-content;
+}
+.name_box p::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    width: 100%;
+    height: 2px;
+    border-radius: 10px;
+    background-color: var(--secondary);
 }
 
 .name_box h3 {
     font-family: "Acme", sans-serif;
-    font-size: 2.85rem;
+    font-size: 3rem;
     color: var(--primary);
     font-weight: 600;
     line-height: 40px;
+    display: block;
 }
 
 .tag_box h3 {
     padding-top: 30px;
-    text-align: right;
-    font-size: 1.6rem;
+    text-align: left;
+    font-size: 1.5rem;
     color: var(--textblack);
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .photo_box,
@@ -329,7 +367,7 @@ h2 {
 
 .about_box ul {
     padding: 0 1rem;
-    color: var(--textblack);
+    color: var(--bgblack);
 }
 
 .about_box ol {
@@ -338,9 +376,9 @@ h2 {
 }
 
 .about_box li {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 38px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 /* ------About section Ends Here---------- */
@@ -350,35 +388,26 @@ h2 {
     height: fit-content;
     padding: 2rem 0;
 }
-
-.tagline_wrapper {
-    display: block;
-    width: 90vw;
-    margin: auto auto;
+.tagline_wrapper{
+    width: 95vw;
+    margin: auto;
     text-align: center;
-    background: rgb(0, 8, 39);
-    background: -moz-linear-gradient(45deg, rgba(0, 8, 39, 1) 0%, rgba(5, 25, 97, 1) 34%, rgba(0, 197, 255, 1) 100%);
-    background: -webkit-linear-gradient(45deg, rgba(0, 8, 39, 1) 0%, rgba(5, 25, 97, 1) 34%, rgba(0, 197, 255, 1) 100%);
-    background: linear-gradient(45deg, rgba(0, 8, 39, 1) 0%, rgba(5, 25, 97, 1) 34%, rgba(0, 197, 255, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000827", endColorstr="#00c5ff", GradientType=1);
     box-shadow: -8px 8px 20px rgba(0, 0, 0, 0.312);
-    border-radius: 15px;
-    border: solid 3px var(--darkwhite);
-    padding: 0.5rem;
+    border-radius: 50px;
+    border: solid 3px var(--bgblack);
+    padding: 4.5rem 0;
 }
 
 .tagline_wrapper p {
-    background-color: transparent;
     font-family: "Yatra One", system-ui;
-    color: var(--white);
+    color: var(--primary);
     font-size: 1.5rem;
     font-weight: 500;
-    border-radius: 15px;
-    padding: 2rem 0;
+    line-height: 60px;
 }
 
 .tagline_wrapper p svg {
-    fill: var(--white);
+    fill: var(--textblack);
     width: 25px;
     margin: 0 0.3rem;
 }

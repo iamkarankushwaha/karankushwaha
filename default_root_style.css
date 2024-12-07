@@ -73,9 +73,8 @@ html {
     font-style: normal;
 }
 
-
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Parkinsans", sans-serif;
     color: var(--textblack);
     width: 100vw;
     height: fit-content;
@@ -114,7 +113,7 @@ body {
 
 .rightside a>span {
     color: var(--white);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     padding: 0 1rem;
 }
 
@@ -176,12 +175,7 @@ body {
 .logo_section .logobox img {
     width: 5.5em;
     border-radius: 20%;
-user-select: none;
-}
-
-.logo_section .logobox img:hover {
-    border: solid 1px var(--primary);
-    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.058);
+    user-select: none;
 }
 
 .ham_section {
@@ -235,7 +229,7 @@ user-select: none;
 
 .loginbox {
     /* border: solid red; */
-    padding-left: 1.5rem;
+    padding-left: 2rem;
     width: 27vw;
     display: flex;
     justify-content: flex-start;
@@ -251,16 +245,16 @@ user-select: none;
     padding: 0.45rem 1rem;
     border-radius: 10px;
     background-color: var(--primary);
-    font-weight: 500;
     /* box-shadow: rgba(0, 0, 0, 0.11) 0px 3px 5px; */
 }
 
 .loginbox .login {
     background-color: var(--white);
-    color: var(--textblack);
+    color: var(--primary);
     font-weight: 600;
     position: relative;
 }
+
 .loginbox .login::after {
     content: "";
     position: absolute;
@@ -281,7 +275,7 @@ user-select: none;
 
 .loginbox .signup {
     border: solid 2px var(--textblack);
-    font-weight: bold;
+    font-weight: 500;
     transition: background 0.3s ease;
 }
 
@@ -304,7 +298,7 @@ user-select: none;
 }
 
 .footer_box li {
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .footer_links ul {
@@ -316,6 +310,8 @@ user-select: none;
 }
 
 .footerbtn {
+    font-family: "Parkinsans", sans-serif;
+    font-size: 1rem;
     background-color: transparent;
     color: var(--darkwhite);
     padding: 0.25rem;
@@ -399,24 +395,3 @@ user-select: none;
 }
 
 /* ---------- Footer Popup related CSS Here Ends----------- */
-/* ---------- No Content website content here Starts----------- */
-.nobox {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.nocontent {
-    font-family: "Acme", sans-serif;
-    font-size: 2rem;
-    position: fixed;
-    top: 20px;
-    padding: 3rem 5rem;
-    border-radius: 15px;
-    border: solid 2px;
-    box-shadow: 0px 0px 5px 8px rgba(0, 0, 0, 0.102);
-}
-
-/* ---------- No Content website content here Ends----------- */
