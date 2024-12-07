@@ -177,7 +177,6 @@ h2::after {
     width: fit-content;
     border-radius: 10px;
     padding: 8px;
-    overflow: hidden;
     background-color: var(--white);
     margin: 0.25rem 1rem;
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
@@ -386,7 +385,6 @@ h2::after {
 .tagline_container {
     width: 100vw;
     height: fit-content;
-    padding: 2rem 0;
 }
 .tagline_wrapper{
     width: 95vw;
@@ -395,7 +393,6 @@ h2::after {
     box-shadow: -8px 8px 20px rgba(0, 0, 0, 0.312);
     border-radius: 50px;
     border: solid 3px var(--bgblack);
-    padding: 4.5rem 0;
 }
 
 .tagline_wrapper p {
@@ -403,7 +400,8 @@ h2::after {
     color: var(--primary);
     font-size: 1.5rem;
     font-weight: 500;
-    line-height: 60px;
+    line-height: 40px;
+    padding: 2.5rem 0;
 }
 
 .tagline_wrapper p svg {

@@ -183,21 +183,18 @@
     .about_box li {
         font-size: 1.3rem;
     }
-    .tagline_container {
-        padding: 0.25rem 0;
-    }
     
     .tagline_wrapper {
         width: 95vw;
     }
 
     .tagline_wrapper p {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        padding: 1.5rem 0.25rem;
     }
 
     .tagline_wrapper p svg {
         width: 15px;
-        margin: 0 0.5rem;
     }
 .footer_links ul {
     display: flex;
