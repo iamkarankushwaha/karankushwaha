@@ -13,7 +13,7 @@
     border-radius: 10px;
     width: 98vw;
     overflow: hidden;
-    border-radius: 20px;    
+    border-radius: 10px;    
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.421);
 }
 
@@ -257,7 +257,7 @@ h2::after {
     width: 80vw;
     height: 3px;
     background-color: var(--darkgray);
-    border-radius: 50px;
+    border-radius: 50%;
 }
 
 /* ------About section Starts Here---------- */
