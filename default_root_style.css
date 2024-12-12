@@ -86,7 +86,6 @@ body {
 .topheader {
     width: 100vw;
     height: fit-content;
-    /* padding: 0.75rem; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -118,7 +117,6 @@ body {
 }
 
 .topheader a {
-    /* border: solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,21 +149,22 @@ body {
 
 
 /* ---------- NAV Header CSS Here Starts----------- */
+/* header :-webkit-any(div){
+    border: solid 1px;
+} */
 .navbox {
-    /* border: solid red; */
     width: 100vw;
-    /* overflow: hidden; */
     height: fit-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.75rem 0;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.279);
+    box-shadow: 0px 0px 10px;
 }
 
 .logo_section {
-    /* border: solid red; */
-    width: 12vw;
+    width: 10vw;
     height: fit-content;
     display: flex;
     justify-content: center;
@@ -173,8 +172,12 @@ body {
 }
 
 .logo_section .logobox img {
-    width: 4em;
+    width: 4.5rem;
     user-select: none;
+}
+.logo_section .logobox img:hover {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.445);
+    border-radius: 5px;
 }
 
 .ham_section {
@@ -183,29 +186,25 @@ body {
 }
 
 .menu_section {
-    /* border: solid red; */
-    width: 61vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 70vw;
 }
 
 .menubox {
-    width: 61vw;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .menubox a {
-    border: solid 3px var(--white);
+    margin: 0.65rem;
     text-decoration: none;
     color: var(--textblack);
     padding: 0.35rem;
     font-size: 1.2rem;
     font-weight: 600;
     position: relative;
-    /* border: solid red !important; */
 }
 
 .menubox a::after {
@@ -227,24 +226,22 @@ body {
 }
 
 .loginbox {
-    /* border: solid red; */
-    padding-left: 2rem;
-    width: 27vw;
+    width: 20vw;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     font-size: 1.2rem;
+    padding-right: 1.5rem;
 }
 
 .loginbox a {
     margin: 0.5rem;
     text-decoration: none;
     color: var(--white);
-    padding: 0.45rem 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 10px;
     background-color: var(--primary);
-    /* box-shadow: rgba(0, 0, 0, 0.11) 0px 3px 5px; */
 }
 
 .loginbox .login {
@@ -273,7 +270,6 @@ body {
 }
 
 .loginbox .signup {
-    border: solid 2px var(--textblack);
     font-weight: 500;
     transition: background 0.3s ease;
 }

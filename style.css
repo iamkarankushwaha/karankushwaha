@@ -2,6 +2,7 @@
 .imageslider {
     /* border: solid red; */
     margin: 1.5rem 0;
+    margin-top: 2rem;
     width: 100vw;
     height: fit-content;
     display: flex;
@@ -13,8 +14,8 @@
     border-radius: 10px;
     width: 98vw;
     overflow: hidden;
-    border-radius: 10px;    
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.421);
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px;
 }
 
 .slides {
@@ -42,10 +43,10 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    border-radius: 20px;
-    padding: 2rem 0.5rem;
-    margin: 1rem auto;
-    margin-bottom: 2.5rem;
+    border-radius: 10px;
+    padding: 3rem 0.5rem;
+    margin: 3rem auto;
+    box-shadow: -2px -2px 5px inset, -2px -2px 5px;
 }
 
 
@@ -386,28 +387,27 @@ h2::after {
     width: 100vw;
     height: fit-content;
 }
-.tagline_wrapper{
-    width: 95vw;
-    margin: auto;
-    text-align: center;
-    box-shadow: -8px 8px 20px rgba(0, 0, 0, 0.312);
-    border-radius: 50px;
-    border: solid 3px var(--bgblack);
-}
+
 
 .tagline_wrapper p {
+    background-color: var(--gray);
     font-family: "Yatra One", system-ui;
     color: var(--primary);
     font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 40px;
-    padding: 2.5rem 0;
+    font-weight: 700;
+    line-height: 45px;
+    padding: 3.5rem 0;
+    width: 98vw;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: -3px -3px 10px inset, -3px -3px 10px;
 }
 
 .tagline_wrapper p svg {
     fill: var(--textblack);
-    width: 25px;
-    margin: 0 0.3rem;
+    width: 20px;
+    margin: 0 0.2rem;
 }
 
 /* ------Quote section Ends Here---------- */
