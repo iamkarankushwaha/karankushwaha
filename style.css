@@ -118,7 +118,6 @@ h2::after {
     padding: 1rem 0.45rem;
     border-radius: 30px;
     border: solid 2px var(--primary);
-    box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.085);
 }
 
 .buttonwrapper input {
@@ -139,11 +138,13 @@ h2::after {
 .buttonwrapper #books:checked~.labelbook {
     background-color: var(--primary);
     color: var(--white);
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.639);
 }
 
 .buttonwrapper #class:checked~.labelclass {
     background-color: var(--primary);
     color: var(--white);
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.639);
 }
 
 /* ------Topline Ends Here---------- */
@@ -180,12 +181,13 @@ h2::after {
     padding: 8px;
     background-color: var(--white);
     margin: 0.25rem 1rem;
-    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.795);
     transition: position 0.4s ease-in-out;
 }
 .bookbox:hover,
 .classbox:hover {
     position: relative;
+    box-shadow: 0px 9px 9px 1px rgba(0, 0, 0, 0.795);
     top: -3px;
 }
 
