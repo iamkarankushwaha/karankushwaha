@@ -83,7 +83,6 @@
         border: solid 3px var(--bgblack);
         background-color: var(--darkwhite);
         align-items: flex-start;
-        box-shadow: 0px 0px 5px 8px rgba(0, 0, 0, 0.087);
         transition: left 0.5s ease;
         overflow-y: scroll;
     }
@@ -161,7 +160,6 @@
         background-color: #d5d6ff;
         border-radius: 15px;
         border: solid 8px white;
-        box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.15);
     }
 
     .photo_about_box {
@@ -178,7 +176,6 @@
     
     .tagline_wrapper p {
         font-size: 1rem;
-    box-shadow: -2px -2px 7px inset, -2px -2px 7px;
     }
 
     .tagline_wrapper p svg {
