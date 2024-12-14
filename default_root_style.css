@@ -214,7 +214,7 @@ body {
     left: 0;
     height: 3px;
     width: 0%;
-    border-bottom: 3px solid var(--bgblack);
+    border-bottom: 3px solid var(--primary);
     border-radius: 8px;
     transition: width 0.5s ease;
     /* Control transition time and style */
@@ -258,7 +258,7 @@ body {
     left: 0;
     height: 3px;
     width: 0%;
-    border-bottom: 3px solid var(--bgblack);
+    border-bottom: 3px solid var(--primary);
     border-radius: 8px;
     transition: width 0.5s ease;
     /* Control transition time and style */
