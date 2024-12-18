@@ -393,7 +393,7 @@ h2::after {
 
 
 .tagline_wrapper p {
-    background-color: var(--gray);
+    background-color: aliceblue;
     /*font-family: "Yatra One", system-ui;*/
     color: var(--primary);
     font-size: 1.5rem;

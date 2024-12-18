@@ -1,25 +1,4 @@
 // ============= Onn Off Menu=============
-let btn = document.getElementById("hamicon");
-let menusection = document.getElementById("menusection");
-btn.onclick = function () {
-  menusection.classList.remove("menuoff")
-  menusection.classList.toggle("menuon")
-}
-
-let btnx = document.getElementById("cross");
-btnx.onclick = function () {
-  menusection.classList.remove("menuon")
-  menusection.classList.toggle("menuoff")
-}
-
-const slides = document.querySelector('.slides');
-let currentIndex = 0;
-const totalImages = 3; // Number of images in the slider
-function slideImages() {
-  currentIndex = (currentIndex + 1) % totalImages;
-  slides.style.transform = `translateX(-${currentIndex * 98}vw)`;
-}
-setInterval(slideImages, 6000);
 
 
 

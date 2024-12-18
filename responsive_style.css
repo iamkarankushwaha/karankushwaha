@@ -32,6 +32,12 @@
     .photo_about_box {
         flex-wrap: wrap;
     }
+    .reviewslider {
+        width: 600px !important;
+    }
+    .review-box {
+        width: 570px !important;
+    }
 }
 
 @media screen and (max-width: 556px) {
@@ -180,6 +186,12 @@
 
     .tagline_wrapper p svg {
         width: 15px;
+    }
+    .reviewslider {
+        width: 370px !important;
+    }
+    .review-box {
+        width: 340px !important;
     }
 .footer_links ul {
     display: flex;

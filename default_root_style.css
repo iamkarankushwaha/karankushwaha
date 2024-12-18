@@ -9,19 +9,8 @@ html {
 }
 
 ::-webkit-scrollbar {
-    width: 8px;
-    height: 12px;
+    display: none;
 }
-
-::-webkit-scrollbar-track {
-    width: 10px;
-    background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--bgblack);
-}
-
 
 :root {
     --primary: #051961;
@@ -34,6 +23,8 @@ html {
     --lightshadow: rggba(0, 0, 0, 0.09);
     --gray: #e7eaf0;
     --darkgray: #a4a4a4;
+    --lightbg:  rgb(226, 242, 255);
+    --lightbgwhite:  rgb(229, 243, 255);
 
     /* Useless but may be used */
     --black: rgb(22, 25, 44);
@@ -286,7 +277,6 @@ body {
     width: 100vw;
     background-color: var(--bgblack);
     color: var(--darkwhite);
-    margin-top: 2rem;
     padding: 2rem 0.5rem;
     text-align: center;
     line-height: 35px;
