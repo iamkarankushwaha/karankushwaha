@@ -55,7 +55,7 @@
     text-decoration: none;
     color: var(--white);
     padding: 0.65rem 1rem;
-    border-radius:  8px;
+    border-radius: 8px;
     background-color: var(--primary);
     font-size: 1rem;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 5px;
@@ -94,6 +94,7 @@ h2 {
     margin-left: 1rem;
     position: relative;
 }
+
 h2::after {
     content: "";
     position: absolute;
@@ -104,6 +105,7 @@ h2::after {
     border-radius: 10px;
     background-color: var(--secondary);
 }
+
 .buttonholder {
     width: 100%;
     /* border: solid red; */
@@ -182,14 +184,15 @@ h2::after {
     padding: 8px;
     background-color: var(--white);
     margin: 0.25rem 1rem;
-    box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.795);
+    box-shadow: 0px 3px 5px;
     transition: position 0.4s ease-in-out;
 }
+
 .bookbox:hover,
 .classbox:hover {
     position: relative;
-    box-shadow: 0px 9px 9px 1px rgba(0, 0, 0, 0.795);
-    top: -3px;
+    box-shadow: 0px 2px 10px;
+    top: -2px;
 }
 
 .bookbox .bookcard,
@@ -215,6 +218,7 @@ h2::after {
 .class_title {
     width: 160px;
 }
+
 .book_title p,
 .class_title p {
     font-size: 1.1rem;
@@ -255,15 +259,6 @@ h2::after {
 /* ------Book box/card CSS Ends Here---------- */
 /* ------Bottomline Ends Here---------- */
 
-.seprater {
-    display: block;
-    margin: 1rem auto;
-    width: 80vw;
-    height: 3px;
-    background-color: var(--darkgray);
-    border-radius: 50%;
-}
-
 /* ------About section Starts Here---------- */
 .introwrapper {
     width: 100vw;
@@ -282,10 +277,12 @@ h2::after {
     align-items: flex-start;
     overflow: hidden;
 }
-.name_box{
+
+.name_box {
     margin-left: 1rem;
 }
-.tag_box{
+
+.tag_box {
     margin-right: 1rem;
 }
 
@@ -298,6 +295,7 @@ h2::after {
     width: 100%;
     height: fit-content;
 }
+
 .name_box p {
     font-size: 1.1rem;
     margin-bottom: 8px;
@@ -306,6 +304,7 @@ h2::after {
     position: relative;
     width: fit-content;
 }
+
 .name_box p::after {
     content: "";
     position: absolute;
@@ -348,7 +347,7 @@ h2::after {
     background-color: #d5d6ff;
     border-radius: 15px;
     border: solid 8px white;
-    box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.5);
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.5);
 }
 
 .imgholder {
@@ -365,7 +364,7 @@ h2::after {
     background-color: #d5d6ff;
     border-radius: 15px;
     border: solid 8px white;
-    box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.5);
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.5);
 }
 
 .about_box ul {
@@ -393,8 +392,8 @@ h2::after {
 
 
 .tagline_wrapper p {
-    background-color: aliceblue;
-    /*font-family: "Yatra One", system-ui;*/
+    background-color: var(--lightbg);
+    user-select: none;
     color: var(--primary);
     font-size: 1.5rem;
     font-weight: 700;
@@ -404,8 +403,8 @@ h2::after {
     margin: auto;
     text-align: center;
     border-radius: 30px;
-    box-shadow: 0px 3px 8px rgba(0,0,0,0.5);
-border: solid 1px var(--bgblack);
+    box-shadow: 0px 5px 15px;
+    border: solid 1px var(--bgblack);
 }
 
 .tagline_wrapper p svg {
