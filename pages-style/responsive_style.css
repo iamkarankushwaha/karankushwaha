@@ -2,10 +2,6 @@
     html {
         font-size: 15px;
     }
-
-    .tagline_wrapper p {
-        font-size: 1.6rem;
-    }
 }
 
 
@@ -32,9 +28,11 @@
     .photo_about_box {
         flex-wrap: wrap;
     }
+
     .reviewslider {
         width: 600px !important;
     }
+
     .review-box {
         width: 570px !important;
     }
@@ -44,12 +42,15 @@
     html {
         font-size: 13px;
     }
+
     .leftside {
         padding-left: 0rem;
     }
+
     .rightside {
         padding-right: 0rem;
     }
+
     .ham_section {
         margin: 5px;
         padding: 8px;
@@ -70,13 +71,13 @@
     .logo_section {
         width: 25vw;
     }
-    
-   
-    
+
+
+
     .navbox {
         position: relative;
     }
-    
+
     .menu_section {
         position: fixed;
         top: 0;
@@ -96,6 +97,7 @@
     .menu_section.menuon {
         left: 0;
     }
+
     .menu_section.menuoff {
         left: -105vw;
     }
@@ -109,12 +111,14 @@
         padding: 1.5rem;
         margin-top: 2rem;
     }
-    #crossbox{
+
+    #crossbox {
         display: block !important;
         width: 100%;
         position: relative;
     }
-    #crossbox div{
+
+    #crossbox div {
         position: absolute;
         top: -15px;
         right: -15px;
@@ -127,6 +131,7 @@
         font-size: 1.8rem;
         padding: 8px;
     }
+
     .menubox a {
         text-align: center;
         font-size: 2rem;
@@ -176,29 +181,34 @@
     .about_box ul {
         padding: 0 1rem;
     }
+
     .about_box li {
         font-size: 1.3rem;
     }
-    
+
     .tagline_wrapper p {
         font-size: 1rem;
+        padding: 2rem 1rem;
     }
 
     .tagline_wrapper p svg {
         width: 15px;
     }
+
     .reviewslider {
         width: 370px !important;
     }
+
     .review-box {
         width: 340px !important;
     }
-.footer_links ul {
-    display: flex;
-flex-direction: column;
-}
+
+    .footer_links ul {
+        display: flex;
+        flex-direction: column;
+    }
 
     .popup {
         width: 90vw;
-       }
+    }
 }

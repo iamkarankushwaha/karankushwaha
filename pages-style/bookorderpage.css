@@ -13,7 +13,7 @@
 .ff-form {
     padding-bottom: unset !important;
     position: relative !important;
-    font-family: "Parkinsans", sans-serif !important;
+    font-family: "Alata", serif !important;
 }
 
 .ff-secfields {
@@ -36,7 +36,7 @@
     display: none;
 }
 .ff-item-qs{
-    font-family: "Parkinsans", sans-serif !important;
+    font-family: "Alata", serif !important;
 }
 .ff-item input,
 select {
@@ -61,7 +61,7 @@ a.ff-powered-img {
     color: var(--primary) !important;
     font-size: 1.1rem !important;
     font-weight: 300 !important;
-    font-family: "Parkinsans", sans-serif !important;
+    font-family: "Alata", serif !important;
 }
 
 .ff-watermark {
@@ -85,7 +85,7 @@ a.ff-powered-img {
     color: var(--textblack);
     font-weight: 500;
     padding: 1rem !important;
-    font-family: "Parkinsans", sans-serif !important;
+    font-family: "Alata", serif !important;
 }
 
 /* ------------ After form content------------ */

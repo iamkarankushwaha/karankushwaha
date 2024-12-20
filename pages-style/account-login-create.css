@@ -9,7 +9,7 @@
   width: 95vw;
   margin: auto;
   height: fit-content;
-  background-color: var(--gray);
+  background-color: var(--lightbg);
   border-radius: 50px;
   overflow: hidden;
 }
@@ -63,11 +63,11 @@ button {
   border: 1px solid var(--gray);
   border-radius: 8px;
   color: white;
-  font-size: 1rem;
+  font-size: 1.1rem !important;
   font-weight: 400;
   background-color: var(--black);
   box-shadow: var(--skyblue) 0px 2px 4px;
-  font-family: "Parkinsans", sans-serif;
+  font-family: "Alata", serif;
 }
 
 input[type="text"]:focus,
@@ -87,7 +87,7 @@ div.input {
   display: flex;
   justify-content: flex-start !important;
   align-items: center;
-  font-size: 0.9rem !important;
+  font-size: 1rem !important;
 }
 
 label.checkbox,
@@ -95,7 +95,7 @@ label.checkbox a {
   background-color: transparent;
   cursor: pointer;
   display: inline;
-  font-size: 0.9rem !important;
+  font-size: 1rem !important;
 }
 
 label.checkbox a {
@@ -107,9 +107,9 @@ input.checkbox {
 }
 
 input::placeholder {
-  color: var(--gray);
+  color: var(--lightbg);
   background-color: transparent;
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-transform: capitalize;
 }
 
@@ -123,7 +123,7 @@ input::placeholder {
 button {
   color: white;
   background-color: var(--black);
-  font-size: 1rem;
+  font-size: 1.1rem;
   cursor: pointer;
   display: flex;
   justify-content: center;

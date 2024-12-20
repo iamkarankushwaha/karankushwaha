@@ -54,6 +54,7 @@
     border-radius: 8px;
     background-color: var(--primary);
     font-size: 1rem;
+    font-weight: 300;
     box-shadow: 0px 3px 10px rgba(0, 0, 255, 0.2);
     transition: background 0.3s ease;
     margin: 0.25rem;
@@ -123,7 +124,7 @@ h2::after {
 .buttonwrapper label {
     display: inline-block;
     font-size: 1.1rem;
-    font-weight: 600;
+    font-weight: 500;
     background-color: var(--white);
     border-radius: 10px;
     padding: 0.65rem 1.5rem;
@@ -161,7 +162,6 @@ h2::after {
 
 .bookrack,
 .classrack {
-    /* overflow: hidden; */
     padding: 0.8rem 0rem;
     display: flex;
     justify-content: flex-start;
@@ -214,7 +214,7 @@ h2::after {
 
 .book_title p,
 .class_title p {
-    height: 60px;
+    height: 62px;
     font-size: 1.1rem;
     line-height: 20px;
     color: var(--bgblack);
@@ -247,7 +247,6 @@ h2::after {
     border-radius: 8px;
     background-color: var(--primary);
     font-size: 1.1rem !important;
-    font-weight: 600 !important;
     transition: background 0.3s ease;
 }
 
@@ -380,7 +379,6 @@ h2::after {
 .about_box li {
     font-size: 1.1rem;
     line-height: 38px;
-    font-weight: 400;
 }
 
 /* ------About section Ends Here---------- */
@@ -395,7 +393,7 @@ h2::after {
     background-color: var(--lightbg);
     user-select: none;
     color: var(--primary);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
     line-height: 45px;
     padding: 3.5rem 1.5rem;
