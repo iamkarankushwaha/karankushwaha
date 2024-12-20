@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font Import Link is here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
+    <!--  -->
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Akaya+Telivigala&display=swap" rel="stylesheet">
+    <!--  -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!--  -->
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+    <!--  -->
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    <title>Order Your Book</title>
+    <link rel="stylesheet" href="pages-style/bookorderpage.css">
+    <link rel="stylesheet" href="pages-style/default_root_style.css">
+    <link rel="stylesheet" href="pages-style/responsive_style.css">
+    <link rel="stylesheet" href="pages-style/style.css">
+</head>
+
+<body>
+    <!-- Auto Scroll -->
+    <script>
+        window.onload = () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Optional: Adds a smooth scrolling effect
+            });
+        };
+    </script>
+    <!-- HEADER IS HERE --> <!-- HEADER IS HERE -->
+    <header id="header"></header>
+    <script>
+        fetch('1header.html')
+            .then(response => {
+                console.log('Fetch response:', response);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                console.log('Fetched content:', data);
+                document.getElementById('header').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading review page:', error));
+    </script>
+    <script>
+        fetch('1header.html')
+            .then(response => {
+                console.log('Fetch response:', response);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                console.log('Fetched content:', data);
+                document.getElementById('header').innerHTML = data;
+
+                // Add event listeners after header content is loaded
+                const btn = document.getElementById("hamicon");
+                const menusection = document.getElementById("menusection");
+                const btnx = document.getElementById("cross");
+
+                if (btn && menusection && btnx) {
+                    btn.onclick = function () {
+                        menusection.classList.remove("menuoff");
+                        menusection.classList.toggle("menuon");
+                    };
+
+                    btnx.onclick = function () {
+                        menusection.classList.remove("menuon");
+                        menusection.classList.toggle("menuoff");
+                    };
+                } else {
+                    console.error("Elements not found in the loaded header content.");
+                }
+            })
+            .catch(error => console.error('Error loading header content:', error));
+
+    </script>
+    <main>
+        <p class="page-heading">Order Details</p>
+        <div class="container">
+            <div id="order-details">
+                <img src="img_assets/book class 12.png" alt="">
+                <div class="book-details">
+                    <div class="book_title"><p>Accounts Book for Class 12 | 1st Edition | Accounts Book 12th Class by Karan Kushwaha</p></div>
+                    <div class="pricebox">Free <span>₹799</span></div>
+                </div>
+            </div>
+            <div class="formbox">
+                <div id="ff-compose">
+                </div>
+                <script async defer src="https://formfacade.com/include/115231058421811126844/form/1FAIpQLSfycbTzc-K-04IOgV7H7pxG-7Krzxnpby0zu6cXPqa48WbfEA/classic.js?div=ff-compose"></script>
+            </div>
+        </div>
+    </main>
+    <footer id="footer"></footer>
+    <script>
+        fetch('2footer.html')
+            .then(response => {
+                console.log('Fetch response:', response);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                console.log('Fetched content:', data);
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading review page:', error));
+    </script>
+    <script>
+        fetch('2footer.html')
+            .then(response => response.text())
+            .then(data => {
+                // --------------Popup are here------------------//
+                // ============= PopUp Privacy=============
+                // Get elements
+                const openPopupPrivacy = document.getElementById("privacybtn");
+                const popupPrivacy = document.getElementById("popupprivacy");
+                const closePopupprivacy = document.getElementById("closePopupprivacy");
+
+                // Open the popup when button is clicked
+                openPopupPrivacy.addEventListener("click", () => {
+                    popupPrivacy.style.display = "flex";
+                });
+
+                // Close the popup when 'X' is clicked
+                closePopupprivacy.addEventListener("click", () => {
+                    popupPrivacy.style.display = "none";
+                });
+
+                // Close the popup when clicking outside of it
+                window.addEventListener("click", (event) => {
+                    if (event.target === popupPrivacy) {
+                        popupPrivacy.style.display = "none";
+                    }
+                });
+
+                // ============= PopUp T&C=============
+                // Get elements
+                const openPopuptnc = document.getElementById("tncbtn");
+                const popuptnc = document.getElementById("popuptnc");
+                const closePopuptnc = document.getElementById("closePopuptnc");
+
+                // Open the popup when button is clicked
+                openPopuptnc.addEventListener("click", () => {
+                    popuptnc.style.display = "flex";
+                });
+
+                // Close the popup when 'X' is clicked
+                closePopuptnc.addEventListener("click", () => {
+                    popuptnc.style.display = "none";
+                });
+
+                // Close the popup when clicking outside of it
+                window.addEventListener("click", (event) => {
+                    if (event.target === popuptnc) {
+                        popuptnc.style.display = "none";
+                    }
+                });
+
+                // ============= PopUp Refund=============
+                // Get elements
+                const openPopuprefund = document.getElementById("refundbtn");
+                const popuprefund = document.getElementById("popuprefund");
+                const closePopuprefund = document.getElementById("closePopuprefund");
+
+                // Open the popup when button is clicked
+                openPopuprefund.addEventListener("click", () => {
+                    popuprefund.style.display = "flex";
+                });
+
+                // Close the popup when 'X' is clicked
+                closePopuprefund.addEventListener("click", () => {
+                    popuprefund.style.display = "none";
+                });
+
+                // Close the popup when clicking outside of it
+                window.addEventListener("click", (event) => {
+                    if (event.target === popuprefund) {
+                        popuprefund.style.display = "none";
+                    }
+                });
+                // --------------Popup Ends here------------------//
+            })
+    </script>
+</body>
+
+</html>

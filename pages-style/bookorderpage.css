@@ -1,0 +1,201 @@
+.ff-message {
+    display: none !important;
+}
+.ff-blocked {
+    background-color: white !important;
+    width: 0px !important;
+    height: 0px !important;
+    overflow: hidden !important;
+    box-shadow: none !important;
+    cursor: none;
+}
+
+.ff-form {
+    padding-bottom: unset !important;
+    position: relative !important;
+    font-family: "Parkinsans", sans-serif !important;
+}
+
+.ff-secfields {
+    padding: 0 !important;
+}
+
+.ff-button-bar {
+    display: flex !important;
+}
+
+.ff-button-bar button {
+    display: flex !important;
+}
+
+.ff-section {
+    padding: 0 !important;
+}
+
+.ff-section h3 {
+    display: none;
+}
+.ff-item-qs{
+    font-family: "Parkinsans", sans-serif !important;
+}
+.ff-item input,
+select {
+    background-color: var(--lightbg) !important;
+    border: solid 1px black !important;
+}
+.ff-item input:focus,
+select:focus {
+    background-color: white !important;
+    outline: none !important;
+    border: solid 1px black !important;
+}
+
+a.ff-powered-img {
+    height: 0px !important;
+    width: 0px !important;
+    overflow: hidden !important;
+
+}
+
+.ff-form p {
+    color: var(--primary) !important;
+    font-size: 1.1rem !important;
+    font-weight: 300 !important;
+    font-family: "Parkinsans", sans-serif !important;
+}
+
+.ff-watermark {
+    position: relative !important;
+    border: none !important;
+}
+
+.ff-watermark::before {
+    content: "Now you may leave this page by clicking 'Home' option given in 'Menubar'.";
+    background-color: var(--lightbg);
+    width: 100%;
+    height: 110%;
+    border-radius: 25px;
+    z-index: 900;
+    position: absolute !important;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    color: var(--textblack);
+    font-weight: 500;
+    padding: 1rem !important;
+    font-family: "Parkinsans", sans-serif !important;
+}
+
+/* ------------ After form content------------ */
+.page-heading{
+    width: fit-content;
+    margin: 1.5rem;
+    font-size: 2.3rem;
+    color: var(--primary);
+    font-weight: 600;
+    font-family: "Acme", sans-serif !important;
+    margin-left: 2rem;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.page-heading::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: var(--secondary);
+    border-radius: 20px;
+    position: absolute;
+    bottom: -5px;
+    left: 10px;
+}
+.container {
+    width: 95vw;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 1rem 0.5rem;
+    background-color: var(--lightbg);
+    border-radius: 40px;
+}
+
+#order-details {
+    padding: 8px;
+    border-radius: 30px;
+    box-shadow: 0px 3px 10px;
+    background-color: white;
+    text-align: center;
+    margin: 1rem;
+}
+
+#order-details img {
+    width: 270px;
+    border-radius: 20px;
+}
+
+.book_title {
+    width: 270px !important;
+    margin-top: 1.5rem;
+    text-align: left;
+    height: 60px;
+}
+.pricebox{
+    background-color: var(--lightbg);
+    padding: 1rem;
+    border-radius: 20px;
+    font-size: 1.3rem !important;
+}
+
+.formbox {
+    padding: 1rem;
+    border-radius: 35px;
+    box-shadow: 0px 3px 10px;
+    background-color: white;
+    margin: 1rem;
+    border: solid;
+}
+
+.contentbox-after-submit {
+    color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0px 3px 10px;
+    padding: 2.5rem;
+    border: solid;
+    width: 100%;
+    background-color: white;
+}
+
+.contentbox-after-submit h2,
+p {
+    width: 100%;
+    text-wrap: wrap;
+    font-size: 1rem;
+}
+
+.contentbox-after-submit img {
+    height: 200px;
+    margin: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px;
+}
+
+.contentbox-after-submit button {
+    border: none;
+    padding: 1rem;
+    background-color: var(--primary);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    box-shadow: 0px 3px 10px;
+}
