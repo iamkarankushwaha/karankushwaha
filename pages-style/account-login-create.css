@@ -67,7 +67,7 @@ button {
   font-weight: 300 !important;
   background-color: var(--black);
   box-shadow: var(--skyblue) 0px 2px 4px;
-  font-family: "Alata", serif;
+  font-family: "Poppins", serif;
 }
 
 input[type="text"]:focus,

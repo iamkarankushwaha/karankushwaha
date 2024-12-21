@@ -13,7 +13,7 @@
 .ff-form {
     padding-bottom: unset !important;
     position: relative !important;
-    font-family: "Alata", serif !important;
+    font-family: "Poppins", serif;
 }
 
 .ff-secfields {
@@ -36,7 +36,7 @@
     display: none;
 }
 .ff-item-qs{
-    font-family: "Alata", serif !important;
+    font-family: "Poppins", serif;
 }
 .ff-item input,
 select {
@@ -61,7 +61,7 @@ a.ff-powered-img {
     color: var(--primary) !important;
     font-size: 1.1rem !important;
     font-weight: 300 !important;
-    font-family: "Alata", serif !important;
+    font-family: "Poppins", serif;
 }
 
 .ff-watermark {
@@ -85,7 +85,7 @@ a.ff-powered-img {
     color: var(--textblack);
     font-weight: 500;
     padding: 1rem !important;
-    font-family: "Alata", serif !important;
+    font-family: "Poppins", serif;
 }
 
 /* ------------ After form content------------ */
@@ -141,7 +141,9 @@ a.ff-powered-img {
     width: 270px !important;
     margin-top: 1.5rem;
     text-align: left;
-    height: 60px;
+    height: fit-content;
+    line-height: unset !important;
+    padding: 0.5rem 0   ;
 }
 .pricebox{
     background-color: var(--lightbg);

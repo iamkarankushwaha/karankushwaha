@@ -29,13 +29,6 @@
         flex-wrap: wrap;
     }
 
-    .reviewslider {
-        width: 600px !important;
-    }
-
-    .review-box {
-        width: 570px !important;
-    }
 }
 
 @media screen and (max-width: 556px) {
@@ -53,23 +46,23 @@
 
     .ham_section {
         margin: 5px;
-        padding: 8px;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 10px;
-        width: 50px;
-        background-color: var(--darkwhite);
-        border: solid var(--bgblack) 2px;
+        width: 30px;
     }
 
     .ham_section svg {
         fill: var(--bgblack);
-        width: 25px;
+        width: 30px;
     }
 
     .logo_section {
         width: 25vw;
+        justify-content: left;
+    }
+    .logo_section .logobox img {
+        width: 50px;
     }
 
 
@@ -87,9 +80,8 @@
         height: 100vh;
         overflow: hidden;
         justify-content: center;
-        border: solid 3px var(--bgblack);
-        background-color: var(--darkwhite);
         align-items: flex-start;
+        background-color: var(--white);
         transition: left 0.5s ease;
         overflow-y: scroll;
     }
@@ -125,11 +117,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: var(--darkwhite);
-        border: solid var(--bgblack) 2px;
+        background-color: var(--lightbg);
         border-radius: 10px;
-        font-size: 1.8rem;
-        padding: 8px;
+        font-size: 1.2rem;
+        padding: 10px;
     }
 
     .menubox a {
@@ -193,14 +184,6 @@
 
     .tagline_wrapper p svg {
         width: 15px;
-    }
-
-    .reviewslider {
-        width: 370px !important;
-    }
-
-    .review-box {
-        width: 340px !important;
     }
 
     .footer_links ul {

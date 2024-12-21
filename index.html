@@ -16,14 +16,14 @@
 
 <body>
     <!-- Auto Scroll -->
-    <script>
+    <!-- <script>
         window.onload = () => {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth' // Optional: Adds a smooth scrolling effect
             });
         };
-    </script>
+    </script> -->
     <!-- HEADER IS HERE --> <!-- HEADER IS HERE -->
     <header id="header"></header>
     <script>
@@ -95,9 +95,9 @@
                 const totalImages = 3; // Number of images in the slider
                 function slideImages() {
                     currentIndex = (currentIndex + 1) % totalImages;
-                    slides.style.transform = `translateX(-${currentIndex * 98}vw)`;
+                    slides.style.transform = `translateX(-${currentIndex * 100}vw)`;
                 }
-                setInterval(slideImages, 6000);
+                setInterval(slideImages, 4000);
             </script>
         </section>
 
@@ -105,7 +105,7 @@
         <nav>
             <div class="important_links">
                 <a href="#">CA Foundation Books</a>
-                <a href="#">CA Inter Books</a>
+                <a href="#">CA Intermediate Books</a>
                 <a href="#">CA Foundation Classes</a>
                 <a href="#">Ask Doubts</a>
             </div>
@@ -261,38 +261,45 @@
                     .catch(error => console.error('Error loading review page:', error));
             </script>
             <script>
-                fetch('7review-page.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        const container = document.getElementById('review-container');
-                        if (!container) {
-                            console.error('No container with ID review-container found.');
-                            return;
-                        }
-                        container.innerHTML = data;
+                document.addEventListener("DOMContentLoaded", () => {
+                    fetch('7review-page.html')
+                        .then(response => {
+                            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+                            return response.text();
+                        })
+                        .then(data => {
+                            const reviewslides = document.querySelector('.review-slides');
+                            if (!reviewslides) {
+                                console.error('No element with class review-slides found.');
+                                return;
+                            }
 
-                        const reviewslides = document.querySelector('.reviewslides');
-                        if (!reviewslides) {
-                            console.error('No element with class reviewslides found.');
-                            return;
-                        }
+                            const reviewbox = document.getElementById("review-box");
+                            if (!reviewbox) {
+                                console.error('No element with ID review-box found.');
+                                return;
+                            }
 
-                        const reviewbox = document.getElementById("review-box");
-                        if (!reviewbox) {
-                            console.error('No element with ID review-box found.');
-                            return;
-                        }
+                            // Ensure elements are fully loaded before measuring dimensions
+                            setTimeout(() => {
+                                const reviewboxWidth = reviewbox.offsetWidth;
+                                if (reviewboxWidth === 0) {
+                                    console.error('Review-box has zero width. Check visibility and layout.');
+                                    return;
+                                }
 
-                        const reviewboxWidth = reviewbox.offsetWidth;
-                        let currentIndex = 0;
-                        const totalreviews = 3; // Number of reviews in slider
-                        function slidereviews() {
-                            currentIndex = (currentIndex + 1) % totalreviews;
-                            reviewslides.style.transform = `translateX(-${currentIndex * reviewboxWidth}px)`;
-                        }
-                        setInterval(slidereviews, 4000);
-                    })
-                    .catch(error => console.error('Error loading review page:', error));
+                                let currentIndex = 0;
+                                const totalreviews = 3; // Ensure this matches the actual number of reviews
+                                function slidereviews() {
+                                    currentIndex = (currentIndex + 1) % totalreviews;
+                                    reviewslides.style.transform = `translateX(-${currentIndex * reviewboxWidth}px)`;
+                                    reviewslides.style.transition = "transform 0.5s ease"; // Add smooth transition
+                                }
+                                setInterval(slidereviews, 4000);
+                            }, 100); // Small delay to ensure layout is rendered
+                        })
+                        .catch(error => console.error('Error loading review page:', error));
+                });
 
             </script>
         </section>

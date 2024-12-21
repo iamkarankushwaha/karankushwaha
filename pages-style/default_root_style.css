@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Acme&family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     margin: 0px;
@@ -16,10 +16,10 @@ html {
 
 
 :root {
-    --primary: #051961;
-    --secondary: #004fad;
+    --primary: #002060;
+    --secondary: #17406D;
     --yellow: #ead409;
-    --textblack: #000c49;
+    --textblack: #000c47;
     --bgblack: #000622;
     --darkwhite: #f8f8fc;
     --white: #ffffff;
@@ -28,6 +28,7 @@ html {
     --darkgray: #a4a4a4;
     --lightbg:  rgb(226, 242, 255);
     --lightbgwhite:  rgb(229, 243, 255);
+    --lightViolet: #d5d6ff;
 
     /* Useless but may be used */
     --black: rgb(22, 25, 44);
@@ -44,14 +45,17 @@ html {
 }
 
 body {
-    font-family: "Alata", serif;
+    font-family: "Poppins", serif;
     color: var(--textblack);
     width: 100vw;
+    font-size: 1rem;
+    font-weight: 400;
     height: fit-content;
     overflow-x: hidden;
 }
-
-
+:-webkit-any(svg){
+    width: 18px;
+}
 /* ---------- Top Header CSS Here Starts----------- */
 .topheader {
     width: 100vw;
@@ -84,7 +88,6 @@ body {
     color: var(--white);
     font-size: 0.9rem;
     padding: 0 1rem;
-    font-weight: 500;
 }
 
 .topheader a {
@@ -98,7 +101,6 @@ body {
 }
 
 .topheader a svg {
-    width: 1.20rem;
     fill: var(--white);
 }
 
@@ -114,15 +116,11 @@ body {
 .topheader a svg.wtsp:hover {
     fill: var(--green);
 }
-
 /* ---------- Top Header CSS Here Ends----------- */
 
 
 
 /* ---------- NAV Header CSS Here Starts----------- */
-/* header :-webkit-any(div){
-    border: solid 1px;
-} */
 .navbox {
     width: 100vw;
     height: fit-content;
@@ -130,7 +128,6 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0.75rem 0;
-    box-shadow: 0px 3px 15px var(--bgblack);
 }
 
 .logo_section {
@@ -142,12 +139,8 @@ body {
 }
 
 .logo_section .logobox img {
-    width: 3.5rem;
+    width: 55px;
     user-select: none;
-}
-.logo_section .logobox img:hover {
-    box-shadow: 0px 0px 2px;
-    border-radius: 5px;
 }
 
 .ham_section {
@@ -175,6 +168,7 @@ body {
     font-size: 1.2rem;
     font-weight: 500;
     position: relative;
+    overflow: hidden;
 }
 
 .menubox a::after {
@@ -184,8 +178,9 @@ body {
     left: 0;
     height: 3px;
     width: 0%;
+    overflow: hidden;
     border-bottom: 3px solid var(--primary);
-    border-radius: 8px;
+    border-radius: 10px;
     transition: width 0.5s ease;
 }
 
@@ -207,7 +202,7 @@ body {
     margin: 0.5rem;
     text-decoration: none;
     color: var(--white);
-    padding: 0.5rem 1rem;
+    padding: 0.45rem 1rem;
     border-radius: 10px;
     background-color: var(--primary);
 }
@@ -227,7 +222,7 @@ body {
     height: 3px;
     width: 0%;
     border-bottom: 3px solid var(--primary);
-    border-radius: 8px;
+    border-radius: 10px;
     transition: width 0.5s ease;
 }
 
@@ -236,7 +231,6 @@ body {
 }
 
 .loginbox .signup {
-    font-weight: 500;
     transition: background 0.3s ease;
 }
 
@@ -254,30 +248,39 @@ body {
     color: var(--darkwhite);
     padding: 2rem 0.5rem;
     text-align: center;
-    line-height: 35px;
 }
 
 .footer_box li {
     font-size: 1rem;
+    font-weight: 300;
+    line-height: 30px;
 }
 
-.footer_links ul {
+.footer_links ul, .social-links ul {
     display: flex;
     list-style: none;
     width: 100%;
     justify-content: center;
     align-items: center;
 }
-
+.social-links ul li a svg{
+    fill: var(--white);
+    width: 20px;
+    margin: 0 1rem;
+}
+.social-links ul li a svg:hover{
+    fill: var(--lightbg);
+}
 .footerbtn {
-    font-family: "Alata", serif;
+    font-family: "Poppins", serif;
     font-size: 1rem;
+    font-weight: 300;
     background-color: transparent;
     color: var(--darkwhite);
     padding: 0.25rem;
     border: none;
     cursor: pointer;
-    margin: 0.5rem;
+    margin: 0 0.45rem;
     position: relative;
 }
 
@@ -289,7 +292,7 @@ body {
     height: 3px;
     width: 0%;
     border-bottom: 2px solid var(--white);
-    border-radius: 5px;
+    border-radius: 10px;
     transition: width 0.5s ease;
 }
 
@@ -312,8 +315,8 @@ body {
     width: 100%;
     height: 100%;
     z-index: 20000000;
-    background-color: rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
     justify-content: center;
     align-items: center;
 }
@@ -325,17 +328,17 @@ body {
     padding: 1.5rem;
     width: 60vw;
     border-radius: 10px;
-    box-shadow: 0 5px 15px;
     position: relative;
+    border: solid 2px;
 }
 
 .popup h4 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 
 .popup p {
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 400;
     text-shadow: none;
 }
 
@@ -344,14 +347,13 @@ body {
     position: absolute;
     top: 10px;
     right: 15px;
-    font-size: 2rem;
+    font-size: 1rem;
     width: fit-content;
     height: fit-content;
-    padding: 0 1rem;
-    border-radius: 10px;
-    border: solid 1px;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: solid 2px;
     cursor: pointer;
-    box-shadow: inset 0 -2px 5px var(--bgblack);
 }
 
 /* ---------- Footer Popup related CSS Here Ends----------- */

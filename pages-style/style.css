@@ -1,6 +1,5 @@
 /* ------Image Slider Starts Here---------- */
 .imageslider {
-    margin-top: 1.5rem;
     width: 100vw;
     height: fit-content;
     display: flex;
@@ -9,15 +8,12 @@
 
 
 .slider {
-    border-radius: 10px;
-    width: 98vw;
+    width: 100vw;
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px;
 }
 
 .slides {
-    width: 98vw;
+    width: 100vw;
     display: flex;
     justify-content: flex-start;
     background-color: var(--bgblack);
@@ -25,8 +21,7 @@
 }
 
 .slides img {
-    border-radius: 10px;
-    min-width: 98vw;
+    min-width: 100vw;
 }
 
 /* ------Image Slider Ends Here---------- */
@@ -41,8 +36,7 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
-    margin: 2rem auto;
-    margin-bottom: 1.5rem;
+    margin: 1rem auto;
     padding: 0.5rem 0;
 }
 
@@ -54,8 +48,7 @@
     border-radius: 8px;
     background-color: var(--primary);
     font-size: 1rem;
-    font-weight: 300;
-    box-shadow: 0px 3px 10px rgba(0, 0, 255, 0.2);
+    font-weight: 400;
     transition: background 0.3s ease;
     margin: 0.25rem;
 }
@@ -74,20 +67,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: solid red; */
 }
 
 .heading {
     display: block;
     width: 100%;
-    /* border: solid red; */
 }
 
 h2 {
     width: fit-content;
     color: var(--primary);
     font-family: "Acme", sans-serif;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-left: 1rem;
     position: relative;
 }
@@ -109,13 +100,12 @@ h2::after {
     justify-content: center;
     align-items: center;
 }
-
 .buttonwrapper {
     width: fit-content;
     height: fit-content;
     background-color: var(--white);
-    padding: 0.5rem;
-    border-radius: 15px;
+    padding: 5px;
+    border-radius: 50px;
     border: solid 2px var(--primary);
 }
 .buttonwrapper input{
@@ -123,11 +113,11 @@ h2::after {
 }
 .buttonwrapper label {
     display: inline-block;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 500;
     background-color: var(--white);
-    border-radius: 10px;
-    padding: 0.65rem 1.5rem;
+    border-radius: 60px;
+    padding: 0.5rem 1rem;
     cursor: pointer;
     transition: background ease-in-out 0.5s;
 }
@@ -135,13 +125,11 @@ h2::after {
 .buttonwrapper #books:checked~.labelbook {
     background-color: var(--primary);
     color: var(--white);
-    box-shadow: 0px 3px 10px rgba(0, 0, 255, 0.1);
 }
 
 .buttonwrapper #class:checked~.labelclass {
     background-color: var(--primary);
     color: var(--white);
-    box-shadow: 0px 3px 10px rgba(0, 0, 255, 0.1);
 }
 
 /* ------Topline Ends Here---------- */
@@ -149,9 +137,8 @@ h2::after {
 
 /* ------Bottomline Starts Here---------- */
 .rackholder {
-    /* border: solid red; */
     width: 98vw;
-    margin: 1.5rem auto;
+    margin: 0 auto;
     height: fit-content;
     overflow-x: scroll;
 }
@@ -162,7 +149,7 @@ h2::after {
 
 .bookrack,
 .classrack {
-    padding: 0.8rem 0rem;
+    padding: 5px 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -174,31 +161,27 @@ h2::after {
 .classbox {
     width: fit-content;
     border-radius: 10px;
-    padding: 8px;
+    padding: 5px;
     background-color: var(--white);
-    margin: 0.25rem 1rem;
-    box-shadow: 0px 3px 5px;
+    margin: 5px 8px;
+    box-shadow: 0px 2px 3px;
     transition: position 0.4s ease-in-out;
 }
 
-.bookbox:hover,
-.classbox:hover {
-    position: relative;
-    box-shadow: 0px 2px 10px;
-    top: -2px;
-}
 
 .bookbox .bookcard,
 .bookimage,
 .bookimage img {
     border-radius: 5px;
     width: 160px;
+    height: 200px;
 }
 
 .classbox .classcard,
 .classimage,
 .classimage img {
     width: 160px;
+    height: 200px;
 }
 
 .bookbox a,
@@ -215,9 +198,9 @@ h2::after {
 .book_title p,
 .class_title p {
     height: 62px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 20px;
-    color: var(--bgblack);
+    color: var(--textblack);
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -229,7 +212,7 @@ h2::after {
 .pricebox {
     color: var(--primary);
     font-weight: 600;
-    margin: 0.25rem auto;
+    margin: 0 auto;
     font-size: 1.3rem;
 }
 
@@ -247,6 +230,7 @@ h2::after {
     border-radius: 8px;
     background-color: var(--primary);
     font-size: 1.1rem !important;
+    font-weight: 500;
     transition: background 0.3s ease;
 }
 
@@ -261,8 +245,8 @@ h2::after {
 .introwrapper {
     width: 100vw;
     height: fit-content;
-    margin-bottom: 2rem;
     user-select: none;
+    padding: 1.5rem 0;
 }
 
 .name_tag_box,
@@ -270,7 +254,6 @@ h2::after {
     width: 98vw;
     margin: auto;
     height: fit-content;
-    padding: 1rem 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -289,7 +272,6 @@ h2::after {
 .tag_box,
 .photo_box,
 .about_box {
-    /* border: red solid; */
     display: block;
     width: 100%;
     height: fit-content;
@@ -317,7 +299,7 @@ h2::after {
 
 .name_box h3 {
     font-family: "Acme", sans-serif;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--primary);
     font-weight: 600;
     line-height: 40px;
@@ -329,7 +311,7 @@ h2::after {
     text-align: left;
     font-size: 1.5rem;
     color: var(--textblack);
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .photo_box,
@@ -343,10 +325,10 @@ h2::after {
 
 .photo_box img.intropic {
     width: 300px;
-    background-color: #d5d6ff;
+    background-color: var(--lightViolet);
     border-radius: 15px;
     border: solid 8px white;
-    box-shadow: 0px 3px 10px;
+    box-shadow: 0px 3px 8px;
 }
 
 .imgholder {
@@ -363,7 +345,7 @@ h2::after {
     background-color: #d5d6ff;
     border-radius: 15px;
     border: solid 8px white;
-    box-shadow: 0px 3px 10px;
+    box-shadow: 0px 3px 5px;
 }
 
 .about_box ul {
@@ -386,6 +368,7 @@ h2::after {
 .tagline_container {
     width: 100vw;
     height: fit-content;
+    padding: 1rem 0;
 }
 
 
@@ -396,19 +379,19 @@ h2::after {
     font-size: 1.3rem;
     font-weight: 700;
     line-height: 45px;
-    padding: 3.5rem 1.5rem;
+    padding: 3rem 1.5rem;
     width: fit-content;
     margin: auto;
     text-align: center;
     border-radius: 30px;
-    box-shadow: 0px 5px 15px;
+    box-shadow: 3px 3px 4px;
     border: solid 1px var(--bgblack);
 }
 
 .tagline_wrapper p svg {
     fill: var(--textblack);
     width: 20px;
-    margin: 0 0.2rem;
+    margin: 0 2px;
 }
 
 /* ------Quote section Ends Here---------- */
