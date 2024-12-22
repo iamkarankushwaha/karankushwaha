@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="pages-style/style.css">
     <link rel="stylesheet" href="pages-style/default_root_style.css">
     <link rel="stylesheet" href="pages-style/responsive_style.css">
+    <!-- Font Awesome Loader Link -->
+    <script src="https://kit.fontawesome.com/25cf39dd91.js" crossorigin="anonymous"></script>
+    <!--  -->
 </head>
 
 <body>
@@ -20,7 +23,7 @@
         window.onload = () => {
             window.scrollTo({
                 top: 0,
-                behavior: 'smooth' // Optional: Adds a smooth scrolling effect
+                behavior: 'smooth'
             });
         };
     </script> -->
@@ -104,11 +107,55 @@
         <!-- ========= Important Links Are Here========== -->
         <nav>
             <div class="important_links">
-                <a href="#">CA Foundation Books</a>
-                <a href="#">CA Intermediate Books</a>
-                <a href="#">CA Foundation Classes</a>
-                <a href="#">Ask Doubts</a>
+                <a class="ImpLinksBtn" act>11th Class Notes</a>
+                <a class="ImpLinksBtn">12th Class Notes</a>
+                <a class="ImpLinksBtn">CA Inter Notes</a>
+                <a class="ImpLinksBtn">Ask Doubts</a>
             </div>
+            <div class="popupbox" id="popupbox">
+                <div id="popup" class="popup">
+                    <span id="closePopup" class="close-button">❌</span>
+                    <h4>Login Is Not Availabe Yet.!</h4>
+                    <p>
+                        We are working on it.
+                        <br>
+                        Please try again later.
+                        <br>
+                        Go to <a href="index.html" style="font-size: 1.1rem; font-weight: 500; ">Home</a> Page.
+                    </p>
+                </div>
+            </div>
+            <script>
+                // Select all elements with the class "ImpLinksBtn"
+                let links = document.querySelectorAll(".ImpLinksBtn");
+            
+                // Loop through each link and attach the event listener
+                links.forEach(link => {
+                    link.addEventListener("click", openpopupimplinks);
+                });
+            
+                // Function to handle the click event
+                function openpopupimplinks(event) {
+                    event.preventDefault(); // Prevent the default link behavior
+                    const popupbox = document.getElementById("popupbox"); // Corrected to target the popup container
+                    popupbox.style.display = "flex";
+            
+                    const closePopup = document.getElementById("closePopup");
+                    // Close the popup when 'X' is clicked
+                    closePopup.addEventListener("click", () => {
+                        popupbox.style.display = "none";
+                    });
+            
+                    // Close the popup when clicking outside of it
+                    window.addEventListener("click", (event) => {
+                        if (event.target === popupbox) {
+                            popupbox.style.display = "none";
+                        }
+                    });
+                }
+            </script>
+            
+
         </nav>
         <!-- ========= Books and Classes Are Here========== -->
         <section>

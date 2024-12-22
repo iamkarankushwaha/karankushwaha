@@ -14,14 +14,14 @@
     <div class="container">
         <div class="big-box">
             <h3>Create Account</h3>
-            <form action="../pages/userinterface.html" class="wrapper">
-                <input type="text" placeholder="Your Name" required autocapitalize="words">
-                <input type="email" placeholder="Email Id" required>
-                <input type="tel" placeholder="Contact Number" required>
-                <input type="password" placeholder="Create Strong Password" required>
-                <input type="password" placeholder="Write again Password" required>
+            <form class="wrapper" onsubmit="showpopup(); return false;">
+                <input type="text" placeholder="Your Name" autocapitalize="words">
+                <input type="email" placeholder="Email Id">
+                <input type="tel" placeholder="Contact Number">
+                <input type="password" placeholder="Create Strong Password">
+                <input type="password" placeholder="Write again Password">
                 <div class="input">
-                    <input class="checkbox" type="checkbox" id="terms" required>
+                    <input class="checkbox" type="checkbox" id="terms">
                     <label class="checkbox" for="terms">I accept all the <a href="">Terms & Conditions.</a></label>
                 </div>
                 <div>Already have account ? <a href="3login.html">click here to Login.</a></div>
@@ -31,6 +31,42 @@
             </form>
         </div>
     </div>
+    <div class="popupbox" id="popupbox">
+        <div id="popup" class="popup">
+            <span id="closePopup" class="close-button">❌</span>
+            <h4>SignUp Is Not Availabe Yet.!</h4>
+            <p>
+                We are working on it.
+                <br>
+                Please try again later.
+                <br>
+                Go to <a href="index.html" style="font-size: 1.1rem; font-weight: 500; ">Home</a> Page.
+            </p>
+        </div>
+    </div>
+    <script>
+        // --------------Popup are here------------------//
+                // ============= PopUp=============
+                // Get elements
+                const openPopup = document.getElementById("LoginBtn");
+                const popup = document.getElementById("popupbox");
+                const closePopup = document.getElementById("closePopup");
+                function showpopup() {
+                    popup.style.display = "flex";
+                }
+
+                // Close the popup when 'X' is clicked
+                closePopup.addEventListener("click", () => {
+                    popup.style.display = "none";
+                });
+
+                // Close the popup when clicking outside of it
+                window.addEventListener("click", (event) => {
+                    if (event.target === popup) {
+                        popup.style.display = "none";
+                    }
+                });
+    </script>
 </body>
 
 </html>

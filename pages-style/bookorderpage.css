@@ -1,93 +1,3 @@
-.ff-message {
-    display: none !important;
-}
-.ff-blocked {
-    background-color: white !important;
-    width: 0px !important;
-    height: 0px !important;
-    overflow: hidden !important;
-    box-shadow: none !important;
-    cursor: none;
-}
-
-.ff-form {
-    padding-bottom: unset !important;
-    position: relative !important;
-    font-family: "Poppins", serif;
-}
-
-.ff-secfields {
-    padding: 0 !important;
-}
-
-.ff-button-bar {
-    display: flex !important;
-}
-
-.ff-button-bar button {
-    display: flex !important;
-}
-
-.ff-section {
-    padding: 0 !important;
-}
-
-.ff-section h3 {
-    display: none;
-}
-.ff-item-qs{
-    font-family: "Poppins", serif;
-}
-.ff-item input,
-select {
-    background-color: var(--lightbg) !important;
-    border: solid 1px black !important;
-}
-.ff-item input:focus,
-select:focus {
-    background-color: white !important;
-    outline: none !important;
-    border: solid 1px black !important;
-}
-
-a.ff-powered-img {
-    height: 0px !important;
-    width: 0px !important;
-    overflow: hidden !important;
-
-}
-
-.ff-form p {
-    color: var(--primary) !important;
-    font-size: 1.1rem !important;
-    font-weight: 300 !important;
-    font-family: "Poppins", serif;
-}
-
-.ff-watermark {
-    position: relative !important;
-    border: none !important;
-}
-
-.ff-watermark::before {
-    content: "Now you may leave this page by clicking 'Home' option given in 'Menubar'.";
-    background-color: var(--lightbg);
-    width: 100%;
-    height: 110%;
-    border-radius: 25px;
-    z-index: 900;
-    position: absolute !important;
-    top: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.1rem;
-    color: var(--textblack);
-    font-weight: 500;
-    padding: 1rem !important;
-    font-family: "Poppins", serif;
-}
-
 /* ------------ After form content------------ */
 .page-heading{
     width: fit-content;
@@ -201,3 +111,103 @@ p {
     margin-top: 1rem;
     box-shadow: 0px 3px 10px;
 }
+
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+.input,
+button {
+  min-width: 290px;
+  width: 30%;
+  margin: 1rem;
+  outline: none;
+  padding: 1rem;
+  border: 1px solid var(--gray);
+  border-radius: 8px;
+  color: white;
+  font-size: 1.1rem !important;
+  font-weight: 300 !important;
+  background-color: var(--black);
+  box-shadow: var(--skyblue) 0px 2px 4px;
+  font-family: "Poppins", serif;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border: 1px solid var(--green);
+  box-shadow: var(--green) 0px 2px 6px 1px;
+}
+
+input:-webkit-autofill {
+  border: 1px solid var(--gray);
+  background-color: var(--black) !important;
+}
+
+div.input {
+  display: flex;
+  justify-content: flex-start !important;
+  align-items: center;
+  font-size: 1rem !important;
+}
+
+label.checkbox,
+label.checkbox a {
+  background-color: transparent;
+  cursor: pointer;
+  display: inline;
+  font-size: 1rem !important;
+}
+
+label.checkbox a {
+  color: var(--gray);
+}
+input.checkbox {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+input::placeholder {
+  color: var(--lightbg);
+  background-color: transparent;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  font-weight: 300 !important;
+}
+
+.btnbox {
+  display: flex;
+  justify-content: center;
+  min-width: fit-content;
+  width: 100%;
+}
+
+button {
+  color: white;
+  background-color: var(--black);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+
+}
+
+form button:hover {
+  color: var(--whitesmoke);
+}
+
+form button span {
+  display: flex;
+  width: 0px;
+  overflow: hidden;
+  transition: width 0.5s;
+}
+
+form button:hover span {
+  width: 15px;
+  overflow: visible;
+}
+

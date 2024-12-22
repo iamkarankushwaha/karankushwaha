@@ -48,7 +48,6 @@ body {
     font-family: "Poppins", serif;
     color: var(--textblack);
     width: 100vw;
-    font-size: 1rem;
     font-weight: 400;
     height: fit-content;
     overflow-x: hidden;
@@ -98,23 +97,6 @@ body {
     padding: 0.65rem 0rem;
     margin-left: 1rem;
     color: var(--white);
-}
-
-.topheader a svg {
-    fill: var(--white);
-}
-
-.topheader a svg.yt:hover {
-    fill: red;
-}
-
-.topheader a svg.ldn:hover,
-.topheader a svg.tele:hover {
-    fill: var(--lightcyan);
-}
-
-.topheader a svg.wtsp:hover {
-    fill: var(--green);
 }
 /* ---------- Top Header CSS Here Ends----------- */
 
@@ -263,13 +245,8 @@ body {
     justify-content: center;
     align-items: center;
 }
-.social-links ul li a svg{
-    fill: var(--white);
-    width: 20px;
-    margin: 0 1rem;
-}
-.social-links ul li a svg:hover{
-    fill: var(--lightbg);
+.social-links ul{
+    gap: 1.5rem;
 }
 .footerbtn {
     font-family: "Poppins", serif;

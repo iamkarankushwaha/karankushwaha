@@ -135,6 +135,7 @@
         padding-left: unset;
         padding-right: 0.5rem;
         justify-content: flex-end;
+        font-size: 1.2rem;
     }
 
     .topline {
@@ -178,7 +179,7 @@
     }
 
     .tagline_wrapper p {
-        font-size: 1rem;
+        font-size: 1.1rem;
         padding: 2rem 1rem;
     }
 
@@ -190,8 +191,12 @@
         display: flex;
         flex-direction: column;
     }
-
+    .footerbtn {
+        font-size: 1.1rem;}
     .popup {
         width: 90vw;
+    }
+    .popup p {
+        font-size: 1.1rem;
     }
 }
