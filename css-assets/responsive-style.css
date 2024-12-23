@@ -1,0 +1,68 @@
+@media screen and (min-width: 768px) and (max-width: 920px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 769px) {
+    html {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 556px) {
+    html {
+        font-size: 13px;
+    }
+    .hero-content-box {
+        grid-template-areas: 'name' 'tagline' 'hero-links';
+    }
+    .hero-links-box {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-top: 1rem;
+    }
+    .main-content-section{
+        grid-template-areas: 'content content';
+        grid-template-columns: auto auto;
+        overflow: unset;
+        padding: unset;
+    }
+    header{
+        width: 100vw;
+        height: 55px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        overflow: scroll;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-top: solid 1px;
+        backdrop-filter: blur(15px);
+        z-index: 100;
+        box-shadow: 0px 2px 15px;
+    }
+    .navbox{
+        width: fit-content;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 15px;
+        position: unset;
+        border: none;
+        padding: 5px 0;
+    }
+
+    .table-container {
+        width: calc(100vw - 20px);
+    }
+
+    .rackholder{
+        width: calc(100vw - 20px);
+    }
+}
