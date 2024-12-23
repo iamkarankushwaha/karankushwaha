@@ -273,7 +273,7 @@ header {
     grid-area: header-nav;
     padding: 5px;
     height: calc(100% - 0px);
-    box-shadow: -38px 50px 50px;
+    box-shadow: 2px 15px 5px;
 }
 
 .navbox {
