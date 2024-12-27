@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Karan Kushwaha">
+    <meta type="description"
+        content="Karan Kushwaha's Portfolio Website where you can find all the information about him.">
+    <title>Karan Kushwaha</title>
+    <link rel="shortcut icon" href="Img-Assets/circle logo.png" type="image/x-icon">
+    <!-- Font Awesome Loader Link -->
+    <script src="https://kit.fontawesome.com/25cf39dd91.js" crossorigin="anonymous"></script>
+    <!--  -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS-Assets/Default-Style.css">
+    <link rel="stylesheet" href="CSS-Assets/Responsive-Styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <a href="">KaranKushwaha.</a>
+            </div>
+            <nav>
+                <ul class="nav">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#books&notes">Books & Notes</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="menu" id="menu">
+                        <i class="fa-solid fa-bars-staggered"></i>
+                        <ul class="sub-menu" id="sub-menu">
+                            <li><a href="#experience">Experience</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#achievements">Achievements</a></li>
+                            <li><a href="#social-media">Social Media</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <script>
+                let menu = document.getElementById("menu");
+                let submenu = document.getElementById("sub-menu");
+
+                // Toggle submenu visibility on menu click
+                menu.addEventListener("click", (event) => {
+                    event.stopPropagation(); // Prevent the click event from propagating to the window
+                    submenu.classList.toggle("visible");
+                });
+
+                // Hide submenu when clicking anywhere else
+                window.addEventListener("click", () => {
+                    submenu.classList.remove("visible");
+                });
+
+                // Prevent submenu clicks from hiding it
+                submenu.addEventListener("click", (event) => {
+                    event.stopPropagation(); // Prevent click from propagating to window
+                });
+
+            </script>
+            <script>
+                // Add event listeners to all links
+                const links = document.querySelectorAll(".nav a, .sub-menu a");
+
+                links.forEach(link => {
+                    link.addEventListener("click", () => {
+                        // Remove the active class from all links
+                        links.forEach(l => l.classList.remove("active"));
+
+                        // Add the active class to the clicked link
+                        link.classList.add("active");
+                    });
+                });
+            </script>
+        </header>
+
+        <section id="home">
+            <div class="hero-section section">
+                <div class="hero-content">
+                    <div class="name">
+                        <h1>Hi, I'm Karan Kushwaha</h1>
+                        <h5>CA Student</h5>
+                    </div>
+                    <div class="headline">
+                        <p>
+                            CA Intermediate Candidate | B.Com. at University of Delhi 🎓<br>
+                            Finance and Taxation Enthusiast | Self-Studied CA Foundation Passer 🏆
+                        </p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/karankushwaha" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://youtube.com/@karan_kushwaha09?si=UCfHJmEtm0ATgaMZ" target="_blank"><i
+                                class="fa-brands fa-youtube"></i></a>
+                        <a href="https://x.com/KaranKushwaha_" target="_blank"><i
+                                class="fa-brands fa-square-x-twitter"></i></a>
+                    </div>
+                    <div class="hero-btn">
+                        <a href="#contact">Let's Talk</a>
+                        <a href="#about">About Me</a>
+                    </div>
+                </div>
+                <div class="hero-photo">
+                    <img src="Img-Assets/hero-img_karan kushwaha.png" alt="Karan kushwaha">
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="about-section section">
+                <div class="about-img">
+                    <img src="Img-Assets/about karan kushwaha.png" alt="Karan Kushwaha" loading="lazy">
+                </div>
+                <div class="about-text">
+                    <h3 class="content-heading">Welcome to My Profile!</h3>
+                    <p>
+                        I'm a student pursuing CA Intermediate and B.Com. at
+                        the
+                        University of
+                        Delhi.
+                        With a keen interest in Finance and Taxation, I am
+                        dedicated to
+                        achieving
+                        my goal of
+                        becoming a successful Chartered Accountant.
+                    </p>
+                    <br>
+                    <p>
+                        I conquered the CA Foundation Exam on my very first attempt in December
+                        2023
+                        through
+                        self-study
+                        and scored 246 / 400.
+                    </p>
+                    <p>
+                        Beyond academics, I have a knack for content creation, and I enjoy
+                        sharing
+                        my
+                        insights and
+                        knowledge with others through posts on LinkedIn about my journey towards becoming a
+                        Chartered
+                        Accountant.
+                    </p>
+                    <br>
+                    <b>Further :-</b>
+                    <ul style="text-indent: 1.5rem; list-style-position: inside;">
+                        <li>Passionate about teaching.</li>
+                        <li>Tech-savvy (created this website).</li>
+                        <li>Constant learner with a growth-oriented mindset.</li>
+                        <li>Currently reading - <b>'Not Just an Accountant' by Vinod Rai.</b></li>
+                    </ul>
+                    <p>
+                        Thanks for visiting my profile! Let's connect and explore opportunities to collaborate
+                        in
+                        the field
+                        of
+                        Chartered Accountancy.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="experience-section section">
+                <div class="exp-row1">
+                    <h3 class="content-heading"><span>My</span> Experiences</h3>
+                    <div class="exp-control-box">
+                        <button class="control-left" id="control-left"><i class="fa-solid fa-angles-left"></i></button>
+                        <button class="control-right" id="control-right"><i
+                                class="fa-solid fa-angles-right"></i></button>
+                    </div>
+                </div>
+                <div class="exp-row2">
+                    <div class="exp-detail-box">
+                        <div class="exp-detail-wrapper">
+                            <div class="exp-detail-slider">
+                                <div class="exp-detail-slides">
+                                    <h1 class="exp-count">01</h1>
+                                    <div class="exp-head">
+                                        <h3>Education For All</h3>
+                                    </div>
+                                    <div class="exp-about">
+                                        <p>It was a great project initiated by me in order to provide basic education to
+                                            students coming from weak financial background.
+                                            During this project I learned how to teach students so that they can
+                                            conceptually understand everything.
+                                            Moreover I also experienced team building and how to manage a team in order
+                                            to get work done in an efficient manner.</p> <br>
+                                        <p>Following is the picture of inauguration day i.e. 9 November, 2021.</p>
+                                    </div>
+                                    <div class="exp-skills">
+                                        <p>#teaching #teambuilding #mentorship</p>
+                                    </div>
+                                    <div class="exp-button"><a href="">Visit <i
+                                                class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exp-image-box">
+                        <div class="exp-wrapper-wrapper">
+                            <div class="exp-image-slider">
+                                <div class="exp-image-slides">
+                                    <img src="Img-Assets/education for all.jpg" alt="Education For All">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const detailSlides = document.querySelectorAll(".exp-detail-slides");
+                    const imageSlides = document.querySelectorAll(".exp-image-slides");
+                    const totalSlides = detailSlides.length;
+
+                    // Create the count display
+                    const countDisplay = document.createElement("div");
+                    countDisplay.classList.add("exp-slide-counter");
+
+                    // Append the counter to the control box
+                    const controlBox = document.querySelector(".exp-control-box");
+                    controlBox.prepend(countDisplay); // Add the counter to the left of the buttons
+
+                    let currentSlide = 0;
+
+                    const updateSlides = () => {
+                        // Hide all slides
+                        detailSlides.forEach((slide, index) => {
+                            slide.style.display = index === currentSlide ? "block" : "none";
+                        });
+                        imageSlides.forEach((slide, index) => {
+                            slide.style.display = index === currentSlide ? "block" : "none";
+                        });
+
+                        // Update the counter display
+                        countDisplay.textContent = `${currentSlide + 1} of ${totalSlides}`;
+                    };
+
+                    // Show the first slide initially
+                    updateSlides();
+
+                    // Left button functionality
+                    document.getElementById("control-left").addEventListener("click", () => {
+                        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                        updateSlides();
+                    });
+
+                    // Right button functionality
+                    document.getElementById("control-right").addEventListener("click", () => {
+                        currentSlide = (currentSlide + 1) % totalSlides;
+                        updateSlides();
+                    });
+                });
+
+            </script>
+        </section>
+    </div>
+</body>
+
+</html>
