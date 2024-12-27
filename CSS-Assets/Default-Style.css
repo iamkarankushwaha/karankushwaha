@@ -520,11 +520,12 @@ section {
 }
 
 .exp-about p{
-    font-size: 1.1;
+    font-size: 1.1rem;
     color: var(--lightbg);
     line-height: 1.4;
     font-weight: 300;
 }
+
 .exp-skills p{
     color: var(--secondary);
     padding-top: 15px;
