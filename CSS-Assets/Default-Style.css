@@ -206,9 +206,11 @@ section {
     padding: 5px 1rem !important;
     width: 170px;
 }
-
+.sub-menu li:nth-child(5) {
+    padding-left: 0;
+}
 .sub-menu.visible {
-    height: 200px;
+    height: 250px;
 }
 
 
@@ -525,7 +527,6 @@ section {
     line-height: 1.4;
     font-weight: 300;
 }
-
 .exp-skills p{
     color: var(--secondary);
     padding-top: 15px;
