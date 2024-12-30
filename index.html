@@ -19,6 +19,13 @@
 
 <body>
     <div class="container">
+        <div id="popup-not-avlbl">
+            <div class="popupbox">
+                <h3>Apology!</h3>
+                <p>The content you are trying to access is not availabe yet. Try again later or contact Karan.</p>
+                <button onclick="closepop()">OK</button>
+            </div>
+        </div>
         <header class="header">
             <div class="logo">
                 <a href="">KaranKushwaha.</a>
@@ -27,15 +34,15 @@
                 <ul class="nav">
                     <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#books&notes">Books & Notes</a></li>
+                    <li><a href="#books&notes" onclick="not_avlbl_popup()">Books & Notes</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li class="menu" id="menu">
                         <i class="fa-solid fa-bars-staggered"></i>
                         <ul class="sub-menu" id="sub-menu">
                             <li><a href="#experience">Experience</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#achievements">Achievements</a></li>
-                            <li><a href="#social-media">Social Media</a></li>
+                            <li><a href="#projects" onclick="not_avlbl_popup()">Projects</a></li>
+                            <li><a href="#achievements" onclick="not_avlbl_popup()">Achievements</a></li>
+                            <li><a href="#social-media" onclick="not_avlbl_popup()">Social Media</a></li>
                             <li><a href="Web-Pages/feedback-form.html" target="_blank">Feedback</a></li>
                         </ul>
                     </li>
@@ -87,8 +94,7 @@
                     </div>
                     <div class="headline">
                         <p>
-                            CA Intermediate Candidate | B.Com. at University of Delhi 🎓<br>
-                            Finance and Taxation Enthusiast | Self-Studied CA Foundation Passer 🏆
+                            CA Intermediate Candidate | B.Com. at University of Delhi 🎓<br> Finance and Taxation Enthusiast | Self-Studied CA Foundation Passer 🏆
                         </p>
                     </div>
                     <div class="social-links">
@@ -118,32 +124,13 @@
                 <div class="about-text">
                     <h3 class="content-heading">Welcome to My Profile!</h3>
                     <p>
-                        I'm a student pursuing CA Intermediate and B.Com. at
-                        the
-                        University of
-                        Delhi.
-                        With a keen interest in Finance and Taxation, I am
-                        dedicated to
-                        achieving
-                        my goal of
-                        becoming a successful Chartered Accountant.
+                        I'm a student pursuing CA Intermediate and B.Com. at the University of Delhi. With a keen interest in Finance and Taxation, I am dedicated to achieving my goal of becoming a successful Chartered Accountant.
                     </p>
                     <br>
                     <p>
-                        I conquered the CA Foundation Exam on my very first attempt in December
-                        2023
-                        through
-                        self-study
-                        and scored 246 / 400.
+                        I conquered the CA Foundation Exam on my very first attempt in December 2023 through self-study and scored 246 / 400.
                     </p>
-                    <p>
-                        Beyond academics, I have a knack for content creation, and I enjoy
-                        sharing
-                        my
-                        insights and
-                        knowledge with others through posts on LinkedIn about my journey towards becoming a
-                        Chartered
-                        Accountant.
+                    <p> Beyond academics, I have a knack for content creation, and I enjoy sharing my insights and knowledge with others through posts on LinkedIn about my journey towards becoming a Chartered Accountant.
                     </p>
                     <br>
                     <b>Further :-</b>
@@ -154,11 +141,7 @@
                         <li>Currently reading - <b>'Not Just an Accountant' by Vinod Rai.</b></li>
                     </ul>
                     <p>
-                        Thanks for visiting my profile! Let's connect and explore opportunities to collaborate
-                        in
-                        the field
-                        of
-                        Chartered Accountancy.
+                        Thanks for visiting my profile! Let's connect and explore opportunities to collaborate in the field of Chartered Accountancy.
                     </p>
                 </div>
             </div>
@@ -184,19 +167,13 @@
                                         <h3>Education For All</h3>
                                     </div>
                                     <div class="exp-about">
-                                        <p>It was a great project initiated by me in order to provide basic education to
-                                            students coming from weak financial background.
-                                            During this project I learned how to teach students so that they can
-                                            conceptually understand everything.
-                                            Moreover I also experienced team building and how to manage a team in order
-                                            to get work done in an efficient manner.</p> <br>
+                                        <p>It was a great project initiated by me in order to provide basic education to students coming from weak financial background. During this project I learned how to teach students so that they can conceptually understand everything. Moreover I also experienced team building and how to manage a team in order to get work done in an efficient manner.</p> <br>
                                         <p>Following is the picture of inauguration day i.e. 9 November, 2021.</p>
                                     </div>
                                     <div class="exp-skills">
                                         <p>#teaching #teambuilding #mentorship</p>
                                     </div>
-                                    <div class="exp-button"><a href="">Visit <i
-                                                class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                                    <div class="exp-button"><a href="">Visit <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
                                 </div>
                             </div>
                         </div>
@@ -260,6 +237,15 @@
             </script>
         </section>
     </div>
+
+    <script>
+        function not_avlbl_popup() {
+            document.getElementById("popup-not-avlbl").style.scale="1";
+        }
+        function closepop() {
+            document.getElementById("popup-not-avlbl").style.scale="0";
+        }
+    </script>
 </body>
 
 </html>

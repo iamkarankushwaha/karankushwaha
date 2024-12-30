@@ -94,6 +94,52 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+#popup-not-avlbl{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: scale 0.2s;
+    scale: 0;
+}
+
+.popupbox{
+    width: 330px;
+    height: fit-content;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0px 5px 10px -5px;
+}
+.popupbox h3{
+    color: var(--primary);
+    font-size: 1.2rem;
+    text-align: center;
+}
+.popupbox p{
+    color: var(--cyan);
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px 0px;
+}
+.popupbox button{
+    color: var(--white);
+    background-color: var(--secondary);
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 15px 0px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    font-family: "Acme";
+}
 
 section {
     width: 100%;
