@@ -71,6 +71,7 @@
 }
 
 .form-wrapper form {
+    width: fit-content !important;
     display: flex;
     justify-content: center;
     align-items: center;
