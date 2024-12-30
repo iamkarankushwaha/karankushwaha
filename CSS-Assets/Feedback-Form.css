@@ -71,7 +71,7 @@
 }
 
 .form-wrapper form {
-    width: fit-content !important;
+    width: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,8 +86,7 @@
 input,
 textarea,
 select {
-    width: 50%;
-    min-width: 330px;
+    width: 100%;
     color: var(--black);
     font-size: 1rem;
     padding: 13px 22px;
@@ -100,7 +99,7 @@ select {
 
 .form select {
     width: 100%;
-    padding: 12px 22px;
+    padding: 13px 22px;
     border-radius: 5px;
     border: 1px solid #dde3ec;
     background: #ffffff;
@@ -132,7 +131,7 @@ textarea:focus {
 button {
     display: block;
     width: 100%;
-    padding: 14px 25px;
+    padding: 10px 25px;
     font-size: 1.2rem;
     font-weight: 500;
     font-family: "poppins";
@@ -169,16 +168,8 @@ button:hover {
         padding-bottom: 40px;
         border-radius: 0;
     }
-
-    .form-wrapper {
+    .form-wrapper{
         padding: 30px 0px;
-    }
-
-    input,
-    textarea,
-    select {
-        width: 50%;
-        min-width: 310px !important;
     }
 }
 
