@@ -1,0 +1,52 @@
+/* About section */
+
+#about {
+    width: 100%;
+}
+.about-section{
+    background-color: var(--lightbg);
+}
+
+.about-img img{
+    width: 350px;
+    border-radius: 15px;
+    padding-bottom: 5px;
+    background-color: white;
+    box-shadow: 0px 4px 10px -4px;
+}
+
+.about-text{
+    width: 80vw;
+    max-width: 600px;
+    min-width: 350px;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.content-heading{
+    width: fit-content;
+    color: var(--primary);
+    font-size: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+.content-heading::before{
+    content: "";
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    width: 40%;
+    height: 2px;
+    background-color: var(--secondary);
+    border-radius: 10px;
+}
+.about-text p, li, b{
+    color: var(--black);
+    line-height: 1.4;
+    font-size: 1.1rem;
+}
+
+.about-text li{
+    list-style: inside disc;
+}
+

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Karan Kushwaha">
+    <meta type="description"
+        content="Karan Kushwaha's Portfolio Website where you can find all the information about him.">
+    <title>Karan Kushwaha</title>
+    <link rel="shortcut icon" href="Img-Assets/circle logo.png" type="image/x-icon">
+    <!-- Font Awesome Loader Link -->
+    <script src="https://kit.fontawesome.com/25cf39dd91.js" crossorigin="anonymous"></script>
+    <!--  -->
+    <link rel="stylesheet" href="CSS-Assets/Default-Style.css">
+    <link rel="stylesheet" href="Home-Hero.css">
+    <link rel="stylesheet" href="CSS-Assets/About-Me.css">
+    <link rel="stylesheet" href="CSS-Assets/Books&Notes.css">
+    <link rel="stylesheet" href="CSS-Assets/Experience.css">
+    <link rel="stylesheet" href="CSS-Assets/Contact-Me.css">
+    <link rel="stylesheet" href="CSS-Assets/Responsive-Styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="popup-not-avlbl">
+            <div class="popupbox">
+                <h3>Apology!</h3>
+                <p id="status">The content you are trying to access is not availabe yet. Try again later or contact
+                    Karan.</p>
+                <button onclick="closepop()">OK</button>
+            </div>
+        </div>
+        <header class="header">
+            <div class="logo">
+                <a href="https://karankushwaha.netlify.app">KaranKushwaha.</a>
+            </div>
+            <nav>
+                <ul class="nav">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#books-notes">Books & Notes</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="menu" id="menu">
+                        <i class="fa-solid fa-bars-staggered"></i>
+                        <ul class="sub-menu" id="sub-menu">
+                            <li><a href="#experience">Experience</a></li>
+                            <li><a href="#projects" onclick="not_avlbl_popup()">Projects</a></li>
+                            <li><a href="#achievements" onclick="not_avlbl_popup()">Achievements</a></li>
+                            <li><a href="#social-media" onclick="not_avlbl_popup()">Social Media</a></li>
+                            <li><a href="Web-Pages/feedback-form.html" target="_blank">Feedback</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <script>
+                let menu = document.getElementById("menu");
+                let submenu = document.getElementById("sub-menu");
+
+                // Toggle submenu visibility on menu click
+                menu.addEventListener("click", (event) => {
+                    event.stopPropagation(); // Prevent the click event from propagating to the window
+                    submenu.classList.toggle("visible");
+                });
+
+                // Hide submenu when clicking anywhere else
+                window.addEventListener("click", () => {
+                    submenu.classList.remove("visible");
+                });
+
+                // Prevent submenu clicks from hiding it
+                submenu.addEventListener("click", (event) => {
+                    event.stopPropagation(); // Prevent click from propagating to window
+                });
+
+            </script>
+            <script>
+                // Add event listeners to all links
+                const links = document.querySelectorAll(".nav a, .sub-menu a");
+
+                links.forEach(link => {
+                    link.addEventListener("click", () => {
+                        // Remove the active class from all links
+                        links.forEach(l => l.classList.remove("active"));
+
+                        // Add the active class to the clicked link
+                        link.classList.add("active");
+                    });
+                });
+            </script>
+        </header>
+
+        <section id="home">
+            <div class="hero-section section">
+                <div class="hero-content">
+                    <div class="name">
+                        <h1>Hi, I'm Karan Kushwaha</h1>
+                        <h5>CA Student</h5>
+                    </div>
+                    <div class="headline">
+                        <p>
+                            CA Intermediate Candidate | B.Com. at University of Delhi 🎓<br> Finance and Taxation
+                            Enthusiast | Self-Studied CA Foundation Passer 🏆
+                        </p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/karankushwaha" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://youtube.com/@karan_kushwaha09?si=UCfHJmEtm0ATgaMZ" target="_blank"><i
+                                class="fa-brands fa-youtube"></i></a>
+                        <a href="https://x.com/KaranKushwaha_" target="_blank"><i
+                                class="fa-brands fa-square-x-twitter"></i></a>
+                    </div>
+                    <div class="hero-btn">
+                        <a href="#contact">Let's Talk</a>
+                        <a href="#about">About Me</a>
+                    </div>
+                </div>
+                <div class="hero-photo">
+                    <img src="Img-Assets/hero-img_karan kushwaha.png" alt="Karan kushwaha">
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="about-section section">
+                <div class="about-img">
+                    <img src="Img-Assets/about karan kushwaha.png" alt="Karan Kushwaha" loading="lazy">
+                </div>
+                <div class="about-text">
+                    <h3 class="content-heading">Welcome to My Profile!</h3>
+                    <p>
+                        I'm a student pursuing CA Intermediate and B.Com. at the University of Delhi. With a keen
+                        interest in Finance and Taxation, I am dedicated to achieving my goal of becoming a successful
+                        Chartered Accountant.
+                    </p>
+                    <br>
+                    <p>
+                        I conquered the CA Foundation Exam on my very first attempt in December 2023 through self-study
+                        and scored 246 / 400.
+                    </p>
+                    <p> Beyond academics, I have a knack for content creation, and I enjoy sharing my insights and
+                        knowledge with others through posts on LinkedIn about my journey towards becoming a Chartered
+                        Accountant.
+                    </p>
+                    <br>
+                    <b>Further :-</b>
+                    <ul style="text-indent: 1.5rem; list-style-position: inside;">
+                        <li>Passionate about teaching.</li>
+                        <li>Tech-savvy (created this website).</li>
+                        <li>Constant learner with a growth-oriented mindset.</li>
+                        <li>Currently reading - <b>'Not Just an Accountant' by Vinod Rai.</b></li>
+                    </ul>
+                    <p>
+                        Thanks for visiting my profile! Let's connect and explore opportunities to collaborate in the
+                        field of Chartered Accountancy.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="books-notes">
+            <div class="section-heading">
+                <h2 class="content-heading">Knowledge Vault: Books and Notes</h2>
+            </div>
+            <div class="books-section section">
+                <div class="book-card">
+                    <img src="Book-Thumbnails/FM Formulae Handbook.png" alt="Book 1" class="book-image">
+                    <div class="book-content">
+                        <h3 class="book-title">FM Fromulae Handbook</h3>
+                        <p class="book-description">A compilation of all Financial Management formulas of CA Inter |
+                            Handwritten by Karan Kushwaha.</p>
+                        <div class="book-actions">
+                            <a onclick="booknotavlb()" class="btn" target="_blank">Download <i
+                                    class="fa-solid fa-download"></i></a>
+                            <script>
+                                function booknotavlb() {
+                                    document.getElementById("popup-not-avlbl").style.scale = "1";
+                                    document.getElementById("status").innerText = "The Book you are trying to access is under development. Kindly check after some time or contact Karan Kushwaha."
+
+                                }
+                                function closepop() {
+                                    document.getElementById("popup-not-avlbl").style.scale = "0";
+                                    document.getElementById("status").innerText = ""
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <img src="Book-Thumbnails/Meaning of Salary.png" alt="Book 1" class="book-image">
+                    <div class="book-content">
+                        <h3 class="book-title">Meaning of Salary</h3>
+                        <p class="book-description">Meaning of salary under different provisions of Income Tax Act 1961
+                            | Relavent for CA Inter | Compiled by Karan Kushwaha</p>
+                        <div class="book-actions">
+                            <a href="https://drive.google.com/file/d/19-sT62RfWfkqBjMaNXBUeix1ptZtESHO/view?usp=sharing"
+                                class="btn" target="_blank">Download <i class="fa-solid fa-download"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="experience-section section">
+                <div class="exp-row1">
+                    <h3 class="content-heading"><span>My</span> Experiences</h3>
+                    <div class="exp-control-box">
+                        <button class="control-left" id="control-left"><i class="fa-solid fa-angles-left"></i></button>
+                        <button class="control-right" id="control-right"><i
+                                class="fa-solid fa-angles-right"></i></button>
+                    </div>
+                </div>
+                <div class="exp-row2">
+                    <div class="exp-detail-box">
+                        <div class="exp-detail-wrapper">
+                            <div class="exp-detail-slider">
+                                <div class="exp-detail-slides">
+                                    <h1 class="exp-count">01</h1>
+                                    <div class="exp-head">
+                                        <h3>Education For All</h3>
+                                    </div>
+                                    <div class="exp-about">
+                                        <p>It was a great project initiated by me in order to provide basic education to
+                                            students coming from weak financial background. During this project I
+                                            learned how to teach students so that they can conceptually understand
+                                            everything. Moreover I also experienced team building and how to manage a
+                                            team in order to get work done in an efficient manner.</p> <br>
+                                        <p>Following is the picture of inauguration day i.e. 9 November, 2021.</p>
+                                    </div>
+                                    <div class="exp-skills">
+                                        <p>#teaching #teambuilding #mentorship</p>
+                                    </div>
+                                    <div class="exp-button"><a href="">Visit <i
+                                                class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exp-image-box">
+                        <div class="exp-wrapper-wrapper">
+                            <div class="exp-image-slider">
+                                <div class="exp-image-slides">
+                                    <img src="Img-Assets/education for all.jpg" alt="Education For All">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const detailSlides = document.querySelectorAll(".exp-detail-slides");
+                    const imageSlides = document.querySelectorAll(".exp-image-slides");
+                    const totalSlides = detailSlides.length;
+
+                    // Create the count display
+                    const countDisplay = document.createElement("div");
+                    countDisplay.classList.add("exp-slide-counter");
+
+                    // Append the counter to the control box
+                    const controlBox = document.querySelector(".exp-control-box");
+                    controlBox.prepend(countDisplay); // Add the counter to the left of the buttons
+
+                    let currentSlide = 0;
+
+                    const updateSlides = () => {
+                        // Hide all slides
+                        detailSlides.forEach((slide, index) => {
+                            slide.style.display = index === currentSlide ? "block" : "none";
+                        });
+                        imageSlides.forEach((slide, index) => {
+                            slide.style.display = index === currentSlide ? "block" : "none";
+                        });
+
+                        // Update the counter display
+                        countDisplay.textContent = `${currentSlide + 1} of ${totalSlides}`;
+                    };
+
+                    // Show the first slide initially
+                    updateSlides();
+
+                    // Left button functionality
+                    document.getElementById("control-left").addEventListener("click", () => {
+                        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                        updateSlides();
+                    });
+
+                    // Right button functionality
+                    document.getElementById("control-right").addEventListener("click", () => {
+                        currentSlide = (currentSlide + 1) % totalSlides;
+                        updateSlides();
+                    });
+                });
+
+            </script>
+        </section>
+
+        <section id="contact">
+            <div class="contact-section section" id="contact-section">
+                <div class="contact-info">
+                    <h3 class="content-heading">Let's Connect</h3>
+                    <img src="Img-Assets/contact-me-vector.png" alt="" class="contact-vector">
+                    <button class="swipe" id="swipeBtn">Message Me <i class="fa-solid fa-right-long"></i></button>
+                    <h3>Address</h3>
+                    <p><i class="fa-solid fa-location-dot"></i> South Extention Part I, New Delhi, Delhi, India -
+                        110003.</p>
+
+                    <h3>Contacts</h3>
+                    <p><i class="fa-solid fa-phone"></i> +91 93155 40041</p>
+
+                    <h3>Email</h3>
+                    <p><i class="fa-solid fa-envelope"></i> kushwahakaran2014@gmail.com</p>
+                </div>
+
+                <div class="contact-form">
+                    <h3 class="content-heading">Message Me</h3>
+                    <p>If you have any questions or query, please fill out the form below, and I'll get back to you
+                        shortly.</p>
+
+                    <form action="" method="post" id="contactForm" name="Contact-Form">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required
+                            autocomplete="on" />
+
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"
+                            autocomplete="on" />
+
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required
+                            autocomplete="on" />
+
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Enter your subject"
+                            autocomplete="on" />
+
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" placeholder="Write your message here..."
+                            required></textarea>
+                        <p class="note">*Marked fields are mandatory.</p>
+                        <button type="submit">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+
+                    <div id="spinner-contact-form">
+                        <div class="spinner-contact-form"><i class="fa-solid fa-spinner"></i></div>
+                    </div>
+
+                    <!-- Popup -->
+                    <div id="popup-contact-form">
+                        <div class="popup-content-contact-form">
+                            <span><i class="fa-solid fa-check"></i></span>
+                            <p>Thank you! Your message has been received.</p>
+                            <button id="ok-button-contact-form">OK</button>
+                        </div>
+                    </div>
+                    <script>
+                        const scriptURL = 'https://script.google.com/macros/s/AKfycbxeTxnZhqDkV8fR5rswYCmwhDSVAedkdAc9Ex9pa1YJwd2pCYuWjF6j0UgTeqXb9sQ_Lw/exec';
+                        const form = document.forms['Contact-Form'];
+                        const spinner = document.getElementById('spinner-contact-form'); // Spinner element
+                        const popup = document.getElementById('popup-contact-form'); // Popup element
+                        const okButton = document.getElementById('ok-button-contact-form'); // OK button
+
+                        form.addEventListener('submit', (e) => {
+                            e.preventDefault();
+                            // Show the spinner while the form is being submitted
+                            spinner.style.display = 'flex';
+
+                            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                                .then((response) => {
+                                    // Hide the spinner and show the popup
+                                    spinner.style.display = 'none';
+                                    popup.style.display = 'flex';
+                                })
+                                .catch((error) => {
+                                    console.error('Error!', error.message);
+                                    alert('An error occurred while submitting the form. Please try again.');
+                                    spinner.style.display = 'none'; // Hide the spinner in case of error
+                                });
+                        });
+
+                        // Redirect after popup confirmation
+                        okButton.addEventListener('click', () => {
+                            // Clear the form fields
+                            form.reset();
+
+                            // Hide the popup
+                            popup.style.display = 'none';
+
+                            // Redirect to the specified URL
+                            window.location.href = 'https://karankushwaha.netlify.app/index.html#contact'; // Replace with your desired redirect URL
+                        });
+                    </script>
+                    <script>
+                        document.getElementById('swipeBtn').addEventListener('click', function () {
+                            const div = document.getElementById('contact-section');
+                            div.scrollBy({
+                                top: 0, // Change this value to adjust the scroll amount in pixels
+                                left: 3600,
+                                behavior: 'smooth' // Optional for smooth scrolling
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer_container">
+                <ul class="footer_box">
+                    <li class="social-links">
+                        <ul>
+                            <li>
+                                <a href="https://youtube.com/@karan_kushwaha09?si=UCfHJmEtm0ATgaMZ" target="_blank">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/karankushwaha" target="_blank">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://t.me/CAInterKaranKushwaha" target="_blank">
+                                    <i class="fa-brands fa-telegram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://wa.me/9315540041" target="_blank">
+                                    <i class="fa-brands fa-square-whatsapp"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="footer_links">
+                        <ul>
+                            <li>
+                                <button id="privacybtn" class="footerbtn">Privacy Policy</button>
+                            </li>
+                            <li>
+                                <button id="tncbtn" class="footerbtn">Terms and Conditions</button>
+                            </li>
+                            <li>
+                                <button id="refundbtn" class="footerbtn">Refund Policy</button>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="rights">© Karan Kushwaha | 2024 | All Rights Reserved</li>
+                    <li class="developer">Developed by Karan Kushwaha</li>
+                </ul>
+            </div>
+        
+            <div class="popupboxf" id="popupprivacy">
+                <div id="popupprivacy" class="popup">
+                    <span id="closePopupprivacy" class="close-button"><i class="fa-solid fa-xmark" style="font-size: 35px;"></i></span>
+                    <h4>Privacy Policy</h4>
+                    <p>▰ The information provided by students or users through form submissions or while ordering books on our
+                        website is handled with utmost care and confidentiality. We are committed to safeguarding your personal
+                        details and using them responsibly to cater to your academic needs.
+                        <br>
+                        ▰ This data also enables us to improve and enhance our website's functionality, design, and offerings.
+                        <br>
+                        ▰ Additionally, it helps us in developing and launching new books, notes, and resources tailored to
+                        better
+                        serve the needs of our students and users, ensuring a valuable and secure experience on our platform.
+                        <br>
+                        ▰ By using this website, you agree to this privacy policy.
+                    </p>
+                </div>
+            </div>
+            <div class="popupboxf" id="popuptnc">
+                <div id="popuptnc" class="popup">
+                    <span id="closePopuptnc" class="close-button"><i class="fa-solid fa-xmark" style="font-size: 35px;"></i></span>
+                    <h4>Terms and Conditions</h4>
+                    <p>▰ Books ordered through our platform are delivered by default to the email ID provided during the
+                        purchase
+                        process. Therefore, it is essential to ensure the accuracy of the email ID entered.
+                        <br>
+                        ▰ Any misuse of books or study materials authored by Karan Kushwaha, including unauthorized distribution
+                        or
+                        use beyond the scope of personal or academic purposes, will result in strict legal action.
+                        <br>
+                        ▰ However, sharing books and study materials with peers is permitted, provided it is solely for
+                        educational purposes and does not violate the integrity or intended use of the content.
+                        <br>
+                        ▰ By proceeding with your order, you agree to these terms and conditions.
+                    </p>
+                </div>
+            </div>
+            <div class="popupboxf" id="popuprefund">
+                <div id="popuprefund" class="popup">
+                    <span id="closePopuprefund" class="close-button"><i class="fa-solid fa-xmark" style="font-size: 35px;"></i></span>
+                    <h4>Refund Policy</h4>
+                    <p>▰ Once books or any study materials listed on this website are sold, they are non-refundable. Students
+                        are,
+                        therefore, strongly encouraged to make informed and careful decisions before completing their purchase.
+                        <br>
+                        ▰ Refunds will only be considered in cases where the delivered study material is incorrect and does not
+                        match the item originally ordered. Such cases will be subject to thorough verification by Karan Kushwaha
+                        and
+                        his team. If verified, appropriate corrective actions, including refunds or replacements, will be
+                        initiated.
+                        <br>
+                        ▰ By purchasing, you agree to adhere to this refund policy.
+                    </p>
+                </div>
+            </div>      
+        </footer>
+
+    </div>
+
+    <script>
+        function not_avlbl_popup() {
+            document.getElementById("popup-not-avlbl").style.scale = "1";
+            document.getElementById("status").innerText = "The web page you are trying to access is under maintainance. Kindly try again later or contact Karan Kushwaha."
+        }
+        function closepop() {
+            document.getElementById("popup-not-avlbl").style.scale = "0";
+            document.getElementById("status").innerText = ""
+        }
+    </script>
+
+    <script>
+        // ============= PopUp Privacy=============
+                // Get elements
+                const openPopupPrivacy = document.getElementById("privacybtn");
+                const popupPrivacy = document.getElementById("popupprivacy");
+                const closePopupprivacy = document.getElementById("closePopupprivacy");
+
+                // Open the popup when button is clicked
+                openPopupPrivacy.addEventListener("click", () => {
+                    popupPrivacy.style.display = "flex";
+                });
+
+                // Close the popup when 'X' is clicked
+                closePopupprivacy.addEventListener("click", () => {
+                    popupPrivacy.style.display = "none";
+                });
+
+                // Close the popup when clicking outside of it
+                window.addEventListener("click", (event) => {
+                    if (event.target === popupPrivacy) {
+                        popupPrivacy.style.display = "none";
+                    }
+                });
+
+                // ============= PopUp T&C=============
+                // Get elements
+                const openPopuptnc = document.getElementById("tncbtn");
+                const popuptnc = document.getElementById("popuptnc");
+                const closePopuptnc = document.getElementById("closePopuptnc");
+
+                // Open the popup when button is clicked
+                openPopuptnc.addEventListener("click", () => {
+                    popuptnc.style.display = "flex";
+                });
+
+                // Close the popup when 'X' is clicked
+                closePopuptnc.addEventListener("click", () => {
+                    popuptnc.style.display = "none";
+                });
+
+                // Close the popup when clicking outside of it
+                window.addEventListener("click", (event) => {
+                    if (event.target === popuptnc) {
+                        popuptnc.style.display = "none";
+                    }
+                });
+
+                // ============= PopUp Refund=============
+                // Get elements
+                const openPopuprefund = document.getElementById("refundbtn");
+                const popuprefund = document.getElementById("popuprefund");
+                const closePopuprefund = document.getElementById("closePopuprefund");
+
+                // Open the popup when button is clicked
+                openPopuprefund.addEventListener("click", () => {
+                    popuprefund.style.display = "flex";
+                });
+
+                // Close the popup when 'X' is clicked
+                closePopuprefund.addEventListener("click", () => {
+                    popuprefund.style.display = "none";
+                });
+
+                // Close the popup when clicking outside of it
+                window.addEventListener("click", (event) => {
+                    if (event.target === popuprefund) {
+                        popuprefund.style.display = "none";
+                    }
+                });
+    </script>
+</body>
+
+</html>

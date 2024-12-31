@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    /* off */
+    /* border: solid 1px; */
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+:-webkit-any(a) {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+:-webkit-any(li) {
+    list-style: none;
+}
+
+:-webkit-any(button) {
+    border: none;
+    outline: none;
+}
+
+:-webkit-any(img) {
+    user-select: none;
+    pointer-events: none;
+    -webkit-user-drag: none;
+}
+
+.acme-font {
+    font-family: "Acme", serif;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --primary: #002060;
+    --secondary: #00abf0;
+    --dark-blue: #000c47;
+    --cyan: #183153;
+    --black: #00051c;
+    --light-black-bg: #000918;
+    --text-black-light: #2b2b2b;
+    --white: #ffffff;
+    --text-gray: rgb(110, 109, 122);
+
+    --gray: #e7eaf0;
+    --darkgray: #a4a4a4;
+    --lightbg: rgb(226, 242, 255);
+    --green: #04aa6d;
+    --skyblue: #00b0f0;
+    --red: #ef134d;
+    --yellow: #ead409;
+
+
+    /* Palette 2: Modern Blues */
+    --primary-text-color: #007bff;
+    --secondary-text-color: #03A9F4;
+    --aside-text-color: #04ACEE;
+    --primary-bg-color: #01579B;
+    --secondary-bg-color: #0288D1;
+}
+
+body {
+    width: 100vw;
+    font-weight: 400;
+    color: var(--black);
+    overflow: hidden;
+    background-color: var(--black);
+}
+
+.container {
+    width: 100vw;
+    max-width: 1500px;
+    height: 100vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+#popup-not-avlbl{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: scale 0.2s;
+    scale: 0;
+}
+
+.popupbox{
+    width: 330px;
+    height: fit-content;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 5px 10px -5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.popupbox h3{
+    color: var(--primary);
+    font-size: 1.2rem;
+    text-align: center;
+}
+.popupbox p{
+    color: var(--cyan);
+    font-size: 1rem;
+    text-align: left;
+    padding: 10px 0px;
+}
+.popupbox button{
+    color: var(--white);
+    background-color: var(--secondary);
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 5px 15px;
+    cursor: pointer;
+    width: fit-content;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+section {
+    width: 100%;
+    margin: 0 auto;
+}
+.section {
+    width: 100%;
+    height: calc(100vh - 40px);
+    min-height: fit-content;
+    max-height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    overflow: scroll;
+    padding: 2rem 5px;
+    padding-bottom: 3rem;
+}
+
+
+/* Header */
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 15px;
+    backdrop-filter: blur(10px);
+    line-height: 1;
+}
+
+.logo a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ededed;
+    transition: all 0.3s;
+}
+
+.logo a:hover {
+    text-decoration: underline;
+    color: var(--secondary);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.nav li:nth-child(5) {
+    padding: 0rem 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--white);
+}
+
+.nav li a {
+    display: block;
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-wrap: nowrap;
+    padding: 0rem 0.5rem;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.nav li a.active {
+    color: var(--secondary);
+}
+
+.nav li a:hover {
+    color: var(--secondary);
+}
+
+.menu {
+    position: relative;
+}
+
+.sub-menu {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0px;
+    background-color: #00051ce8;
+    backdrop-filter: blur(15px);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 0px 5px 8px -8px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.sub-menu li a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 1rem !important;
+    width: 170px;
+}
+.sub-menu li:nth-child(5) {
+    padding-left: 0;
+}
+.sub-menu.visible {
+    height: 250px;
+}
+
+/* ----------------------------------------- */
+.footer_box {
+    width: 100%;
+    background-color: var(--black);
+    padding: 2rem 0.5rem;
+    text-align: center;
+}
+
+.footer_box li {
+    color: white;
+    list-style-type: none;
+    font-size: 1rem;
+    line-height: 30px;
+    font-weight: 300;
+}
+
+.footer_links ul, .social-links ul {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.social-links ul{
+    gap: 5px;
+}
+.social-links a {
+    color: white;
+}
+.footerbtn {
+    font-size: 1rem;
+    font-weight: 300;
+    background-color: transparent !important;
+    color: var(--white);
+    padding: 0.25rem;
+    border: none;
+    cursor: pointer;
+    margin: 0 0.45rem;
+    position: relative;
+}
+
+.footerbtn::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    border-bottom: 2px solid var(--white);
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+.footerbtn:hover::after {
+    width: 100%;
+}
+
+/* ---------- Footer related CSS Here Ends----------- */
+
+/* ---------- Footer Popup related CSS starts----------- */
+
+/* ================ Privacy=============== */
+
+/* Popup background (hidden by default) */
+.popupboxf {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 20000000;
+    backdrop-filter: blur(20px);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Popup content box */
+.popup {
+    color: var(--cyan);
+    background-color: white;
+    padding: 1.5rem;
+    width: 80vw;
+    border-radius: 10px;
+    position: relative;
+}
+
+.popup h4 {
+    font-size: 1.2rem;
+}
+
+.popup p {
+    font-size: 1rem;
+    font-weight: 400;
+    text-shadow: none;
+    max-height: 500px;
+    overflow: scroll;
+}
+
+/* Close button style */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1rem;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* ---------- Footer Popup related CSS Here Ends----------- */
