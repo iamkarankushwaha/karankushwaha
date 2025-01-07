@@ -1,29 +1,6 @@
 #books-notes {
-    background-color: white;
+    background-color: var(--white);
 }
-
-.section-heading {
-    width: 100%;
-    padding: 30px 20px;
-    padding-bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-#books-notes .content-heading::before{
-    display: none;
-}
-.section-heading h2{
-    display: block;
-    white-space: nowrap;
-}
-.section-heading hr{
-    border: solid 1px var(--secondary);
-    width: 100%;
-}
-
 
 .books-section {
     height: fit-content;
@@ -31,18 +8,24 @@
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     padding: 5px 20px;
     padding-bottom: 2rem;
     overflow: unset;
 }
 
+.books-section .content-heading-box h3{
+    color: var(--primary-bg-color);
+}
+.books-section .content-heading-box h3 span{
+    background-color: var(--primary-bg-color);
+}
 .book-card {
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
     width: 270px;
-    box-shadow: 0px 5px 15px -4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0);
     cursor: pointer;
     transition: border 0.3s;
     padding: 8px;
@@ -62,14 +45,15 @@
 .book-content h3 {
     color: var(--black);
     line-height: 1;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
     margin-top: 10px;
 }
 
 .book-content p {
-    font-size: 0.9rem;
-    color: #333;
+    font-size: 1rem;
+    color: var(--cyan);
+    font-weight: 500;
     margin: 10px 0;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -83,8 +67,8 @@
     display: block;
     width: 100%;
     text-align: center;
-    padding: 5px;
-    background-color: var(--secondary);
+    padding: 8px 5px;
+    background-color: var(--secondary-bg-color);
     border-radius: 5px;
     color: var(--white);
     font-weight: 500;
@@ -93,6 +77,6 @@
 }
 
 .book-actions a:hover{
-    background-color: var(--secondary-bg-color);
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: var(--primary-bg-color);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.8);
 }

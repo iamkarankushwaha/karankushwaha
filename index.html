@@ -99,8 +99,39 @@
             <div class="hero-section section">
                 <div class="hero-content">
                     <div class="name">
-                        <h1>Hi, I'm Karan Kushwaha</h1>
+                        <h1 id="typing"></h1>
                         <h5>CA Student</h5>
+                        <script>
+                            const texts = ["Hi, I'm Karan Kushwaha"];
+                            let index = 0;
+                            let charIndex = 0;
+                            const typingElement = document.getElementById("typing");
+                          
+                            function type() {
+                              if (charIndex < texts[index].length) {
+                                typingElement.textContent += texts[index].charAt(charIndex);
+                                charIndex++;
+                                setTimeout(type, 100); // Adjust typing speed (in milliseconds)
+                              } else {
+                                setTimeout(erase, 2000); // Pause before erasing
+                              }
+                            }
+                          
+                            function erase() {
+                              if (charIndex > 0) {
+                                typingElement.textContent = texts[index].substring(0, charIndex - 1);
+                                charIndex--;
+                                setTimeout(erase, 50); // Adjust erasing speed
+                              } else {
+                                index = (index + 1) % texts.length; // Loop through texts
+                                setTimeout(type, 500); // Pause before typing the next text
+                              }
+                            }
+                          
+                            document.addEventListener("DOMContentLoaded", () => {
+                              type();
+                            });
+                          </script>                          
                     </div>
                     <div class="headline">
                         <p>
@@ -345,25 +376,43 @@
             </script>
         </section>
 
-        <section id="skills-projects">
-            <div class="skills-projects-section section"></div>
+        <!-- <section id="skills-projects">
+            <div class="skills-projects-section section">
+                <div class="content-heading-box">
+                    <hr>
+                    <h3 class="content-heading"><span>My Skiils</span> & Projects</h3>
+                    <hr>
+                </div>
+            </div>
         </section>
 
         <section id="achievements">
-            <div class="achievements-section section"></div>
+            <div class="achievements-section section">
+                <div class="content-heading-box">
+                    <hr>
+                    <h3 class="content-heading">My <span>Achievements</span></h3>
+                    <hr>
+                </div>
+            </div>
         </section>
 
         <section id="social-media">
-            <div class="social-media-section section"></div>
-        </section>
+            <div class="social-media-section section">
+                <div class="content-heading-box">
+                    <hr>
+                    <h3 class="content-heading"><span>Social Media</span> Presence</h3>
+                    <hr>
+                </div>
+            </div>
+        </section> -->
 
         <section id="books-notes">
-            <div class="section-heading">
-                <hr>
-                <h2 class="content-heading">Knowledge Vault: <br> Books and Notes</h2>
-                <hr>
-            </div>
             <div class="books-section section">
+                <div class="content-heading-box">
+                    <hr>
+                    <h3 class="content-heading">My <span>Books & Notes</span></h3>
+                    <hr>
+                </div>
                 <div class="book-card">
                     <img src="Book-Thumbnails/FM Formulae Handbook.png" alt="Book 1" class="book-image">
                     <div class="book-content">
@@ -404,109 +453,114 @@
 
         <section id="contact">
             <div class="contact-section section" id="contact-section">
-                <div class="contact-info">
-                    <h3 class="content-heading">Let's Connect</h3>
-                    <img src="Img-Assets/contact-me-vector.png" alt="" class="contact-vector">
-                    <button class="swipe" id="swipeBtn">Message Me <i class="fa-solid fa-right-long"></i></button>
-                    <h3>Address</h3>
-                    <p><i class="fa-solid fa-location-dot"></i> South Extention Part I, New Delhi, Delhi, India -
-                        110003.</p>
-
-                    <h3>Contacts</h3>
-                    <p><i class="fa-solid fa-phone"></i> +91 93155 40041</p>
-
-                    <h3>Email</h3>
-                    <p><i class="fa-solid fa-envelope"></i> kushwahakaran2014@gmail.com</p>
+                <div class="content-heading-box">
+                    <hr>
+                    <h3 class="content-heading">Let's <span>Connect</span></h3>
+                    <hr>
                 </div>
-
-                <div class="contact-form">
-                    <h3 class="content-heading">Message Me</h3>
-                    <p>If you have any questions or query, please fill out the form below, and I'll get back to you
-                        shortly.</p>
-
-                    <form action="" method="post" id="contactForm" name="Contact-Form">
-                        <label for="name">Name *</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your name" required
-                            autocomplete="on" />
-
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"
-                            autocomplete="on" />
-
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required
-                            autocomplete="on" />
-
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" placeholder="Enter your subject"
-                            autocomplete="on" />
-
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" placeholder="Write your message here..."
-                            required></textarea>
-                        <p class="note">*Marked fields are mandatory.</p>
-                        <button type="submit">Send Message <i class="fa-solid fa-paper-plane"></i></button>
-                    </form>
-
-                    <div id="spinner-contact-form">
-                        <div class="spinner-contact-form"><i class="fa-solid fa-spinner"></i></div>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <img src="Img-Assets/contact-me-vector.png" alt="" class="contact-vector">
+                        <button class="swipe" id="swipeBtn">Message Me <i class="fa-solid fa-right-long"></i></button>
+                        <h3>Address</h3>
+                        <p><i class="fa-solid fa-location-dot"></i> South Extention Part I, New Delhi, Delhi, India -
+                            110003.</p>
+    
+                        <h3>Contacts</h3>
+                        <p><i class="fa-solid fa-phone"></i> +91 93155 40041</p>
+    
+                        <h3>Email</h3>
+                        <p><i class="fa-solid fa-envelope"></i> kushwahakaran2014@gmail.com</p>
                     </div>
-
-                    <!-- Popup -->
-                    <div id="popup-contact-form">
-                        <div class="popup-content-contact-form">
-                            <span><i class="fa-solid fa-check"></i></span>
-                            <p>Thank you! Your message has been received.</p>
-                            <button id="ok-button-contact-form">OK</button>
+    
+                    <div class="contact-form">
+                        <p>Please <span>message me</span> if you have any questions or query, and I'll get back to you
+                            shortly.</p>
+    
+                        <form action="" method="post" id="contactForm" name="Contact-Form">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required
+                                autocomplete="on" />
+    
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"
+                                autocomplete="on" />
+    
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required
+                                autocomplete="on" />
+    
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Enter your subject"
+                                autocomplete="on" />
+    
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" placeholder="Write your message here..."
+                                required></textarea>
+                            <p class="note">*Marked fields are mandatory.</p>
+                            <button type="submit">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+    
+                        <div id="spinner-contact-form">
+                            <div class="spinner-contact-form"><i class="fa-solid fa-spinner"></i></div>
                         </div>
-                    </div>
-                    <script>
-                        const scriptURL = 'https://script.google.com/macros/s/AKfycbxeTxnZhqDkV8fR5rswYCmwhDSVAedkdAc9Ex9pa1YJwd2pCYuWjF6j0UgTeqXb9sQ_Lw/exec';
-                        const form = document.forms['Contact-Form'];
-                        const spinner = document.getElementById('spinner-contact-form'); // Spinner element
-                        const popup = document.getElementById('popup-contact-form'); // Popup element
-                        const okButton = document.getElementById('ok-button-contact-form'); // OK button
-
-                        form.addEventListener('submit', (e) => {
-                            e.preventDefault();
-                            // Show the spinner while the form is being submitted
-                            spinner.style.display = 'flex';
-
-                            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                                .then((response) => {
-                                    // Hide the spinner and show the popup
-                                    spinner.style.display = 'none';
-                                    popup.style.display = 'flex';
-                                })
-                                .catch((error) => {
-                                    console.error('Error!', error.message);
-                                    alert('An error occurred while submitting the form. Please try again.');
-                                    spinner.style.display = 'none'; // Hide the spinner in case of error
-                                });
-                        });
-
-                        // Redirect after popup confirmation
-                        okButton.addEventListener('click', () => {
-                            // Clear the form fields
-                            form.reset();
-
-                            // Hide the popup
-                            popup.style.display = 'none';
-
-                            // Redirect to the specified URL
-                            window.location.href = 'https://karankushwaha.netlify.app/index.html#contact'; // Replace with your desired redirect URL
-                        });
-                    </script>
-                    <script>
-                        document.getElementById('swipeBtn').addEventListener('click', function () {
-                            const div = document.getElementById('contact-section');
-                            div.scrollBy({
-                                top: 0, // Change this value to adjust the scroll amount in pixels
-                                left: 3600,
-                                behavior: 'smooth' // Optional for smooth scrolling
+    
+                        <!-- Popup -->
+                        <div id="popup-contact-form">
+                            <div class="popup-content-contact-form">
+                                <span><i class="fa-solid fa-check"></i></span>
+                                <p>Thank you! Your message has been received.</p>
+                                <button id="ok-button-contact-form">OK</button>
+                            </div>
+                        </div>
+                        <script>
+                            const scriptURL = 'https://script.google.com/macros/s/AKfycbxeTxnZhqDkV8fR5rswYCmwhDSVAedkdAc9Ex9pa1YJwd2pCYuWjF6j0UgTeqXb9sQ_Lw/exec';
+                            const form = document.forms['Contact-Form'];
+                            const spinner = document.getElementById('spinner-contact-form'); // Spinner element
+                            const popup = document.getElementById('popup-contact-form'); // Popup element
+                            const okButton = document.getElementById('ok-button-contact-form'); // OK button
+    
+                            form.addEventListener('submit', (e) => {
+                                e.preventDefault();
+                                // Show the spinner while the form is being submitted
+                                spinner.style.display = 'flex';
+    
+                                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                                    .then((response) => {
+                                        // Hide the spinner and show the popup
+                                        spinner.style.display = 'none';
+                                        popup.style.display = 'flex';
+                                    })
+                                    .catch((error) => {
+                                        console.error('Error!', error.message);
+                                        alert('An error occurred while submitting the form. Please try again.');
+                                        spinner.style.display = 'none'; // Hide the spinner in case of error
+                                    });
                             });
-                        });
-                    </script>
+    
+                            // Redirect after popup confirmation
+                            okButton.addEventListener('click', () => {
+                                // Clear the form fields
+                                form.reset();
+    
+                                // Hide the popup
+                                popup.style.display = 'none';
+    
+                                // Redirect to the specified URL
+                                window.location.href = 'https://karankushwaha.netlify.app/index.html#contact'; // Replace with your desired redirect URL
+                            });
+                        </script>
+                        <script>
+                            document.getElementById('swipeBtn').addEventListener('click', function () {
+                                const div = document.getElementById('contact-section');
+                                div.scrollBy({
+                                    top: 0, // Change this value to adjust the scroll amount in pixels
+                                    left: 3600,
+                                    behavior: 'smooth' // Optional for smooth scrolling
+                                });
+                            });
+                        </script>
+                    </div>
                 </div>
             </div>
         </section>
@@ -533,7 +587,7 @@
                             </li>
                             <li>
                                 <a href="https://wa.me/9315540041" target="_blank">
-                                    <i class="fa-brands fa-square-whatsapp"></i>
+                                    <i class="fa-brands fa-whatsapp"></i>
                                 </a>
                             </li>
                         </ul>

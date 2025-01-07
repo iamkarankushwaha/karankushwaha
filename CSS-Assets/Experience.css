@@ -10,10 +10,8 @@
 }
 
 .experience-section .content-heading-box h3 span {
-    color: var(--white);
-    background-color: transparent;
-    font-weight: 600;
-    padding: 0;
+    color: var(--black);
+    background-color: var(--white);
 }
 
 .exp-row1 {

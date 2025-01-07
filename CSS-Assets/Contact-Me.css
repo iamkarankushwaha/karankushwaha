@@ -1,7 +1,23 @@
 /* Contact CSS */
 .contact-section{
     background-color: var(--lightbg);
+    justify-content: center;
     align-items: flex-start;
+    overflow: hidden;
+}
+.contact-section .content-heading-box h3{
+    color: var(--primary);
+}
+
+.contact-section .content-heading-box h3 span{
+    background-color: var(--primary);
+}
+.contact-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
     flex-wrap: nowrap;
     overflow: scroll;
 }
@@ -31,17 +47,8 @@
     font-size: 1.5rem;
     color: var(--cyan);
 }
-.content-heading{
-    text-align: center;
-    padding-top: 20px;
-}
-.contact-info .content-heading{
-    color: var(--primary);
-}
-.contact-info .content-heading::before{
-    width: 15%;
-    left: unset;
-}
+
+
 .contact-info p{
     display: block;
     width: 100%;
@@ -74,6 +81,13 @@
     text-align: justify;
     padding-bottom: 20px;
 }
+
+.contact-form p span{
+    color: var(--skyblue);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
 .contact-form form{
     width: 100%;
     display: flex;
