@@ -83,7 +83,7 @@ body {
     font-weight: 400;
     color: var(--black);
     overflow: hidden;
-    background-color: var(--black);
+    font-size: 1rem;
 }
 
 .container {
@@ -94,6 +94,8 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+
+
 #popup-not-avlbl{
     position: absolute;
     top: 0;
@@ -145,23 +147,58 @@ body {
     margin-top: 20px;
 }
 
+
+
 section {
     width: 100%;
     margin: 0 auto;
 }
+
 .section {
     width: 100%;
-    height: calc(100vh - 40px);
-    min-height: fit-content;
-    max-height: 900px;
+    height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
     overflow: scroll;
-    padding: 2rem 5px;
-    padding-bottom: 3rem;
+    padding: 50px 5px;
+    padding-top: 30px !important;
+}
+
+.content-heading-box{
+    width: 100%;
+    display: block;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+    user-select: none;
+    margin-bottom: 20px;
+}
+.content-heading-box hr{
+    width: 100%;
+    height: 1px;
+    background-color: var(--darkgray);
+    border: none;
+    border-radius: 10px;
+}
+.content-heading-box h3{
+    display: block;
+    text-wrap: nowrap;
+    padding: 0;
+    color: var(--cyan);
+    font-size: 1.5rem;
+}
+.content-heading-box h3 span{
+    background-color: var(--cyan);
+    padding: 5px 8px;
+    border-radius: 5px;
+    color: var(--white);
+    font-weight: 600;
 }
 
 
@@ -176,8 +213,8 @@ section {
     top: 0;
     z-index: 1000;
     padding: 10px 15px;
-    backdrop-filter: blur(10px);
     line-height: 1;
+    box-shadow: 0px 4px 8px -1px;
 }
 
 .logo a {
@@ -201,7 +238,7 @@ section {
 
 .nav li:nth-child(5) {
     padding: 0rem 1rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     cursor: pointer;
     color: var(--white);
 }
@@ -209,8 +246,8 @@ section {
 .nav li a {
     display: block;
     color: var(--white);
-    font-size: 1.1rem;
-    font-weight: 500;
+    font-size: 1.05rem;
+    font-weight: 400;
     text-wrap: nowrap;
     padding: 0rem 0.5rem;
     position: relative;
@@ -219,6 +256,7 @@ section {
 
 .nav li a.active {
     color: var(--secondary);
+    font-weight: 500;
 }
 
 .nav li a:hover {
@@ -230,36 +268,32 @@ section {
 }
 
 .sub-menu {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 10px;
     position: absolute;
     top: calc(100% + 10px);
     right: 0px;
-    background-color: #00051ce8;
-    backdrop-filter: blur(15px);
+    background-color: var(--black);
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
-    box-shadow: 0px 5px 8px -8px;
+    padding: 0px 10px;
     height: 0;
     overflow: hidden;
     transition: height 0.3s ease;
+    box-shadow: 0px 4px 8px black;
 }
-
-.sub-menu li a {
+.sub-menu li{
+    border-bottom: 1px solid var(--darkgray);
+    width: 200px;
+    height: 50px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 5px 1rem !important;
-    width: 170px;
+    padding: 0px 1rem;
 }
-.sub-menu li:nth-child(5) {
-    padding-left: 0;
+.sub-menu li:last-child{
+    border: none;
 }
 .sub-menu.visible {
-    height: 250px;
+    height: calc(50px * 5);
 }
 
 /* ----------------------------------------- */

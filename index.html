@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta author="Karan Kushwaha">
-    <meta type="keywords" content="Karan Kushwaha, Karan Kushwaha CA, Karan Kushwaha CA Inter, Karan Kushwaha B.Com., Karan Kushwaha Delhi University, Karan Kushwaha Chartered Accountant, Karan Kushwaha CA Foundation, Karan Kushwaha CA Intermediate, Karan Kushwaha Finance, Karan Kushwaha Taxation, Karan Kushwaha Content Creator, Karan Kushwaha LinkedIn, Karan Kushwaha YouTube, Karan Kushwaha Twitter, Karan Kushwaha X.com, Karan Kushwaha Feedback, Karan Kushwaha Books, Karan Kushwaha Notes, Karan Kushwaha Experience, Karan Kushwaha Projects, Karan Kushwaha Achievements, Karan Kushwaha Social Media, Karan Kushwaha Contact, Karan Kushwaha Education For All, Karan Kushwaha Privacy Policy, Karan Kushwaha Terms and Conditions, Karan Kushwaha Refund Policy">
+    <meta type="keywords"
+        content="Karan Kushwaha, Karan Kushwaha CA, Karan Kushwaha CA Inter, Karan Kushwaha B.Com., Karan Kushwaha Delhi University, Karan Kushwaha Chartered Accountant, Karan Kushwaha CA Foundation, Karan Kushwaha CA Intermediate, Karan Kushwaha Finance, Karan Kushwaha Taxation, Karan Kushwaha Content Creator, Karan Kushwaha LinkedIn, Karan Kushwaha YouTube, Karan Kushwaha Twitter, Karan Kushwaha X.com, Karan Kushwaha Feedback, Karan Kushwaha Books, Karan Kushwaha Notes, Karan Kushwaha Experience, Karan Kushwaha Projects, Karan Kushwaha Achievements, Karan Kushwaha Social Media, Karan Kushwaha Contact, Karan Kushwaha Education For All, Karan Kushwaha Privacy Policy, Karan Kushwaha Terms and Conditions, Karan Kushwaha Refund Policy">
     <meta type="description"
         content="Karan Kushwaha's Portfolio Website where you can find all the information about him.">
     <title>Karan Kushwaha</title>
@@ -16,9 +17,10 @@
     <link rel="stylesheet" href="CSS-Assets/Default-Style.css">
     <link rel="stylesheet" href="Home-Hero.css">
     <link rel="stylesheet" href="CSS-Assets/About-Me.css">
-    <link rel="stylesheet" href="CSS-Assets/Books&Notes.css">
+    <link rel="stylesheet" href="CSS-Assets/Qualification.css">
     <link rel="stylesheet" href="CSS-Assets/Experience.css">
     <link rel="stylesheet" href="CSS-Assets/Contact-Me.css">
+    <link rel="stylesheet" href="CSS-Assets/Books&Notes.css">
     <link rel="stylesheet" href="CSS-Assets/Responsive-Styles.css">
 </head>
 
@@ -32,6 +34,7 @@
                 <button onclick="closepop()">OK</button>
             </div>
         </div>
+
         <header class="header">
             <div class="logo">
                 <a href="https://karankushwaha.netlify.app">KaranKushwaha.</a>
@@ -39,21 +42,22 @@
             <nav>
                 <ul class="nav">
                     <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#qualification" onclick="not_avlbl_popup()">Qualification</a></li>
+                    <li><a href="#qualification">Qualification</a></li>
                     <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects" onclick="not_avlbl_popup()">Skills</a></li>
+                    <li><a href="#skills-projects">Skills & Projects</a></li>
                     <li class="menu" id="menu">
                         <i class="fa-solid fa-bars-staggered"></i>
                         <ul class="sub-menu" id="sub-menu">
-                            <li><a href="#projects" onclick="not_avlbl_popup()">Projects</a></li>
-                            <li><a href="#achievements" onclick="not_avlbl_popup()">Achievements</a></li>
-                            <li><a href="#social-media" onclick="not_avlbl_popup()">Social Media</a></li>
+                            <li><a href="#achievements">Achievements</a></li>
+                            <li><a href="#social-media">Social Media</a></li>
+                            <li><a href="#books-notes">Books & Notes</a></li>
                             <li><a href="Web-Pages/feedback-form.html" target="_blank">Feedback</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
+
             <script>
                 let menu = document.getElementById("menu");
                 let submenu = document.getElementById("sub-menu");
@@ -125,11 +129,15 @@
 
         <section id="about">
             <div class="about-section section">
+                <div class="content-heading-box">
+                    <hr>
+                    <h3 class="content-heading">Welcome to <span>My Profile!</span></h3>
+                    <hr>
+                </div>
                 <div class="about-img">
-                    <img src="Img-Assets/about karan kushwaha.png" alt="Karan Kushwaha" loading="lazy">
+                    <img src="Img-Assets/karan kushwaha- about.jpg" alt="Karan Kushwaha" loading="lazy">
                 </div>
                 <div class="about-text">
-                    <h3 class="content-heading">Welcome to My Profile!</h3>
                     <p>
                         I'm a student pursuing CA Intermediate and B.Com. at the University of Delhi. With a keen
                         interest in Finance and Taxation, I am dedicated to achieving my goal of becoming a successful
@@ -160,46 +168,52 @@
             </div>
         </section>
 
-        <section id="books-notes">
-            <div class="section-heading">
-                <hr>
-                <h2 class="content-heading">Knowledge Vault: <br> Books and Notes</h2>
-                <hr>
-            </div>
-            <div class="books-section section">
-                <div class="book-card">
-                    <img src="Book-Thumbnails/FM Formulae Handbook.png" alt="Book 1" class="book-image">
-                    <div class="book-content">
-                        <h3 class="book-title">FM Fromulae Handbook</h3>
-                        <p class="book-description">A compilation of all Financial Management formulas of CA Inter |
-                            Handwritten by Karan Kushwaha.</p>
-                        <div class="book-actions">
-                            <a onclick="booknotavlb()" class="btn" target="_blank">Download <i
-                                    class="fa-solid fa-download"></i></a>
-                            <script>
-                                function booknotavlb() {
-                                    document.getElementById("popup-not-avlbl").style.scale = "1";
-                                    document.getElementById("status").innerText = "The Book you are trying to access is under development. Kindly check after some time or contact Karan Kushwaha."
-
-                                }
-                                function closepop() {
-                                    document.getElementById("popup-not-avlbl").style.scale = "0";
-                                    document.getElementById("status").innerText = ""
-                                }
-                            </script>
-                        </div>
+        <section id="qualification">
+            <div class="qualification-section section">
+                <div class="content-heading-box">
+                    <hr>
+                    <h3 class="content-heading"><span>Educational</span> Journey!</h3>
+                    <hr>
+                </div>
+                <div class="prfnl-edu-wrapper edu-wrapper">
+                    <h2>Professional Qualifications</h2>
+                    <div class="timeline-item">
+                        <h3>CA Intermediate</h3>
+                        <p>Institute of Chartered Accountants of India (ICAI)</p>
+                        <p><b>Marks : </b>510</p>
+                        <p><b>Year : </b>May 2025</p>
+                        <p><b>Remarks : </b>Passed with All India Rank.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>CA Foundation</h3>
+                        <p>Institute of Chartered Accountants of India (ICAI)</p>
+                        <p><b>Marks : </b>246</p>
+                        <p><b>Year : </b>January 2024</p>
+                        <p><b>Remarks : </b>Exemption in 3 subjects.</p>
                     </div>
                 </div>
-                <div class="book-card">
-                    <img src="Book-Thumbnails/Meaning of Salary.png" alt="Book 1" class="book-image">
-                    <div class="book-content">
-                        <h3 class="book-title">Meaning of Salary</h3>
-                        <p class="book-description">Meaning of salary under different provisions of Income Tax Act 1961
-                            | Relavent for CA Inter | Compiled by Karan Kushwaha</p>
-                        <div class="book-actions">
-                            <a href="https://drive.google.com/file/d/19-sT62RfWfkqBjMaNXBUeix1ptZtESHO/view?usp=sharing"
-                                class="btn" target="_blank">Download <i class="fa-solid fa-download"></i></a>
-                        </div>
+                <div class="acdmc-edu-wrapper edu-wrapper">
+                    <h2>Academic Qualifications</h2>
+                    <div class="timeline-item">
+                        <h3>Batchelor of Commerce (BCom.)</h3>
+                        <p>University of Delhi (DU)</p>
+                        <p><b>CGPA : </b>7.8</p>
+                        <p><b>Year : </b>June 2025</p>
+                        <p><b>Remarks : </b>Passed with Distinction</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Senior School (12th)</h3>
+                        <p>Sarvodaya Vidyalara Rani Durgawati (CBSE)</p>
+                        <p><b>Marks : </b>410</p>
+                        <p><b>Year : </b>March 2022</p>
+                        <p><b>Remarks : </b>1st Position in Commerce Section.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Secondary School (10th)</h3>
+                        <p>Sarvodaya Vidyalara Rani Durgawati (CBSE)</p>
+                        <p><b>Marks : </b>412</p>
+                        <p><b>Year : </b>March 2020</p>
+                        <p><b>Remarks : </b>3rd Position in School.</p>
                     </div>
                 </div>
             </div>
@@ -207,8 +221,10 @@
 
         <section id="experience">
             <div class="experience-section section">
+                <div class="content-heading-box">
+                    <h3 class="content-heading">My <span>Experience</span></h3>
+                </div>
                 <div class="exp-row1">
-                    <h3 class="content-heading"><span>My</span> Experiences</h3>
                     <div class="exp-control-box">
                         <button class="control-left" id="control-left"><i class="fa-solid fa-angles-left"></i></button>
                         <button class="control-right" id="control-right"><i
@@ -235,7 +251,9 @@
                                     <div class="exp-skills">
                                         <p>#teaching #teambuilding #mentorship</p>
                                     </div>
-                                    <div class="exp-button"><a href="https://iamkarankushwaha.github.io/Education_For_All/" target="_blank">Visit <i
+                                    <div class="exp-button"><a
+                                            href="https://iamkarankushwaha.github.io/Education_For_All/"
+                                            target="_blank">Visit <i
                                                 class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
                                 </div>
                                 <!-- ---------Exp Seprator--------- -->
@@ -245,13 +263,19 @@
                                         <h3>The Alphabet Education</h3>
                                     </div>
                                     <div class="exp-about">
-                                        <p>Teaching at an emerging institute, I had the privilege of guiding students from classes 6th to 11th. Mentoring 8th and 10th-grade mathematics was rewarding, while teaching 9th-grade science and math became memorable with fun examples to simplify concepts. I especially enjoyed teaching 11th-grade Accounts, where I explained Adjustments in Final Accounts using practical examples to make the topic engaging and clear.</p> <br>
+                                        <p>Teaching at an emerging institute, I had the privilege of guiding students
+                                            from classes 6th to 11th. Mentoring 8th and 10th-grade mathematics was
+                                            rewarding, while teaching 9th-grade science and math became memorable with
+                                            fun examples to simplify concepts. I especially enjoyed teaching 11th-grade
+                                            Accounts, where I explained Adjustments in Final Accounts using practical
+                                            examples to make the topic engaging and clear.</p> <br>
                                         <p>It was five days experience from 27 to 31 December 2024.</p>
                                     </div>
                                     <div class="exp-skills">
                                         <p>#teaching #mentorship</p>
                                     </div>
-                                    <div class="exp-button"><a href="https://maps.app.goo.gl/dMrD8FXo6rrepr8A7" target="_blank">Visit <i
+                                    <div class="exp-button"><a href="https://maps.app.goo.gl/dMrD8FXo6rrepr8A7"
+                                            target="_blank">Visit <i
                                                 class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
                                 </div>
                             </div>
@@ -265,7 +289,8 @@
                                 </div>
                                 <!-- ---------Exp Img Seprator--------- -->
                                 <div class="exp-image-slides">
-                                    <img src="https://lh3.googleusercontent.com/p/AF1QipPLPkPUsaLMyK-9r0gkB3mVVcJ4ckMtBNxJk0nC=s1360-w1360-h1020" alt="The Alphabet Education">
+                                    <img src="https://lh3.googleusercontent.com/p/AF1QipPLPkPUsaLMyK-9r0gkB3mVVcJ4ckMtBNxJk0nC=s1360-w1360-h1020"
+                                        alt="The Alphabet Education">
                                 </div>
                             </div>
                         </div>
@@ -318,6 +343,63 @@
                 });
 
             </script>
+        </section>
+
+        <section id="skills-projects">
+            <div class="skills-projects-section section"></div>
+        </section>
+
+        <section id="achievements">
+            <div class="achievements-section section"></div>
+        </section>
+
+        <section id="social-media">
+            <div class="social-media-section section"></div>
+        </section>
+
+        <section id="books-notes">
+            <div class="section-heading">
+                <hr>
+                <h2 class="content-heading">Knowledge Vault: <br> Books and Notes</h2>
+                <hr>
+            </div>
+            <div class="books-section section">
+                <div class="book-card">
+                    <img src="Book-Thumbnails/FM Formulae Handbook.png" alt="Book 1" class="book-image">
+                    <div class="book-content">
+                        <h3 class="book-title">FM Fromulae Handbook</h3>
+                        <p class="book-description">A compilation of all Financial Management formulas of CA Inter |
+                            Handwritten by Karan Kushwaha.</p>
+                        <div class="book-actions">
+                            <a onclick="booknotavlb()" class="btn" target="_blank">Download <i
+                                    class="fa-solid fa-download"></i></a>
+                            <script>
+                                function booknotavlb() {
+                                    document.getElementById("popup-not-avlbl").style.scale = "1";
+                                    document.getElementById("status").innerText = "The Book you are trying to access is under development. Kindly check after some time or contact Karan Kushwaha."
+
+                                }
+                                function closepop() {
+                                    document.getElementById("popup-not-avlbl").style.scale = "0";
+                                    document.getElementById("status").innerText = ""
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <img src="Book-Thumbnails/Meaning of Salary.png" alt="Book 1" class="book-image">
+                    <div class="book-content">
+                        <h3 class="book-title">Meaning of Salary</h3>
+                        <p class="book-description">Meaning of salary under different provisions of Income Tax Act 1961
+                            | Relavent for CA Inter | Compiled by Karan Kushwaha</p>
+                        <div class="book-actions">
+                            <a href="https://drive.google.com/file/d/19-sT62RfWfkqBjMaNXBUeix1ptZtESHO/view?usp=sharing"
+                                class="btn" target="_blank">Download <i class="fa-solid fa-download"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="contact">
@@ -473,20 +555,26 @@
                     <li class="developer">Developed by Karan Kushwaha</li>
                 </ul>
             </div>
-        
+
             <div class="popupboxf" id="popupprivacy">
                 <div id="popupprivacy" class="popup">
-                    <span id="closePopupprivacy" class="close-button"><i class="fa-solid fa-xmark" style="font-size: 35px;"></i></span>
+                    <span id="closePopupprivacy" class="close-button"><i class="fa-solid fa-xmark"
+                            style="font-size: 35px;"></i></span>
                     <h4>Privacy Policy</h4>
-                    <p>▰ The information provided by students or users through form submissions or while ordering books on our
-                        website is handled with utmost care and confidentiality. We are committed to safeguarding your personal
+                    <p>▰ The information provided by students or users through form submissions or while ordering books
+                        on our
+                        website is handled with utmost care and confidentiality. We are committed to safeguarding your
+                        personal
                         details and using them responsibly to cater to your academic needs.
                         <br>
-                        ▰ This data also enables us to improve and enhance our website's functionality, design, and offerings.
+                        ▰ This data also enables us to improve and enhance our website's functionality, design, and
+                        offerings.
                         <br>
-                        ▰ Additionally, it helps us in developing and launching new books, notes, and resources tailored to
+                        ▰ Additionally, it helps us in developing and launching new books, notes, and resources tailored
+                        to
                         better
-                        serve the needs of our students and users, ensuring a valuable and secure experience on our platform.
+                        serve the needs of our students and users, ensuring a valuable and secure experience on our
+                        platform.
                         <br>
                         ▰ By using this website, you agree to this privacy policy.
                     </p>
@@ -494,13 +582,15 @@
             </div>
             <div class="popupboxf" id="popuptnc">
                 <div id="popuptnc" class="popup">
-                    <span id="closePopuptnc" class="close-button"><i class="fa-solid fa-xmark" style="font-size: 35px;"></i></span>
+                    <span id="closePopuptnc" class="close-button"><i class="fa-solid fa-xmark"
+                            style="font-size: 35px;"></i></span>
                     <h4>Terms and Conditions</h4>
                     <p>▰ Books ordered through our platform are delivered by default to the email ID provided during the
                         purchase
                         process. Therefore, it is essential to ensure the accuracy of the email ID entered.
                         <br>
-                        ▰ Any misuse of books or study materials authored by Karan Kushwaha, including unauthorized distribution
+                        ▰ Any misuse of books or study materials authored by Karan Kushwaha, including unauthorized
+                        distribution
                         or
                         use beyond the scope of personal or academic purposes, will result in strict legal action.
                         <br>
@@ -513,24 +603,29 @@
             </div>
             <div class="popupboxf" id="popuprefund">
                 <div id="popuprefund" class="popup">
-                    <span id="closePopuprefund" class="close-button"><i class="fa-solid fa-xmark" style="font-size: 35px;"></i></span>
+                    <span id="closePopuprefund" class="close-button"><i class="fa-solid fa-xmark"
+                            style="font-size: 35px;"></i></span>
                     <h4>Refund Policy</h4>
-                    <p>▰ Once books or any study materials listed on this website are sold, they are non-refundable. Students
+                    <p>▰ Once books or any study materials listed on this website are sold, they are non-refundable.
+                        Students
                         are,
-                        therefore, strongly encouraged to make informed and careful decisions before completing their purchase.
+                        therefore, strongly encouraged to make informed and careful decisions before completing their
+                        purchase.
                         <br>
-                        ▰ Refunds will only be considered in cases where the delivered study material is incorrect and does not
-                        match the item originally ordered. Such cases will be subject to thorough verification by Karan Kushwaha
+                        ▰ Refunds will only be considered in cases where the delivered study material is incorrect and
+                        does not
+                        match the item originally ordered. Such cases will be subject to thorough verification by Karan
+                        Kushwaha
                         and
-                        his team. If verified, appropriate corrective actions, including refunds or replacements, will be
+                        his team. If verified, appropriate corrective actions, including refunds or replacements, will
+                        be
                         initiated.
                         <br>
                         ▰ By purchasing, you agree to adhere to this refund policy.
                     </p>
                 </div>
-            </div>      
+            </div>
         </footer>
-
     </div>
 
     <script>
@@ -546,73 +641,73 @@
 
     <script>
         // ============= PopUp Privacy=============
-                // Get elements
-                const openPopupPrivacy = document.getElementById("privacybtn");
-                const popupPrivacy = document.getElementById("popupprivacy");
-                const closePopupprivacy = document.getElementById("closePopupprivacy");
+        // Get elements
+        const openPopupPrivacy = document.getElementById("privacybtn");
+        const popupPrivacy = document.getElementById("popupprivacy");
+        const closePopupprivacy = document.getElementById("closePopupprivacy");
 
-                // Open the popup when button is clicked
-                openPopupPrivacy.addEventListener("click", () => {
-                    popupPrivacy.style.display = "flex";
-                });
+        // Open the popup when button is clicked
+        openPopupPrivacy.addEventListener("click", () => {
+            popupPrivacy.style.display = "flex";
+        });
 
-                // Close the popup when 'X' is clicked
-                closePopupprivacy.addEventListener("click", () => {
-                    popupPrivacy.style.display = "none";
-                });
+        // Close the popup when 'X' is clicked
+        closePopupprivacy.addEventListener("click", () => {
+            popupPrivacy.style.display = "none";
+        });
 
-                // Close the popup when clicking outside of it
-                window.addEventListener("click", (event) => {
-                    if (event.target === popupPrivacy) {
-                        popupPrivacy.style.display = "none";
-                    }
-                });
+        // Close the popup when clicking outside of it
+        window.addEventListener("click", (event) => {
+            if (event.target === popupPrivacy) {
+                popupPrivacy.style.display = "none";
+            }
+        });
 
-                // ============= PopUp T&C=============
-                // Get elements
-                const openPopuptnc = document.getElementById("tncbtn");
-                const popuptnc = document.getElementById("popuptnc");
-                const closePopuptnc = document.getElementById("closePopuptnc");
+        // ============= PopUp T&C=============
+        // Get elements
+        const openPopuptnc = document.getElementById("tncbtn");
+        const popuptnc = document.getElementById("popuptnc");
+        const closePopuptnc = document.getElementById("closePopuptnc");
 
-                // Open the popup when button is clicked
-                openPopuptnc.addEventListener("click", () => {
-                    popuptnc.style.display = "flex";
-                });
+        // Open the popup when button is clicked
+        openPopuptnc.addEventListener("click", () => {
+            popuptnc.style.display = "flex";
+        });
 
-                // Close the popup when 'X' is clicked
-                closePopuptnc.addEventListener("click", () => {
-                    popuptnc.style.display = "none";
-                });
+        // Close the popup when 'X' is clicked
+        closePopuptnc.addEventListener("click", () => {
+            popuptnc.style.display = "none";
+        });
 
-                // Close the popup when clicking outside of it
-                window.addEventListener("click", (event) => {
-                    if (event.target === popuptnc) {
-                        popuptnc.style.display = "none";
-                    }
-                });
+        // Close the popup when clicking outside of it
+        window.addEventListener("click", (event) => {
+            if (event.target === popuptnc) {
+                popuptnc.style.display = "none";
+            }
+        });
 
-                // ============= PopUp Refund=============
-                // Get elements
-                const openPopuprefund = document.getElementById("refundbtn");
-                const popuprefund = document.getElementById("popuprefund");
-                const closePopuprefund = document.getElementById("closePopuprefund");
+        // ============= PopUp Refund=============
+        // Get elements
+        const openPopuprefund = document.getElementById("refundbtn");
+        const popuprefund = document.getElementById("popuprefund");
+        const closePopuprefund = document.getElementById("closePopuprefund");
 
-                // Open the popup when button is clicked
-                openPopuprefund.addEventListener("click", () => {
-                    popuprefund.style.display = "flex";
-                });
+        // Open the popup when button is clicked
+        openPopuprefund.addEventListener("click", () => {
+            popuprefund.style.display = "flex";
+        });
 
-                // Close the popup when 'X' is clicked
-                closePopuprefund.addEventListener("click", () => {
-                    popuprefund.style.display = "none";
-                });
+        // Close the popup when 'X' is clicked
+        closePopuprefund.addEventListener("click", () => {
+            popuprefund.style.display = "none";
+        });
 
-                // Close the popup when clicking outside of it
-                window.addEventListener("click", (event) => {
-                    if (event.target === popuprefund) {
-                        popuprefund.style.display = "none";
-                    }
-                });
+        // Close the popup when clicking outside of it
+        window.addEventListener("click", (event) => {
+            if (event.target === popuprefund) {
+                popuprefund.style.display = "none";
+            }
+        });
     </script>
 </body>
 
