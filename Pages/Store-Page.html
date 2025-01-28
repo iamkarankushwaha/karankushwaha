@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store | Karan Kushwaha</title>
+    <link rel="shortcut icon" href="../Img-Assets/circle logo.png" type="image/x-icon">
+    <!-- Font Awesome Loader Link -->
+    <script src="https://kit.fontawesome.com/25cf39dd91.js" crossorigin="anonymous"></script>
+    <!--  -->
+    <link rel="stylesheet" href="../CSS-Assets/Default-Style.css">
+    <link rel="stylesheet" href="../CSS-Assets/Header-Style.css">
+    <link rel="stylesheet" href="../CSS-Assets/Store-Style.css">
+    <link rel="stylesheet" href="../CSS-Assets/Footer-Style.css">
+</head>
+
+<body>
+    <div class="container" id="container">
+        
+
+        <div class="profile-box">
+            <div class="profile">
+                <img src="Img-Assets/Profile.jpg" alt="Profile Picture">
+                <div class="profile-name">Karan Kushwaha</div>
+                <div class="profile-email"></div>
+            </div>
+
+
+
+            <!-- <div class="banner">
+            <img src="Img-Assets/banner 1.png" alt="Banner 1">
+            <img src="Img-Assets/banner 2.png" alt="Banner 2">
+            <img src="Img-Assets/banner 3.png" alt="Banner 3">
+            </div> -->
+
+            <div class="filter">
+                <div class="filter-buttons">
+                    <button>Books</button>
+                    <button>Notes</button>
+                    <button>Clear</button>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search...">
+                </div>
+            </div>
+
+            <div class="store">
+                <div class="card">
+                    <!-- <img src="book1.jpg" alt="Book Thumbnail"> -->
+                    <div class="card-content">
+                        <div class="card-title">Book Title 1</div>
+                        <div class="card-detail">Brief details about the book...</div>
+                        <div class="card-category">Category: Books1</div>
+                        <div class="card-download">
+                            <button onclick="openPopup('Book Title 1', 'Books')"><i class="fas fa-download"></i>
+                                Download</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <!-- <img src="book1.jpg" alt="Book Thumbnail"> -->
+                    <div class="card-content">
+                        <div class="card-title">Book Title 2</div>
+                        <div class="card-detail">Brief details about the book...</div>
+                        <div class="card-category">Category: Books2</div>
+                        <div class="card-download">
+                            <button onclick="openPopup('Book Title 1', 'Books')"><i class="fas fa-download"></i>
+                                Download</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <!-- <img src="book1.jpg" alt="Book Thumbnail"> -->
+                    <div class="card-content">
+                        <div class="card-title">Book Title 3</div>
+                        <div class="card-detail">Brief details about the book...</div>
+                        <div class="card-category">Category: Books3</div>
+                        <div class="card-download">
+                            <button onclick="openPopup('Book Title 1', 'Books')"><i class="fas fa-download"></i>
+                                Download</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <!-- <img src="book1.jpg" alt="Book Thumbnail"> -->
+                    <div class="card-content">
+                        <div class="card-title">Book Title 4</div>
+                        <div class="card-detail">Brief details about the book...</div>
+                        <div class="card-category">Category: Books4</div>
+                        <div class="card-download">
+                            <button onclick="openPopup('Book Title 4', 'Books')"><i class="fas fa-download"></i>
+                                Download</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup" id="popup">
+                <div class="popup-header">Download Book</div>
+                <div class="popup-body">
+                    <form>
+                        <input type="text" id="book-title" placeholder="Book Title" readonly>
+                        <input type="text" id="book-category" placeholder="Category" readonly>
+                        <input type="email" placeholder="Email">
+                        <textarea placeholder="Message"></textarea>
+                    </form>
+                </div>
+                <div class="popup-footer">
+                    <button>Download</button>
+                    <button onclick="closePopup()">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            function openPopup(title, category) {
+                document.getElementById('popup').style.display = 'block';
+                document.getElementById('book-title').value = title;
+                document.getElementById('book-category').value = category;
+            }
+
+            function closePopup() {
+                document.getElementById('popup').style.display = 'none';
+            }
+
+
+        </script>
+    </div>
+</body>
+
+</html>
