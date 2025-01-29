@@ -116,10 +116,9 @@ i{
 .pop-text-box{
     padding: 10px 0;
     min-height: 150px;
-    width: 100%;
-    min-width: 300px;
-    max-width: 400px;
+    width: 300px;
 }
+
 
 #pop-text{
     font-size: 1rem;
