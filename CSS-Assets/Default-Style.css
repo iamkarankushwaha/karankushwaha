@@ -133,7 +133,7 @@ i{
 #close-popup{
     font-size: 1.2rem;
     display: inline-block;
-    padding: 5px 20px;
+    padding: 10px 0px;
     background-color: var(--skyblue);
     color: var(--White);
     border-radius: 5px;
