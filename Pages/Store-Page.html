@@ -17,8 +17,31 @@
 
 <body>
     <div class="container" id="container">
-        
+        <h1>📚 Online Book Store</h1>
+    <a href="Cart-Page.html">🛒 Cart (<span id="cart-count">0</span>)</a>
 
+    <div class="store">
+        <div class="book">
+            <h3>CA Inter FM Formula Handbook</h3>
+            <p>Price: ₹0</p>
+            <button onclick="addToCart('CA Inter FM Formula Handbook', 0)">Add to Cart</button>
+        </div>
+
+        <div class="book">
+            <h3>CA Inter Taxation Guide</h3>
+            <p>Price: ₹499</p>
+            <button onclick="addToCart('CA Inter Taxation Guide', 499)">Add to Cart</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+
+
+
+
+
+<div style="visibility: collapse;">
         <div class="profile-box">
             <div class="profile">
                 <img src="Img-Assets/Profile.jpg" alt="Profile Picture">
@@ -124,6 +147,8 @@
 
 
         </script>
+
+</div>
     </div>
 </body>
 

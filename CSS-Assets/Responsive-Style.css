@@ -62,18 +62,8 @@
         justify-content: flex-end;
     }
 
-    .blog-container{
-        flex-direction: column;
-    }
-
-    .blog-wrapper{
-        width: 100%;
-    }
-    .blog-menu-wrapper{
-        width: 100%;
-    }
-    #blog-menu{
-        display: flex;
+    .profile-container {
+        max-height: fit-content;
     }
 
     .footer{
@@ -81,6 +71,9 @@
     }
 
     .row1footer{
+        width: 100%;
+    }
+    .about-website .imgbox{
         width: 100%;
     }
     .row2footer{

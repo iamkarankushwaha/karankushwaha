@@ -31,7 +31,11 @@
             </div>
             <div class="app-pop-down-row">
                 <div class="app-pop-text-box">
-                    <p id="app-pop-text">This website has been meticulously designed and developed by Karan Kushwaha as a part of his heartfelt dream project.<br><br><b>Since this website is currently under development, some features may not function as expected. However, you can reach out to Karan Kushwaha through the "Contact" section of the website.</b><br><br>Thanks and Regards,<br>Karan Kushwaha</p>
+                    <p id="app-pop-text">This website has been meticulously designed and developed by Karan Kushwaha as
+                        a part of his heartfelt dream project.<br><br><b>Since this website is currently under
+                            development, some features may not function as expected. However, you can reach out to Karan
+                            Kushwaha through the "Contact" section of the website.</b><br><br>Thanks and
+                        Regards,<br>Karan Kushwaha</p>
                 </div>
                 <div class="app-pop-close-box">
                     <button id="app-close-popup">Okay</button>
@@ -40,15 +44,19 @@
         </div>
         <script>
             // Show the popup when the page loads
-            window.onload = function() {
-                const AppPopup = document.getElementById('app-pop');
-                AppPopup.style.top = '0vh'; // Show the popup
+            window.onload = function () {
+                setTimeout(function () {
+                    const AppPopup = document.getElementById('app-pop');
+                    AppPopup.style.visibility = 'visible'; // Show the popup after 1 sec
+                    AppPopup.style.opacity = '1'; // Fade in effect
+                }, 800); // 1000 milliseconds = 1 second
             };
-    
+
             // Close the popup when the user clicks "OK"
-            document.getElementById('app-close-popup').onclick = function() {
+            document.getElementById('app-close-popup').onclick = function () {
                 const AppPopup = document.getElementById('app-pop');
-                AppPopup.style.top = '-110vh'; // Hide the popup
+                AppPopup.style.opacity = '0'; // Fade in effect
+                AppPopup.style.visibility = 'hidden'; // Hide the popup
             };
         </script>
     </div>
@@ -56,21 +64,29 @@
     <div class="AppContainer" id="container">
         <header id="header">
             <div id="menu-icon"><i class="fa-solid fa-bars"></i></div>
-            <div class="logo"><a href="https://karankushwaha.netlify.app"><img src="Img-Assets/logo-light.png" alt="Logo Karan Kushwaha"></a></div>
+            <div class="logo"><a href="https://karankushwaha.netlify.app"><img src="Img-Assets/logo-light.png"
+                        alt="Logo Karan Kushwaha"></a></div>
             <div id="menubox">
                 <ul class="menu">
                     <li><a href="https://karankushwaha.netlify.app">Home</a></li>
-                    <li><a href="" onclick="NotAvlblPopupHeader('Store page is not availabe yet due undergoing development, please try after few days or contact Karan Kushwaha.')">Store</a></li>
-                    <li><a href="" onclick="NotAvlblPopupHeader('Ask-Doubts feature is under development plsease check after sometime or you may contact Karan Kushwaha.')">Ask-Doubts</a></li>
-                    <li><a href="" onclick="NotAvlblPopupHeader('Free-Resources are being compilled please check again after some time or contact Karan Kushwaha.')">Free-Resources</a></li>
+                    <li><a href="Pages/Store-Page.html">Store</a>
+                    </li>
+                    <li><a href=""
+                            onclick="NotAvlblPopupHeader('Ask-Doubts feature is under development plsease check after sometime or you may contact Karan Kushwaha.')">Ask-Doubts</a>
+                    </li>
+                    <li><a href=""
+                            onclick="NotAvlblPopupHeader('Free-Resources are being compilled please check again after some time or contact Karan Kushwaha.')">Free-Resources</a>
+                    </li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <div class="right-header">
                 <ul>
-                    <li id="cart"><a href="" onclick="NotAvlblPopup('Store is under-development, kindly try after few days or contact Karan Kushwaha.')"><i class="fa-solid fa-bag-shopping"></i></a></li>
-                    <li><a href="https://wa.me/9315540041?text=Hello Karan, I visited your website and checked some of your products. I wanted to know more about [*Write here your query..*]" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li id="cart"><a href="Pages/Store-Page.html"><i class="fa-solid fa-bag-shopping"></i></a>
+                    </li>
+                    <li><a href="https://wa.me/9315540041?text=Hello Karan, I visited your website and checked some of your products. I wanted to know more about [*Write here your query..*]"
+                            target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
                 </ul>
             </div>
             <script>
@@ -78,13 +94,13 @@
                 const container = document.getElementById('container');
                 const header = document.getElementById('header');
                 container.addEventListener('scroll', () => {
-                    if (container.scrollTop > 80) {
+                    if (container.scrollTop > 20) {
                         header.classList.add('scrolled');
                     } else {
                         header.classList.remove('scrolled');
                     }
                 });
-    
+
                 // Menu Icon
                 const menuIcon = document.getElementById('menu-icon');
                 const menubox = document.getElementById('menubox');
@@ -170,50 +186,44 @@
                         <div class="rackholder">
                             <div class="prodrack" id="prodrack">
                                 <div class="prodbox">
-                                    <a href="https://drive.google.com/file/d/19-sT62RfWfkqBjMaNXBUeix1ptZtESHO/view?usp=drive_link" class="prodcard">
+                                    <a href="https://drive.google.com/file/d/19-sT62RfWfkqBjMaNXBUeix1ptZtESHO/view?usp=drive_link"
+                                        class="prodcard">
                                         <div class="prodimage">
                                             <i class="fa-solid fa-file-pdf"></i>
                                             <!-- <img src="Img-Assets/Untitled.png" alt="prod 11 class"> -->
                                         </div>
                                         <div class="prod_title">
                                             <p>Meaning of salary under different provisions of Income Tax Act 1961
-                            | Relavent for CA Inter | Compiled by Karan Kushwaha</p>
+                                                | Relavent for CA Inter | Compiled by Karan Kushwaha</p>
                                         </div>
                                     </a>
                                     <div class="pricebox">Free <span>₹699</span></div>
-                                    <a href="https://drive.google.com/file/d/19-sT62RfWfkqBjMaNXBUeix1ptZtESHO/view?usp=drive_link" class="order_now_btn">Download <span
-                                            class="fa-solid fa-download"></span></a>
+                                    <a href="https://drive.google.com/file/d/19-sT62RfWfkqBjMaNXBUeix1ptZtESHO/view?usp=drive_link"
+                                        class="order_now_btn">Download <span class="fa-solid fa-download"></span></a>
                                 </div>
                                 <div class="prodbox">
-                                    <a href="" class="prodcard" onclick="NotAvlblPopup('The Book or Class you are trying to access is not available right now. Please visit Store for more products.')">
+                                    <a href="Pages/Store-Page.html" class="prodcard">
                                         <div class="prodimage">
                                             <i class="fa-solid fa-file-pdf"></i>
                                             <!-- <img src="Img-Assets/Untitled.png" alt="prod 11 class"> -->
                                         </div>
                                         <div class="prod_title">
-                                            <p>CA Inter FM Formula HandBook | Compilation of all Formulas of Financial Management</p>
+                                            <p>CA Inter FM Formula HandBook | Compilation of all Formulas of Financial
+                                                Management</p>
                                         </div>
                                     </a>
                                     <div class="pricebox">Free <span>₹699</span></div>
-                                    <a href="" class="order_now_btn"  onclick="NotAvlblPopup('The Book or Class you are trying to access is not available right now. Please visit Store for more products.')">Order <span
-                                            class="fa-solid fa-caret-right"></span></a>
+                                    <a href="Pages/Store-Page.html" class="order_now_btn">Order Now
+                                        <span class="fa-solid fa-caret-right"></span></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="filter-box">
-                        <p class="link-store">Visit <a href="" onclick="NotAvlblPopup('Store is under-development, kindly try after few days or contact Karan Kushwaha.')">Store <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></a> for
-                            more products.</p>
+                        <p class="link-store">Visit <a href="Pages/Store-Page.html">Store <i
+                                    class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></a> for more products.</p>
                     </div>
                 </div>
-                <script>
-                    function NotAvlblPopup(msg) {
-                        event.preventDefault();
-                        document.getElementById("popup-container").style.display = 'flex';
-                        document.getElementById("pop-header").innerText = "Product Not Available";
-                        document.getElementById("pop-text").innerText = msg;
-                    }
-                </script>
             </div>
 
             <div class="why-box">
@@ -233,7 +243,7 @@
                         <li>✔️ Exam Oriented Preparation</li>
                     </ul>
                     </p>
-                    <div class="btn"><a href="" onclick="NotAvlblPopup('Store is under-development, kindly try after few days or contact Karan Kushwaha.')">See Classes</a></div>
+                    <div class="btn"><a href="Pages/Store-Page.html">SeeClasses</a></div>
                 </div>
                 <div class="why-books">
                     <h2>USP of Books</h2>
@@ -247,10 +257,10 @@
                         <li>✔️ Freely Available</li>
                     </ul>
                     </p>
-                    <div class="btn"><a href=""onclick="NotAvlblPopup('Store is under-development, kindly try after few days or contact Karan Kushwaha.')">See Books</a></div>
+                    <div class="btn"><a href="Pages/Store-Page.html">SeeBooks</a></div>
                 </div>
             </div>
-            
+
             <section id="about">
                 <div class="about-section">
                     <div class="heading-box">
@@ -298,7 +308,7 @@
                     </div>
                 </div>
             </section>
-            
+
             <section id="contact">
                 <div class="contact-section section" id="contact-section">
                     <div class="heading-box">
@@ -336,11 +346,11 @@
                                 <p class="note">*Marked fields are mandatory.</p>
                                 <button type="submit">Send Message <i class="fa-solid fa-paper-plane"></i></button>
                             </form>
-                                    
+
                             <div id="spinner-contact-form">
                                 <div class="spinner-contact-form"><i class="fa-solid fa-spinner"></i></div>
                             </div>
-        
+
                             <!-- Popup -->
                             <div id="popup-contact-form">
                                 <div class="popup-content-contact-form">
@@ -355,12 +365,12 @@
                                 const spinner = document.getElementById('spinner-contact-form'); // Spinner element
                                 const popup = document.getElementById('popup-contact-form'); // Popup element
                                 const okButton = document.getElementById('ok-button-contact-form'); // OK button
-        
+
                                 form.addEventListener('submit', (e) => {
                                     e.preventDefault();
                                     // Show the spinner while the form is being submitted
                                     spinner.style.display = 'flex';
-        
+
                                     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
                                         .then((response) => {
                                             // Hide the spinner and show the popup
@@ -373,15 +383,15 @@
                                             spinner.style.display = 'none'; // Hide the spinner in case of error
                                         });
                                 });
-        
+
                                 // Redirect after popup confirmation
                                 okButton.addEventListener('click', () => {
                                     // Clear the form fields
                                     form.reset();
-        
+
                                     // Hide the popup
                                     popup.style.display = 'none';
-        
+
                                     // Redirect to the specified URL
                                     window.location.href = 'https://karankushwaha.netlify.app/index.html#contact'; // Replace with your desired redirect URL
                                 });
@@ -394,14 +404,19 @@
             <footer class="footer">
                 <div class="row1footer">
                     <div class="footer-logo">
-                        <a href="https://karankushwaha.netlify.app"><img src="Img-Assets/logo-dark.png" alt="Logo Karan Kushwaha"></a>
+                        <a href="https://karankushwaha.netlify.app"><img src="Img-Assets/logo-light.png"
+                                alt="Logo Karan Kushwaha"></a>
                     </div>
                     <div class="about-website">
                         <div class="imgbox">
                             <img src="Img-Assets/karan kushwaha.jpg" alt="karan kushwaha">
                         </div>
                         <div class="textbox">
-                            <p>This website has been meticulously designed and developed by Karan Kushwaha as a part of his heartfelt dream project. With unwavering dedication and passion, Karan has created this platform to empower and support students from commerce backgrounds. This initiative aims to provide invaluable resources, guidance, and opportunities that will benefit countless aspiring learners on their educational journey.</p>
+                            <p>This website has been meticulously designed and developed by Karan Kushwaha as a part of
+                                his heartfelt dream project. With unwavering dedication and passion, Karan has created
+                                this platform to empower and support students from commerce backgrounds. This initiative
+                                aims to provide invaluable resources, guidance, and opportunities that will benefit
+                                countless aspiring learners on their educational journey.</p>
                         </div>
                     </div>
                 </div>
@@ -417,7 +432,7 @@
                 </div>
                 <div class="row3footer">
                     <p>&copy; 2025 Karan Kushwaha. All Rights Reserved.</p>
-                    <p>Created and Maintained by Karan Kushwaha</p>
+                    <p>Created and Maintained by Karan Kushwaha.</p>
                 </div>
             </footer>
         </main>
@@ -425,14 +440,14 @@
     <div id="popup-container">
         <div id="popup-wrapper">
             <div class="pop-top-row">
-                <h3 id="pop-header">Your Cart is Empty</h3>
+                <h3 id="pop-header"></h3>
             </div>
             <div class="pop-down-row">
                 <div class="pop-text-box">
-                    <p id="pop-text">Kindly visit store and start shopping and add items to your cart.</p>
+                    <p id="pop-text"></p>
                 </div>
                 <div class="pop-close-box">
-                    <button id="close-popup">OK <i class="fa-solid fa-thumbs-up"></i></button>
+                    <button id="close-popup">Okay</button>
                     <script>
                         document.getElementById("close-popup").addEventListener("click", () => {
                             document.getElementById("popup-container").style.display = 'none';
