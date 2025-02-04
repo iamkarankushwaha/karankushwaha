@@ -139,7 +139,7 @@
                         <img src="Img-Assets/banner 3.png" alt="banner 2">
                     </div>
                 </div>
-            <script>
+                <script>
                 const slides = document.querySelector('.slides');
                 let currentIndex = 0;
                 const totalImages = 3; // Number of images in the slider
@@ -148,7 +148,7 @@
                     slides.style.transform = `translateX(-${currentIndex * 100}vw)`;
                 }
                 setInterval(slideImages, 4000);
-            </script>
+                </script>
             </div> -->
 
             <div class="profile-container">
@@ -272,39 +272,116 @@
                             <img src="Img-Assets/hero-img_karan kushwaha.png" alt="Karan Kushwaha" loading="lazy">
                         </div>
                         <div class="about-text">
-                            <p>
-                                I'm a student pursuing CA Intermediate and B.Com. at the University of Delhi. With a
-                                keen
-                                interest in Finance and Taxation, I am dedicated to achieving my goal of becoming a
-                                successful
-                                Chartered Accountant.
-                            </p>
-                            <br>
-                            <p>
-                                I conquered the CA Foundation Exam on my very first attempt in December 2023 through
-                                self-study
-                                and scored 246 / 400.
-                            </p>
-                            <p> Beyond academics, I have a knack for content creation, and I enjoy sharing my insights
-                                and
-                                knowledge with others through posts on LinkedIn about my journey towards becoming a
-                                Chartered
-                                Accountant.
-                            </p>
-                            <br>
-                            <b>Further :-</b>
-                            <ul style="text-indent: 1.5rem; list-style-position: inside;">
-                                <li>Passionate about teaching.</li>
-                                <li>Tech-savvy (created this website).</li>
-                                <li>Constant learner with a growth-oriented mindset.</li>
-                                <li>Currently reading - <b>'Not Just an Accountant' by Vinod Rai.</b></li>
+                            <ul>
+                                <li><strong>Education:</strong> CA Intermediate student & B.Com. undergraduate at the University of Delhi.</li>
+                                <li><strong>Finance & Taxation Enthusiast:</strong> Dedicated to becoming a successful Chartered Accountant.</li>
+                                <li><strong>CA Foundation Success:</strong> Cleared in the first attempt (Dec 2023) through self-study, scoring 246/400.</li>
+                                <li><strong>Content Creator:</strong> Share insights on my CA journey via LinkedIn.</li>
+                                <li><strong>Passionate Teacher:</strong> Enjoys mentoring and educating others.</li>
+                                <li><strong>Tech-Savvy:</strong> Built this website and keen on leveraging technology.</li>
+                                <li><strong>Constant Learner:</strong> Growth-oriented mindset, currently reading <em>Not Just an Accountant</em> by Vinod Rai.</li>
+                                <li><strong>Networking:</strong> Open to connecting and exploring opportunities in Chartered Accountancy.</li>
                             </ul>
                             <p>
-                                Thanks for visiting my profile! Let's connect and explore opportunities to collaborate
-                                in the
-                                field of Chartered Accountancy.
+                                <b>Thanks for visiting my profile!</b>
                             </p>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="reviews">
+                <div class="heading-box padding">
+                    <h2 class="acme-font">Students' Reviews</h2>
+                    <p class="featured-prod-tagline">What they say ?</p>
+                </div>
+                <div class="reviewslider">
+                    <div class="mainslider">
+                        <div class="reviewslides">
+                            <!-- Review 1 -->
+                            <div class="reviewbox">
+                                <div class="review-content">
+                                    <div class="student-profile">
+                                        <div class="avatar">
+                                            <img src="Img-Assets/avatar-girl.png" alt="Avatar">
+                                        </div>
+                                        <h3 class="studentname">Nitya Khandelwal</h3>
+                                    </div>
+                                    <div class="review-info">
+                                        <p class="subject">Mathematics and Economics</p>
+                                        <p class="class">9th</p>
+                                    </div>
+                                    <p class="review-text">It was a great experience learning with you. With your help I was able to learn more things which made my concepts more crystal clear. You are a great mentor, very understanding and always willing to help...</p>
+                                    <div class="review-info">
+                                        <p class="date">3 Jan 2025</p>
+                                        <p class="batch">The Alphabet Education</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Review 2 -->
+                            <div class="reviewbox">
+                                <div class="review-content">
+                                    <div class="student-profile">
+                                        <div class="avatar">
+                                            <img src="Img-Assets/avatar-girl.png" alt="Avatar">
+                                        </div>
+                                        <h3 class="studentname">Akansha Nayak</h3>
+                                    </div>
+                                    <div class="review-info">
+                                        <p class="subject">Mathematics</p>
+                                        <p class="class">8th</p>
+                                    </div>
+                                    <p class="review-text">I had a great time with karan sir , he teaches me mathematics and s.st. I appreciate all the hardwork. I am grateful to have a teacher Like you.<br>You have been a incredible mentor, and I am so thankful for your guidance.</p>
+                                    <div class="review-info">
+                                        <p class="date">3 Jan 2025</p>
+                                        <p class="batch">The Alphabet Education</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <script>
+                        let currentIndexR = 0;
+                        const totalReviews = document.querySelectorAll('.reviewbox').length; // Get total number of review boxes
+    
+                        function slideReviews() {
+                            const mainslider = document.querySelector('.mainslider');
+                            const reviewboxes = document.querySelectorAll('.reviewbox');
+                            const Rslides = document.querySelector('.reviewslides');
+    
+                            if (!mainslider || reviewboxes.length === 0 || !Rslides) {
+                                console.error("Elements not found!");
+                                return;
+                            }
+    
+                            let mainsliderwidth = mainslider.getBoundingClientRect().width; // More reliable way to get width
+    
+                            console.log("Slider Width:", mainsliderwidth); // Debugging log
+    
+                            // Set width of each review box
+                            reviewboxes.forEach(box => {
+                                box.style.width = `${mainsliderwidth}px`;
+                            });
+    
+                            // Ensure .reviewslides is wide enough to hold all review boxes
+                            Rslides.style.width = `${mainsliderwidth * totalReviews}px`;
+    
+                            // Move slides
+                            currentIndexR = (currentIndexR + 1) % totalReviews;
+                            Rslides.style.transform = `translateX(-${currentIndexR * mainsliderwidth}px)`;
+                        }
+    
+                        // Run once initially to set the widths before sliding
+                        slideReviews();
+    
+                        // Auto-slide every 5 seconds
+                        setInterval(slideReviews, 8000);
+                    </script>
+                    <div class="reviewdoodle">
+                        <img src="Img-Assets/review doodle.jpg" alt="review doodle">
                     </div>
                 </div>
             </section>
@@ -401,42 +478,44 @@
                 </div>
             </section>
 
-            <footer class="footer">
-                <div class="row1footer">
-                    <div class="footer-logo">
-                        <a href="https://karankushwaha.netlify.app"><img src="Img-Assets/logo-light.png"
-                                alt="Logo Karan Kushwaha"></a>
-                    </div>
-                    <div class="about-website">
-                        <div class="imgbox">
-                            <img src="Img-Assets/karan kushwaha.jpg" alt="karan kushwaha">
-                        </div>
-                        <div class="textbox">
-                            <p>This website has been meticulously designed and developed by Karan Kushwaha as a part of
-                                his heartfelt dream project. With unwavering dedication and passion, Karan has created
-                                this platform to empower and support students from commerce backgrounds. This initiative
-                                aims to provide invaluable resources, guidance, and opportunities that will benefit
-                                countless aspiring learners on their educational journey.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row2footer">
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/karankushwaha" target="_blank"><i
-                                class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://youtube.com/@karan_kushwaha09?si=UCfHJmEtm0ATgaMZ" target="_blank"><i
-                                class="fa-brands fa-youtube"></i></a>
-                        <a href="https://x.com/KaranKushwaha_" target="_blank"><i
-                                class="fa-brands fa-square-x-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="row3footer">
-                    <p>&copy; 2025 Karan Kushwaha. All Rights Reserved.</p>
-                    <p>Created and Maintained by Karan Kushwaha.</p>
-                </div>
-            </footer>
         </main>
+
+        <footer class="footer">
+            <div class="row1footer">
+                <div class="footer-logo">
+                    <a href="https://karankushwaha.netlify.app"><img src="Img-Assets/logo-light.png"
+                            alt="Logo Karan Kushwaha"></a>
+                </div>
+                <div class="about-website">
+                    <div class="imgbox">
+                        <img src="Img-Assets/karan kushwaha.jpg" alt="karan kushwaha">
+                    </div>
+                    <div class="textbox">
+                        <p>This website has been meticulously designed and developed by Karan Kushwaha as a part of
+                            his heartfelt dream project. With unwavering dedication and passion, Karan has created
+                            this platform to empower and support students from commerce backgrounds. This initiative
+                            aims to provide invaluable resources, guidance, and opportunities that will benefit
+                            countless aspiring learners on their educational journey.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row2footer">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/karankushwaha" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://youtube.com/@karan_kushwaha09?si=UCfHJmEtm0ATgaMZ" target="_blank"><i
+                            class="fa-brands fa-youtube"></i></a>
+                    <a href="https://x.com/KaranKushwaha_" target="_blank"><i
+                            class="fa-brands fa-square-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="row3footer">
+                <p>&copy; 2025 Karan Kushwaha. All Rights Reserved.</p>
+                <p>Created and Maintained by Karan Kushwaha.</p>
+            </div>
+        </footer>
     </div>
+
     <div id="popup-container">
         <div id="popup-wrapper">
             <div class="pop-top-row">
@@ -458,5 +537,4 @@
         </div>
     </div>
 </body>
-
 </html>

@@ -59,7 +59,7 @@
     height: fit-content;
 }
 .about-website p{
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--White);
     font-weight: 300;
     text-align: justify;
@@ -91,7 +91,7 @@
 }
 .row3footer p{
     width: fit-content;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--GrayBg);
     font-weight: 400;
     text-align: center;
