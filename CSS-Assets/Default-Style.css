@@ -31,6 +31,10 @@ html{
 :-webkit-any(button){
     border: none;
     outline: none;
+    background-color: var(--Button);
+}
+:-webkit-any(button):hover{
+    background-color: var(--BtnBg);
 }
 
 :-webkit-any(img) {
@@ -41,19 +45,22 @@ html{
 
 :root{
     --green: #04aa6d;
-    --skyblue: #00b0f0;
     --red: #ef134d;
     --yellow: #ead409;
-
+    --skyblue: #00b0f0;
+    
     /* New & Final */
-    --Primary: #000;
-    --Secondary: #1c1c1c;
+    --Primary: rgba(0,0,20,1);
+    --Secondary: rgba(0,0,10,1);
+    --MainText: #001e53;
+    --black: #000;
     --White: #fff;
     --PText: #707377;
     --DarkGray: #393939;
     --GrayBg: #bbbcbc;
-    --FluiedBg: #e8eae9;
-    --BtnBg: #0076a8;
+    --FluiedBg: #e8e8fa;
+    --Button: #0064fb;
+    --BtnBg: #0046af;
 }
 .AppContainer {
     width: 100vw;
@@ -136,7 +143,7 @@ i{
     font-weight: 500;
     display: inline-block;
     padding: 10px 20px;
-    background-color: var(--skyblue);
+    background-color: var(--Button);
     color: var(--White);
     border-radius: 5px;
     cursor: pointer;

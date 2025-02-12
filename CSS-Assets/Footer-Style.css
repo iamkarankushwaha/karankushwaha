@@ -1,20 +1,3 @@
-:root{
-    --green: #04aa6d;
-    --skyblue: #00b0f0;
-    --red: #ef134d;
-    --yellow: #ead409;
-
-    /* New & Final */
-    --Primary: #000;
-    --Secondary: #1c1c1c;
-    --White: #fff;
-    --PText: #707377;
-    --DarkGray: #393939;
-    --GrayBg: #bbbcbc;
-    --FluiedBg: #e8eae9;
-    --BtnBg: #0076a8;
-}
-
 .footer {
     width: 100vw;
     height: fit-content;
@@ -67,9 +50,9 @@
 
 .row2footer{
     width: 50%;
+    border-left: solid 1px var(--DarkGray);
 }
 .row2footer .social-links{
-    background-color: var(--Secondary);
     padding: 10px 20px;
     justify-content: center;
     gap: 50px;
@@ -86,8 +69,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background-color: var(--Primary);
-    border-radius: 5px;
 }
 .subscribebox form{
     display: flex;
@@ -114,7 +95,7 @@
 .subscribebox input[type=submit]{
     color: var(--White);
     font-weight: 500;
-    background-color: var(--skyblue);
+    background-color: var(--Button);
     margin: 10px 0;
     cursor: pointer;
 }
@@ -122,7 +103,7 @@
     background-color: var(--BtnBg);
 }
 .row3footer{
-    background-color: var(--Primary);
+    border-top: solid 1px var(--DarkGray);
     width: 100%;
     padding: 30px 10px;
     display: flex;

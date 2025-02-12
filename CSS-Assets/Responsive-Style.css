@@ -97,6 +97,8 @@
     }
     .row2footer{
         width: 100%;
+        border-left: unset;
+        border-top: solid 1px var(--DarkGray);
     }
 
     .subscribebox form{

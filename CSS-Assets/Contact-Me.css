@@ -1,20 +1,3 @@
-:root{
-    --green: #04aa6d;
-    --skyblue: #00b0f0;
-    --red: #ef134d;
-    --yellow: #ead409;
-
-    /* New & Final */
-    --Primary: #000;
-    --Secondary: #1c1c1c;
-    --White: #fff;
-    --PText: #707377;
-    --DarkGray: #393939;
-    --GrayBg: #bbbcbc;
-    --FluiedBg: #e8eae9;
-    --BtnBg: #0076a8;
-}
-
 /* Contact CSS */
 .contact-section{
     background: linear-gradient(0deg,var(--White), var(--FluiedBg));
@@ -125,8 +108,8 @@ button {
     padding: 10px 25px;
     font-size: 1.1rem;
     font-weight: 500;
-    border-radius: 5px;
-    background-color: var(--skyblue);
+    border-radius: 15px;
+    background-color: var(--Button);
     color: var(--White);
     cursor: pointer;
     transition: background 0.3s;
@@ -169,7 +152,7 @@ form textarea{
 
 .spinner-contact-form i {
     animation: spin 1s linear infinite;
-    color: var(--skyblue);
+    color: var(--Button);
     font-size: 40px;
 }
 
@@ -219,7 +202,7 @@ form textarea{
 }
 
 #ok-button-contact-form {
-    background-color: var(--skyblue);
+    background-color: var(--Button);
     color: var(--White);
     border: none;
     padding: 8px 25px;
