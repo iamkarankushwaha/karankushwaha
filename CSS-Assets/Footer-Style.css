@@ -25,15 +25,12 @@
     padding-bottom: 0;
 }
 .row1footer{
-    width: 100%;
+    width: 50%;
 }
 .footer-logo{
     display: block;
     padding: 10px 20px;
     width: fit-content;
-}
-.footer-logo a{
-    display: block;
 }
 .footer-logo a img{
     width: 150px;
@@ -53,8 +50,11 @@
     width: 100px;
     border-radius: 100%;
 }
+.imgbox{
+    width: 100%;
+}
 .about-website .textbox{
-    width: 85%;
+    width: 100%;
     min-width: 330px;
     height: fit-content;
 }
@@ -62,11 +62,11 @@
     font-size: 0.9rem;
     color: var(--White);
     font-weight: 300;
-    text-align: justify;
+    line-height: 24px;
 }
 
 .row2footer{
-    width: 100%;
+    width: 50%;
 }
 .row2footer .social-links{
     background-color: var(--Secondary);
@@ -78,6 +78,48 @@
 .row2footer .social-links a{
     background-color: var(--White);
     border-radius: 5px;
+}
+
+.subscribebox{
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--Primary);
+    border-radius: 5px;
+}
+.subscribebox form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.subscribebox label{
+    display: block;
+    color: var(--FluiedBg);
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 10px 0 !important;
+    cursor: pointer;
+}
+.subscribebox input{
+    display: block;
+    width: 50%;
+    color: var(--Primary);
+    font-size: 1rem;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+.subscribebox input[type=submit]{
+    color: var(--White);
+    font-weight: 500;
+    background-color: var(--skyblue);
+    margin: 10px 0;
+    cursor: pointer;
+}
+.subscribebox input[type=submit]:hover{
+    background-color: var(--BtnBg);
 }
 .row3footer{
     background-color: var(--Primary);

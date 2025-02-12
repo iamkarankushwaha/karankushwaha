@@ -22,6 +22,7 @@
     align-items: flex-start;
     overflow: hidden;
     padding: 70px 10px;
+    padding-bottom: 0;
 }
 
 .contact-wrapper{
@@ -32,22 +33,26 @@
     flex-wrap: nowrap;
 }
 .contact-form{
-    width: fit-content;
     display: flex; 
     justify-content: center;
     align-items: center;
     background-color: var(--White);
-    border-radius: 10px;
+    border-radius: 90px 90px 0px 0px;
+    box-shadow: 0px -5px 20px -10px #00000040;
+    width: fit-content;
+    max-width: fit-content;
+    padding-top: 20px;
+    padding-bottom: 70px;
 }
 
 #contactForm{
-    width: 90vw;
-    display: flex !important;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
     padding: 30px 0;
+    width: 90vw;
 }
 .inputbox{
     width: 100%;
@@ -72,7 +77,6 @@
 
 .contact-form form label{
     padding: 0px 10px;
-    font-weight: 500;
     font-size: 1.1rem;
     color: var(--Secondary);
     cursor: pointer;
@@ -107,9 +111,9 @@ textarea:focus {
 .contact-form p{
     display: block;
     width: 100%;
+    max-width: 450px;
     color: var(--PText) !important;
     padding:0px 10px;
-    text-align: center;
     padding-bottom: 20px;
     font-size: 0.9rem;
 }
@@ -119,9 +123,8 @@ button {
     width: 90%;
     max-width: 450px;
     padding: 10px 25px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
-    font-family: "poppins";
     border-radius: 5px;
     background-color: var(--skyblue);
     color: var(--White);

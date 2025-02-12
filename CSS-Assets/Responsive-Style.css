@@ -1,6 +1,6 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
     html{
-        font-size: 14.5px;
+        font-size: 14px;
     }
     #header {
         padding: 20px 10px;
@@ -28,9 +28,9 @@
         height: 0px;
         overflow: hidden;
         background-color: var(--Primary);
-        z-index: 9999999;
         box-shadow: 0px 5px 16px #00000080;
         transition: height 0.5s ease;
+        z-index: 99999999999;
     }
     #menubox.show-menubox{
         height: calc(45px * 6 + 20px);
@@ -63,9 +63,28 @@
     }
 
     .profile-container {
-        max-height: fit-content;
+        height: fit-content;
     }
 
+    .detail-box {
+        top: 0px;
+    }
+
+    .media-box iframe{
+        width: 300px;
+        height: 169px;
+    }
+    .media-title{
+        width: 300px;
+    }
+    .contact-form{
+        border-radius: 20px 20px 0px 0px;
+    }
+
+    #contactForm{
+        width: 95vw;
+
+    }
     .footer{
         flex-direction: column;
     }
@@ -78,5 +97,15 @@
     }
     .row2footer{
         width: 100%;
+    }
+
+    .subscribebox form{
+        align-items: flex-start;
+    }
+    .subscribebox label{
+        width: 100%;
+    }
+    .subscribebox input{
+        width: 80%;
     }
 }

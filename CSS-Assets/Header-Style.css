@@ -7,14 +7,6 @@
     align-items: center;
     padding: 10px 20px;
     background-color: var(--Primary);
-    position: sticky;
-    top: 0;
-    z-index: 99999999;
-    transition: box-shadow 0.3s ease;
-}
-
-.scrolled {
-    box-shadow: 0px 5px 16px #00000080;
 }
 
 #menu-icon {
@@ -37,7 +29,7 @@
 }
 
 .logo img {
-    height: 30px;
+    width: 110px;
 }
 
 
@@ -62,7 +54,6 @@
 }
 #menubox ul li a {
     font-size: 1.1rem;
-    font-weight: 500;
     cursor: pointer;
     color: var(--White);
     position: relative;
@@ -71,10 +62,10 @@
 #menubox ul li a::before{
     content: "";
     width: 0%;
-    height: 2px;
+    height: 1px;
     position: absolute;
     bottom: -3px;
-    border-radius: 5px;
+    border-radius: 5px 5px 0 0;
     background-color: var(--White);
     transition: all 0.3s;
 }

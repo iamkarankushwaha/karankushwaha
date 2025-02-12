@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="CSS-Assets/Default-Style.css">
     <link rel="stylesheet" href="CSS-Assets/Header-Style.css">
     <link rel="stylesheet" href="Index-Style.css">
+    <link rel="stylesheet" href="CSS-Assets/Social-Media.css">
     <link rel="stylesheet" href="CSS-Assets/Contact-Me.css">
     <link rel="stylesheet" href="CSS-Assets/Footer-Style.css">
     <link rel="stylesheet" href="CSS-Assets/Responsive-Style.css">
@@ -47,7 +48,7 @@
             window.onload = function () {
                 setTimeout(function () {
                     const AppPopup = document.getElementById('app-pop');
-                    AppPopup.style.visibility = 'visible'; // Show the popup after 1 sec
+                    // AppPopup.style.visibility = 'visible'; // Show the popup after 1 sec
                     AppPopup.style.opacity = '1'; // Fade in effect
                 }, 800); // 1000 milliseconds = 1 second
             };
@@ -62,6 +63,7 @@
     </div>
 
     <div class="AppContainer" id="container">
+
         <header id="header">
             <div id="menu-icon"><i class="fa-solid fa-bars"></i></div>
             <div class="logo"><a href="https://karankushwaha.netlify.app"><img src="Img-Assets/logo-light.png"
@@ -72,10 +74,10 @@
                     <li><a href="Pages/Store-Page.html">Store</a>
                     </li>
                     <li><a href=""
-                            onclick="NotAvlblPopupHeader('Ask-Doubts feature is under development plsease check after sometime or you may contact Karan Kushwaha.')">Ask-Doubts</a>
+                        onclick="NotAvlblPopupHeader('Free-Resources are being compilled please check again after some time or contact Karan Kushwaha.')">Free-Resources</a>
                     </li>
                     <li><a href=""
-                            onclick="NotAvlblPopupHeader('Free-Resources are being compilled please check again after some time or contact Karan Kushwaha.')">Free-Resources</a>
+                            onclick="NotAvlblPopupHeader('Ask-Doubts feature is under development plsease check after sometime or you may contact Karan Kushwaha.')">Ask-Doubts</a>
                     </li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -90,17 +92,6 @@
                 </ul>
             </div>
             <script>
-                // Listen for the scroll event on the container
-                const container = document.getElementById('container');
-                const header = document.getElementById('header');
-                container.addEventListener('scroll', () => {
-                    if (container.scrollTop > 20) {
-                        header.classList.add('scrolled');
-                    } else {
-                        header.classList.remove('scrolled');
-                    }
-                });
-
                 // Menu Icon
                 const menuIcon = document.getElementById('menu-icon');
                 const menubox = document.getElementById('menubox');
@@ -153,8 +144,8 @@
 
             <div class="profile-container">
                 <div class="profile-box">
-                    <img src="Img-Assets/Karan Kushwaha - Profile.jpg" alt="Profile">
-                    <h1 class="acme-font">Hello, I'm Karan Kushwaha</h1>
+                    <img src="Img-Assets/Karan Kushwaha - Profile.jpg" alt="Profile of Karan Kushwaha" loading="eager">
+                    <h1>Hello, I'm Karan Kushwaha</h1>
                     <p class="tagline">CA Inter Student</p>
                 </div>
                 <div class="detail-box">
@@ -178,45 +169,37 @@
 
             <div class="featured-prod">
                 <div class="heading-box">
-                    <h2 class="acme-font">Featured Products</h2>
+                    <h2>Featured Products</h2>
                     <p class="featured-prod-tagline">Check out our latest products</p>
                 </div>
                 <div class="product-wrapper">
-                    <div class="product-box">
-                        <div class="rackholder">
-                            <div class="prodrack" id="prodrack">
-                                <div class="prodbox">
-                                    <a href="https://drive.google.com/file/d/19-sT62RfWfkqBjMaNXBUeix1ptZtESHO/view?usp=drive_link"
-                                        class="prodcard">
-                                        <div class="prodimage">
-                                            <i class="fa-solid fa-file-pdf"></i>
-                                            <!-- <img src="Img-Assets/Untitled.png" alt="prod 11 class"> -->
-                                        </div>
-                                        <div class="prod_title">
-                                            <p>Meaning of salary under different provisions of Income Tax Act 1961
-                                                | Relavent for CA Inter | Compiled by Karan Kushwaha</p>
-                                        </div>
-                                    </a>
-                                    <div class="pricebox">Free <span>₹699</span></div>
-                                    <a href="https://drive.google.com/file/d/19-sT62RfWfkqBjMaNXBUeix1ptZtESHO/view?usp=drive_link"
-                                        class="order_now_btn">Download <span class="fa-solid fa-download"></span></a>
-                                </div>
-                                <div class="prodbox">
-                                    <a href="Pages/Store-Page.html" class="prodcard">
-                                        <div class="prodimage">
-                                            <i class="fa-solid fa-file-pdf"></i>
-                                            <!-- <img src="Img-Assets/Untitled.png" alt="prod 11 class"> -->
-                                        </div>
-                                        <div class="prod_title">
-                                            <p>CA Inter FM Formula HandBook | Compilation of all Formulas of Financial
-                                                Management</p>
-                                        </div>
-                                    </a>
-                                    <div class="pricebox">Free <span>₹699</span></div>
-                                    <a href="Pages/Store-Page.html" class="order_now_btn">Order Now
-                                        <span class="fa-solid fa-caret-right"></span></a>
-                                </div>
+                    <div class="prodrack" id="prodrack">
+                        <!-- Prod 1 -->
+                        <div class="prodbox">
+                            <img src="Img-Assets/book-thumbnail01.png" id="prodimg01" class="prodimg" alt="Meaning of salary under different provisions of Income Tax Act">
+                            <div>
+                                <p id="prod_title01" class="prod_title">
+                                    Meaning of salary under different provisions of Income Tax Act 1961 | Relavent for CA Inter | Compiled by Karan Kushwaha
+                                </p>
                             </div>
+                            <div class="pricebox">
+                                <h5 id="prodprice01">Free</h5> <span>₹699</span>
+                            </div>
+                            <button id="prodbutton" onclick="DownloadProd('01')">Download <span class="fa-solid fa-download"></span></button>
+                        </div>
+                        
+                        <!-- Prod 2 -->
+                        <div class="prodbox">
+                            <img src="Img-Assets/book-thumbnail02.png" id="prodimg02" class="prodimg" alt="Meaning of salary under different provisions of Income Tax Act">
+                            <div>
+                                <p id="prod_title02" class="prod_title">
+                                    CA Inter FM Formula HandBook | Compilation of all Formulas of Financial Management
+                                </p>
+                            </div>
+                            <div class="pricebox">
+                                <h5 id="prodprice02">Free</h5> <span>₹699</span>
+                            </div>
+                            <button id="prodbutton" onclick="DownloadProd('02')">Download <span class="fa-solid fa-download"></span></button>
                         </div>
                     </div>
                     <div class="filter-box">
@@ -224,11 +207,119 @@
                                     class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></a> for more products.</p>
                     </div>
                 </div>
+
+                <!-- ------------Order Page here -->
+                <div id="order-page">
+                    <div class="order-wrapper">
+                        <div class="orderheading">
+                            <h2>Order Page</h2>
+                        </div>
+                        <div class="order-details">
+                            <div class="itemimgbox">
+                                <img src="" id="Item-Image" alt="Item-Image">
+                            </div>
+                            <div class="itemdetails">
+                                <p id="item_title">Item title goes here...</p>
+                                <div class="item_pricebox">
+                                    <span>Price in rupees:</span>
+                                    <h4 id="item_price">Price</h4>
+                                </div>
+                                <div class="itemnote">Downloading this Book is easy just fill the following form carefully.</div>
+                            </div>
+                        </div>
+                        <form action="" method="post" id="OrderForm" name="Order-Form">
+                            <div class="formbox">
+                                <div class="inputbox">
+                                    <label for="name">Your Name *</label>
+                                    <input type="text" id="name" name="StudentName" placeholder="Enter your name" required
+                                        autocomplete="on" />
+                                </div>
+                                <div class="inputbox">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="StudentPhone" placeholder="Enter your phone number" required
+                                        autocomplete="on" />
+                                </div>
+                                <div class="inputbox">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="StudentEmail" placeholder="Enter your email" required
+                                        autocomplete="on" />
+                                </div>
+                                <div class="inputbox">
+                                    <label for="city">City *</label>
+                                    <input type="text" id="city" name="StudentCity" placeholder="Enter City of living" required
+                                        autocomplete="on" />
+                                </div>
+                                <div class="inputbox hidebox">
+                                    <label for="bookname">Name of Book</label>
+                                    <input type="text" id="bookname" name="BookName" readonly>
+                                </div>
+                                <div class="inputbox hidebox">
+                                    <label for="bookprice">Price of Book</label>
+                                    <input type="text" id="bookprice" name="BookPrice" readonly>
+                                </div>
+                            </div>
+                            <div class="orderbuttonbox">
+                                <button type="submit">Order</button>
+                                <button type="button" id="cancel-order" onclick="cancel_order()">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div id="spinner-order-form">
+                        <div class="spinner-order-form"><i class="fa-solid fa-spinner"></i></div>
+                    </div>
+                
+                    <!-- Popup -->
+                    <div id="popup-order-form">
+                        <div class="popup-content-order-form">
+                            <span><i class="fa-solid fa-check"></i></span>
+                            <p>Thank you! Your order has been received.</p>
+                            <button id="ok-button-order-form">OK</button>
+                        </div>
+                    </div>
+                    <script>
+                        const order_scriptURL = 'https://script.google.com/macros/s/AKfycbwESw3BD6hihwhaA_8QdDw3Q4meqkkTVQG6NZ0Of4q0vuLBntKO-f2TH0Yi3C4pdx2KxA/exec';
+                        const order_form = document.forms['OrderForm'];
+                        const order_spinner = document.getElementById('spinner-order-form'); // Spinner element
+                        const order_popup = document.getElementById('popup-order-form'); // Popup element
+                        const order_okButton = document.getElementById('ok-button-order-form'); // OK button
+
+                        order_form.addEventListener('submit', (e) => {
+                            e.preventDefault();
+                            // Show the spinner while the form is being submitted
+                            order_spinner.style.display = 'flex';
+
+                            fetch(order_scriptURL, { method: 'POST', body: new FormData(order_form) })
+                                .then((response) => {
+                                    // Hide the spinner and show the popup
+                                    order_spinner.style.display = 'none';
+                                    order_popup.style.display = 'flex';
+                                })
+                                .catch((error) => {
+                                    console.error('Error!', error.message);
+                                    alert('An error occurred while submitting the form. Please try again.');
+                                    order_spinner.style.display = 'none'; // Hide the spinner in case of error
+                                });
+                        });
+
+                        // Redirect after popup confirmation
+                        order_okButton.addEventListener('click', () => {
+                            // Clear the form fields
+                            order_form.reset();
+
+                            // Hide the popup
+                            order_popup.style.display = 'none';
+
+                            document.getElementById("order-page").style.display = "none";
+                        });
+                    </script>
+                </div>
+
             </div>
 
             <div class="why-box">
                 <div class="heading-box">
-                    <h2 class="acme-font">What's Special</h2>
+                    <h2>What's Special</h2>
                     <p class="featured-prod-tagline">Why Karan's claases and Books ?</p>
                 </div>
                 <div class="why-classes">
@@ -243,7 +334,7 @@
                         <li>✔️ Exam Oriented Preparation</li>
                     </ul>
                     </p>
-                    <div class="btn"><a href="Pages/Store-Page.html">SeeClasses</a></div>
+                    <div class="btn"><a href="Pages/Store-Page.html">See Classes</a></div>
                 </div>
                 <div class="why-books">
                     <h2>USP of Books</h2>
@@ -257,14 +348,14 @@
                         <li>✔️ Freely Available</li>
                     </ul>
                     </p>
-                    <div class="btn"><a href="Pages/Store-Page.html">SeeBooks</a></div>
+                    <div class="btn"><a href="Pages/Store-Page.html">See Books</a></div>
                 </div>
             </div>
 
             <section id="about">
                 <div class="about-section">
                     <div class="heading-box">
-                        <h2 class="acme-font">Welcome to My Profile!</h2>
+                        <h2>Welcome to My Profile!</h2>
                         <p class="featured-prod-tagline">Who I am? Let's Explore</p>
                     </div>
                     <div class="about-wrapper">
@@ -290,9 +381,28 @@
                 </div>
             </section>
 
+            <section id="social-media">
+                <div class="heading-box">
+                    <h2>Content That Matters</h2>
+                    <p class="featured-prod-tagline">What I Create: Videos & Posts</p>
+                </div>
+                <div class="media-wrapper">
+                    <div class="media-rack">
+                        <div class="media-box">
+                            <iframe src="https://www.youtube.com/embed/sEk91t6xLNE?si=QbXUQCSjTtrnJZtK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <p class="media-title">How to Cover CA Inter ICAI Module | CA Intermediate Jan'25 | CA Inter study tips | CA Inter Student</p>
+                        </div>
+                        <div class="media-box">
+                            <iframe src="https://www.youtube.com/embed/_6RIm2Ml6jE?si=Qg0DIeWq5zhmGPLe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <p class="media-title">CA Student Study Vlog | Backlog | Revision | CA Inter Jan25 | CA Inter study tips | CA Inter Student</p> 
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="reviews">
                 <div class="heading-box padding">
-                    <h2 class="acme-font">Students' Reviews</h2>
+                    <h2>Students' Reviews</h2>
                     <p class="featured-prod-tagline">What they say ?</p>
                 </div>
                 <div class="reviewslider">
@@ -303,7 +413,7 @@
                                 <div class="review-content">
                                     <div class="student-profile">
                                         <div class="avatar">
-                                            <img src="Img-Assets/avatar-girl.png" alt="Avatar">
+                                            <img src="Img-Assets/avatar-girl.png" alt="Avatar" loading="lazy">
                                         </div>
                                         <h3 class="studentname">Nitya Khandelwal</h3>
                                     </div>
@@ -324,7 +434,7 @@
                                 <div class="review-content">
                                     <div class="student-profile">
                                         <div class="avatar">
-                                            <img src="Img-Assets/avatar-girl.png" alt="Avatar">
+                                            <img src="Img-Assets/avatar-girl.png" alt="Avatar" loading="lazy">
                                         </div>
                                         <h3 class="studentname">Akansha Nayak</h3>
                                     </div>
@@ -381,7 +491,7 @@
                         setInterval(slideReviews, 8000);
                     </script>
                     <div class="reviewdoodle">
-                        <img src="Img-Assets/review doodle.jpg" alt="review doodle">
+                        <img src="Img-Assets/review doodle.jpg" alt="review doodle" loading="lazy">
                     </div>
                 </div>
             </section>
@@ -389,7 +499,7 @@
             <section id="contact">
                 <div class="contact-section section" id="contact-section">
                     <div class="heading-box">
-                        <h2 class="acme-font">Let's Connect</h2>
+                        <h2>Let's Connect</h2>
                         <p class="featured-prod-tagline">Send your message</p>
                     </div>
                     <div class="contact-wrapper">
@@ -483,12 +593,12 @@
         <footer class="footer">
             <div class="row1footer">
                 <div class="footer-logo">
-                    <a href="https://karankushwaha.netlify.app"><img src="Img-Assets/logo-light.png"
+                    <a href="https://karankushwaha.netlify.app"><img src="Img-Assets/logo-light.png" loading="lazy"
                             alt="Logo Karan Kushwaha"></a>
                 </div>
                 <div class="about-website">
                     <div class="imgbox">
-                        <img src="Img-Assets/karan kushwaha.jpg" alt="karan kushwaha">
+                        <img src="Img-Assets/karan kushwaha.jpg" alt="karan kushwaha" loading="lazy">
                     </div>
                     <div class="textbox">
                         <p>This website has been meticulously designed and developed by Karan Kushwaha as a part of
@@ -507,6 +617,14 @@
                             class="fa-brands fa-youtube"></i></a>
                     <a href="https://x.com/KaranKushwaha_" target="_blank"><i
                             class="fa-brands fa-square-x-twitter"></i></a>
+                </div>
+
+                <div class="subscribebox">
+                    <form action="" name="subscribe">
+                        <label for="subscribe">Be the first to discover new products! Subscribe for the latest updates and exclusive launches.</label>
+                        <input type="email" name="email" id="subscribe" placeholder="Your Email..." required>
+                        <input type="submit" value="SUBSCRIBE"></input>
+                    </form>
                 </div>
             </div>
             <div class="row3footer">
@@ -536,5 +654,7 @@
             </div>
         </div>
     </div>
+
+    <script src="Scripts/OrderItem.js"></script>
 </body>
 </html>

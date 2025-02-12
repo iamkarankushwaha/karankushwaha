@@ -11,145 +11,289 @@
     <!--  -->
     <link rel="stylesheet" href="../CSS-Assets/Default-Style.css">
     <link rel="stylesheet" href="../CSS-Assets/Header-Style.css">
+    <link rel="stylesheet" href="../Index-Style.css">
     <link rel="stylesheet" href="../CSS-Assets/Store-Style.css">
+    <link rel="stylesheet" href="../CSS-Assets/Contact-Me.css">
     <link rel="stylesheet" href="../CSS-Assets/Footer-Style.css">
+    <link rel="stylesheet" href="../CSS-Assets/Responsive-Style.css">
 </head>
 
+
 <body>
-    <div class="container" id="container">
-        <h1>📚 Online Book Store</h1>
-    <a href="Cart-Page.html">🛒 Cart (<span id="cart-count">0</span>)</a>
+    <div class="AppContainer" id="container">
 
-    <div class="store">
-        <div class="book">
-            <h3>CA Inter FM Formula Handbook</h3>
-            <p>Price: ₹0</p>
-            <button onclick="addToCart('CA Inter FM Formula Handbook', 0)">Add to Cart</button>
-        </div>
-
-        <div class="book">
-            <h3>CA Inter Taxation Guide</h3>
-            <p>Price: ₹499</p>
-            <button onclick="addToCart('CA Inter Taxation Guide', 499)">Add to Cart</button>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-
-
-
-
-
-
-<div style="visibility: collapse;">
-        <div class="profile-box">
-            <div class="profile">
-                <img src="Img-Assets/Profile.jpg" alt="Profile Picture">
-                <div class="profile-name">Karan Kushwaha</div>
-                <div class="profile-email"></div>
+        <header id="header">
+            <div id="menu-icon"><i class="fa-solid fa-bars"></i></div>
+            <div class="logo"><a href="https://karankushwaha.netlify.app"><img src="../Img-Assets/logo-light.png"
+                        alt="Logo Karan Kushwaha"></a></div>
+            <div id="menubox">
+                <ul class="menu">
+                    <li><a href="https://karankushwaha.netlify.app">Home</a></li>
+                    <li><a href="Store-Page.html">Store</a>
+                    </li>
+                    <li><a href=""
+                        onclick="NotAvlblPopupHeader('Free-Resources are being compilled please check again after some time or contact Karan Kushwaha.')">Free-Resources</a>
+                    </li>
+                    <li><a href=""
+                            onclick="NotAvlblPopupHeader('Ask-Doubts feature is under development plsease check after sometime or you may contact Karan Kushwaha.')">Ask-Doubts</a>
+                    </li>
+                    <li><a href="https://karankushwaha.netlify.app/index.html#about">About</a></li>
+                    <li><a href="https://karankushwaha.netlify.app/index.html#contact">Contact</a></li>
+                </ul>
             </div>
+            <div class="right-header">
+                <ul>
+                    <li id="cart"><a href="Store-Page.html"><i class="fa-solid fa-bag-shopping"></i></a>
+                    </li>
+                    <li><a href="https://wa.me/9315540041?text=Hello Karan, I visited your website and checked some of your products. I wanted to know more about [*Write here your query..*]"
+                            target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+                </ul>
+            </div>
+            <script>
+                // Menu Icon
+                const menuIcon = document.getElementById('menu-icon');
+                const menubox = document.getElementById('menubox');
+                // Toggle submenu visibility on menu click
+                menuIcon.addEventListener("click", (event) => {
+                    event.stopPropagation(); // Prevent the click event from propagating to the window
+                    menubox.classList.toggle("show-menubox");
+                });
 
+                // Hide submenu when clicking anywhere else
+                window.addEventListener("click", () => {
+                    menubox.classList.remove("show-menubox");
+                });
 
+                // Prevent submenu clicks from hiding it
+                menubox.addEventListener("click", (event) => {
+                    event.stopPropagation(); // Prevent click from propagating to window
+                });
+            </script>
+            <script>
+                function NotAvlblPopupHeader(msg) {
+                    event.preventDefault();
+                    document.getElementById("popup-container").style.display = 'flex';
+                    document.getElementById("pop-header").innerText = "Feature Not Available";
+                    document.getElementById("pop-text").innerText = msg;
+                }
+            </script>
+        </header>
 
-            <!-- <div class="banner">
-            <img src="Img-Assets/banner 1.png" alt="Banner 1">
-            <img src="Img-Assets/banner 2.png" alt="Banner 2">
-            <img src="Img-Assets/banner 3.png" alt="Banner 3">
-            </div> -->
+        <!-- <div class="banner">
+            <img src="../Img-Assets/banner 1.png" alt="Banner 1">
+            <img src="../Img-Assets/banner 2.png" alt="Banner 2">
+            <img src="../Img-Assets/banner 3.png" alt="Banner 3">
+        </div> -->
+        <div class="featured-prod">
 
-            <div class="filter">
-                <div class="filter-buttons">
-                    <button>Books</button>
-                    <button>Notes</button>
-                    <button>Clear</button>
+            <div class="heading-box">
+                <h2>All Books & Notes</h2>
+                <p class="featured-prod-tagline">Check out our latest products</p>
+            </div>
+            <div class="product-wrapper">
+                <div class="prodrack" id="prodrack">
+                    <!-- Prod 1 -->
+                    <div class="prodbox">
+                        <img src="../Img-Assets/book-thumbnail01.png" id="prodimg01" class="prodimg" alt="Meaning of salary under different provisions of Income Tax Act">
+                        <div>
+                            <p id="prod_title01" class="prod_title">
+                                Meaning of salary under different provisions of Income Tax Act 1961 | Relavent for CA Inter | Compiled by Karan Kushwaha
+                            </p>
+                        </div>
+                        <div class="pricebox">
+                            <h5 id="prodprice01">Free</h5> <span>₹699</span>
+                        </div>
+                        <button id="prodbutton" onclick="DownloadProd('01')">Download <span class="fa-solid fa-download"></span></button>
+                    </div>
+                    
+                    <!-- Prod 2 -->
+                    <div class="prodbox">
+                        <img src="../Img-Assets/book-thumbnail02.png" id="prodimg02" class="prodimg" alt="Meaning of salary under different provisions of Income Tax Act">
+                        <div>
+                            <p id="prod_title02" class="prod_title">
+                                CA Inter FM Formula HandBook | Compilation of all Formulas of Financial Management
+                            </p>
+                        </div>
+                        <div class="pricebox">
+                            <h5 id="prodprice02">Free</h5> <span>₹699</span>
+                        </div>
+                        <button id="prodbutton" onclick="DownloadProd('02')">Download <span class="fa-solid fa-download"></span></button>
+                    </div>
                 </div>
-                <div class="search-box">
-                    <input type="text" placeholder="Search...">
+                <div class="filter-box">
+                    <p class="link-store">Visit <a href="Pages/Store-Page.html">Store <i
+                                class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></a> for more products.</p>
                 </div>
             </div>
-
-            <div class="store">
-                <div class="card">
-                    <!-- <img src="book1.jpg" alt="Book Thumbnail"> -->
-                    <div class="card-content">
-                        <div class="card-title">Book Title 1</div>
-                        <div class="card-detail">Brief details about the book...</div>
-                        <div class="card-category">Category: Books1</div>
-                        <div class="card-download">
-                            <button onclick="openPopup('Book Title 1', 'Books')"><i class="fas fa-download"></i>
-                                Download</button>
+            <div id="order-page">
+                <div class="order-wrapper">
+                    <div class="orderheading">
+                        <h2>Order Page</h2>
+                    </div>
+                    <div class="order-details">
+                        <div class="itemimgbox">
+                            <img src="" id="Item-Image" alt="Item-Image">
+                        </div>
+                        <div class="itemdetails">
+                            <p id="item_title">Item title goes here...</p>
+                            <div class="item_pricebox">
+                                <span>Price in rupees:</span><h4 id="item_price">Price</h4>
+                            </div>
+                            <div class="itemnote">Downloading this Book is easy just fill the following form carefully.</div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <!-- <img src="book1.jpg" alt="Book Thumbnail"> -->
-                    <div class="card-content">
-                        <div class="card-title">Book Title 2</div>
-                        <div class="card-detail">Brief details about the book...</div>
-                        <div class="card-category">Category: Books2</div>
-                        <div class="card-download">
-                            <button onclick="openPopup('Book Title 1', 'Books')"><i class="fas fa-download"></i>
-                                Download</button>
+                    <form action="" method="post" id="OrderForm" name="Order-Form">
+                        <div class="formbox">
+                            <div class="inputbox">
+                                <label for="name">Your Name *</label>
+                                <input type="text" id="name" name="StudentName" placeholder="Enter your name" required
+                                    autocomplete="on" />
+                            </div>
+                            <div class="inputbox">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="StudentPhone" placeholder="Enter your phone number" required
+                                    autocomplete="on" />
+                            </div>
+                            <div class="inputbox">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="StudentEmail" placeholder="Enter your email" required
+                                    autocomplete="on" />
+                            </div>
+                            <div class="inputbox">
+                                <label for="city">City *</label>
+                                <input type="text" id="city" name="StudentCity" placeholder="Enter City of living" required
+                                    autocomplete="on" />
+                            </div>
+                            <div class="inputbox">
+                                <label for="bookname">Name of Book</label>
+                                <input type="text" id="bookname" name="BookName" readonly>
+                            </div>
+                            <div class="inputbox">
+                                <label for="bookprice">Price of Book</label>
+                                <input type="text" id="bookprice" name="BookPrice" readonly>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <!-- <img src="book1.jpg" alt="Book Thumbnail"> -->
-                    <div class="card-content">
-                        <div class="card-title">Book Title 3</div>
-                        <div class="card-detail">Brief details about the book...</div>
-                        <div class="card-category">Category: Books3</div>
-                        <div class="card-download">
-                            <button onclick="openPopup('Book Title 1', 'Books')"><i class="fas fa-download"></i>
-                                Download</button>
+                        <div class="orderbuttonbox">
+                            <button type="submit">Order</button>
+                            <button type="button" id="cancel-order" onclick="cancel_order()">Cancel</button>
                         </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <!-- <img src="book1.jpg" alt="Book Thumbnail"> -->
-                    <div class="card-content">
-                        <div class="card-title">Book Title 4</div>
-                        <div class="card-detail">Brief details about the book...</div>
-                        <div class="card-category">Category: Books4</div>
-                        <div class="card-download">
-                            <button onclick="openPopup('Book Title 4', 'Books')"><i class="fas fa-download"></i>
-                                Download</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="popup" id="popup">
-                <div class="popup-header">Download Book</div>
-                <div class="popup-body">
-                    <form>
-                        <input type="text" id="book-title" placeholder="Book Title" readonly>
-                        <input type="text" id="book-category" placeholder="Category" readonly>
-                        <input type="email" placeholder="Email">
-                        <textarea placeholder="Message"></textarea>
                     </form>
                 </div>
-                <div class="popup-footer">
-                    <button>Download</button>
-                    <button onclick="closePopup()">Cancel</button>
+            </div>
+
+            <div id="spinner-order-form">
+                <div class="spinner-order-form"><i class="fa-solid fa-spinner"></i></div>
+            </div>
+
+            <!-- Popup -->
+            <div id="popup-order-form">
+                <div class="popup-content-order-form">
+                    <span><i class="fa-solid fa-check"></i></span>
+                    <p>Thank you! Your order has been received.</p>
+                    <button id="ok-button-order-form">OK</button>
+                </div>
+            </div>
+            <script>
+                const order_scriptURL = 'https://script.google.com/macros/s/AKfycbwESw3BD6hihwhaA_8QdDw3Q4meqkkTVQG6NZ0Of4q0vuLBntKO-f2TH0Yi3C4pdx2KxA/exec';
+                const order_form = document.forms['OrderForm'];
+                const order_spinner = document.getElementById('spinner-order-form'); // Spinner element
+                const order_popup = document.getElementById('popup-order-form'); // Popup element
+                const order_okButton = document.getElementById('ok-button-order-form'); // OK button
+
+                order_form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    // Show the spinner while the form is being submitted
+                    order_spinner.style.display = 'flex';
+
+                    fetch(order_scriptURL, { method: 'POST', body: new FormData(order_form) })
+                        .then((response) => {
+                            // Hide the spinner and show the popup
+                            order_spinner.style.display = 'none';
+                            order_popup.style.display = 'flex';
+                        })
+                        .catch((error) => {
+                            console.error('Error!', error.message);
+                            alert('An error occurred while submitting the form. Please try again.');
+                            order_spinner.style.display = 'none'; // Hide the spinner in case of error
+                        });
+                });
+
+                // Redirect after popup confirmation
+                order_okButton.addEventListener('click', () => {
+                    // Clear the form fields
+                    order_form.reset();
+
+                    // Hide the popup
+                    order_popup.style.display = 'none';
+
+                    document.getElementById("order-page").style.display="none";
+                });
+            </script>
+        </div>
+        <footer class="footer">
+            <div class="row1footer">
+                <div class="footer-logo">
+                    <a href="https://karankushwaha.netlify.app"><img src="../Img-Assets/logo-light.png" loading="lazy"
+                            alt="Logo Karan Kushwaha"></a>
+                </div>
+                <div class="about-website">
+                    <div class="imgbox">
+                        <img src="../Img-Assets/karan kushwaha.jpg" alt="karan kushwaha" loading="lazy">
+                    </div>
+                    <div class="textbox">
+                        <p>This website has been meticulously designed and developed by Karan Kushwaha as a part of
+                            his heartfelt dream project. With unwavering dedication and passion, Karan has created
+                            this platform to empower and support students from commerce backgrounds. This initiative
+                            aims to provide invaluable resources, guidance, and opportunities that will benefit
+                            countless aspiring learners on their educational journey.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row2footer">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/karankushwaha" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://youtube.com/@karan_kushwaha09?si=UCfHJmEtm0ATgaMZ" target="_blank"><i
+                            class="fa-brands fa-youtube"></i></a>
+                    <a href="https://x.com/KaranKushwaha_" target="_blank"><i
+                            class="fa-brands fa-square-x-twitter"></i></a>
+                </div>
+
+                <div class="subscribebox">
+                    <form action="" name="subscribe">
+                        <label for="subscribe">Be the first to discover new products! Subscribe for the latest updates and exclusive launches.</label>
+                        <input type="email" name="email" id="subscribe" placeholder="Your Email..." required>
+                        <input type="submit" value="SUBSCRIBE"></input>
+                    </form>
+                </div>
+            </div>
+            <div class="row3footer">
+                <p>&copy; 2025 Karan Kushwaha. All Rights Reserved.</p>
+                <p>Created and Maintained by Karan Kushwaha.</p>
+            </div>
+        </footer>
+    </div>
+    <div id="popup-container">
+        <div id="popup-wrapper">
+            <div class="pop-top-row">
+                <h3 id="pop-header"></h3>
+            </div>
+            <div class="pop-down-row">
+                <div class="pop-text-box">
+                    <p id="pop-text"></p>
+                </div>
+                <div class="pop-close-box">
+                    <button id="close-popup">Okay</button>
+                    <script>
+                        document.getElementById("close-popup").addEventListener("click", () => {
+                            document.getElementById("popup-container").style.display = 'none';
+                        });
+                    </script>
                 </div>
             </div>
         </div>
-        <script>
-            function openPopup(title, category) {
-                document.getElementById('popup').style.display = 'block';
-                document.getElementById('book-title').value = title;
-                document.getElementById('book-category').value = category;
-            }
-
-            function closePopup() {
-                document.getElementById('popup').style.display = 'none';
-            }
-
-
-        </script>
-
-</div>
     </div>
+    <script src="../Scripts/OrderItem.js"></script>
 </body>
 
 </html>
