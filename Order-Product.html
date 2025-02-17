@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Img-Assets/circle logo.png" type="image/x-icon">
+    <!-- Font Awesome Loader Link -->
+    <script src="https://kit.fontawesome.com/25cf39dd91.js" crossorigin="anonymous"></script>
+    <title>Product Page</title>
+    <link rel="stylesheet" href="CSS-Assets/Default-Style.css">
+    <link rel="stylesheet" href="CSS-Assets/Header-Style.css">
+    <link rel="stylesheet" href="CSS-Assets/Index-Style.css">
+    <link rel="stylesheet" href="CSS-Assets/Contact-Me.css">
+    <link rel="stylesheet" href="CSS-Assets/Order-Product.css">
+    <link rel="stylesheet" href="CSS-Assets/Footer-Style.css">
+    <link rel="stylesheet" href="CSS-Assets/Responsive-Style.css">
+</head>
+<body>
+    <div class="AppContainer">
+        <header id="header">
+            <div id="menu-icon"><i class="fa-solid fa-bars"></i></div>
+            <div class="logo"><a href="https://karankushwaha.netlify.app"><img src="Img-Assets/logo-light.png"
+                        alt="Logo Karan Kushwaha"></a></div>
+            <div id="menubox">
+                <ul class="menu">
+                    <li><a href="https://karankushwaha.netlify.app">Home</a></li>
+                    <li><a href="Store-Page.html">Store</a>
+                    </li>
+                    <li><a href=""
+                        onclick="NotAvlblPopupHeader('Free-Resources are being compilled please check again after some time or contact Karan Kushwaha.')">Free-Resources</a>
+                    </li>
+                    <li><a href=""
+                            onclick="NotAvlblPopupHeader('Ask-Doubts feature is under development plsease check after sometime or you may contact Karan Kushwaha.')">Ask-Doubts</a>
+                    </li>
+                    <li><a href="index.html?scrollTo=about">About</a></li>
+                    <li><a href="index.html?scrollTo=contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="right-header">
+                <ul>
+                    <li id="cart"><a href="Store-Page.html"><i class="fa-solid fa-bag-shopping"></i></a>
+                    </li>
+                    <li><a href="https://wa.me/9315540041?text=Hello Karan, I visited your website and checked some of your products. I wanted to know more about [*Write here your query..*]"
+                            target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <div class="item-detail-box">
+                <div class="itemimgbox">
+                    <img src="" alt="" id="itemimg">
+                </div>
+                <div class="itemdetails">
+                    <p class="author"><b>Author: </b>Karan Kushwaha</p>
+                    <h2 id="item-title"></h2>
+                    <div class="pricebox">
+                        <p id="item-price"></p>
+                        <p id="droped-price"></p>
+                    </div>
+                    <a href="#order-page" id="orderbtn">Order Now</a>
+                </div>
+            </div>
+            <div class="item-des-box">
+                <h2 class="des-head">Description</h2>
+                <div id="description"></div>
+                <div class="readmore"><button id="readmore">....read more.</button></div>
+            </div>
+
+            <div id="order-page">
+                <div class="order-wrapper">
+                    <div class="formheading">
+                        <h2>Place the order</h2>
+                        <p><strong>Terms: </strong>Getting this book delivered to your email is simple! Just fill out the form carefully, and within 24 hours, you'll receive a downloadable and printable soft copy straight to your inbox. Therefor you are requested to provide correct email id.</p>
+                    </div>
+                    <form action="" method="post" id="OrderForm" name="Order-Form">
+                        <div class="formbox">
+                            <div class="inputbox">
+                                <label for="name">Your Name *</label>
+                                <input type="text" id="name" name="StudentName" placeholder="Enter your name" required
+                                    autocomplete="on" />
+                            </div>
+                            <div class="inputbox">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="StudentPhone" placeholder="Enter your phone number" required
+                                    autocomplete="on" />
+                            </div>
+                            <div class="inputbox">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="StudentEmail" placeholder="Enter your email" required
+                                    autocomplete="on" />
+                            </div>
+                            <div class="inputbox">
+                                <label for="city">City *</label>
+                                <input type="text" id="city" name="StudentCity" placeholder="Enter City of living" required
+                                    autocomplete="on" />
+                            </div>
+                            <div class="inputbox hidebox">
+                                <label for="bookname">Name of Book</label>
+                                <input type="text" id="bookname" name="BookName" readonly>
+                            </div>
+                            <div class="inputbox hidebox">
+                                <label for="bookprice">Price of Book</label>
+                                <input type="text" id="bookprice" name="BookPrice" readonly>
+                            </div>
+                        </div>
+                        <div class="orderbuttonbox">
+                            <button type="submit">Order</button>
+                            <button type="button" id="cancel-order" onclick="cancel_order()">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+        
+                <div id="spinner-order-form">
+                    <div class="spinner-order-form"><i class="fa-solid fa-spinner"></i></div>
+                </div>
+            
+                <!-- Popup -->
+                <div id="popup-order-form">
+                    <div class="popup-content-order-form">
+                        <span><i class="fa-solid fa-check"></i></span>
+                        <p>Thank you! Your order has been received.</p>
+                        <button id="ok-button-order-form">OK</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <section class="featured-prod">
+            <div class="section-heading">
+                <div class="heading-itembox">
+                    <h2 class="heading-header">Related Products</h2>
+                </div>
+                <div class="heading-itembox">
+                    <p class="section-tagline">Check out our other <span>products!</span></p>
+                </div>
+            </div>
+            <div class="product-wrapper">
+                <div class="prodrack" id="prodrack"></div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="row1footer">
+                <div class="footer-logo">
+                    <a href="https://karankushwaha.netlify.app"><img src="Img-Assets/logo-light.png" loading="lazy"
+                            alt="Logo Karan Kushwaha"></a>
+                </div>
+                <div class="about-website">
+                    <div class="imgbox">
+                        <img src="Img-Assets/karan kushwaha.jpg" alt="karan kushwaha" loading="lazy">
+                    </div>
+                    <div class="textbox">
+                        <p>This website has been meticulously designed and developed by Karan Kushwaha as a part of
+                            his heartfelt dream project. With unwavering dedication and passion, Karan has created
+                            this platform to empower and support students from commerce backgrounds. This initiative
+                            aims to provide invaluable resources, guidance, and opportunities that will benefit
+                            countless aspiring learners on their educational journey.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row2footer">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/karankushwaha" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://youtube.com/@karan_kushwaha09?si=UCfHJmEtm0ATgaMZ" target="_blank"><i
+                            class="fa-brands fa-youtube"></i></a>
+                    <a href="https://x.com/KaranKushwaha_" target="_blank"><i
+                            class="fa-brands fa-square-x-twitter"></i></a>
+                </div>
+
+                <div class="subscribebox">
+                    <form action="" name="subscribe">
+                        <label for="subscribe">Be the first to discover new products! Subscribe for the latest updates and exclusive launches.</label>
+                        <input type="email" name="email" id="subscribe" placeholder="Your Email..." required>
+                        <input type="submit" value="SUBSCRIBE"></input>
+                    </form>
+                </div>
+            </div>
+            <div class="row3footer">
+                <p>&copy; 2025 Karan Kushwaha. All Rights Reserved.</p>
+                <p>Created and Maintained by Karan Kushwaha.</p>
+            </div>
+        </footer>
+    </div>
+    <div id="popup-container">
+        <div id="popup-wrapper">
+            <div class="pop-top-row">
+                <h3 id="pop-header"></h3>
+            </div>
+            <div class="pop-down-row">
+                <div class="pop-text-box">
+                    <p id="pop-text"></p>
+                </div>
+                <div class="pop-close-box">
+                    <button id="close-popup">Okay</button>
+                    <script>
+                        document.getElementById("close-popup").addEventListener("click", () => {
+                            document.getElementById("popup-container").style.display = 'none';
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Scripts/Database.js"></script>
+    <script src="Scripts/Order-Product.js"></script>
+    <script src="Scripts/Menu & Header.js"></script>
+    <script src="Scripts/Featured-Products.js"></script>
+</body>
+</html>

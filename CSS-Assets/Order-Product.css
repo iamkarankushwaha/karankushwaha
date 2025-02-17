@@ -1,0 +1,327 @@
+/* ========= Order Page CSS=========== */
+main{
+    background-color: var(--FluiedBg);
+    padding: 10px 0;
+}
+.item-detail-box{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 10px auto;
+    margin-bottom: 0;
+    border-radius: 10px 10px 0 0;
+    padding: 50px 10px;
+    gap: 40px;
+    background-color: var(--White);
+    border-bottom: 1px var(--GrayBg) solid;
+}
+.itemimgbox, .itemdetails{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.itemimgbox img{
+    width: 320px;
+    height: 320px;
+    border-radius: 15px;
+    background-color: var(--GrayBg);
+}
+.itemdetails{
+    max-width: 600px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100%;
+}
+.author{
+    font-size: 1.1rem;
+    color: var(--Primary);
+    margin-bottom: 15px;
+}
+
+#item-title{
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: var(--Primary);
+}
+.pricebox{
+    display: flex;
+}
+#item-price{
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--red);
+}
+
+#droped-price{
+    font-size: 1rem;
+    font-weight: 600;
+    padding-right: 5px;
+    color: var(--GrayBg);
+}
+
+#orderbtn{
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+    text-align: center;
+    color: white !important;
+    background-color: var(--Button);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    box-shadow: #00000030 0px 0px 5px 0px;
+}
+#orderbtn:hover{
+    background-color: var(--BtnBg);
+}
+
+.item-des-box{
+    width: 95%;
+    margin: 15px auto;
+    margin-top: 0px;
+    background-color: var(--White);
+    border-radius:0 0 10px 10px;
+    padding: 20px 15px;
+}
+.item-des-box .des-head{
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    color: var(--Secondary);
+    position: relative;
+    width: fit-content;
+    white-space: nowrap;
+}
+.item-des-box .des-head::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: -10px;
+    height: 2px;
+    width: 120%;
+    background-color: var(--red);
+    border-radius: 5px 5px 0px 0px;
+}
+
+#description{
+    line-height: 27px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    padding-top: 0;
+    transition: -webkit-line-clamp 0.3s ease;
+}
+#description.toggleheight{
+    -webkit-line-clamp: unset;
+}
+#description h1{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--red);
+}
+#description strong, #description h2{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--Primary);
+}
+#description span{
+    text-decoration: underline;
+}
+#description ul{
+    padding: 5px 10px;
+    list-style-type: disc;
+}
+#description ul li{
+    list-style: disc inside !important;
+}
+
+.readmore{
+    padding: 10px 0;
+    width: 100%;
+}
+#readmore{
+    width: fit-content;
+    background-color: transparent;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--DarkGray);
+}
+
+
+#order-page{
+    width: 95%;
+    margin: 20px auto;
+    background-color: var(--White);
+    border-radius: 8px;
+}
+
+.formheading{
+    width: 100%;
+    padding: 20px 20px;
+}
+.formheading h2{
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--BtnBg);
+}
+.formheading strong{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--Primary);
+}
+.formheading p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--Secondary);
+}
+
+.formbox{
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px 20px;
+}
+.inputbox{
+    padding:10px;
+}
+.inputbox label{
+    width: 90%;
+    padding: 0px 10px;
+    font-size: 1.1rem;
+    color: var(--Secondary);
+    cursor: pointer;
+}
+.inputbox input{
+    color: var(--Primary);
+    background-color: var(--White);
+    border: 1px solid #c8d4e7;
+    border-radius: 5px;
+}
+
+.orderbuttonbox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 15px;
+    padding-bottom: 50px;
+    gap: 30px;
+    margin-top: 40px;
+}
+.orderbuttonbox button {
+    width: fit-content;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: var(--Button);
+    box-shadow: 0px 0px 10px #00000030;
+}
+.orderbuttonbox button:last-child {
+   background-color: var(--Primary);
+   color: var(--White);
+}
+.orderbuttonbox button:last-child:hover {
+   background-color: var(--Secondary);
+}
+
+
+/* Order page spinner */
+#spinner-order-form{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #00000080;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999999999999;
+}
+
+.spinner-order-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-color: var(--White);
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px -2px;
+}
+
+.spinner-order-form i {
+    animation: spin 1s linear infinite;
+    color: var(--Button);
+    font-size: 40px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* ----------------------Popup Style */
+#popup-order-form {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #00000080;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999999999999999;
+}
+
+.popup-content-order-form {
+    width: 320px;
+    height: fit-content;
+    padding: 20px 30px;
+    background-color: var(--White);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px -2px;
+}
+
+.popup-content-order-form span i {
+    font-size: 40px;
+    color: var(--green);
+}
+
+.popup-content-order-form p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: var(--Secondary) !important;
+    font-weight: 500 !important;
+}
+
+#ok-button-order-form {
+    background-color: var(--Button);
+    color: var(--White);
+    border: none;
+    padding: 8px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: auto;
+}
+
+#ok-button-order-form:hover {
+    background-color: var(--BtnBg);
+}
+
+
+

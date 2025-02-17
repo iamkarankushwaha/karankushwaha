@@ -17,7 +17,7 @@
     <!--  -->
     <link rel="stylesheet" href="CSS-Assets/Default-Style.css">
     <link rel="stylesheet" href="CSS-Assets/Header-Style.css">
-    <link rel="stylesheet" href="Index-Style.css">
+    <link rel="stylesheet" href="CSS-Assets/Index-Style.css">
     <link rel="stylesheet" href="CSS-Assets/Social-Media.css">
     <link rel="stylesheet" href="CSS-Assets/Contact-Me.css">
     <link rel="stylesheet" href="CSS-Assets/Footer-Style.css">
@@ -43,23 +43,6 @@
                 </div>
             </div>
         </div>
-        <script>
-            // Show the popup when the page loads
-            window.onload = function () {
-                setTimeout(function () {
-                    const AppPopup = document.getElementById('app-pop');
-                    AppPopup.style.visibility = 'visible'; // Show the popup after 1 sec
-                    AppPopup.style.opacity = '1'; // Fade in effect
-                }, 800); // 1000 milliseconds = 1 second
-            };
-
-            // Close the popup when the user clicks "OK"
-            document.getElementById('app-close-popup').onclick = function () {
-                const AppPopup = document.getElementById('app-pop');
-                AppPopup.style.opacity = '0'; // Fade in effect
-                AppPopup.style.visibility = 'hidden'; // Hide the popup
-            };
-        </script>
     </div>
 
     <div class="AppContainer" id="container">
@@ -71,7 +54,7 @@
             <div id="menubox">
                 <ul class="menu">
                     <li><a href="https://karankushwaha.netlify.app">Home</a></li>
-                    <li><a href="Pages/Store-Page.html">Store</a>
+                    <li><a href="Store-Page.html">Store</a>
                     </li>
                     <li><a href=""
                         onclick="NotAvlblPopupHeader('Free-Resources are being compilled please check again after some time or contact Karan Kushwaha.')">Free-Resources</a>
@@ -79,46 +62,18 @@
                     <li><a href=""
                             onclick="NotAvlblPopupHeader('Ask-Doubts feature is under development plsease check after sometime or you may contact Karan Kushwaha.')">Ask-Doubts</a>
                     </li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html?scrollTo=about">About</a></li>
+                    <li><a href="index.html?scrollTo=contact">Contact</a></li>
                 </ul>
             </div>
             <div class="right-header">
                 <ul>
-                    <li id="cart"><a href="Pages/Store-Page.html"><i class="fa-solid fa-bag-shopping"></i></a>
+                    <li id="cart"><a href="Store-Page.html"><i class="fa-solid fa-bag-shopping"></i></a>
                     </li>
                     <li><a href="https://wa.me/9315540041?text=Hello Karan, I visited your website and checked some of your products. I wanted to know more about [*Write here your query..*]"
                             target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
                 </ul>
             </div>
-            <script>
-                // Menu Icon
-                const menuIcon = document.getElementById('menu-icon');
-                const menubox = document.getElementById('menubox');
-                // Toggle submenu visibility on menu click
-                menuIcon.addEventListener("click", (event) => {
-                    event.stopPropagation(); // Prevent the click event from propagating to the window
-                    menubox.classList.toggle("show-menubox");
-                });
-
-                // Hide submenu when clicking anywhere else
-                window.addEventListener("click", () => {
-                    menubox.classList.remove("show-menubox");
-                });
-
-                // Prevent submenu clicks from hiding it
-                menubox.addEventListener("click", (event) => {
-                    event.stopPropagation(); // Prevent click from propagating to window
-                });
-            </script>
-            <script>
-                function NotAvlblPopupHeader(msg) {
-                    event.preventDefault();
-                    document.getElementById("popup-container").style.display = 'flex';
-                    document.getElementById("pop-header").innerText = "Feature Not Available";
-                    document.getElementById("pop-text").innerText = msg;
-                }
-            </script>
         </header>
 
         <main>
@@ -142,7 +97,7 @@
                 </script>
             </div> -->
 
-            <div class="profile-container">
+            <section class="profile-container">
                 <div class="profile-box">
                     <img src="Img-Assets/Karan Kushwaha - Profile.jpg" alt="Profile of Karan Kushwaha" loading="eager">
                     <h1>Hello, I'm Karan Kushwaha</h1>
@@ -165,165 +120,36 @@
                                 class="fa-brands fa-square-x-twitter"></i></a>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="featured-prod">
-                <div class="heading-box">
-                    <h2>Featured Products</h2>
-                    <p class="featured-prod-tagline">Check out our latest products</p>
+            <section class="featured-prod">
+                <div class="section-heading">
+                    <div class="heading-itembox">
+                        <h2 class="heading-header">Featured Products</h2>
+                    </div>
+                    <div class="heading-itembox">
+                        <p class="section-tagline">Check out our latest <span>products!</span></p>
+                    </div>
                 </div>
                 <div class="product-wrapper">
-                    <div class="prodrack" id="prodrack">
-                        <!-- Prod 1 -->
-                        <div class="prodbox">
-                            <img src="Img-Assets/book-thumbnail01.png" id="prodimg01" class="prodimg" alt="Meaning of salary under different provisions of Income Tax Act">
-                            <div>
-                                <p id="prod_title01" class="prod_title">
-                                    Meaning of salary under different provisions of Income Tax Act 1961 | Relavent for CA Inter | Compiled by Karan Kushwaha
-                                </p>
-                            </div>
-                            <div class="pricebox">
-                                <h5 id="prodprice01">Free</h5> <span>₹699</span>
-                            </div>
-                            <button id="prodbutton" onclick="DownloadProd('01')">Download <span class="fa-solid fa-download"></span></button>
-                        </div>
-                        
-                        <!-- Prod 2 -->
-                        <div class="prodbox">
-                            <img src="Img-Assets/book-thumbnail02.png" id="prodimg02" class="prodimg" alt="Meaning of salary under different provisions of Income Tax Act">
-                            <div>
-                                <p id="prod_title02" class="prod_title">
-                                    CA Inter FM Formula HandBook | Compilation of all Formulas of Financial Management
-                                </p>
-                            </div>
-                            <div class="pricebox">
-                                <h5 id="prodprice02">Free</h5> <span>₹699</span>
-                            </div>
-                            <button id="prodbutton" onclick="DownloadProd('02')">Download <span class="fa-solid fa-download"></span></button>
-                        </div>
-                    </div>
+                    <div class="prodrack" id="prodrack"></div>
                     <div class="filter-box">
-                        <p class="link-store">Visit <a href="Pages/Store-Page.html">Store <i
+                        <p class="link-store">Visit <a href="Store-Page.html">Store <i
                                     class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></a> for more products.</p>
                     </div>
                 </div>
+            </section>
 
-                <!-- ------------Order Page here -->
-                <!-- Consider adding a detailed information about each book or product. Because if students dont know much about that product how they will buy it. -->
-                <div id="order-page">
-                    <div class="order-wrapper">
-                        <div class="orderheading">
-                            <h2>Order Page</h2>
-                        </div>
-                        <div class="order-details">
-                            <div class="itemimgbox">
-                                <img src="" id="Item-Image" alt="Item-Image">
-                            </div>
-                            <div class="itemdetails">
-                                <p id="item_title">Item title goes here...</p>
-                                <div class="item_pricebox">
-                                    <span>Price in rupees:</span>
-                                    <h4 id="item_price">Price</h4>
-                                </div>
-                                <div class="itemnote"><i class="fa-solid fa-circle-info fa-lg" style="color: var(--Primary);"></i> Getting this book delivered to your email is simple! Just fill out the form carefully, and within 24 hours, you'll receive a downloadable and printable soft copy straight to your inbox.</div>
-                            </div>
-                        </div>
-
-                        <form action="" method="post" id="OrderForm" name="Order-Form">
-                            <div class="formbox">
-                                <div class="inputbox">
-                                    <label for="name">Your Name *</label>
-                                    <input type="text" id="name" name="StudentName" placeholder="Enter your name" required
-                                        autocomplete="on" />
-                                </div>
-                                <div class="inputbox">
-                                    <label for="phone">Phone Number</label>
-                                    <input type="tel" id="phone" name="StudentPhone" placeholder="Enter your phone number" required
-                                        autocomplete="on" />
-                                </div>
-                                <div class="inputbox">
-                                    <label for="email">Email *</label>
-                                    <input type="email" id="email" name="StudentEmail" placeholder="Enter your email" required
-                                        autocomplete="on" />
-                                </div>
-                                <div class="inputbox">
-                                    <label for="city">City *</label>
-                                    <input type="text" id="city" name="StudentCity" placeholder="Enter City of living" required
-                                        autocomplete="on" />
-                                </div>
-                                <div class="inputbox hidebox">
-                                    <label for="bookname">Name of Book</label>
-                                    <input type="text" id="bookname" name="BookName" readonly>
-                                </div>
-                                <div class="inputbox hidebox">
-                                    <label for="bookprice">Price of Book</label>
-                                    <input type="text" id="bookprice" name="BookPrice" readonly>
-                                </div>
-                            </div>
-                            <div class="orderbuttonbox">
-                                <button type="submit">Order</button>
-                                <button type="button" id="cancel-order" onclick="cancel_order()">Cancel</button>
-                            </div>
-                        </form>
+            <section class="why-box">
+                <div class="section-heading">
+                    <div class="heading-itembox">
+                        <h2 class="heading-header">What's Special</h2>
                     </div>
-
-                    <div id="spinner-order-form">
-                        <div class="spinner-order-form"><i class="fa-solid fa-spinner"></i></div>
+                    <div class="heading-itembox">
+                        <p class="section-tagline">Why Karan's claases and <span>Books ?</span></p>
                     </div>
-                
-                    <!-- Popup -->
-                    <div id="popup-order-form">
-                        <div class="popup-content-order-form">
-                            <span><i class="fa-solid fa-check"></i></span>
-                            <p>Thank you! Your order has been received.</p>
-                            <button id="ok-button-order-form">OK</button>
-                        </div>
-                    </div>
-                    <script>
-                        const order_scriptURL = 'https://script.google.com/macros/s/AKfycbwESw3BD6hihwhaA_8QdDw3Q4meqkkTVQG6NZ0Of4q0vuLBntKO-f2TH0Yi3C4pdx2KxA/exec';
-                        const order_form = document.forms['OrderForm'];
-                        const order_spinner = document.getElementById('spinner-order-form'); // Spinner element
-                        const order_popup = document.getElementById('popup-order-form'); // Popup element
-                        const order_okButton = document.getElementById('ok-button-order-form'); // OK button
-
-                        order_form.addEventListener('submit', (e) => {
-                            e.preventDefault();
-                            // Show the spinner while the form is being submitted
-                            order_spinner.style.display = 'flex';
-
-                            fetch(order_scriptURL, { method: 'POST', body: new FormData(order_form) })
-                                .then((response) => {
-                                    // Hide the spinner and show the popup
-                                    order_spinner.style.display = 'none';
-                                    order_popup.style.display = 'flex';
-                                })
-                                .catch((error) => {
-                                    console.error('Error!', error.message);
-                                    alert('An error occurred while submitting the form. Please try again.');
-                                    order_spinner.style.display = 'none'; // Hide the spinner in case of error
-                                });
-                        });
-
-                        // Redirect after popup confirmation
-                        order_okButton.addEventListener('click', () => {
-                            // Clear the form fields
-                            order_form.reset();
-
-                            // Hide the popup
-                            order_popup.style.display = 'none';
-
-                            document.getElementById("order-page").style.display = "none";
-                        });
-                    </script>
                 </div>
 
-            </div>
-
-            <div class="why-box">
-                <div class="heading-box">
-                    <h2>What's Special</h2>
-                    <p class="featured-prod-tagline">Why Karan's claases and Books ?</p>
-                </div>
                 <div class="why-classes">
                     <h2>USP of Classes</h2>
                     <ul>
@@ -334,7 +160,7 @@
                         <li><p>✔️ Student Wise Doubt Clearing Sessions</p></li>
                         <li><p>✔️ Exam Oriented Preparation</p></li>
                     </ul>
-                    <div class="btn"><a href="Pages/Store-Page.html">See Classes</a></div>
+                    <div class="btn"><a href="Store-Page.html">See Classes</a></div>
                 </div>
                 <div class="why-books">
                     <h2>USP of Books</h2>
@@ -346,16 +172,21 @@
                         <li><p>✔️ Colourful Books</p></li>
                         <li><p>✔️ Freely Available</p></li>
                     </ul>
-                    <div class="btn"><a href="Pages/Store-Page.html">See Books</a></div>
+                    <div class="btn"><a href="Store-Page.html">See Books</a></div>
                 </div>
-            </div>
+            </section>
 
             <section id="about">
                 <div class="about-section">
-                    <div class="heading-box">
-                        <h2>Welcome to My Profile!</h2>
-                        <p class="featured-prod-tagline">Who I am? Let's Explore</p>
+                    <div class="section-heading">
+                        <div class="heading-itembox">
+                            <h2 class="heading-header">Welcome to My Profile!</h2>
+                        </div>
+                        <div class="heading-itembox">
+                            <p class="section-tagline">Let'explore, who <span>I am ?</span></p>
+                        </div>
                     </div>
+
                     <div class="about-wrapper">
                         <div class="about-img">
                             <img src="Img-Assets/hero-img_karan kushwaha.png" alt="Karan Kushwaha" loading="lazy">
@@ -380,10 +211,15 @@
             </section>
 
             <section id="social-media">
-                <div class="heading-box">
-                    <h2>Content That Matters</h2>
-                    <p class="featured-prod-tagline">What I Create: Videos & Posts</p>
+                <div class="section-heading">
+                    <div class="heading-itembox">
+                        <h2 class="heading-header">Content That Matters</h2>
+                    </div>
+                    <div class="heading-itembox">
+                        <p class="section-tagline">What I Create: Videos & <span>Posts.</span></p>
+                    </div>
                 </div>
+                
                 <div class="media-wrapper">
                     <div class="media-rack">
                         <div class="media-box">
@@ -399,10 +235,15 @@
             </section>
 
             <section class="reviews">
-                <div class="heading-box padding">
-                    <h2>Students' Reviews</h2>
-                    <p class="featured-prod-tagline">What they say ?</p>
+                <div class="section-heading">
+                    <div class="heading-itembox">
+                        <h2 class="heading-header">Word of Mouth</h2>
+                    </div>
+                    <div class="heading-itembox">
+                        <p class="section-tagline">Experience of <span>students.</span></p>
+                    </div>
                 </div>
+
                 <div class="reviewslider">
                     <div class="mainslider">
                         <div class="reviewslides">
@@ -450,44 +291,6 @@
                             
                         </div>
                     </div>
-                    
-                    <script>
-                        let currentIndexR = 0;
-                        const totalReviews = document.querySelectorAll('.reviewbox').length; // Get total number of review boxes
-    
-                        function slideReviews() {
-                            const mainslider = document.querySelector('.mainslider');
-                            const reviewboxes = document.querySelectorAll('.reviewbox');
-                            const Rslides = document.querySelector('.reviewslides');
-    
-                            if (!mainslider || reviewboxes.length === 0 || !Rslides) {
-                                console.error("Elements not found!");
-                                return;
-                            }
-    
-                            let mainsliderwidth = mainslider.getBoundingClientRect().width; // More reliable way to get width
-    
-                            console.log("Slider Width:", mainsliderwidth); // Debugging log
-    
-                            // Set width of each review box
-                            reviewboxes.forEach(box => {
-                                box.style.width = `${mainsliderwidth}px`;
-                            });
-    
-                            // Ensure .reviewslides is wide enough to hold all review boxes
-                            Rslides.style.width = `${mainsliderwidth * totalReviews}px`;
-    
-                            // Move slides
-                            currentIndexR = (currentIndexR + 1) % totalReviews;
-                            Rslides.style.transform = `translateX(-${currentIndexR * mainsliderwidth}px)`;
-                        }
-    
-                        // Run once initially to set the widths before sliding
-                        slideReviews();
-    
-                        // Auto-slide every 5 seconds
-                        setInterval(slideReviews, 8000);
-                    </script>
                     <div class="reviewdoodle">
                         <img src="Img-Assets/review doodle.jpg" alt="review doodle" loading="lazy">
                     </div>
@@ -496,9 +299,13 @@
 
             <section id="contact">
                 <div class="contact-section section" id="contact-section">
-                    <div class="heading-box">
-                        <h2>Let's Connect</h2>
-                        <p class="featured-prod-tagline">Send your message</p>
+                    <div class="section-heading">
+                        <div class="heading-itembox">
+                            <h2 class="heading-header">Let's Connect</h2>
+                        </div>
+                        <div class="heading-itembox">
+                            <p class="section-tagline">Request a callback or send <span>message.</span></p>
+                        </div>
                     </div>
                     <div class="contact-wrapper">
                         <div class="contact-form">
@@ -540,47 +347,10 @@
                             <div id="popup-contact-form">
                                 <div class="popup-content-contact-form">
                                     <span><i class="fa-solid fa-check"></i></span>
-                                    <p>Thank you! Your message has been received.</p>
+                                    <p>Thank you! Your message has been received. Our team will contact you as earliest as possible.</p>
                                     <button id="ok-button-contact-form">OK</button>
                                 </div>
                             </div>
-                            <script>
-                                const scriptURL = 'https://script.google.com/macros/s/AKfycbxeTxnZhqDkV8fR5rswYCmwhDSVAedkdAc9Ex9pa1YJwd2pCYuWjF6j0UgTeqXb9sQ_Lw/exec';
-                                const form = document.forms['Contact-Form'];
-                                const spinner = document.getElementById('spinner-contact-form'); // Spinner element
-                                const popup = document.getElementById('popup-contact-form'); // Popup element
-                                const okButton = document.getElementById('ok-button-contact-form'); // OK button
-
-                                form.addEventListener('submit', (e) => {
-                                    e.preventDefault();
-                                    // Show the spinner while the form is being submitted
-                                    spinner.style.display = 'flex';
-
-                                    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                                        .then((response) => {
-                                            // Hide the spinner and show the popup
-                                            spinner.style.display = 'none';
-                                            popup.style.display = 'flex';
-                                        })
-                                        .catch((error) => {
-                                            console.error('Error!', error.message);
-                                            alert('An error occurred while submitting the form. Please try again.');
-                                            spinner.style.display = 'none'; // Hide the spinner in case of error
-                                        });
-                                });
-
-                                // Redirect after popup confirmation
-                                okButton.addEventListener('click', () => {
-                                    // Clear the form fields
-                                    form.reset();
-
-                                    // Hide the popup
-                                    popup.style.display = 'none';
-
-                                    // Redirect to the specified URL
-                                    window.location.href = 'https://karankushwaha.netlify.app/index.html#contact'; // Replace with your desired redirect URL
-                                });
-                            </script>
                         </div>
                     </div>
                 </div>
@@ -653,6 +423,9 @@
         </div>
     </div>
 
-    <script src="Scripts/OrderItem.js"></script>
+    <script src="Scripts/Script.js"></script>
+    <script src="Scripts/Menu & Header.js"></script>
+    <script src="Scripts/Database.js"></script>
+    <script src="Scripts/Featured-Products.js"></script>
 </body>
 </html>

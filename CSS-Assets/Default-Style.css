@@ -96,6 +96,49 @@ i{
     font-size: 25px;
 }
 
+
+
+.section-heading {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.heading-itembox, .heading-itembox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.heading-header {
+    width: fit-content !important;
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--MainText);
+}
+
+.section-tagline,.section-tagline span {
+    font-size: 1.2rem;
+    color: var(--Secondary);
+    font-weight: 500;
+    margin: 10px 0px;
+    position: relative;
+    white-space: nowrap;
+}
+
+.section-tagline span::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: -10px;
+    height: 2px;
+    width: 120%;
+    background-color: var(--red);
+    border-radius: 5px 5px 0px 0px;
+}
+
+
+
+
 #popup-container{
     position: fixed;
     top: 0;
@@ -166,7 +209,7 @@ i{
     overflow-y: auto;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 1s ease;
 }
 
 #app-popup-wrapper{
