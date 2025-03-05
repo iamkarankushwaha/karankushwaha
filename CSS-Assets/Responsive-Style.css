@@ -13,7 +13,7 @@
     }
     .logo a{
         padding-left: 15px;
-        border-left: solid 1px var(--GrayBg);
+        border-left: solid 2px var(--GrayBg);
         border-right: none;
     }
     .logo img {

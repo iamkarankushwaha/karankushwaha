@@ -51,7 +51,7 @@ main{
     display: flex;
 }
 #item-price{
-    font-size: 1.3em;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--red);
 }
@@ -88,7 +88,7 @@ main{
     padding: 20px 15px;
 }
 .item-des-box .des-head{
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 30px;
     margin-left: 20px;
     color: var(--Secondary);
@@ -108,6 +108,7 @@ main{
 }
 
 #description{
+font-size: 0.9rem !important;
     line-height: 27px;
     overflow: hidden;
     display: -webkit-box;
@@ -121,17 +122,19 @@ main{
     -webkit-line-clamp: unset;
 }
 #description h1{
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--red);
 }
 #description strong, #description h2{
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 0.9rem;
+    font-weight: 500;
     color: var(--Primary);
 }
 #description span{
     text-decoration: underline;
+font-size: 0.9rem;
+    font-weight: 400;
 }
 #description ul{
     padding: 5px 10px;
@@ -139,6 +142,12 @@ main{
 }
 #description ul li{
     list-style: disc inside !important;
+font-size: 0.9rem;
+    font-weight: 400;
+}
+#description p{
+    font-size: 0.9rem;
+    font-weight: 400;
 }
 
 .readmore{
@@ -171,14 +180,14 @@ main{
     color: var(--BtnBg);
 }
 .formheading strong{
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 0.9rem;
+    font-weight: 500;
     color: var(--Primary);
 }
 .formheading p{
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 400;
-    color: var(--Secondary);
+    color: var(--DarkGray);
 }
 
 .formbox{

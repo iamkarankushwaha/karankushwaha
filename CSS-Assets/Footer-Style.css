@@ -79,7 +79,7 @@
 .subscribebox label{
     display: block;
     color: var(--FluiedBg);
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 300;
     padding: 10px 0 !important;
     cursor: pointer;
