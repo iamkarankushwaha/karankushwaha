@@ -9,11 +9,11 @@ html{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    /*font-family: "Poppins", serif; */
+    font-family: "Poppins", serif;
     font-size: 1rem;
     /* off */
     /* border: solid 1px; */
-   font-family: "Jost", sans-serif;
+   /*font-family: "Jost", sans-serif; */
 }
 
 ::-webkit-scrollbar{
