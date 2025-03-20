@@ -20,7 +20,7 @@
     justify-content: center;
     align-items: center;
     background-color: var(--White);
-    border-radius: 90px 90px 0px 0px;
+    border-radius: 20px 20px 0px 0px;
     box-shadow: 0px -5px 20px -10px #00000040;
     width: fit-content;
     max-width: fit-content;
@@ -108,7 +108,7 @@ button {
     padding: 10px 25px;
     font-size: 1.1rem;
     font-weight: 500;
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: var(--Button);
     color: var(--White);
     cursor: pointer;
@@ -184,7 +184,7 @@ form textarea{
     height: fit-content;
     padding: 20px 30px;
     background-color: var(--White);
-    border-radius: 20px;
+    border-radius: 10px;
     text-align: center;
     box-shadow: 0px 0px 10px -2px;
 }
@@ -206,7 +206,7 @@ form textarea{
     color: var(--White);
     border: none;
     padding: 8px 25px;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     margin: auto;
 }

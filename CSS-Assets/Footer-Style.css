@@ -42,10 +42,11 @@
     height: fit-content;
 }
 .about-website p{
-    font-size: 0.9rem;
-    color: var(--White);
+    font-size: 1rem;
+    color: var(--FluiedBg);
     font-weight: 300;
     line-height: 24px;
+    text-align: justify;
 }
 
 .row2footer{
@@ -60,28 +61,21 @@
 }
 .row2footer .social-links a{
     background-color: var(--White);
-    border-radius: 5px;
 }
 
-.subscribebox{
-    padding: 25px 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
 .subscribebox form{
+    padding: 20px 30px;
+    padding-top: 0;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
 }
 .subscribebox label{
     display: block;
     color: var(--FluiedBg);
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 300;
-    padding: 10px 0 !important;
+    padding: 10px 20px !important;
     cursor: pointer;
 }
 .subscribebox input{
@@ -89,7 +83,7 @@
     width: 50%;
     color: var(--Primary);
     font-size: 1rem;
-    border-radius: 8px;
+    border-radius: 10px 0px 0px 10px;
     margin: 10px 0;
 }
 .subscribebox input[type=submit]{
@@ -98,6 +92,9 @@
     background-color: var(--Button);
     margin: 10px 0;
     cursor: pointer;
+    padding: 13px 20px;
+    border-radius: 0px 10px 10px 0px;
+    width: fit-content;
 }
 .subscribebox input[type=submit]:hover{
     background-color: var(--BtnBg);

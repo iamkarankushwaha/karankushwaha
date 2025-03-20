@@ -134,7 +134,7 @@ i{
     height: 2px;
     width: 120%;
     background-color: var(--red);
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 10px;
 }
 
 
@@ -189,7 +189,7 @@ i{
     padding: 10px 20px;
     background-color: var(--Button);
     color: var(--White);
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     box-shadow: #00000030 0px 0px 5px 0px;
 }

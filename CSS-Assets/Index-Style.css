@@ -82,7 +82,7 @@
     height: 1px;
     width: 30%;
     background-color: var(--Button);
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
 }
 
 
@@ -114,7 +114,7 @@
     color: var(--White);
     padding: 0.5rem 1rem;
     font-size: 1.1rem;
-    border-radius: 15px;
+    border-radius: 10px;
     cursor: pointer;
     box-shadow: #00000030 0px 0px 5px 0px;
     border: solid 2px var(--Secondary);
@@ -143,7 +143,6 @@
     justify-content: center;
     align-items: center;
     font-size: 1.4rem;
-    border: solid 1px var(--GrayBg);
 }
 
 .social-links a:nth-child(1) {
@@ -192,7 +191,6 @@
 .product-wrapper {
     width: 100%;
     margin: auto;
-    border-radius: 10px;
     padding: 10px;
 }
 
@@ -216,7 +214,7 @@
     width: fit-content;
     text-align: right;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .link-store a {
@@ -246,7 +244,7 @@
     width: 211px;
     min-width: 211px;
     padding: 5px;
-    border-radius:18px;
+    border-radius:10px;
     background-color: var(--White);
     border: solid 1px var(--GrayBg);
     box-shadow: 0px 0px 15px -4px #00000060;
@@ -265,7 +263,6 @@
     background-color: var(--Button);
     transition: width 0.3s ease;
     z-index: 1;
-    border-radius: 8px;
 }
 
 
@@ -278,7 +275,7 @@
     height: 200px;
     background-color: var(--GrayBg);
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 8px;
 }
 
 .prod_title {
@@ -317,7 +314,7 @@
     text-align: center;
     color: white !important;
     padding: 8px;
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: var(--Button);
     font-size: 1.1rem;
     font-weight: 500;
@@ -354,17 +351,12 @@
     max-width: 400px;
     background-color: var(--White);
     border-bottom: solid 5px var(--Button);
-    border-radius: 15px;
+    border-radius: 10px;
     overflow: hidden;
     box-shadow: 0px 0px 20px 0px #00000030;
     transition: border 0.3s ease;
 }
-.why-classes:hover,
-.why-books:hover{
-    border-bottom: solid 5px var(--BtnBg);
-    box-shadow: 0px 0px 40px 0px #00000070;
-    cursor: pointer;
-}
+
 .why-classes h2,
 .why-books h2 {
     font-size: 1.2rem;
@@ -378,8 +370,13 @@
 
 .why-classes ul,
 .why-books ul {
-    padding: 0px 30px;
+    padding: 0px 20px;
     line-height: 26px;
+    font-size: 0.9rem;
+}
+.why-classes ul li p,
+.why-books ul li  p{
+    font-size: 1rem;
 }
 
 .why-box .btn {
@@ -391,14 +388,14 @@
 
 .why-classes a,
 .why-books a {
-    padding: 10px 40px;
+    padding: 10px 20px;
     display: block;
     width: fit-content;
     margin-top: 30px;
     margin-bottom: 20px;
     font-size: 1.1rem;
     font-weight: 500;
-    border-radius: 50px;
+    border-radius: 10px;
     color: var(--White);
     transition: background 0.3s ease;
     background-color: var(--Button);
@@ -435,8 +432,8 @@
 
 .about-img img {
     width: 330px;
-    border-radius: 30px 5px 30px 5px;
-    border: solid 2px var(--White);
+    border-radius: 10px;
+    border: solid 5px var(--White);
     box-shadow: 0px 0px 20px -5px #00000040;
     background: linear-gradient(45deg, var(--skyblue), var(--White));
 }

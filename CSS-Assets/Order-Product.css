@@ -25,7 +25,7 @@ main{
 .itemimgbox img{
     width: 320px;
     height: 320px;
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: var(--GrayBg);
 }
 .itemdetails{
@@ -65,7 +65,7 @@ main{
 
 #orderbtn{
     padding: 10px 20px;
-    border-radius: 15px;
+    border-radius: 10px;
     margin-top: 30px;
     text-align: center;
     color: white !important;
@@ -104,7 +104,7 @@ main{
     height: 2px;
     width: 120%;
     background-color: var(--red);
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 10px;
 }
 
 #description{
@@ -167,7 +167,7 @@ font-size: 0.9rem;
     width: 95%;
     margin: 20px auto;
     background-color: var(--White);
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 .formheading{
@@ -301,7 +301,7 @@ font-size: 0.9rem;
     height: fit-content;
     padding: 20px 30px;
     background-color: var(--White);
-    border-radius: 20px;
+    border-radius: 10px;
     text-align: center;
     box-shadow: 0px 0px 10px -2px;
 }
@@ -323,7 +323,7 @@ font-size: 0.9rem;
     color: var(--White);
     border: none;
     padding: 8px 25px;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     margin: auto;
 }

@@ -17,7 +17,7 @@
     height: fit-content;
     cursor: pointer;
     padding: 5px 10px;
-    border-radius: 8px;
+    border-radius: 10px;
     border: solid 1px var(--GrayBg);
 }
 .logo a{
@@ -65,7 +65,7 @@
     height: 1px;
     position: absolute;
     bottom: -3px;
-    border-radius: 5px 5px 0 0;
+    border-radius: 10px;
     background-color: var(--White);
     transition: all 0.3s;
 }
