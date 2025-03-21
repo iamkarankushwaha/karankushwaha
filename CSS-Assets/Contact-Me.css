@@ -21,9 +21,6 @@
     align-items: center;
     background-color: var(--White);
     border-radius: 20px 20px 0px 0px;
-    box-shadow: 0px -5px 20px -10px #00000040;
-    width: fit-content;
-    max-width: fit-content;
     padding-top: 20px;
     padding-bottom: 70px;
 }
@@ -35,7 +32,6 @@
     flex-wrap: wrap;
     gap: 20px;
     padding: 30px 0;
-    width: 90vw;
 }
 .inputbox{
     width: 100%;

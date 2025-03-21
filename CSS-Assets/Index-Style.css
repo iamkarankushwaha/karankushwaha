@@ -350,11 +350,11 @@
     width: 95%;
     max-width: 400px;
     background-color: var(--White);
+    border: solid 1px var(--GrayBg);
     border-bottom: solid 5px var(--Button);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0px 0px 20px 0px #00000030;
-    transition: border 0.3s ease;
+    box-shadow: 0px 0px 15px -4px #00000060;
 }
 
 .why-classes h2,
@@ -377,6 +377,17 @@
 .why-classes ul li p,
 .why-books ul li  p{
     font-size: 1rem;
+    position: relative;
+    left: 20px;
+}
+.why-classes ul li p:before,
+.why-books ul li  p:before{
+    content: "✓";
+    position: absolute; 
+    left: -20px;
+    top: 0px;
+    color: var(--Button);
+    font-weight: 500;
 }
 
 .why-box .btn {
@@ -411,6 +422,10 @@
 .about-section {
     background-color: var(--White);
     padding: 60px 10px;
+    background-size: 35px 35px;
+  background-image:
+    linear-gradient(to right, var(--GrayBg) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--GrayBg) 1px, transparent 1px);
 }
 
 .about-wrapper {
@@ -440,8 +455,11 @@
 
 .about-text {
     width: 80%;
-    max-width: 600px;
+    max-width: 650px;
     min-width: 330px;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .about-text p,
