@@ -4,7 +4,7 @@ window.onload = function () {
     setTimeout(function () {
         const AppPopup = document.getElementById('app-pop');
         // Show the popup after 1 sec
-        AppPopup.style.visibility = 'visible';
+        // AppPopup.style.visibility = 'visible';
         AppPopup.style.opacity = '1'; // Fade in effect
     }, 800); // 1000 milliseconds = 1 second
 };

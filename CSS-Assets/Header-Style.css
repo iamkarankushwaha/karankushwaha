@@ -1,62 +1,55 @@
 #header {
-    height: 80px;
-    min-height: fit-content;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    width: 95%;
+    height: 70px;
+    margin: auto;
     padding: 10px 20px;
-    background-color: var(--Primary);
-}
-
-#menu-icon {
-    display: none;
-    align-items: center;
-    justify-content: flex-start;
-    margin-right: 15px;
-    height: fit-content;
-    cursor: pointer;
-    padding: 5px 10px;
-    border-radius: 10px;
-    border: solid 1px var(--GrayBg);
-}
-.logo a{
+    border: var(--border-thin);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-soft);
+    position: sticky;
+    top: 20px;
+    background-color: var(--color-surface-light);
+    z-index: 1000;
     display: flex;
+    justify-content: center;
     align-items: center;
-    border-right: solid 1px var(--GrayBg);
-    padding: 5px 0;
-    padding-right: 15px;
+    gap: 20px;
+    transition: all 0.3s;
 }
-
-.logo img {
-    width: 110px;
+#beforeheader{
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    height: 60px;
+    z-index: 999;
+    backdrop-filter: blur(15px);
 }
-
+.logo{
+    max-height: 50px;
+}
+.logo a img{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
 
 /* Navigation Bar */
-#menubox {
+#menubox{
+    width: 100%;
+}
+#menubox ul {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#menubox ul {
-    display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 10px 20px;
-    padding: 0px 20px;
-}
-#menubox ul li{
-    line-height: 1;
 }
 #menubox ul li a {
-    font-size: 1.1rem;
-    cursor: pointer;
-    color: var(--White);
+    font-size: var(--font-md);
+    color: var(--color-bg-primary);
     position: relative;
+    font-weight: 500;
 }
 
 #menubox ul li a::before{
@@ -64,39 +57,43 @@
     width: 0%;
     height: 1px;
     position: absolute;
-    bottom: -3px;
-    border-radius: 10px;
-    background-color: var(--White);
+    bottom: 0px;
+    background-color: var(--color-accent-blue-dark);
     transition: all 0.3s;
 }
 #menubox ul li a:hover::before{
     width: 100%;
+    box-shadow: var(--shadow-sm);
 }
 
 .right-header ul {
-    width: fit-content;
-    min-width: fit-content;
     display: flex;
     align-items: center;
+    gap: 20px;
 }
 
-.right-header ul li a{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    border-right: solid 1px var(--GrayBg);
-    padding: 5px 20px;
-    
-}
-.right-header ul li a{
-    color: var(--White);
-}
-.right-header ul li:last-child a{
-    border-right: none;
-    padding-right: 0;
-    font-weight: 700;
+.right-header ul li:first-child a i{
+    font-size: var(--font-2xl);
+    color: var(--color-bg-primary);    
 }
 .right-header ul li:last-child a i{
-    font-size: 28px;
-    font-weight: 500;
+    font-size: var(--font-2xl);
+    color: var(--color-accent-green);    
 }
+
+
+#menu-icon {
+    display: none;
+    padding: 5px 10px;
+    border: var(--border-thin);
+    border-radius: var(--radius-md);
+    background-color: var(--color-surface-light);
+    box-shadow: var(--shadow-sm);
+}
+#menu-icon i{
+    font-size: var(--font-xl);
+    color: var(--color-text-muted);
+}
+
+
+/* RESPONSIVE STYLE HERE */

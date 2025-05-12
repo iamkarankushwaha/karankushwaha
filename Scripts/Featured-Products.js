@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Function to navigate to quick view page
+// Function to navigate to download page
 function prodorder(id) {
     window.location.href = `Order-Product.html?id=${id}`;
 }

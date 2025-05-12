@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("bookname").value=item.title;
         document.getElementById("bookprice").value=item.priceActive;
     } else {
-        document.getElementById("quickview-container").innerHTML = `<p>Item not found.</p>`;
+        window.location="index.html";
     }
 });
 
@@ -69,13 +69,11 @@ order_okButton.addEventListener('click', () => {
     // Hide the popup
     order_popup.style.display = 'none';
 
-    window.location.href="Store-Page.html";
+    window.location.href="library.html";
 });
 
 
 function cancel_order() {
     order_form.reset();
-    document.querySelector(".AppContainer").scrollTo({
-        top: 0
-    });
+    window.location.href="library.html";
 }

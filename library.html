@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library | Karan Kushwaha</title>
+    <link rel="shortcut icon" href="Img-Assets/main-logo-white.png" type="image/x-icon">
+    <!-- Font Awesome Loader Link -->
+    <script src="https://kit.fontawesome.com/25cf39dd91.js" crossorigin="anonymous"></script>
+    <!--  -->
+    <link rel="stylesheet" href="CSS-Assets/Default-Style.css">
+    <link rel="stylesheet" href="CSS-Assets/Header-Style.css">
+    <link rel="stylesheet" href="CSS-Assets/Profile.css">
+    <link rel="stylesheet" href="CSS-Assets/Store-Style.css">
+    <link rel="stylesheet" href="CSS-Assets/Footer-Style.css">
+    <link rel="stylesheet" href="CSS-Assets/Responsive-Style.css">
+</head>
+
+
+<body>
+    <div id="popup-container">
+        <div id="popup-wrapper">
+            <div class="pop-top-row">
+                <h3 id="pop-header"></h3>
+            </div>
+            <div class="pop-down-row">
+                <div class="pop-text-box">
+                    <p id="pop-text"></p>
+                </div>
+                <div class="pop-close-box">
+                    <button id="close-popup">Okay</button>
+                    <script>
+                        document.getElementById("close-popup").addEventListener("click", () => {
+                            document.getElementById("popup-container").style.display = 'none';
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER STARTS HERE -->
+    <div id="beforeheader"></div>
+    <header id="header"><!-- Inserted Via JS --></header>
+    <!-- HEADER ENDS HERE -->
+     
+    <main>
+        <!-- <div class="banner">
+            <img src="../Img-Assets/banner 1.png" alt="Banner 1">
+            <img src="../Img-Assets/banner 2.png" alt="Banner 2">
+            <img src="../Img-Assets/banner 3.png" alt="Banner 3">
+        </div> -->
+        <section class="featured-prod">
+            <div class="section-heading library-heading">
+                <div class="heading-itembox">
+                    <h2 class="heading-header">Books & Notes Library</h2>
+                </div>
+                <div class="heading-itembox">
+                    <p class="section-tagline">Explore all <span>products.</span></p>
+                </div>
+            </div>
+            <div class="product-wrapper">
+                <div class="prodrack" id="prodrack"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER STARTS -->
+    <footer class="footer" id="footer"></footer>
+    <!-- FOOTER ENDS -->
+    
+    <script src="Scripts/Menu & Header.js"></script>
+    <script src="Scripts/Database.js"></script>
+    <script src="Scripts/Featured-Products.js"></script>
+    <script src="Scripts/Script.js"></script>
+</body>
+
+</html>

@@ -10,10 +10,6 @@ html{
     padding: 0px;
     box-sizing: border-box;
     font-family: "Poppins", serif;
-    font-size: 1rem;
-    /* off */
-    /* border: solid 1px; */
-   /*font-family: "Jost", sans-serif; */
 }
 
 ::-webkit-scrollbar{
@@ -23,6 +19,7 @@ html{
 :-webkit-any(a){
     text-decoration: none;
     cursor: pointer;
+    display: block;
 }
 
 :-webkit-any(li){
@@ -32,10 +29,11 @@ html{
 :-webkit-any(button){
     border: none;
     outline: none;
-    background-color: var(--Button);
+    cursor: pointer;
+    background-color: var(--color-accent-blue);
 }
 :-webkit-any(button):hover{
-    background-color: var(--BtnBg);
+    background-color: var(--color-accent-blue-dark);
 }
 
 :-webkit-any(img) {
@@ -44,86 +42,138 @@ html{
     -webkit-user-drag: none;
 }
 
-:root{
-    --green: #04aa6d;
-    --red: #ef134d;
-    --yellow: #ead409;
-    --skyblue: #00b0f0;
-    
-    /* New & Final */
-    --Primary: rgba(0,0,20,1);
-    --Secondary: rgba(0,0,10,1);
-    --MainText: #001e53;
-    --black: #000;
-    --White: #fff;
-    --PText: #707377;
-    --DarkGray: #393939;
-    --GrayBg: #bbbcbc;
-    --FluiedBg: #e8e8fa;
-    --Button: #0064fb;
-    --BtnBg: #0046af;
+:root {
+  /* Primary Backgrounds */
+  --color-bg-primary: #0a0a1a;      /* Deep Navy - For full body backgrounds */
+  --color-bg-secondary: #1a1a2e;    /* Dark Blue-Gray - For cards, navbars, footers */
+
+  /* Text Colors */
+  --color-text-main-black: #0a0a1a; /* black - Main heading/text on light backgrounds */
+  --color-text-main-white: #e9e9f0; /* Soft White - Main heading/text on dark backgrounds */
+  --color-text-secondary: #b0b3b8;  /* Light Gray - Paragraphs, descriptions */
+  --color-text-accent: #0064fb;     /* Blue Accent - For links, highlights */
+  --color-text-muted: #707377;      /* Muted Gray - Metadata or less important info */
+
+  /* Brand Colors / Buttons / CTA */
+  --color-accent-blue: #0064fb;     /* Primary Accent Blue - For buttons, links */
+  --color-accent-blue-dark: #0046af;/* Button Hover/Pressed State */
+  --color-accent-green: #04aa6d;    /* Success/Positive Status */
+  --color-accent-green-dark: #007a4d;    /* Success/Positive Status */
+  --color-accent-red: #ef134d;      /* Error/Danger */
+  --color-accent-yellow: #ffc107;   /* Warning/Attention (slightly softened for accessibility) */
+  --color-accent-sky: #00b0f0;      /* Optional accent for tags or subtle highlights */
+
+  /* UI/Surfaces */
+  --color-surface-light: #f5f6fa;   /* Light Background - For contrast on dark themes */
+  --color-surface-muted: #d3d3dd;   /* Grayish Surface - For cards/sections in light mode */
+  --color-divider: #393939;         /* Divider Lines */
+  --color-border: #bbbcbc;          /* Borders or subtle containers */
+
+  /* Utility */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* ====== SHADOWS ====== */
+  
+  /* Basic UI Shadow */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.10); 
+  /* Use For: Buttons, small elements, subtle borders */
+  
+  /* Card Shadow */
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.08); 
+  /* Use For: Cards, sections, content boxes */
+  
+  /* Medium Elevation */
+  --shadow-lg: 0 6px 12px rgba(0, 0, 0, 0.12); 
+  /* Use For: Hover states, tooltips, elevated buttons */
+  
+  /* Deep Elevation */
+  --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.15); 
+  /* Use For: Modals, popups, dropdowns */
+  
+  /* Inner Shadow */
+  --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.06); 
+  /* Use For: Inputs, containers needing inner depth */
+  
+  /* Neumorphic Soft Spread */
+  --shadow-soft: 
+    0 10px 20px rgba(0, 0, 0, 0.05), 
+    0 6px 6px rgba(0, 0, 0, 0.05);
+  /* Use For: Modern subtle 3D effects, cards, UI panels */
+
+  /* ====== BORDER WIDTHS ====== */
+
+  --border-thin: 1px solid #d0d3d8;       /* Light Gray - For cards, input borders */
+  --border-medium: 2px solid #b0b3b8;     /* Medium Gray - For focus states */
+  --border-thick: 3px solid #0064fb;      /* Accent Blue - For active elements, buttons */
+
+  /* ====== BORDER COLORS ====== */
+
+  --border-color-muted: #d0d3d8;          /* Default muted gray border */
+  --border-color-accent: #0064fb;         /* Accent blue for focus/active */
+  --border-color-danger: #ef134d;         /* Red border for error state */
+  --border-color-success: #04aa6d;        /* Green border for success state */
+  --border-color-warning: #ffc107;        /* Yellow border for warning */
+
+  /* ====== BORDER RADIUS ====== */
+
+  --radius-xs: 2px;      /* Subtle rounding - icons, checkboxes */
+  --radius-sm: 4px;      /* Small radius - input fields, buttons */
+  --radius-md: 8px;      /* Default UI - cards, modals */
+  --radius-lg: 12px;     /* Large containers - feature blocks */
+  --radius-xl: 20px;     /* Soft aesthetic UI - hero sections */
+  --radius-full: 9999px; /* Fully rounded - pills, avatars, circles */
+
+  /* ====== FONT SIZES ====== */
+
+  --font-xxs: 0.625rem;   /* 10px - Micro text, badges, captions */
+  --font-xs: 0.75rem;     /* 12px - Labels, hints, small buttons */
+  --font-sm: 0.875rem;    /* 14px - Paragraphs, UI text (default) */
+  --font-base: 1rem;      /* 16px - Body text, default desktop base */
+  --font-md: 1.125rem;    /* 18px - Larger body, subtitles */
+  --font-lg: 1.25rem;     /* 20px - Section headers */
+  --font-xl: 1.5rem;      /* 24px - Card titles, h4 */
+  --font-2xl: 1.875rem;   /* 30px - h3, large titles */
+  --font-3xl: 2.25rem;    /* 36px - h2, section headings */
+  --font-4xl: 3rem;       /* 48px - h1, hero section heading */
+  --font-5xl: 4rem;       /* 64px - Landing page, banners */
 }
-.AppContainer {
-    width: 100vw;
-    max-width: 1500px;
-    height: 100vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    margin: auto;
-}
+
 body {
     width: 100vw;
-    height: 100vh;
+    max-width: 1500px;
+    margin: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: var(--color-white);
+    color: var(--color-text-main-black);
+    font-size: var(--font-base);
+}
+
+section{
+    width: 100%;
+    padding: 50px 20px;
     overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    border-bottom: var(--border-thin);
 }
-
-p, a, b, strong, span, button, input, label, select, option, textarea, li, h1, h2, h3, h4, h5, h6{
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--Primary);
-}
-
-h1, h2, h3, h4, h5, h6{
-    font-size: unset;
-    font-weight: 600;
-}
-
-b, strong{
-    font-weight: 600;
-}
-
-i{
-    font-size: 25px;
-}
-
-
-
 .section-heading {
     width: 100%;
-    margin-bottom: 20px;
-}
-.heading-itembox, .heading-itembox{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    padding: 10px;
 }
 .heading-header {
-    width: fit-content !important;
+    width: 100%;
     text-align: center;
-    font-size: 2.5rem;
-    color: var(--MainText);
+    font-size: var(--font-4xl);
+    color: var(--color-bg-secondary);
 }
-
 .section-tagline,.section-tagline span {
-    font-size: 1.2rem;
-    color: var(--Secondary);
+    font-size: var(--font-md);
+    color: var(--color-text-muted);
     font-weight: 500;
     margin: 10px 0px;
     position: relative;
-    white-space: nowrap;
+    text-align: center;
 }
 
 .section-tagline span::after {
@@ -133,10 +183,9 @@ i{
     right: -10px;
     height: 2px;
     width: 120%;
-    background-color: var(--red);
-    border-radius: 10px;
+    background-color: var(--color-border);
+    border-radius: var(--radius-sm);
 }
-
 
 
 
@@ -144,7 +193,7 @@ i{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 99999999999999;
+    z-index: 1200;
     height: 100vh;
     width: 100vw;
     display: none;
@@ -155,7 +204,7 @@ i{
 #popup-wrapper{
     width: 90vw;
     max-width: 400px;
-    background-color: var(--White);
+    background-color: var(--color-white);
     padding: 20px 20px;
     border-radius: 10px;
     box-shadow: #00000080 0px 0px 20px 0px;

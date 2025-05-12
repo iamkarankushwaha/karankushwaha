@@ -1,249 +1,470 @@
-/* ========= Order Page CSS=========== */
-main{
-    background-color: var(--FluiedBg);
-    padding: 10px 0;
+:root {
+    /* Primary Backgrounds */
+    --color-bg-primary: #0a0a1a;
+    /* Deep Navy - For full body backgrounds */
+    --color-bg-secondary: #1a1a2e;
+    /* Dark Blue-Gray - For cards, navbars, footers */
+
+    /* Text Colors */
+    --color-text-main-black: #0a0a1a;
+    /* black - Main heading/text on light backgrounds */
+    --color-text-main-white: #e9e9f0;
+    /* Soft White - Main heading/text on dark backgrounds */
+    --color-text-secondary: #b0b3b8;
+    /* Light Gray - Paragraphs, descriptions */
+    --color-text-accent: #0064fb;
+    /* Blue Accent - For links, highlights */
+    --color-text-muted: #707377;
+    /* Muted Gray - Metadata or less important info */
+
+    /* Brand Colors / Buttons / CTA */
+    --color-accent-blue: #0064fb;
+    /* Primary Accent Blue - For buttons, links */
+    --color-accent-blue-dark: #0046af;
+    /* Button Hover/Pressed State */
+    --color-accent-green: #04aa6d;
+    /* Success/Positive Status */
+    --color-accent-green-dark: #007a4d;
+    /* Success/Positive Status */
+    --color-accent-red: #ef134d;
+    /* Error/Danger */
+    --color-accent-yellow: #ffc107;
+    /* Warning/Attention (slightly softened for accessibility) */
+    --color-accent-sky: #00b0f0;
+    /* Optional accent for tags or subtle highlights */
+
+    /* UI/Surfaces */
+    --color-surface-light: #f5f6fa;
+    /* Light Background - For contrast on dark themes */
+    --color-surface-muted: #d3d3dd;
+    /* Grayish Surface - For cards/sections in light mode */
+    --color-divider: #393939;
+    /* Divider Lines */
+    --color-border: #bbbcbc;
+    /* Borders or subtle containers */
+
+    /* Utility */
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    /* ====== SHADOWS ====== */
+
+    /* Basic UI Shadow */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.10);
+    /* Use For: Buttons, small elements, subtle borders */
+
+    /* Card Shadow */
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.08);
+    /* Use For: Cards, sections, content boxes */
+
+    /* Medium Elevation */
+    --shadow-lg: 0 6px 12px rgba(0, 0, 0, 0.12);
+    /* Use For: Hover states, tooltips, elevated buttons */
+
+    /* Deep Elevation */
+    --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.15);
+    /* Use For: Modals, popups, dropdowns */
+
+    /* Inner Shadow */
+    --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+    /* Use For: Inputs, containers needing inner depth */
+
+    /* Neumorphic Soft Spread */
+    --shadow-soft:
+        0 10px 20px rgba(0, 0, 0, 0.05),
+        0 6px 6px rgba(0, 0, 0, 0.05);
+    /* Use For: Modern subtle 3D effects, cards, UI panels */
+
+    /* ====== BORDER WIDTHS ====== */
+
+    --border-thin: 1px solid #d0d3d8;
+    /* Light Gray - For cards, input borders */
+    --border-medium: 2px solid #b0b3b8;
+    /* Medium Gray - For focus states */
+    --border-thick: 3px solid #0064fb;
+    /* Accent Blue - For active elements, buttons */
+
+    /* ====== BORDER COLORS ====== */
+
+    --border-color-muted: #d0d3d8;
+    /* Default muted gray border */
+    --border-color-accent: #0064fb;
+    /* Accent blue for focus/active */
+    --border-color-danger: #ef134d;
+    /* Red border for error state */
+    --border-color-success: #04aa6d;
+    /* Green border for success state */
+    --border-color-warning: #ffc107;
+    /* Yellow border for warning */
+
+    /* ====== BORDER RADIUS ====== */
+
+    --radius-xs: 2px;
+    /* Subtle rounding - icons, checkboxes */
+    --radius-sm: 4px;
+    /* Small radius - input fields, buttons */
+    --radius-md: 8px;
+    /* Default UI - cards, modals */
+    --radius-lg: 12px;
+    /* Large containers - feature blocks */
+    --radius-xl: 20px;
+    /* Soft aesthetic UI - hero sections */
+    --radius-full: 9999px;
+    /* Fully rounded - pills, avatars, circles */
+
+    /* ====== FONT SIZES ====== */
+
+    --font-xxs: 0.625rem;
+    /* 10px - Micro text, badges, captions */
+    --font-xs: 0.75rem;
+    /* 12px - Labels, hints, small buttons */
+    --font-sm: 0.875rem;
+    /* 14px - Paragraphs, UI text (default) */
+    --font-base: 1rem;
+    /* 16px - Body text, default desktop base */
+    --font-md: 1.125rem;
+    /* 18px - Larger body, subtitles */
+    --font-lg: 1.25rem;
+    /* 20px - Section headers */
+    --font-xl: 1.5rem;
+    /* 24px - Card titles, h4 */
+    --font-2xl: 1.875rem;
+    /* 30px - h3, large titles */
+    --font-3xl: 2.25rem;
+    /* 36px - h2, section headings */
+    --font-4xl: 3rem;
+    /* 48px - h1, hero section heading */
+    --font-5xl: 4rem;
+    /* 64px - Landing page, banners */
 }
-.item-detail-box{
+
+/* ========= Order Page CSS=========== */
+.orderpageheader {
+    box-shadow: none;
+    border: none;
+}
+
+.orderpage-heading {
+    background: url(https://png.pngtree.com/thumb_back/fh260/background/20220510/pngtree-delivery-service-background-order-occupation-image_1327804.jpg);
+    height: 250px;
+    min-height: fit-content;
+    padding: 30px 10px;
+    border-radius: var(--radius-lg);
+    background: cover no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.orderpage-heading::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.657);
+    z-index: 1;
+    border-radius: var(--radius-lg);
+}
+
+.orderpage-heading .heading-header {
+    color: var(--color-white);
+    position: relative;
+    z-index: 2;
+}
+
+.orderpage-heading .heading-itembox p {
+    color: var(--color-white);
+    position: relative;
+    z-index: 2;
+}
+
+.item-detail-box {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    width: 95%;
-    margin: 10px auto;
-    margin-bottom: 0;
-    border-radius: 10px 10px 0 0;
-    padding: 50px 10px;
-    gap: 40px;
-    background-color: var(--White);
-    border-bottom: 1px var(--GrayBg) solid;
+    width: 100%;
+    padding: 30px 0px;
+    gap: 30px;
+    border-bottom: var(--border-thin);
 }
-.itemimgbox, .itemdetails{
+
+.itemimgbox,
+.itemdetails {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.itemimgbox img{
+
+.itemimgbox img {
     width: 320px;
     height: 320px;
+    box-shadow: var(--shadow-xl);
     border-radius: 10px;
-    background-color: var(--GrayBg);
 }
-.itemdetails{
-    max-width: 600px;
+
+.itemdetails {
+    width: 100%;
+    max-width: 650px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     height: 100%;
 }
-.author{
-    font-size: 1.1rem;
-    color: var(--Primary);
+
+.author {
+    font-size: var(--font-lg);
+    color: var(--color-bg-secondary);
     margin-bottom: 15px;
+    font-weight: 500;
 }
 
-#item-title{
-    font-size: 1.6rem;
+#item-title {
+    font-size: var(--font-2xl);
     font-weight: 600;
-    margin-bottom: 30px;
-    color: var(--Primary);
+    margin-bottom: 15px;
+    color: var(--color-bg-primary);
 }
-.pricebox{
+
+.pricebox {
     display: flex;
 }
-#item-price{
-    font-size: 1.5rem;
+
+#item-price {
+    font-size: var(--font-2xl);
     font-weight: 600;
-    color: var(--red);
+    color: var(--color-accent-red);
 }
 
-#droped-price{
-    font-size: 1rem;
+#droped-price {
+    font-size: var(--font-base);
     font-weight: 600;
     padding-right: 5px;
-    color: var(--GrayBg);
+    color: var(--color-text-muted);
+    text-decoration: line-through;
 }
 
-#orderbtn{
+#orderbtn {
     padding: 10px 20px;
     border-radius: 10px;
-    margin-top: 30px;
+    margin-top: 20px;
     text-align: center;
-    color: white !important;
-    background-color: var(--Button);
+    color: var(--color-white);
+    background-color: var(--color-accent-blue);
     font-size: 1.1rem;
     font-weight: 500;
     transition: background 0.3s ease;
-    box-shadow: #00000030 0px 0px 5px 0px;
-}
-#orderbtn:hover{
-    background-color: var(--BtnBg);
+    box-shadow: var(--shadow-md);
+    border-bottom: solid 2px var(--color-bg-secondary);
 }
 
-.item-des-box{
-    width: 95%;
-    margin: 15px auto;
-    margin-top: 0px;
-    background-color: var(--White);
-    border-radius:0 0 10px 10px;
-    padding: 20px 15px;
+#orderbtn:hover {
+    background-color: var(--color-accent-blue-dark);
+    box-shadow: var(--shadow-lg);
 }
-.item-des-box .des-head{
-    font-size: 1.3rem;
+
+.subsection {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 60px 0px;
+    gap: 30px;
+    overflow: scroll;
+}
+
+.item-des-box {
+    display: block;
+    width: 100%;
+    max-width: 550px;
+}
+
+.item-des-box .des-head {
+    font-size: var(--font-2xl);
     margin-bottom: 30px;
-    margin-left: 20px;
-    color: var(--Secondary);
+    color: var(--color-bg-secondary);
     position: relative;
     width: fit-content;
     white-space: nowrap;
 }
+
 .item-des-box .des-head::after {
     content: "";
     position: absolute;
-    bottom: -5px;
-    right: -10px;
+    bottom: 0px;
+    right: 0px;
     height: 2px;
-    width: 120%;
-    background-color: var(--red);
+    width: 100%;
+    background-color: var(--color-accent-red);
     border-radius: 10px;
 }
 
-#description{
-font-size: 0.9rem !important;
-    line-height: 27px;
+#description {
+    font-size: var(--font-sm) !important;
+    line-height: 25px;
     overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 8;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    padding-top: 0;
-    transition: -webkit-line-clamp 0.3s ease;
+    height: 300px;
+    transition: height 0.3s ease;
 }
-#description.toggleheight{
-    -webkit-line-clamp: unset;
+
+#description.toggleheight {
+    height: fit-content;
 }
-#description h1{
+
+#description h1 {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--red);
+    color: var(--color-accent-red);
 }
-#description strong, #description h2{
-    font-size: 0.9rem;
+
+#description strong,
+#description h2 {
+    font-size: var(--font-sm);
     font-weight: 500;
-    color: var(--Primary);
+    color: var(--color-bg-primary);
 }
-#description span{
+
+#description span {
     text-decoration: underline;
-font-size: 0.9rem;
+    font-size: var(--font-sm);
     font-weight: 400;
 }
-#description ul{
+
+#description ul {
     padding: 5px 10px;
     list-style-type: disc;
 }
-#description ul li{
+
+#description ul li {
     list-style: disc inside !important;
-font-size: 0.9rem;
-    font-weight: 400;
-}
-#description p{
-    font-size: 0.9rem;
+    font-size: var(--font-sm);
     font-weight: 400;
 }
 
-.readmore{
+#description p {
+    font-size: var(--font-sm);
+    font-weight: 400;
+}
+
+.readmore {
     padding: 10px 0;
     width: 100%;
 }
-#readmore{
+
+#readmore {
     width: fit-content;
     background-color: transparent;
-    font-size: 1.1rem;
+    font-size: var(--font-base);
     font-weight: 600;
-    color: var(--DarkGray);
+    color: var(--color-text-muted);
+    box-shadow: none;
+    padding: 0 !important;
 }
 
 
-#order-page{
-    width: 95%;
-    margin: 20px auto;
-    background-color: var(--White);
+#order-page {
+    width: 100%;
+    max-width: 450px;
+    background-color: var(--color-surface-light);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    border: var(--border-thin);
+}
+
+.formheading {
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.formheading h2 {
+    font-size: var(--font-2xl);
+    font-weight: 600;
+    color: var(--color-bg-primary);
+    padding-top: 20px;
+    position: relative;
+    width: fit-content;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+.formheading h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    height: 2px;
+    width: 100%;
+    background-color: var(--color-accent-red);
     border-radius: 10px;
 }
+.formheading strong {
+    font-size: var(--font-sm);
+    color: var(--color-text-muted);
+}
 
-.formheading{
+.formheading p {
+    font-size: var(--font-sm);
+    color: var(--color-text-muted);
+}
+
+.formbox {
+    padding: 10px;
+}
+
+.inputbox {
+    display: block;
+    max-width: unset;
+    padding: 10px;
+}
+
+.inputbox input {
     width: 100%;
-    padding: 20px 20px;
-}
-.formheading h2{
-    font-size: 1.7rem;
-    font-weight: 600;
-    color: var(--BtnBg);
-}
-.formheading strong{
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--Primary);
-}
-.formheading p{
-    font-size: 0.8rem;
-    font-weight: 400;
-    color: var(--DarkGray);
+    max-width: unset;
+    color: var(--color-bg-primary);
+    background-color: var(--color-white);
+    border: var(--border-thin);
+    border-radius: var(--radius-sm);
 }
 
-.formbox{
-    padding: 20px 10px;
+.orderbuttonbox {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 30px 20px;
-}
-.inputbox{
-    padding:10px;
-}
-.inputbox label{
-    width: 90%;
     padding: 0px 10px;
-    font-size: 1.1rem;
-    color: var(--Secondary);
-    cursor: pointer;
-}
-.inputbox input{
-    color: var(--Primary);
-    background-color: var(--White);
-    border: 1px solid #c8d4e7;
-    border-radius: 5px;
+    gap: 30px;
+    padding-bottom: 20px;
 }
 
-.orderbuttonbox{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 10px 15px;
-    padding-bottom: 50px;
-    gap: 30px;
-    margin-top: 40px;
-}
 .orderbuttonbox button {
     width: fit-content;
-    font-size: 1.1rem;
+    font-size: var(--font-md);
     font-weight: 500;
-    background-color: var(--Button);
-    box-shadow: 0px 0px 10px #00000030;
+    background-color: var(--color-accent-green);
+    box-shadow: var(--shadow-inset);
+}
+.orderbuttonbox button:hover {
+    background-color: var(--color-accent-green-dark);
+    box-shadow: var(--shadow-lg);
 }
 .orderbuttonbox button:last-child {
-   background-color: var(--Primary);
-   color: var(--White);
+    background-color: var(--border-color-danger);
+    color: var(--color-white);
 }
+
 .orderbuttonbox button:last-child:hover {
-   background-color: var(--Secondary);
+    background-color: var(--color-bg-secondary);
 }
 
 
 /* Order page spinner */
-#spinner-order-form{
+#spinner-order-form {
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -253,7 +474,7 @@ font-size: 0.9rem;
     display: none;
     align-items: center;
     justify-content: center;
-    z-index: 999999999999999;
+    z-index: 1200;
 }
 
 .spinner-order-form {
@@ -262,14 +483,14 @@ font-size: 0.9rem;
     align-items: center;
     width: 80px;
     height: 80px;
-    background-color: var(--White);
+    background-color: var(--color-white);
     border-radius: 10px;
-    box-shadow: 0px 0px 8px -2px;
+    box-shadow: var(--shadow-lg);
 }
 
 .spinner-order-form i {
     animation: spin 1s linear infinite;
-    color: var(--Button);
+    color: var(--color-accent-blue);
     font-size: 40px;
 }
 
@@ -282,6 +503,7 @@ font-size: 0.9rem;
         transform: rotate(360deg);
     }
 }
+
 /* ----------------------Popup Style */
 #popup-order-form {
     width: 100vw;
@@ -293,34 +515,42 @@ font-size: 0.9rem;
     display: none;
     align-items: center;
     justify-content: center;
-    z-index: 9999999999999999;
+    z-index: 1100;
 }
 
 .popup-content-order-form {
-    width: 320px;
+    width: 90%;
+    max-width: 500px;
     height: fit-content;
     padding: 20px 30px;
-    background-color: var(--White);
+    background-color: var(--color-white);
     border-radius: 10px;
     text-align: center;
+    border: var(--border-thin);
     box-shadow: 0px 0px 10px -2px;
 }
 
 .popup-content-order-form span i {
-    font-size: 40px;
-    color: var(--green);
+    font-size: 50px;
+    font-weight: 900;
+    border: var(--border-thin);
+    padding: 10px 30px;
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius-full);
+    color: var(--color-accent-green);
+    margin-bottom: 40px;
 }
 
 .popup-content-order-form p {
     margin-bottom: 20px;
     font-size: 1rem;
-    color: var(--Secondary) !important;
+    color: var(--color-bg-secondary) !important;
     font-weight: 500 !important;
 }
 
 #ok-button-order-form {
-    background-color: var(--Button);
-    color: var(--White);
+    background-color: var(--color-accent-green);
+    color: var(--color-white);
     border: none;
     padding: 8px 25px;
     border-radius: 10px;
@@ -329,8 +559,6 @@ font-size: 0.9rem;
 }
 
 #ok-button-order-form:hover {
-    background-color: var(--BtnBg);
+    background-color: var(--color-accent-green-dark);
+    box-shadow: var(--shadow-lg);
 }
-
-
-
