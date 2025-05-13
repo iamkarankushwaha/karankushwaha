@@ -164,7 +164,7 @@
 .profile-box p {
     font-size: var(--font-lg);
     font-weight: 600;
-    color: var(--color-accent-blue-dark);
+    color: var(--color-accent-red);
     position: relative;
     white-space: nowrap;
 }
@@ -175,7 +175,7 @@
     bottom: 0;
     left: 0;
     height: 1px;
-    width: 30%;
+    width: 20%;
     background-color: var(--color-bg-secondary);
     border-radius: 10px;
 }
@@ -290,7 +290,7 @@
     color: var(--color-bg-secondary);
     text-decoration: underline;
     padding: 5px 10px;
-    background-color: var(--color-surface-light);
+    background-color: var(--color-white);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
     border: var(--border-thin);
@@ -318,7 +318,7 @@
     min-width: 211px;
     padding: 5px;
     border-radius:10px;
-    background-color: var(--color-surface-light);
+    background-color: var(--color-white);
     border: var(--border-thin);
     box-shadow: var(--shadow-lg);
     position: relative;
@@ -385,7 +385,7 @@
     display: block;
     width: 100%;
     text-align: center;
-    color: var(--color-text-main-white);
+    color: var(--color-white);
     padding: 8px;
     border-radius: var(--radius-md);
     background-color: var(--color-accent-blue);
@@ -419,7 +419,7 @@
 .why-books {
     width: 100%;
     max-width: 420px;
-    background-color: var(--color-surface-light);
+    background-color: var(--color-white);
     border: var(--border-thin);
     border-bottom: 4px solid var(--color-bg-primary);
     border-radius: var(--radius-xl);
@@ -433,7 +433,7 @@
     margin-bottom: 30px;
     width: 100%;
     text-align: center;
-    color: var(--color-text-main-white);
+    color: var(--color-white);
     background-color: var(--color-bg-primary);
     padding: 20px 0;
 }
@@ -547,24 +547,13 @@
     height: fit-content;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    background-color: var(--color-white);
-    padding: 0px 10px;
 }
 .mainslider {
     width: 100%;
     max-width: 550px;
     overflow: hidden;
-}
-.reviewdoodle{
-    width: 100%;
-    max-width: 550px;
-    display: flex;
-    justify-content: center;
-}
-.reviewdoodle img{
-    width: 80%;
-    object-fit: contain;
+    box-shadow: var(--shadow-soft);
+    border-radius: var(--radius-lg);
 }
 .reviewslides {
     width: fit-content;
@@ -576,6 +565,10 @@
 
 .reviewbox{
     display: block;
+    border: var(--border-thin);
+    border-radius: var(--radius-lg);
+    background-color: var(--color-white);
+    padding: 20px;
 }
 .student-profile{
     display: flex;

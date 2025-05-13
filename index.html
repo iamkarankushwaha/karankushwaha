@@ -50,26 +50,6 @@
             </div>
         </div>
     </div>
-    <div id="popup-container">
-        <div id="popup-wrapper">
-            <div class="pop-top-row">
-                <h3 id="pop-header"></h3>
-            </div>
-            <div class="pop-down-row">
-                <div class="pop-text-box">
-                    <p id="pop-text"></p>
-                </div>
-                <div class="pop-close-box">
-                    <button id="close-popup">Okay</button>
-                    <script>
-                        document.getElementById("close-popup").addEventListener("click", () => {
-                            document.getElementById("popup-container").style.display = 'none';
-                        });
-                    </script>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- POPUP ENDS HERE -->
 
     <!-- HEADER STARTS HERE -->
@@ -114,11 +94,11 @@
                 </div>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/karankushwaha" target="_blank"><i
-                            class="fa-brands fa-linkedin"></i></a>
+                            class="fa-brands fa-linkedin-in"></i></a>
                     <a href="https://youtube.com/@karan_kushwaha09?si=UCfHJmEtm0ATgaMZ" target="_blank"><i
                             class="fa-brands fa-youtube"></i></a>
                     <a href="https://x.com/KaranKushwaha_" target="_blank"><i
-                            class="fa-brands fa-square-x-twitter"></i></a>
+                            class="fa-brands fa-x-twitter"></i></a>
                 </div>
             </div>
         </section>
@@ -126,7 +106,7 @@
         <section class="featured-prod">
             <div class="section-heading">
                 <div class="heading-itembox">
-                    <h2 class="heading-header">New Releases!</h2>
+                    <h2 class="heading-header">New <span class="lastword">Releases!</span></h2>
                 </div>
                 <div class="heading-itembox">
                     <p class="section-tagline">Check out latest <span>books & Notes!</span></p>
@@ -137,7 +117,7 @@
                     <div class="prodrack" id="prodrack"></div>
                 </div>
                 <div class="filter-box">
-                    <p class="link-store">Visit<a href="Store-Page.html">Library <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></a>for more.</p>
+                    <p class="link-store">Visit<a href="library.html">Library <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></a>for more.</p>
                 </div>
             </div>
         </section>
@@ -145,7 +125,7 @@
         <section id="about">
             <div class="section-heading">
                 <div class="heading-itembox">
-                    <h2 class="heading-header">Welcome to My Profile!</h2>
+                    <h2 class="heading-header">Welcome to My <span class="lastword">Profile!</span></h2>
                 </div>
                 <div class="heading-itembox">
                     <p class="section-tagline">Let's explore, who <span>I am ?</span></p>
@@ -176,7 +156,7 @@
         <section class="why-box">
             <div class="section-heading">
                 <div class="heading-itembox">
-                    <h2 class="heading-header">What's Special</h2>
+                    <h2 class="heading-header">What's <span class="lastword">Special?</span></h2>
                 </div>
                 <div class="heading-itembox">
                     <p class="section-tagline">Why Karan's sessions and <span>Books ?</span></p>
@@ -193,7 +173,7 @@
                         <li><p>Student Wise Sessions</p></li>
                         <li><p>Exam Oriented Guidance</p></li>
                     </ul>
-                    <div class="btn"><a href="services.html">Services</a></div>
+                    <div class="btn"><a onclick="showPopupServices('Not Available!', 'The Feature of SERVICES is under development kindly check after sometime or you may contact Karan via contact provided on Home Page.')">Services</a></div>
                 </div>
                 <div class="why-books">
                     <h2>USP of Books</h2>
@@ -213,7 +193,7 @@
         <section id="social-media">
             <div class="section-heading">
                 <div class="heading-itembox">
-                    <h2 class="heading-header">Content That Matters</h2>
+                    <h2 class="heading-header">Content That <span class="lastword">Matters!</span></h2>
                 </div>
                 <div class="heading-itembox">
                     <p class="section-tagline">What I Create: Videos & <span>Posts.</span></p>
@@ -237,7 +217,7 @@
         <section class="reviews">
             <div class="section-heading">
                 <div class="heading-itembox">
-                    <h2 class="heading-header">Word of Mouth</h2>
+                    <h2 class="heading-header">Word of <span class="lastword">Mouth</span></h2>
                 </div>
                 <div class="heading-itembox">
                     <p class="section-tagline">Experience of <span>students.</span></p>
@@ -291,51 +271,67 @@
                         
                     </div>
                 </div>
-                <div class="reviewdoodle">
-                    <img src="Img-Assets/review doodle.jpg" alt="review doodle" loading="lazy">
-                </div>
             </div>
         </section>
 
         <section id="contact">
             <div class="section-heading">
                 <div class="heading-itembox">
-                    <h2 class="heading-header">Let's Connect</h2>
+                    <h2 class="heading-header">Let's <span class="lastword">Connect :)</span></h2>
                 </div>
                 <div class="heading-itembox">
                     <p class="section-tagline">Request a callback or send <span>message.</span></p>
                 </div>
             </div>
             <div class="contact-wrapper">
+                <div class="social-card">
+                    <div class="profile-info">
+                        <img src="Img-Assets/karan kushwaha.jpg" alt="Karan's Avatar" class="profile-pic" />
+                        <h2>Karan Kushwaha</h2>
+                        <p>Aspiring Chartered Accountant | CA Finalist | B.Com @ DU</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/karankushwaha" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://youtube.com/@karan_kushwaha09?si=UCfHJmEtm0ATgaMZ" target="_blank" aria-label="Email">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="https://twitter.com/karankushwaha_" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
                 <div class="contact-form">
+                    <div class="formheading">
+                        <h2 class="">Message Me</h2>
+                        <p class="contact-tagline">Feel free to reach out for any queries or feedback, I will revert as soon as possible.</p>
+                    </div>
                     <form action="" method="post" id="contactForm" name="Contact-Form">
                         <div class="inputbox">
-                            <label for="name">Name *</label>
                             <input type="text" id="name" name="name" placeholder="Enter your name" required
                                 autocomplete="on" />
                         </div>
                         <div class="inputbox">
-                            <label for="phone">Phone Number</label>
                             <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"
                                 autocomplete="on" />
                         </div>
                         <div class="inputbox">
-                            <label for="email">Email *</label>
                             <input type="email" id="email" name="email" placeholder="Enter your email" required
                                 autocomplete="on" />
                         </div>
                         <div class="inputbox">
-                            <label for="subject">Subject</label>
                             <input type="text" id="subject" name="subject" placeholder="Enter your subject"
                                 autocomplete="on" />
                         </div>
                         <div class="inputbox">
-                            <label for="message">Message *</label>
                             <textarea id="message" name="message" placeholder="Write your message here..."
                                 required></textarea>
                         </div>
-                        <p class="note">*Marked fields are mandatory.</p>
-                        <button type="submit">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                        <div class="inputbox">
+                            <button type="submit">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                        </div>
                     </form>
 
                     <div id="spinner-contact-form">
@@ -346,7 +342,7 @@
                     <div id="popup-contact-form">
                         <div class="popup-content-contact-form">
                             <span><i class="fa-solid fa-check"></i></span>
-                            <p>Thank you! Your message has been received. Our team will contact you as earliest as possible.</p>
+                            <p>Thank you!<br>Your message has been received.<br>I will contact you as earliest as possible.</p>
                             <button id="ok-button-contact-form">OK</button>
                         </div>
                     </div>

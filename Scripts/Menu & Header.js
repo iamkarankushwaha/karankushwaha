@@ -61,10 +61,10 @@ function LoadHeader() {
                     <a href="library.html">Library</a>
                 </li>
                 <li>
-                    <a href="services.html">Services</a>
+                    <a onclick="showPopupServices('Not Available!', 'The Feature of SERVICES is under development kindly check after sometime or you may contact Karan via contact provided on Home Page.')">Services</a>
                 </li>
                 <li>
-                    <a href="projects.html">Projects</a>
+                    <a onclick="showPopupServices('Not Available!', 'The Feature of PROJECTS is under development kindly check after sometime or you may contact Karan via contact provided on Home Page.')">Projects</a>
                 </li>
                 <li>
                     <a href="index.html?#about">About-Me</a>
@@ -111,11 +111,11 @@ function LoadFooter() {
         <div class="row2footer">
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/karankushwaha" target="_blank"><i
-                        class="fa-brands fa-linkedin"></i></a>
+                        class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://youtube.com/@karan_kushwaha09?si=UCfHJmEtm0ATgaMZ" target="_blank"><i
                         class="fa-brands fa-youtube"></i></a>
                 <a href="https://x.com/KaranKushwaha_" target="_blank"><i
-                        class="fa-brands fa-square-x-twitter"></i></a>
+                        class="fa-brands fa-x-twitter"></i></a>
             </div>
         </div>
         <div class="row3footer">
@@ -123,4 +123,45 @@ function LoadFooter() {
             <p>Created and Maintained by Karan Kushwaha.</p>
         </div>
     `;
+}
+
+
+// This function will be called when the user clicks on the "Services" link
+function showPopupServices(title, message) {
+    // Check if popup already exists
+    if (!document.getElementById("popup-container")) {
+        // Create the popup structure
+        const popupHTML = `
+            <div id="popup-container">
+                <div id="popup-wrapper">
+                    <div class="pop-top-row">
+                        <h3 id="pop-header"></h3>
+                    </div>
+                    <div class="pop-down-row">
+                        <div class="pop-text-box">
+                            <p id="pop-text"></p>
+                        </div>
+                        <div class="pop-close-box">
+                            <button id="close-popup">Okay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Append to body
+        document.body.insertAdjacentHTML('beforeend', popupHTML);
+
+        // Add close event listener
+        document.getElementById("close-popup").addEventListener("click", () => {
+            document.getElementById("popup-container").remove();
+        });
+    }
+
+    // Set content
+    document.getElementById("pop-header").textContent = title;
+    document.getElementById("pop-text").textContent = message;
+
+    // Show popup
+    document.getElementById("popup-container").style.display = 'flex'; // or block based on your CSS
 }

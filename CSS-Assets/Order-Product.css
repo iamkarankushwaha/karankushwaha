@@ -182,14 +182,18 @@
     position: relative;
     z-index: 2;
 }
-
+.orderpage{
+    padding-top: 0px;
+    background-color: var(--color-white) !important;
+}
 .item-detail-box {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
     width: 100%;
-    padding: 30px 0px;
+    padding-top: 0px;
+    padding-bottom: 60px;
     gap: 30px;
     border-bottom: var(--border-thin);
 }
@@ -414,21 +418,6 @@
 
 .formbox {
     padding: 10px;
-}
-
-.inputbox {
-    display: block;
-    max-width: unset;
-    padding: 10px;
-}
-
-.inputbox input {
-    width: 100%;
-    max-width: unset;
-    color: var(--color-bg-primary);
-    background-color: var(--color-white);
-    border: var(--border-thin);
-    border-radius: var(--radius-sm);
 }
 
 .orderbuttonbox {

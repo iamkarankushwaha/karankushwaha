@@ -1,98 +1,141 @@
 :root {
-  /* Primary Backgrounds */
-  --color-bg-primary: #0a0a1a;      /* Deep Navy - For full body backgrounds */
-  --color-bg-secondary: #1a1a2e;    /* Dark Blue-Gray - For cards, navbars, footers */
+    /* Primary Backgrounds */
+    --color-bg-primary: #0a0a1a;
+    /* Deep Navy - For full body backgrounds */
+    --color-bg-secondary: #1a1a2e;
+    /* Dark Blue-Gray - For cards, navbars, footers */
 
-  /* Text Colors */
-  --color-text-main-black: #0a0a1a; /* black - Main heading/text on light backgrounds */
-  --color-text-main-white: #e9e9f0; /* Soft White - Main heading/text on dark backgrounds */
-  --color-text-secondary: #b0b3b8;  /* Light Gray - Paragraphs, descriptions */
-  --color-text-accent: #0064fb;     /* Blue Accent - For links, highlights */
-  --color-text-muted: #707377;      /* Muted Gray - Metadata or less important info */
+    /* Text Colors */
+    --color-text-main-black: #0a0a1a;
+    /* black - Main heading/text on light backgrounds */
+    --color-text-main-white: #e9e9f0;
+    /* Soft White - Main heading/text on dark backgrounds */
+    --color-text-secondary: #b0b3b8;
+    /* Light Gray - Paragraphs, descriptions */
+    --color-text-accent: #0064fb;
+    /* Blue Accent - For links, highlights */
+    --color-text-muted: #707377;
+    /* Muted Gray - Metadata or less important info */
 
-  /* Brand Colors / Buttons / CTA */
-  --color-accent-blue: #0064fb;     /* Primary Accent Blue - For buttons, links */
-  --color-accent-blue-dark: #0046af;/* Button Hover/Pressed State */
-  --color-accent-green: #04aa6d;    /* Success/Positive Status */
-  --color-accent-green-dark: #007a4d;    /* Success/Positive Status */
-  --color-accent-red: #ef134d;      /* Error/Danger */
-  --color-accent-yellow: #ffc107;   /* Warning/Attention (slightly softened for accessibility) */
-  --color-accent-sky: #00b0f0;      /* Optional accent for tags or subtle highlights */
+    /* Brand Colors / Buttons / CTA */
+    --color-accent-blue: #0064fb;
+    /* Primary Accent Blue - For buttons, links */
+    --color-accent-blue-dark: #0046af;
+    /* Button Hover/Pressed State */
+    --color-accent-green: #04aa6d;
+    /* Success/Positive Status */
+    --color-accent-green-dark: #007a4d;
+    /* Success/Positive Status */
+    --color-accent-red: #ef134d;
+    /* Error/Danger */
+    --color-accent-yellow: #ffc107;
+    /* Warning/Attention (slightly softened for accessibility) */
+    --color-accent-sky: #00b0f0;
+    /* Optional accent for tags or subtle highlights */
 
-  /* UI/Surfaces */
-  --color-surface-light: #f5f6fa;   /* Light Background - For contrast on dark themes */
-  --color-surface-muted: #d3d3dd;   /* Grayish Surface - For cards/sections in light mode */
-  --color-divider: #393939;         /* Divider Lines */
-  --color-border: #bbbcbc;          /* Borders or subtle containers */
+    /* UI/Surfaces */
+    --color-surface-light: #f5f6fa;
+    /* Light Background - For contrast on dark themes */
+    --color-surface-muted: #d3d3dd;
+    /* Grayish Surface - For cards/sections in light mode */
+    --color-divider: #393939;
+    /* Divider Lines */
+    --color-border: #bbbcbc;
+    /* Borders or subtle containers */
 
-  /* Utility */
-  --color-white: #ffffff;
-  --color-black: #000000;
+    /* Utility */
+    --color-white: #ffffff;
+    --color-black: #000000;
 
-  /* ====== SHADOWS ====== */
-  
-  /* Basic UI Shadow */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.10); 
-  /* Use For: Buttons, small elements, subtle borders */
-  
-  /* Card Shadow */
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.08); 
-  /* Use For: Cards, sections, content boxes */
-  
-  /* Medium Elevation */
-  --shadow-lg: 0 6px 12px rgba(0, 0, 0, 0.12); 
-  /* Use For: Hover states, tooltips, elevated buttons */
-  
-  /* Deep Elevation */
-  --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.15); 
-  /* Use For: Modals, popups, dropdowns */
-  
-  /* Inner Shadow */
-  --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.06); 
-  /* Use For: Inputs, containers needing inner depth */
-  
-  /* Neumorphic Soft Spread */
-  --shadow-soft: 
-    0 10px 20px rgba(0, 0, 0, 0.05), 
-    0 6px 6px rgba(0, 0, 0, 0.05);
-  /* Use For: Modern subtle 3D effects, cards, UI panels */
+    /* ====== SHADOWS ====== */
 
-  /* ====== BORDER WIDTHS ====== */
+    /* Basic UI Shadow */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.10);
+    /* Use For: Buttons, small elements, subtle borders */
 
-  --border-thin: 1px solid #d0d3d8;       /* Light Gray - For cards, input borders */
-  --border-medium: 2px solid #b0b3b8;     /* Medium Gray - For focus states */
-  --border-thick: 3px solid #0064fb;      /* Accent Blue - For active elements, buttons */
+    /* Card Shadow */
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.08);
+    /* Use For: Cards, sections, content boxes */
 
-  /* ====== BORDER COLORS ====== */
+    /* Medium Elevation */
+    --shadow-lg: 0 6px 12px rgba(0, 0, 0, 0.12);
+    /* Use For: Hover states, tooltips, elevated buttons */
 
-  --border-color-muted: #d0d3d8;          /* Default muted gray border */
-  --border-color-accent: #0064fb;         /* Accent blue for focus/active */
-  --border-color-danger: #ef134d;         /* Red border for error state */
-  --border-color-success: #04aa6d;        /* Green border for success state */
-  --border-color-warning: #ffc107;        /* Yellow border for warning */
+    /* Deep Elevation */
+    --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.15);
+    /* Use For: Modals, popups, dropdowns */
 
-  /* ====== BORDER RADIUS ====== */
+    /* Inner Shadow */
+    --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+    /* Use For: Inputs, containers needing inner depth */
 
-  --radius-xs: 2px;      /* Subtle rounding - icons, checkboxes */
-  --radius-sm: 4px;      /* Small radius - input fields, buttons */
-  --radius-md: 8px;      /* Default UI - cards, modals */
-  --radius-lg: 12px;     /* Large containers - feature blocks */
-  --radius-xl: 20px;     /* Soft aesthetic UI - hero sections */
-  --radius-full: 9999px; /* Fully rounded - pills, avatars, circles */
+    /* Neumorphic Soft Spread */
+    --shadow-soft:
+        0 10px 20px rgba(0, 0, 0, 0.05),
+        0 6px 6px rgba(0, 0, 0, 0.05);
+    /* Use For: Modern subtle 3D effects, cards, UI panels */
 
-  /* ====== FONT SIZES ====== */
+    /* ====== BORDER WIDTHS ====== */
 
-  --font-xxs: 0.625rem;   /* 10px - Micro text, badges, captions */
-  --font-xs: 0.75rem;     /* 12px - Labels, hints, small buttons */
-  --font-sm: 0.875rem;    /* 14px - Paragraphs, UI text (default) */
-  --font-base: 1rem;      /* 16px - Body text, default desktop base */
-  --font-md: 1.125rem;    /* 18px - Larger body, subtitles */
-  --font-lg: 1.25rem;     /* 20px - Section headers */
-  --font-xl: 1.5rem;      /* 24px - Card titles, h4 */
-  --font-2xl: 1.875rem;   /* 30px - h3, large titles */
-  --font-3xl: 2.25rem;    /* 36px - h2, section headings */
-  --font-4xl: 3rem;       /* 48px - h1, hero section heading */
-  --font-5xl: 4rem;       /* 64px - Landing page, banners */
+    --border-thin: 1px solid #d0d3d8;
+    /* Light Gray - For cards, input borders */
+    --border-medium: 2px solid #b0b3b8;
+    /* Medium Gray - For focus states */
+    --border-thick: 3px solid #0064fb;
+    /* Accent Blue - For active elements, buttons */
+
+    /* ====== BORDER COLORS ====== */
+
+    --border-color-muted: #d0d3d8;
+    /* Default muted gray border */
+    --border-color-accent: #0064fb;
+    /* Accent blue for focus/active */
+    --border-color-danger: #ef134d;
+    /* Red border for error state */
+    --border-color-success: #04aa6d;
+    /* Green border for success state */
+    --border-color-warning: #ffc107;
+    /* Yellow border for warning */
+
+    /* ====== BORDER RADIUS ====== */
+
+    --radius-xs: 2px;
+    /* Subtle rounding - icons, checkboxes */
+    --radius-sm: 4px;
+    /* Small radius - input fields, buttons */
+    --radius-md: 8px;
+    /* Default UI - cards, modals */
+    --radius-lg: 12px;
+    /* Large containers - feature blocks */
+    --radius-xl: 20px;
+    /* Soft aesthetic UI - hero sections */
+    --radius-full: 9999px;
+    /* Fully rounded - pills, avatars, circles */
+
+    /* ====== FONT SIZES ====== */
+
+    --font-xxs: 0.625rem;
+    /* 10px - Micro text, badges, captions */
+    --font-xs: 0.75rem;
+    /* 12px - Labels, hints, small buttons */
+    --font-sm: 0.875rem;
+    /* 14px - Paragraphs, UI text (default) */
+    --font-base: 1rem;
+    /* 16px - Body text, default desktop base */
+    --font-md: 1.125rem;
+    /* 18px - Larger body, subtitles */
+    --font-lg: 1.25rem;
+    /* 20px - Section headers */
+    --font-xl: 1.5rem;
+    /* 24px - Card titles, h4 */
+    --font-2xl: 1.875rem;
+    /* 30px - h3, large titles */
+    --font-3xl: 2.25rem;
+    /* 36px - h2, section headings */
+    --font-4xl: 3rem;
+    /* 48px - h1, hero section heading */
+    --font-5xl: 4rem;
+    /* 64px - Landing page, banners */
 }
 
 /* Contact CSS */
@@ -100,68 +143,128 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    gap: 40px;
+    position: relative;
+    overflow: auto !important;
 }
 
-.contact-form {
+.social-card {
+    position: sticky !important;
+    top: 0;
+    width: 100%;
+    max-width: 450px;
+    height: fit-content;
+    padding: 30px 20px;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+    border: var(--border-thin);
+    border-color: var(--color-border);
+    background-color: var(--color-surface-light);
+}
+
+.profile-info .profile-pic {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.profile-info h2 {
+    margin: 0;
+    font-size: var(--font-lg);
+    font-weight: 600;
+    color: var(--color-accent-red);
+}
+
+.profile-info p {
+    font-size: var(--font-sm);
+    color: var(--color-text-muted);
+    margin: 6px 0 20px;
+}
+
+.social-links {
     display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 16px;
+}
+
+.social-links a {
+    font-size: 20px;
+    color: var(--color-accent-blue);
+    transition: color 0.3s;
+    background-color: var(--color-white);
+}
+
+
+/*  */
+.contact-form {
+    width: 100%;
+    max-width: 450px;
+    background-color: var(--color-surface-light);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-soft);
+    border: var(--border-thin);
+}
+
+.formheading {
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.formheading h2 {
+    font-size: var(--font-md);
+    font-weight: 600;
+    color: var(--color-text-muted);
+    padding-top: 20px;
+    position: relative;
+    width: fit-content;
+    white-space: nowrap;
+    margin-bottom: 10px;
+}
+
+.formheading h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    height: 2px;
+    width: 100%;
+    background-color: var(--color-text-secondary);
+    border-radius: 10px;
+}
+
+.formheading p {
+    font-size: var(--font-sm);
+    color: var(--color-text-muted);
 }
 
 #contactForm {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 30px 0;
+    padding: 10px;
 }
 
 .inputbox {
     width: 100%;
-    max-width: 450px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 10px;
-    overflow: hidden;
+    padding: 10px;
 }
 
-.contact-form form label,
 input,
 textarea,
 button {
-    display: inline-flex;
-    width: 90%;
+    display: block;
+    width: 100%;
     font-size: var(--font-base);
     padding: 13px 15px;
     border: none;
     outline: none;
-}
-
-.contact-form form label {
-    padding: 0px 10px;
-    font-size: var(--font-md);
-    color: var(--color-bg-secondary);
-    cursor: pointer;
-}
-
-.contact-form form input,
-textarea {
-    margin-bottom: 20px;
-}
-
-.contact-form form input,
-textarea {
-    color: var(--color-text-main-black);
+    color: var(--color-bg-primary);
     background-color: var(--color-white);
-    border: 1px solid #c8d4e7;
     border: var(--border-thin);
-    border-radius: 5px;
-    box-shadow: var(--shadow-inset);
+    border-radius: var(--radius-sm);
 }
 
 input::placeholder,
@@ -171,35 +274,21 @@ textarea::placeholder {
 
 textarea {
     resize: vertical;
-    min-height: 150px;
-    max-height: 200px;
+    min-height: 100px;
 }
 
-form input:focus,
+input:focus,
 textarea:focus {
-    border-color: var(--border-color-accent);
+    border-color: var(--color-bg-primary);
     box-shadow: 0px 3px 5px rgba(0, 36, 196, 0.3);
-}
-
-
-.contact-form p {
-    display: block;
-    width: 100%;
-    max-width: 450px;
-    color: var(--color-text-muted);
-    padding: 0px 10px;
-    padding-bottom: 20px;
-    font-size: 0.9rem;
 }
 
 button {
     display: block;
-    width: 90%;
-    max-width: 450px;
+    width: 100%;
     padding: 10px 25px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    border-radius: 10px;
+    font-size: var(--font-md);
+    border-radius: var(--radius-md);
     background-color: var(--color-accent-blue);
     color: var(--color-white);
     cursor: pointer;
@@ -215,9 +304,8 @@ button i {
     font-size: 1.1rem;
 }
 
-form textarea {
-    margin: 0;
-}
+/*  */
+
 
 #spinner-contact-form {
     width: 100vw;
