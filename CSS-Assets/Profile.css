@@ -1,100 +1,3 @@
-:root {
-  /* Primary Backgrounds */
-  --color-bg-primary: #0a0a1a;      /* Deep Navy - For full body backgrounds */
-  --color-bg-secondary: #1a1a2e;    /* Dark Blue-Gray - For cards, navbars, footers */
-
-  /* Text Colors */
-  --color-text-main-black: #0a0a1a; /* black - Main heading/text on light backgrounds */
-  --color-text-main-white: #e9e9f0; /* Soft White - Main heading/text on dark backgrounds */
-  --color-text-secondary: #b0b3b8;  /* Light Gray - Paragraphs, descriptions */
-  --color-text-accent: #0064fb;     /* Blue Accent - For links, highlights */
-  --color-text-muted: #707377;      /* Muted Gray - Metadata or less important info */
-
-  /* Brand Colors / Buttons / CTA */
-  --color-accent-blue: #0064fb;     /* Primary Accent Blue - For buttons, links */
-  --color-accent-blue-dark: #0046af;/* Button Hover/Pressed State */
-  --color-accent-green: #04aa6d;    /* Success/Positive Status */
-  --color-accent-green-dark: #007a4d;    /* Success/Positive Status */
-  --color-accent-red: #ef134d;      /* Error/Danger */
-  --color-accent-yellow: #ffc107;   /* Warning/Attention (slightly softened for accessibility) */
-  --color-accent-sky: #00b0f0;      /* Optional accent for tags or subtle highlights */
-
-  /* UI/Surfaces */
-  --color-surface-light: #f5f6fa;   /* Light Background - For contrast on dark themes */
-  --color-surface-muted: #d3d3dd;   /* Grayish Surface - For cards/sections in light mode */
-  --color-divider: #393939;         /* Divider Lines */
-  --color-border: #bbbcbc;          /* Borders or subtle containers */
-
-  /* Utility */
-  --color-white: #ffffff;
-  --color-black: #000000;
-
-  /* ====== SHADOWS ====== */
-  
-  /* Basic UI Shadow */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.10); 
-  /* Use For: Buttons, small elements, subtle borders */
-  
-  /* Card Shadow */
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.08); 
-  /* Use For: Cards, sections, content boxes */
-  
-  /* Medium Elevation */
-  --shadow-lg: 0 6px 12px rgba(0, 0, 0, 0.12); 
-  /* Use For: Hover states, tooltips, elevated buttons */
-  
-  /* Deep Elevation */
-  --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.15); 
-  /* Use For: Modals, popups, dropdowns */
-  
-  /* Inner Shadow */
-  --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.06); 
-  /* Use For: Inputs, containers needing inner depth */
-  
-  /* Neumorphic Soft Spread */
-  --shadow-soft: 
-    0 10px 20px rgba(0, 0, 0, 0.05), 
-    0 6px 6px rgba(0, 0, 0, 0.05);
-  /* Use For: Modern subtle 3D effects, cards, UI panels */
-
-  /* ====== BORDER WIDTHS ====== */
-
-  --border-thin: 1px solid #d0d3d8;       /* Light Gray - For cards, input borders */
-  --border-medium: 2px solid #b0b3b8;     /* Medium Gray - For focus states */
-  --border-thick: 3px solid #0064fb;      /* Accent Blue - For active elements, buttons */
-
-  /* ====== BORDER COLORS ====== */
-
-  --border-color-muted: #d0d3d8;          /* Default muted gray border */
-  --border-color-accent: #0064fb;         /* Accent blue for focus/active */
-  --border-color-danger: #ef134d;         /* Red border for error state */
-  --border-color-success: #04aa6d;        /* Green border for success state */
-  --border-color-warning: #ffc107;        /* Yellow border for warning */
-
-  /* ====== BORDER RADIUS ====== */
-
-  --radius-xs: 2px;      /* Subtle rounding - icons, checkboxes */
-  --radius-sm: 4px;      /* Small radius - input fields, buttons */
-  --radius-md: 8px;      /* Default UI - cards, modals */
-  --radius-lg: 12px;     /* Large containers - feature blocks */
-  --radius-xl: 20px;     /* Soft aesthetic UI - hero sections */
-  --radius-full: 9999px; /* Fully rounded - pills, avatars, circles */
-
-  /* ====== FONT SIZES ====== */
-
-  --font-xxs: 0.625rem;   /* 10px - Micro text, badges, captions */
-  --font-xs: 0.75rem;     /* 12px - Labels, hints, small buttons */
-  --font-sm: 0.875rem;    /* 14px - Paragraphs, UI text (default) */
-  --font-base: 1rem;      /* 16px - Body text, default desktop base */
-  --font-md: 1.125rem;    /* 18px - Larger body, subtitles */
-  --font-lg: 1.25rem;     /* 20px - Section headers */
-  --font-xl: 1.5rem;      /* 24px - Card titles, h4 */
-  --font-2xl: 1.875rem;   /* 30px - h3, large titles */
-  --font-3xl: 2.25rem;    /* 36px - h2, section headings */
-  --font-4xl: 3rem;       /* 48px - h1, hero section heading */
-  --font-5xl: 4rem;       /* 64px - Landing page, banners */
-}
-
 /* ------Image Slider Starts Here---------- */
 .imageslider {
     width: 100vw;
@@ -224,7 +127,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: var(--font-2xl);
+    font-size: var(--font-lg);
     box-shadow: var(--shadow-soft);
 }
 
@@ -435,7 +338,7 @@
     text-align: center;
     color: var(--color-white);
     background-color: var(--color-bg-primary);
-    padding: 20px 0;
+    padding: 25px 0;
 }
 
 .why-classes ul,

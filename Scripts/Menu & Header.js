@@ -64,7 +64,10 @@ function LoadHeader() {
                     <a onclick="showPopupServices('Not Available!', 'The Feature of SERVICES is under development kindly check after sometime or you may contact Karan via contact provided on Home Page.')">Services</a>
                 </li>
                 <li>
-                    <a onclick="showPopupServices('Not Available!', 'The Feature of PROJECTS is under development kindly check after sometime or you may contact Karan via contact provided on Home Page.')">Projects</a>
+                    <a href="projects.html">Projects</a>
+                </li>
+                <li>
+                    <a href="blogs.html">Blogs</a>
                 </li>
                 <li>
                     <a href="index.html?#about">About-Me</a>
