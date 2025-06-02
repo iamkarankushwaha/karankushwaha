@@ -1,366 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO IS HERE -->
     <meta author="Karan Kushwaha">
-    <meta type="keywords"
-        content="Karan Kushwaha, Karan Kushwaha CA, Karan Kushwaha CA Inter, Karan Kushwaha B.Com., Karan Kushwaha Delhi University, Karan Kushwaha Chartered Accountant, Karan Kushwaha CA Foundation, Karan Kushwaha CA Intermediate, Karan Kushwaha Finance, Karan Kushwaha Taxation, Karan Kushwaha Content Creator, Karan Kushwaha LinkedIn, Karan Kushwaha YouTube, Karan Kushwaha Twitter, Karan Kushwaha X.com, Karan Kushwaha Feedback, Karan Kushwaha Books, Karan Kushwaha Notes, Karan Kushwaha Experience, Karan Kushwaha Projects, Karan Kushwaha Achievements, Karan Kushwaha Social Media, Karan Kushwaha Contact, Karan Kushwaha Education For All, Karan Kushwaha Privacy Policy, Karan Kushwaha Terms and Conditions, Karan Kushwaha Refund Policy">
-    <meta type="description"
-        content="Karan Kushwaha's Portfolio Website where you can find all the information about him.">
-    <title>Karan Kushwaha</title>
-    <link rel="canonical" href="https://karankushwaha.netlify.app/" />
+    <meta type="keywords" content="Karan Kushwaha, Karan Kushwaha CA, Karan Kushwaha CA Inter, Karan Kushwaha B.Com., Karan Kushwaha Delhi University, Karan Kushwaha Chartered Accountant, Karan Kushwaha CA Foundation, Karan Kushwaha CA Intermediate, Karan Kushwaha Finance, Karan Kushwaha Taxation, Karan Kushwaha Content Creator, Karan Kushwaha LinkedIn, Karan Kushwaha YouTube, Karan Kushwaha Twitter, Karan Kushwaha X.com, Karan Kushwaha Feedback, Karan Kushwaha Books, Karan Kushwaha Notes, Karan Kushwaha Experience, Karan Kushwaha Projects, Karan Kushwaha Achievements, Karan Kushwaha Social Media, Karan Kushwaha Contact, Karan Kushwaha Education For All, Karan Kushwaha Privacy Policy, Karan Kushwaha Terms and Conditions, Karan Kushwaha Refund Policy">
+    <meta type="description" content="Karan Kushwaha's Portfolio Website where you can find all the information about him.">
+    <link rel="canonical" href="https://karankushwaha.netlify.app" />
+    <link rel="shortcut icon" href="Img-Assets/main_logo_whiteBg.png" type="image/x-icon">
+    <title>Karan Kushwaha | Home</title>
     <!-- SEO ENDS HERE -->
-    <!-- FAVICON -->
-    <link rel="shortcut icon" href="Img-Assets/main-logo-white.png" type="image/x-icon">
     <!-- Font Awesome Loader Link -->
     <script src="https://kit.fontawesome.com/25cf39dd91.js" crossorigin="anonymous"></script>
 
     <!-- CSS STYLE SHEETS -->
-    <link rel="stylesheet" href="CSS-Assets/Default-Style.css">
-    <link rel="stylesheet" href="CSS-Assets/Header-Style.css">
-    <link rel="stylesheet" href="CSS-Assets/Profile.css">
-    <link rel="stylesheet" href="CSS-Assets/Social-Media.css">
-    <link rel="stylesheet" href="CSS-Assets/Contact-Me.css">
-    <link rel="stylesheet" href="CSS-Assets/Footer-Style.css">
-    <link rel="stylesheet" href="CSS-Assets/Responsive-Style.css">
+    <link rel="stylesheet" href="StyleSheets/theme.css">
+    <link rel="stylesheet" href="StyleSheets/header.css">
+    <link rel="stylesheet" href="StyleSheets/hero.css">
+
     <!-- CSS ENDS HERE -->
 </head>
-
 <body>
-    <!-- POPUP STARTS HERE -->
-    <div class="app-pop" id="app-pop">
-        <div id="app-popup-wrapper">
-            <div class="app-pop-top-row">
-                <h3 id="app-pop-header">Please Note</h3>
-            </div>
-            <div class="app-pop-down-row">
-                <div class="app-pop-text-box">
-                    <p id="app-pop-text">This website has been meticulously designed and developed by Karan Kushwaha as
-                        a part of his heartfelt dream project.<br><br><b>Since this website is currently under
-                            development, some features may not function as expected. However, you can reach out to Karan
-                            Kushwaha through the "Contact" section of the website.</b><br><br>Thanks and
-                        Regards,<br>Karan Kushwaha</p>
-                </div>
-                <div class="app-pop-close-box">
-                    <button id="app-close-popup">Okay</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- POPUP ENDS HERE -->
-
     <!-- HEADER STARTS HERE -->
     <div id="beforeheader"></div>
-    <header id="header"><!-- Inserted Via JS --></header>
+    <header id="header" class="flexbox"><!-- Inserted Via JS --></header>
     <!-- HEADER ENDS HERE -->
 
-    <!-- MAIN CONTENT STARTS -->
     <main>
-        <!-- <div class="imageslider">
-            <div class="slider">
-                <div class="slides">
-                    <img src="Img-Assets/banner 1.png" alt="banner 1">
-                    <img src="Img-Assets/banner 2.png" alt="banner 1">
-                    <img src="Img-Assets/banner 3.png" alt="banner 2">
+        <!-- Hero Section Starts -->
+        <section class="hero">
+            <div class="container flexbox hero-container">
+                <div class="left-section flexbox hero-profile">
+                    <img src="Img-Assets/Karan Kushwaha - Profile.jpg" alt="Profile of Karan Kushwaha" loading="eager">
+                    <h1 class="mastername"><span>Hi I'm </span>Karan Kushwaha</h1>
+                    <h2 class="designation flexbox">CA Finalist</h2>
                 </div>
-            </div>
-            <script>
-            const slides = document.querySelector('.slides');
-            let currentIndex = 0;
-            const totalImages = 3; // Number of images in the slider
-            function slideImages() {
-                currentIndex = (currentIndex + 1) % totalImages;
-                slides.style.transform = `translateX(-${currentIndex * 100}vw)`;
-            }
-            setInterval(slideImages, 4000);
-            </script>
-        </div> -->
-
-        <section class="profile-container">
-            <div class="profile-box">
-                <img src="Img-Assets/Karan Kushwaha - Profile.jpg" alt="Profile of Karan Kushwaha" loading="eager">
-                <h1>Hi, I'm Karan Kushwaha</h1>
-                <p class="tagline">CA Intermediate Student</p>
-            </div>
-            <div class="detail-box">
-                <p>
-                    CA Intermediate Candidate | B.Com. at University of Delhi 🎓 Finance and Taxation Enthusiast | Self-Studied CA Foundation Passer 🏆
-                </p>
-                <div class="hero-btn">
-                    <a href="#about">About Me</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/karankushwaha" target="_blank"><i
-                            class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://youtube.com/@karan_kushwaha09?si=UCfHJmEtm0ATgaMZ" target="_blank"><i
-                            class="fa-brands fa-youtube"></i></a>
-                    <a href="https://x.com/KaranKushwaha_" target="_blank"><i
-                            class="fa-brands fa-x-twitter"></i></a>
-                </div>
-            </div>
-        </section>
-
-        <section class="featured-prod">
-            <div class="section-heading">
-                <div class="heading-itembox">
-                    <h2 class="heading-header">New <span class="lastword">Releases!</span></h2>
-                </div>
-                <div class="heading-itembox">
-                    <p class="section-tagline">Check out latest <span>books & Notes!</span></p>
-                </div>
-            </div>
-            <div class="section-content">
-                <div class="product-wrapper">
-                    <div class="prodrack" id="prodrack"></div>
-                </div>
-                <div class="filter-box">
-                    <p class="link-store">Visit<a href="library.html">Library <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></a>for more.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="about">
-            <div class="section-heading">
-                <div class="heading-itembox">
-                    <h2 class="heading-header">Welcome to My <span class="lastword">Profile!</span></h2>
-                </div>
-                <div class="heading-itembox">
-                    <p class="section-tagline">Let's explore, who <span>I am ?</span></p>
-                </div>
-            </div>
-            <div class="about-wrapper">
-                <div class="about-img">
-                    <img src="Img-Assets/hero-img_karan kushwaha.png" alt="Karan Kushwaha" loading="lazy">
-                </div>
-                <div class="about-text">
-                    <ul>
-                        <li><strong>Education:</strong> CA Intermediate student & B.Com. undergraduate at the University of Delhi.</li>
-                        <li><strong>Finance & Taxation Enthusiast:</strong> Dedicated to becoming a successful Chartered Accountant.</li>
-                        <li><strong>CA Foundation Success:</strong> Cleared in the first attempt (Dec 2023) through self-study, scoring 246/400.</li>
-                        <li><strong>Content Creator:</strong> Share insights on my CA journey via LinkedIn.</li>
-                        <li><strong>Passionate Teacher:</strong> Enjoys mentoring and educating others.</li>
-                        <li><strong>Tech-Savvy:</strong> Built this website and keen on leveraging technology.</li>
-                        <li><strong>Constant Learner:</strong> Growth-oriented mindset, currently reading <em>Not Just an Accountant</em> by Vinod Rai.</li>
-                        <li><strong>Networking:</strong> Open to connecting and exploring opportunities in Chartered Accountancy.</li>
-                    </ul>
-                    <p>
-                        <b>Thanks for visiting my profile!</b>
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="why-box">
-            <div class="section-heading">
-                <div class="heading-itembox">
-                    <h2 class="heading-header">What's <span class="lastword">Special?</span></h2>
-                </div>
-                <div class="heading-itembox">
-                    <p class="section-tagline">Why Karan's sessions and <span>Books ?</span></p>
-                </div>
-            </div>
-            <div class="whybox-wrapper">
-                <div class="why-classes">
-                    <h2>USP of Sessions</h2>
-                    <ul>
-                        <li><p>Comprehensive Doubt Solution</p></li>
-                        <li><p>Thought Clarity</p></li>
-                        <li><p>Free Access</p></li>
-                        <li><p>Personal Guidance</p></li>
-                        <li><p>Student Wise Sessions</p></li>
-                        <li><p>Exam Oriented Guidance</p></li>
-                    </ul>
-                    <div class="btn"><a onclick="showPopupServices('Not Available!', 'The Feature of SERVICES is under development kindly check after sometime or you may contact Karan via contact provided on Home Page.')">Services</a></div>
-                </div>
-                <div class="why-books">
-                    <h2>USP of Books</h2>
-                    <ul>
-                        <li><p>Comprehensive Coverage of NCERT</p></li>
-                        <li><p>Helpful for Before Exam Revision</p></li>
-                        <li><p>Topic wise Questions</p></li>
-                        <li><p>Charts, Tables & Flowchart</p></li>
-                        <li><p>Colourful Books</p></li>
-                        <li><p>Freely Available</p></li>
-                    </ul>
-                    <div class="btn"><a href="library.html">Library</a></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="social-media">
-            <div class="section-heading">
-                <div class="heading-itembox">
-                    <h2 class="heading-header">Content That <span class="lastword">Matters!</span></h2>
-                </div>
-                <div class="heading-itembox">
-                    <p class="section-tagline">What I Create: Videos & <span>Posts.</span></p>
-                </div>
-            </div>
-            
-            <div class="media-wrapper">
-                <div class="media-rack">
-                    <div class="media-box">
-                        <iframe src="https://www.youtube.com/embed/sEk91t6xLNE?si=QbXUQCSjTtrnJZtK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <p class="media-title">How to Cover CA Inter ICAI Module | CA Intermediate Jan'25 | CA Inter study tips | CA Inter Student</p>
+                <div class="left-section flexbox hero-content">
+                    <div class="headlinebox">
+                        <p class="headline">CA Finalist 💼 Final Year B.Com Student at Delhi University 🎓 Audit, Taxation & Finance Enthusiast 📊 Cleared CA Foundation via Self-Study 🏆 Creator on LinkedIn & YouTube ✨</p>
                     </div>
-                    <div class="media-box">
-                        <iframe src="https://www.youtube.com/embed/_6RIm2Ml6jE?si=Qg0DIeWq5zhmGPLe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <p class="media-title">CA Student Study Vlog | Backlog | Revision | CA Inter Jan25 | CA Inter study tips | CA Inter Student</p> 
+                    <div class="ctahero flexbox">
+                        <a href="#about" class="heroctabtn">About Me</a>
+                        <a onclick="DownloadResume()" class="heroctabtn">Resume</a>
+                    </div>
+                    <div class="ctalinks flexbox">
+                        <a href="https://www.linkedin.com/in/karankushwaha" target="_blank"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://youtube.com/@karan_kushwaha09?si=UCfHJmEtm0ATgaMZ" target="_blank"><i
+                                class="fa-brands fa-youtube"></i></a>
+                        <a href="index.html?#message"><i class="fa-solid fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section class="reviews">
-            <div class="section-heading">
-                <div class="heading-itembox">
-                    <h2 class="heading-header">Word of <span class="lastword">Mouth</span></h2>
-                </div>
-                <div class="heading-itembox">
-                    <p class="section-tagline">Experience of <span>students.</span></p>
-                </div>
-            </div>
-
-            <div class="reviewslider">
-                <div class="mainslider">
-                    <div class="reviewslides">
-                        <!-- Review 1 -->
-                        <div class="reviewbox">
-                            <div class="review-content">
-                                <div class="student-profile">
-                                    <div class="avatar">
-                                        <img src="Img-Assets/avatar-girl.png" alt="Avatar" loading="lazy">
-                                    </div>
-                                    <h3 class="studentname">Nitya Khandelwal</h3>
-                                </div>
-                                <div class="review-info">
-                                    <p class="subject">Mathematics and Economics</p>
-                                    <p class="class">9th</p>
-                                </div>
-                                <p class="review-text">It was a great experience learning with you. With your help I was able to learn more things which made my concepts more crystal clear. You are a great mentor, very understanding and always willing to help...</p>
-                                <div class="review-info">
-                                    <p class="date">3 Jan 2025</p>
-                                    <p class="batch">The Alphabet Education</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Review 2 -->
-                        <div class="reviewbox">
-                            <div class="review-content">
-                                <div class="student-profile">
-                                    <div class="avatar">
-                                        <img src="Img-Assets/avatar-girl.png" alt="Avatar" loading="lazy">
-                                    </div>
-                                    <h3 class="studentname">Akansha Nayak</h3>
-                                </div>
-                                <div class="review-info">
-                                    <p class="subject">Mathematics</p>
-                                    <p class="class">8th</p>
-                                </div>
-                                <p class="review-text">I had a great time with karan sir , he teaches me mathematics and s.st. I appreciate all the hardwork. I am grateful to have a teacher Like you.<br>You have been a incredible mentor, and I am so thankful for your guidance.</p>
-                                <div class="review-info">
-                                    <p class="date">3 Jan 2025</p>
-                                    <p class="batch">The Alphabet Education</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="section-heading">
-                <div class="heading-itembox">
-                    <h2 class="heading-header">Let's <span class="lastword">Connect :)</span></h2>
-                </div>
-                <div class="heading-itembox">
-                    <p class="section-tagline">Request a callback or send <span>message.</span></p>
-                </div>
-            </div>
-            <div class="contact-wrapper">
-                <div class="social-card">
-                    <div class="profile-info">
-                        <img src="Img-Assets/karan kushwaha.jpg" alt="Karan's Avatar" class="profile-pic" />
-                        <h2>Karan Kushwaha</h2>
-                        <p>Aspiring Chartered Accountant | CA Finalist | B.Com @ DU</p>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/karankushwaha" target="_blank" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://youtube.com/@karan_kushwaha09?si=UCfHJmEtm0ATgaMZ" target="_blank" aria-label="Email">
-                            <i class="fa-brands fa-youtube"></i>
-                        </a>
-                        <a href="https://twitter.com/karankushwaha_" target="_blank" aria-label="Twitter">
-                            <i class="fab fa-x-twitter"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="contact-form">
-                    <div class="formheading">
-                        <h2 class="">Message Me</h2>
-                        <p class="contact-tagline">Feel free to reach out for any queries or feedback, I will revert as soon as possible.</p>
-                    </div>
-                    <form action="" method="post" id="contactForm" name="Contact-Form">
-                        <div class="inputbox">
-                            <input type="text" id="name" name="name" placeholder="Enter your name" required
-                                autocomplete="on" />
-                        </div>
-                        <div class="inputbox">
-                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"
-                                autocomplete="on" />
-                        </div>
-                        <div class="inputbox">
-                            <input type="email" id="email" name="email" placeholder="Enter your email" required
-                                autocomplete="on" />
-                        </div>
-                        <div class="inputbox">
-                            <input type="text" id="subject" name="subject" placeholder="Enter your subject"
-                                autocomplete="on" />
-                        </div>
-                        <div class="inputbox">
-                            <textarea id="message" name="message" placeholder="Write your message here..."
-                                required></textarea>
-                        </div>
-                        <div class="inputbox">
-                            <button type="submit">Send Message <i class="fa-solid fa-paper-plane"></i></button>
-                        </div>
-                    </form>
-
-                    <div id="spinner-contact-form">
-                        <div class="spinner-contact-form"><i class="fa-solid fa-spinner"></i></div>
-                    </div>
-
-                    <!-- Popup -->
-                    <div id="popup-contact-form">
-                        <div class="popup-content-contact-form">
-                            <span><i class="fa-solid fa-check"></i></span>
-                            <p>Thank you!<br>Your message has been received.<br>I will contact you as earliest as possible.</p>
-                            <button id="ok-button-contact-form">OK</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <!-- Hero Section Ends -->
     </main>
-    <!-- MAIN ENDS -->
 
-    <!-- FOOTER STARTS -->
-    <footer class="footer" id="footer"></footer>
-    <!-- FOOTER ENDS -->
-
-    <!-- SCRIPTS STARTS -->
-    <script src="Scripts/Script.js"></script>
-    <script src="Scripts/Menu & Header.js"></script>
-    <script src="Scripts/Database.js"></script>
-    <script src="Scripts/Featured-Products.js"></script>
+    <!-- SCRIPTS HERE -->
+    <script src="JavaScripts/header.js"></script>
 </body>
 </html>
