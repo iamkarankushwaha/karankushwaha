@@ -52,7 +52,7 @@
     height: 1px;
     position: absolute;
     bottom: 0px;
-    background-color: var(--accent-yellow);
+    background-color: var(--ui-secondary);
     box-shadow: var(--shadow-sm);
     border-radius: var(--radius-md);
     transition: all 0.3s;
@@ -88,7 +88,36 @@
     color: var(--text-muted);
 }
 
-
+/* tool tip */
+.p-profile-li{
+    position: relative;
+}
+.p-profile-item{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 40px;
+    background-color: var(--ui-secondary);
+    width: 350px;
+    border-radius: var(--radius-md);
+    z-index: 999;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.p-profile-item::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--ui-secondary);
+    rotate: 45deg;
+    top: -8px;
+    z-index: -998;
+}
+.p-profile-item span{
+    color: var(--secondary-bg);
+    font-size: var(--font-sm);
+}
 /* RESPONSIVE STYLE HERE */
 @media screen and (max-width: 650px) {
     .ctabox {
@@ -101,12 +130,11 @@
     }
     #menubox {
         position: absolute;
-        top: 150vh;
+        top: -150vh;
         left: 0;
         width: 100%;
         height: calc(100vh - 95px);
         background-color: var(--secondary-bg);
-        transition: left 0.5s ease;
         z-index: 1000;
         border-radius: var(--radius-xl);
         overflow: scroll;
@@ -162,5 +190,34 @@
         font-size: var(--font-xl);
         margin-left: 20px;
     }
+
+    .p-profile-li{
+    height: 80px !important;
 }
+.p-profile-li a{
+    top: -5px;
+}
+    .p-profile-item{
+    position: absolute;
+    top: 35px;
+    left: 0;
+
+    background-color: transparent;
+    width: 100%;
+    height: fit-content;
+    border-radius: unset;
+    z-index: unset;
+    padding: unset;
+    transition: unset;
+    justify-content: flex-start;
+}
+.p-profile-item::before{
+    position: unset;
+    display: none;
+}
+.p-profile-item span{
+    color: var(--text-muted);
+}
+}
+
 /* End of Responsive Style */

@@ -1,0 +1,72 @@
+.efaprojhead h1{
+    font-size: var(--font-xl);
+    color: var(--text-accent);
+    position: relative;
+    width: fit-content;
+    text-align: center;
+}
+.efaprojhead h1::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 40%;
+    background-color: var(--ui-primary);
+}
+
+.efaaboutbox table{
+    padding: 10px 0;
+}
+.efaaboutbox table td{
+    color: var(--text-muted);
+    font-size: var(--font-sm);
+    padding: 0 5px;
+}
+.efaaboutbox table td:nth-child(1){
+    font-weight: 500;
+}
+.efaaboutbox p{
+    font-size: var(--font-base);
+    color: var(--ui-secondary);
+    margin-bottom: 10px;    
+}
+
+.efa-webbox{
+    border: var(--border-thin);
+    padding: 15px;
+    box-shadow: var(--shadow-md);
+    border-radius: var(--radius-lg);
+}
+
+.webframe{
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    border: var(--border-black);
+    height: 260px;
+}
+.webframe iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.btnbox{
+    flex-direction: column;
+}
+.btnbox p{
+    width: 100%;
+    padding: 10px;
+    font-weight: 400;
+    font-size: var(--font-sm);
+    text-align: left;
+    color: var(--text-muted);
+}
+.btnbox a{
+    background-color: var(--ui-primary);
+    font-size: var(--font-sm);
+    border: var(--border-black);
+    &:hover{
+        background-color: var(--secondary-bg);
+        color: var(--ui-primary);
+    }
+}

@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const header = document.getElementById("beforeheader");
         header.style.display = scrollTop < 60 ? "none" : "block";
     }
-    
+
     toggleBeforeHeader();
     window.addEventListener("scroll", toggleBeforeHeader);
     // ------- End Blur Box --------
@@ -20,10 +20,13 @@ document.addEventListener("DOMContentLoaded", function () {
     <div id="menubox">
         <ul class="menuwrapper flexbox">
             <li><a href="index.html">Home</a></li>
+            <li><a href="index.html?#experience">Experience</a></li>
+            <li><a href="profile.html?projects">Projects</a></li>
+            <li class="p-profile-li flexbox" id="profileli">
+                <a href="profile.html">Professional Profile</a>
+                <div class="p-profile-item flexbox" id="profiletooltip"><span>Explore my qualifications, certifications, skills and more.</span></div>
+            </li>
             <li><a href="library.html">Library</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contents.html">Contents</a></li>
-            <li><a href="index.html?#about">About-Me</a></li>
             <li><a href="index.html?#contact">Contact</a></li>
         </ul>
     </div>
@@ -39,17 +42,49 @@ document.addEventListener("DOMContentLoaded", function () {
     // ------- Mobile Menu Toggle -------
     const menuIcon = document.getElementById("menuicon");
     const menuBox = document.getElementById("menubox");
-    
-    menuIcon.addEventListener("click", function(event) {
+
+    menuIcon.addEventListener("click", function (event) {
         menuBox.classList.toggle("openmenu");
         event.stopPropagation();  // Prevent immediate closure
     });
 
-    document.addEventListener("click", function(event) {
+    document.addEventListener("click", function (event) {
         // Close menu only if clicked outside of menu elements
         if (!menuBox.contains(event.target) && event.target !== menuIcon) {
             menuBox.classList.remove("openmenu");
         }
     });
     // ------- End Mobile Menu -------
+
 });
+// Opening and closing the tooltip
+window.addEventListener("DOMContentLoaded", function () {
+    const tooltip = document.getElementById("profiletooltip");
+    const profilelink = document.getElementById("profileli")
+
+    if (window.innerWidth>650) {
+        // Show on load
+        tooltip.style.visibility = "visible";
+        tooltip.style.opacity = "1";
+    
+        // hide after 4 sec
+        setTimeout(() => {
+            tooltip.style.visibility = "hidden";
+            tooltip.style.opacity = "0";
+        }, 2000);
+    
+        // HOver effect
+        profilelink.addEventListener("mouseenter", () => {
+            tooltip.style.visibility = "visible";
+            tooltip.style.opacity = "1";
+        })
+        profilelink.addEventListener("mouseleave", () => {
+            tooltip.style.visibility = "hidden";
+            tooltip.style.opacity = "0";
+        })
+        
+    } else {
+        tooltip.style.visibility = "visible";
+            tooltip.style.opacity = "1";
+    }
+})

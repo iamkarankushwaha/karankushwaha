@@ -1,11 +1,14 @@
 /* Profile CSS */
 .hero {
     margin-top: 15px;
+    padding: 40px 20px;
 }
 
 .hero-container {
     height: fit-content;
     min-height: calc(100vh - 165px);
+    padding: unset;
+    align-items: center;
 }
 
 .hero-profile,
@@ -42,7 +45,6 @@
     font-weight: 600;
     color: var(--text-muted);
     width: fit-content;
-    border-radius: var(--radius-md);
     cursor: default;
     user-select: none;
     white-space: nowrap;
@@ -68,7 +70,23 @@
     font-weight: 400;
     line-height: 1.5;
     color: var(--text-secondary);
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.headline::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: 30%;
+    background-color: var(--text-muted);
+    transition: width 0.3s;
+}
+
+.headline:hover::before {
+    width: 100%;
 }
 
 .ctahero {
@@ -79,89 +97,35 @@
 }
 
 .heroctabtn {
-    width: fit-content;
-    text-align: center;
-    white-space: nowrap;
-    background-color: var(--ui-secondary);
-    color: var(--accent-yellow);
-    padding: 10px 20px;
-    font-size: var(--font-base);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
-    border-bottom: var(--border-black);
-    border-color: var(--accent-yellow);
-    border-width: 2px;
-    transition: background 0.3s linear, color 0.3s linear;
-    
+    background-color: var(--ui-primary);
+    border: var(--border-black);
+    font-weight: 400;
     &:hover {
-        background-color: var(--accent-yellow);
-        color: var(--ui-secondary);
-        border-bottom: var(--border-black);
-        border-width: 2px;
+        background-color: var(--secondary-bg);
+        color: var(--ui-primary);
+        font-weight: 500;
     }
-    &:active{
-        border: solid 2px var(--accent);
+
+    &:active {
+        border: solid 2px var(--ui-primary);
     }
 }
 
 .heroctabtn:nth-child(even) {
-    background-color: var(--accent-yellow);
+    background-color: var(--secondary-bg);
     color: var(--text-primary);
-    border-bottom: var(--border-black);
-    border-width: 2px;
     font-weight: 500;
     &:hover {
         background-color: var(--ui-secondary);
-        color: var(--accent-yellow);
-        border-bottom: var(--border-black);
-        border-width: 2px;
-        border-color: var(--accent-yellow);
+        color: var(--white);
     }
-    &:active{
-        border: solid 2px var(--accent);
+
+    &:active {
+        border: solid 2px var(--accent-blue);
     }
 }
-
 .ctalinks {
     margin-top: 40px;
     gap: 20px;
     justify-content: end;
-}
-
-.ctalinks a {
-    padding: 15px;
-    height: 40px;
-    width: 40px;
-    border-radius: var(--radius-full);
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: var(--font-lg);
-    box-shadow: var(--shadow-lg);
-}
-
-.ctalinks a:nth-child(1) {
-    transition: background 0.3s;
-    color: var(--accent-blue);
-    &:hover{
-        background-color: var(--accent-blue);
-        color: var(--white);
-    }
-}
-.ctalinks a:nth-child(2) {
-    transition: background 0.3s;
-    color: var(--accent-red);
-    &:hover{
-        background-color: var(--accent-red);
-        color: var(--white);
-    }
-}
-.ctalinks a:nth-child(3) {
-    transition: background 0.3s;
-    color: var(--text-primary);
-    &:hover{
-        background-color: var(--text-primary);
-        color: var(--white);
-    }
 }
