@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", serif;
+    font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 html {
@@ -99,13 +99,20 @@ html {
 }
 
 body {
-    font-family: "Poppins", serif;
     color: var(--text-primary);
-    background-color: var(--primary-bg);
+    background-color: var(--secondary-bg);
     font-size: var(--font-base);
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
+}
+
+.padcontainer{
+    padding: 0 20px;
+}
+
+main{
+    padding: 0px 20px;
 }
 
 :-webkit-any(a) {
@@ -126,50 +133,60 @@ body {
     text-align: center;
     white-space: nowrap;
     border: none;
-    outline: none;
     cursor: pointer;
-    border-bottom: solid 2px var(--ui-primary);
     background-color: var(--accent-blue);
-    border-radius: var(--radius-lg);
+    border-radius: 10px;
     color: var(--white);
-    padding: 10px 20px;
-    box-shadow: var(--shadow-soft);
+    padding: 15px 35px;
+    box-shadow: 0px 3px 10px -2px #0004;
     transition: all 0.3s ease-in-out;
 
     &:hover {
         background-color: var(--accent-blue-dark);
+        scale: 1.1;
     }
-
+    
     &:active {
         background-color: var(--accent-blue-dark);
     }
 }
 
 .ctalinks a {
-    padding: 15px;
-    height: 40px;
-    width: 40px;
+    padding: 20px;
+    height: 45px;
+    width: 45px;
+    background-color: var(--primary-bg);
     border-radius: var(--radius-full);
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: var(--font-lg);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0px 3px 10px -4px #0004;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        scale: 1.3;
+    }
 }
 
-.ctalinks a:nth-child(2) {
-    transition: background 0.3s;
+.ctalinks a:nth-child(1) {
     color: var(--accent-blue);
-
+    
     &:hover {
         background-color: var(--accent-blue);
         color: var(--white);
     }
 }
+.ctalinks a:nth-child(2) {
+    color: var(--accent-green);
+
+    &:hover {
+        background-color: var(--accent-green);
+        color: var(--white);
+    }
+}
 
 .ctalinks a:nth-child(3) {
-    transition: background 0.3s;
     color: var(--accent-red);
 
     &:hover {
@@ -178,12 +195,11 @@ body {
     }
 }
 
-.ctalinks a:nth-child(1) {
-    transition: background 0.3s;
-    color: var(--text-primary);
+.ctalinks a:nth-child(4) {
+    color: var(--border-muted);
 
     &:hover {
-        background-color: var(--text-primary);
+        background-color: var(--border-muted);
         color: var(--white);
     }
 }
@@ -234,17 +250,14 @@ input, textarea {
 
 section{
     width: 100%;
-    background-color: var(--primary-bg);
-    margin-top: 50px;
-    border-bottom: var(--border-thin);
-    border-color: var(--secondary-bg);
+    padding-bottom: 100px;
 }
 .section-heading{
     padding: 20px;
     flex-direction: column;
 }
 .heading {
-    font-size: var(--font-4xl);
+    font-size: var(--font-3xl);
     color: var(--text-secondary);
     text-shadow: var(--shadow-md);
     position: relative;
@@ -265,23 +278,14 @@ section{
 }
 .section-tagline{
     width: 100%;
-    font-size: var(--font-base);
+    font-size: var(--font-sm);
     color: var(--text-muted);
     text-align: center;
 }
 .container{
-    height: 100%;
-    gap: 10px 30px;
-    padding-top: 20px;
-    padding-bottom: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
-    flex-wrap: wrap;
+    gap: 30px 20px;
     align-items: flex-start;
-}
-.left-section, .right-section{
-    width: 100%;
-    max-width: 550px;
+    justify-content: space-evenly;
 }
 
 /* SPINNER IS HERE */
@@ -329,41 +333,39 @@ section{
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 60px 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    padding: 70px 0;
+    background-color: rgba(0, 0, 0, 0.04);
     z-index: 1100;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(2px);
     align-items: flex-start;
     overflow: scroll;
     scrollbar-width: none; /* Hide scrollbar for Firefox */
     -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
 }
 .popupwrapper{
-    flex-direction: column;
     width: 90%;
     max-width: 600px;
     background-color: var(--primary-bg);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
+    border-radius: 10px;
+    border: solid 1px var(--border);
+    box-shadow: 0px 10px 40px 3px #0004;
     position: relative;
 }
 .popupwrapper .closebtn {
+    font-weight: 1000;
     position: absolute;
     top: -20px;
     right: -20px;
-    font-size: var(--font-xl);
-    width: 40px !important;
-    height: 40px !important;
+    font-size: var(--font-md);
+    width: fit-content !important;
+    height: fit-content !important;
+    padding: 8px;
     border-radius: var(--radius-full);
     background-color: var(--secondary-bg);
     color: var(--text-muted);
     cursor: pointer;
-    border: var(--border-black);
+    border: var(--border-thin);
     transition: color 0.3s;
-
-    &:hover {
-        color: var(--accent-red);
-    }
 }
 .closebtnc{
     width: fit-content !important;
@@ -372,19 +374,18 @@ section{
 .popupwrapper h2 {
     font-size: var(--font-xl);
     color: var(--ui-secondary);
-    text-shadow: var(--shadow-md);
-    background-color: var(--secondary-bg);
     width: 100%;
-    padding: 20px;
-    border-start-start-radius: var(--radius-lg);
+    padding: 20px 25px;
+    border-start-start-radius: 10px;
     border-bottom: var(--border-thin);
 }
 .popupheaderc{
-    border-top-left-radius: var(--radius-lg);
-    border-top-right-radius: var(--radius-lg);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 .popupcontent{
-    padding: 20px;
+    padding: 10px 25px;
+    padding-bottom: 30px;
     flex-direction: column;
 }
 #popupStatusText, #PopupText {

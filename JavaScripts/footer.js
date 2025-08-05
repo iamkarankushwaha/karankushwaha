@@ -32,11 +32,12 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="footer-bottom flexbox">
                 <p>&copy; 2025 karankushwaha.in | All rights reserved.</p>
                 <div class="ctalinks flexbox">
-                        <a href="mailto:karankushwaha.in@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-                        <a href="https://www.linkedin.com/in/karankushwaha" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://youtube.com/@karan_kushwaha09?si=UCfHJmEtm0ATgaMZ" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="tel:+919315540041" target="_blank"><i class="fa-solid fa-phone"></i></a>
-                        <a href="https://wa.me/919315540041" target="_blank"><i class="fa-brands fa-solid fa-whatsapp"></i></a>
+                    <a href="tel:+919315540041" target="_blank"><i class="fa-solid fa-phone"></i></a>
+                    <a href="mailto:karankushwaha.in@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="?#message"><i class="fa-solid fa-message"></i></a>
+                    <a href="https://www.linkedin.com/in/karankushwaha" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://youtube.com/@karan_kushwaha09?si=UCfHJmEtm0ATgaMZ" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://wa.me/919315540041" target="_blank"><i class="fa-brands fa-solid fa-whatsapp"></i></a>
                 </div>
             </div>
     `;

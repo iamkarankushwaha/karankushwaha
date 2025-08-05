@@ -115,13 +115,13 @@
 input,
 textarea,
 button {
-    width: 100%;
+    /* width: 100%; */
     box-shadow: none;
 }
 
 button {
     display: block;
-    width: 100% !important;
+    /* width: 100%; */
 }
 
 button:hover {

@@ -13,7 +13,7 @@
     <!-- SEO ENDS HERE -->
     <!-- Font Awesome Loader Link -->
     <script src="https://kit.fontawesome.com/25cf39dd91.js" crossorigin="anonymous"></script>
-
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     <!-- CSS STYLE SHEETS -->
     <link rel="stylesheet" href="StyleSheets/theme.css">
     <link rel="stylesheet" href="StyleSheets/header.css">
@@ -26,8 +26,7 @@
 </head>
 <body>
     <!-- HEADER STARTS HERE -->
-    <div id="beforeheader"></div>
-    <header id="header" class="flexbox"><!-- Inserted Via JS --></header>
+    <header id="header"><!-- Inserted Via JS --></header>
     <!-- HEADER ENDS HERE -->
 
     <main>
@@ -36,23 +35,23 @@
             <div class="container flexbox hero-container">
                 <div class="left-section flexbox hero-profile">
                     <img src="Img-Assets/Karan Kushwaha - Profile.jpg" alt="Profile of Karan Kushwaha" loading="eager">
-                    <h1 class="mastername"><span>Hi I'm </span>Karan Kushwaha</h1>
-                    <h2 class="designation flexbox">CA Finalist</h2>
                 </div>
                 <div class="right-section flexbox hero-content">
+                    <h1 class="mastername"><span>Hi I'm </span>Karan Kushwaha</h1>
+                    <h2 class="designation flexbox">CA Finalist</h2>
                     <div class="headlinebox">
                         <p class="headline flexbox">CA Finalist 💼 Final Year B.Com Student at Delhi University 🎓 Audit, Taxation & Finance Enthusiast 📊 Cleared CA Foundation via Self-Study 🏆 Creator on LinkedIn & YouTube ✨</p>
                     </div>
                     <div class="ctahero flexbox">
-                        <a href="#about" class="heroctabtn ctabtns">About Me</a>
-                        <a onclick="DownloadResume()" class="heroctabtn ctabtns">Resume</a>
+                        <button onclick="window.location.href='?#about'" class="heroctabtn ctabtns">About Me</button>
+                        <button onclick="DownloadResume()" class="heroctabtn ctabtns">Resume</button>
                     </div>
                     <div class="ctalinks flexbox">
-                        <a href="index.html?#message"><i class="fa-solid fa-envelope"></i></a>
-                        <a href="https://www.linkedin.com/in/karankushwaha" target="_blank"><i
-                                class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://youtube.com/@karan_kushwaha09?si=UCfHJmEtm0ATgaMZ" target="_blank"><i
-                                class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/in/karankushwaha" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="tel:+919315540041" target="_blank"><i class="fa-solid fa-phone"></i></a>
+                        <a href="mailto:karankushwaha.in@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="?#message"><i class="fa-solid fa-message"></i></a>
+                        <!-- <a href="https://youtube.com/@karan_kushwaha09?si=UCfHJmEtm0ATgaMZ" target="_blank"><i class="fa-brands fa-youtube"></i></a> -->
                     </div>
                 </div>
             </div>
@@ -175,7 +174,12 @@
                 </div>
             </div>
             <div class="container flexbox">
-                <div class="left-section"></div>
+                <div class="left-section">
+                    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="VERTICAL" data-vanity="karankushwaha" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/karankushwaha?trk=profile-badge">Karan Kushwaha</a></div>
+                    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="karankushwaha" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/karankushwaha?trk=profile-badge">Karan Kushwaha</a></div>
+              <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="karankushwaha" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/karankushwaha?trk=profile-badge">Karan Kushwaha</a></div>
+              
+                </div>
             </div>
         </section>
         <!-- Social-Media Section Ends -->
@@ -194,7 +198,7 @@
                 <div class="left-section flexbox">
                     <div class="social-card">
                         <div class="profile-info">
-                            <img src="Img-Assets/karan kushwaha.jpg" alt="Karan's Avatar" class="profile-pic" />
+                            <img src="Img-Assets/Karan Kushwaha - Profile.jpg" alt="Karan's Avatar" class="profile-pic" />
                             <h2>Karan Kushwaha</h2>
                         </div>
                         <div class="contact-links">

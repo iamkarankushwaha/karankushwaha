@@ -5,7 +5,7 @@ function DownloadResume() {
     newDiv.innerHTML =
         `
             <div class="popupwrapper">
-                <button class="closebtn flexbox" onclick="ClosePopupresume()"><i class="fa-solid fa-xmark"></i></button>
+                <button class="closebtn flexbox" onclick="ClosePopupresume()">✖️</button>
                 <div class="popupheader flexbox">
                     <h2>Download Resume</h2>
                 </div>
