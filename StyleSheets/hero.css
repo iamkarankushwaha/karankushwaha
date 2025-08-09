@@ -1,6 +1,8 @@
 /* Profile CSS */
 .hero {
-    margin-top: 40px;
+    margin-top: 30px;
+    height: calc(100vh - 140px);
+    min-height: fit-content;
 }
 
 .hero-profile,
@@ -51,6 +53,7 @@
     line-height: 1.7;
     color: var(--text-secondary);
     padding: 40px 0;
+    text-align: justify;
 }
 
 
@@ -69,6 +72,7 @@
     &:hover {
         background-color: var(--primary-bg);
         color: var(--text-secondary);
+        scale: 1.05;
     }
 }
 

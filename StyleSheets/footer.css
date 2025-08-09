@@ -39,13 +39,19 @@ footer{
 .footer-bottom{
     border-top: var(--border-thin);
     border-color: var(--divider);
-    padding-top: 20px;
     flex-direction: column;
+}
+.footer-bottom p{
+    padding: 30px 0;
+    padding-bottom: 20px;
+    color: var(--secondary-bg);
+    font-weight: 500;
 }
 
 .footer-bottom .ctalinks{
     margin-top: 0;
     padding: 10px 0;
+    gap: 20px 25px;
 }
 
 .footer-bottom .ctalinks a{
