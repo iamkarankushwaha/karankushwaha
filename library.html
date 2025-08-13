@@ -17,15 +17,22 @@
     <!-- CSS STYLE SHEETS -->
     <link rel="stylesheet" href="StyleSheets/theme.css">
     <link rel="stylesheet" href="StyleSheets/header.css">
+    <link rel="stylesheet" href="StyleSheets/library.css">
+    <link rel="stylesheet" href="StyleSheets/featured-products.css">
     <link rel="stylesheet" href="StyleSheets/footer.css">
     <!-- CSS ENDS HERE -->
 </head>
 <body>
     <!-- HEADER STARTS HERE -->
-    <div id="beforeheader"></div>
-    <header id="header" class="flexbox"><!-- Inserted Via JS --></header>
+    <header id="header"><!-- Inserted Via JS --></header>
     <!-- HEADER ENDS HERE -->
-
+    <main>
+        <section class="featured-prod">
+            <div class="product-wrapper">
+                <div class="prodrack" id="prodrack"></div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer Starts -->
         <footer id="footer"><!-- Injected via Javascript --></footer>
@@ -35,5 +42,8 @@
     <script src="JavaScripts/header.js"></script>
     <script src="JavaScripts/resume.js"></script>
     <script src="JavaScripts/footer.js"></script>
+
+    <script src="JavaScripts/Database.js"></script>
+    <script src="JavaScripts/Featured-Products.js"></script>
 </body>
 </html>

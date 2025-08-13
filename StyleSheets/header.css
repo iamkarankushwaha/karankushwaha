@@ -41,7 +41,8 @@ header{
 }
 
 .menubox li a {
-    font-size: var(--font-base);
+    font-size: var(--font-md);
+    font-weight: 500;
     color: var(--text-primary);
     position: relative;
 }
@@ -63,9 +64,9 @@ header{
     gap: 10px;
 }
 .ctawrapper li a {
-    font-size: var(--font-lg);
-    padding: 5px 10px;
+    padding: 10px;
     border-radius: 5px;
+    border: solid 1px transparent;
     transition: all 0.2s ease-in-out;
     &:hover {
         border: var(--border-black);
@@ -73,9 +74,12 @@ header{
     }
 }
 .ctawrapper li:first-child a i{
-    color: var(--ui-secondary);    
+    font-size: var(--font-lg);
+    color: var(--ui-secondary);
+    font-weight: 900;  
 }
 .ctawrapper li:last-child a i{
+    font-size: var(--font-xl);
     color: var(--accent-green);
 }
 
@@ -176,7 +180,6 @@ header{
     .ctawrapper li a{
         padding: 15px 35px;
         font-size: var(--font-xl);
-        border-radius: unset;
         transition: all 0.2s ease-in-out;
         border-radius: 10px;
         box-shadow: 0px 5px 20px -5px #0003;

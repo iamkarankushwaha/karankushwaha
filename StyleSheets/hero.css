@@ -16,6 +16,8 @@
     width: 100%;
     max-width: 450px;
     border-radius: 10px;
+    border-end-end-radius: 0;
+    border-end-start-radius: 0;
     object-fit: fill;
     mask: linear-gradient(to bottom, black 50%, transparent 100%);
 }
@@ -23,6 +25,7 @@
 .hero-content {
     max-width: 650px;
     flex-shrink: 2;
+    user-select: none;
 }
 
 .hero-content h1 {
@@ -42,8 +45,6 @@
     font-weight: 400;
     color: var(--text-muted);
     width: fit-content;
-    cursor: default;
-    user-select: none;
     white-space: nowrap;
 }
 
@@ -68,11 +69,11 @@
 .heroctabtn {
     background-color: var(--ui-secondary);
     border: var(--border-black);
-
+    width: fit-content;
     &:hover {
         background-color: var(--primary-bg);
         color: var(--text-secondary);
-        scale: 1.05;
+        scale: unset;
     }
 }
 

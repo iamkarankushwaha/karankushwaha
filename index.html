@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="StyleSheets/theme.css">
     <link rel="stylesheet" href="StyleSheets/header.css">
     <link rel="stylesheet" href="StyleSheets/hero.css">
+    <link rel="stylesheet" href="StyleSheets/projects.css">
     <link rel="stylesheet" href="StyleSheets/about.css">
     <link rel="stylesheet" href="StyleSheets/experience.css">
     <link rel="stylesheet" href="StyleSheets/contact.css">
@@ -135,7 +136,7 @@
 
 <body>
     <!-- HEADER STARTS HERE -->
-    <header id="header"><!-- Inserted Via JS --></header>
+        <header id="header"><!-- Inserted Via JS --></header>
     <!-- HEADER ENDS HERE -->
 
     <main>
@@ -146,17 +147,20 @@
                     <img src="Img-Assets/Karan Kushwaha - Profile.jpg" alt="Profile of Karan Kushwaha" loading="eager">
                 </div>
                 <div class="right-section flexbox hero-content">
-                    <h1 class="mastername"><span>Hi I'm </span>Karan Kushwaha</h1>
+                    <h1 class="mastername asapfont"><span>Hi I'm </span>Karan Kushwaha</h1>
                     <h2 class="designation flexbox">CA Finalist</h2>
                     <div class="headlinebox">
-                        <p class="headline flexbox">CA Finalist 💼 Final Year B.Com Student at Delhi University 🎓 Audit, Taxation & Finance Enthusiast 📊 Cleared CA Foundation via Self-Study 🏆 Creator on LinkedIn & YouTube ✨</p>
+                        <p class="headline flexbox">CA Finalist 💼 Final Year B.Com Student at Delhi University 🎓 Audit,
+                            Taxation & Finance Enthusiast 📊 Cleared CA Foundation via Self-Study 🏆 Creator on LinkedIn &
+                            YouTube ✨</p>
                     </div>
                     <div class="ctahero flexbox">
                         <button onclick="window.location.href='?#about'" class="heroctabtn ctabtns">Who I am</button>
                         <button onclick="DownloadResume()" class="heroctabtn ctabtns">Resume</button>
                     </div>
                     <div class="ctalinks flexbox">
-                        <a href="https://www.linkedin.com/in/karankushwaha" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.linkedin.com/in/karankushwaha" target="_blank"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
                         <a href="tel:+919315540041" target="_blank"><i class="fa-solid fa-phone"></i></a>
                         <a href="mailto:karankushwaha.in@gmail.com"><i class="fa-solid fa-envelope"></i></a>
                         <a href="?#message"><i class="fa-solid fa-message"></i></a>
@@ -167,113 +171,154 @@
         </section>
         <!-- Hero Section Ends -->
         
-        <!-- About Me Starts -->
-        <!--<section class="about" id="about">
+        <!-- Projects Start -->
+         <section class="projects">
             <div class="section-heading flexbox">
                 <div class="heading-box">
-                    <h2 class="heading flexbox">Who I am ?</h2>
+                    <h2 class="heading flexbox">My Projects</h2>
                 </div>
                 <div class="heading-tagline">
-                    <p class="section-tagline">Books, Balance Sheets & Big Dreams — That's Me</p>
+                    <p class="section-tagline">These are definitions of my skills</p>
                 </div>
             </div>
-            <div class="container flexbox about-container">
-                <div class="left-section about-img flexbox">
-                    <img src="Img-Assets/hero-img_karan kushwaha.png" alt="Karan Kushwaha" loading="lazy">
+            <div class="container flexbox projects-container">
+                <div class="project-wrapper">
+                    <h2 class="proj-name">Dynamic Invoice</h2>
+                    <p class="proj-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus eligendi aliquid eius, sunt voluptatem doloremque!</p>
+                    <div class="projlinkbox"><a href="#">View</a></div>
+                    <button id="closeproj">⟫</button>
                 </div>
-                <div class="right-section about-text">
-                    <ul>
-                        <li>CA Intermediate & Final-year B.Com student from the University of Delhi.</li>
-                        <li>Cleared CA Foundation (December 2023) in first attempt through disciplined self-study.</li>
-                        <li><i>Passionate about Statutory Audit, with sceptic focus on risk assessment, professional judgment and ethics.</i></li>
-                        <li>Keen interest in Taxation, Accounting Standards, and always eager to learn more.</li>
-                        <li>Proficient in Excel, MS Word, and actively explore emerging tools including <b>Artificial Intelligence (AI)</b> for accounting/audit workflow optimization.</li>
-                        <li>I Share insights on LinkedIn/YouTube to 2K+ followers, fostering a collaborative learning network.</li>
-                        <li><i>Tech Savvy - Coded this Portfolio Website.</i></li>
-                        <li>Detail-oriented, intellectually curious, and committed to lifelong learning & growth in finance.</li>
-                    </ul>
-                    <p>
-                        <blockquote class="about-quote">
-                            “Thanks for visiting my profile — I’m always open to connect, collaborate, and grow together.”
-                        </blockquote>
-                    </p>
-                    <div class="ctabox flexbox" style="justify-content: flex-start; gap: 20px;">
-                        <a href="profile.html" class="nonbtncta">View Full Profile <i class="fa-solid fa-link"></i></a>
-                        <a href="index.html?#contact" class="nonbtncta">Contact-Me <i class="fa-solid fa-link"></i></a>
-                    </div>
+                <div class="project-wrapper">
+                    <h2 class="proj-name">Project 2</h2>
+                    <p class="proj-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus eligendi aliquid eius, sunt voluptatem doloremque!</p>
+                    <button id="closeproj">⟫</button>
+                </div>
+                <div class="project-wrapper">
+                    <h2 class="proj-name">Project 3</h2>
+                    <p class="proj-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus eligendi aliquid eius, sunt voluptatem doloremque!</p>
+                    <button id="closeproj">⟫</button>
+                </div>
+                <div class="project-wrapper">
+                    <h2 class="proj-name">Project 4</h2>
+                    <p class="proj-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus eligendi aliquid eius, sunt voluptatem doloremque!</p>
+                    <button id="closeproj">⟫</button>
+                </div>
+                <div class="project-wrapper">
+                    <h2 class="proj-name">Project 5</h2>
+                    <p class="proj-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus eligendi aliquid eius, sunt voluptatem doloremque!</p>
+                    <button id="closeproj">⟫</button>
                 </div>
             </div>
-        </section>-->
+         </section>
+        <!-- Projects End -->
+
+        <!-- About Me Starts -->
+            <!--<section class="about" id="about">
+                            <div class="section-heading flexbox">
+                                <div class="heading-box">
+                                    <h2 class="heading flexbox">Who I am ?</h2>
+                                </div>
+                                <div class="heading-tagline">
+                                    <p class="section-tagline">Books, Balance Sheets & Big Dreams — That's Me</p>
+                                </div>
+                            </div>
+                            <div class="container flexbox about-container">
+                                <div class="left-section about-img flexbox">
+                                    <img src="Img-Assets/hero-img_karan kushwaha.png" alt="Karan Kushwaha" loading="lazy">
+                                </div>
+                                <div class="right-section about-text">
+                                    <ul>
+                                        <li>CA Intermediate & Final-year B.Com student from the University of Delhi.</li>
+                                        <li>Cleared CA Foundation (December 2023) in first attempt through disciplined self-study.</li>
+                                        <li><i>Passionate about Statutory Audit, with sceptic focus on risk assessment, professional judgment and ethics.</i></li>
+                                        <li>Keen interest in Taxation, Accounting Standards, and always eager to learn more.</li>
+                                        <li>Proficient in Excel, MS Word, and actively explore emerging tools including <b>Artificial Intelligence (AI)</b> for accounting/audit workflow optimization.</li>
+                                        <li>I Share insights on LinkedIn/YouTube to 2K+ followers, fostering a collaborative learning network.</li>
+                                        <li><i>Tech Savvy - Coded this Portfolio Website.</i></li>
+                                        <li>Detail-oriented, intellectually curious, and committed to lifelong learning & growth in finance.</li>
+                                    </ul>
+                                    <p>
+                                        <blockquote class="about-quote">
+                                            “Thanks for visiting my profile — I’m always open to connect, collaborate, and grow together.”
+                                        </blockquote>
+                                    </p>
+                                    <div class="ctabox flexbox" style="justify-content: flex-start; gap: 20px;">
+                                        <a href="profile.html" class="nonbtncta">View Full Profile <i class="fa-solid fa-link"></i></a>
+                                        <a href="index.html?#contact" class="nonbtncta">Contact-Me <i class="fa-solid fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>-->
         <!-- About Me End -->
         
         <!-- Experience Starts -->
-        <!--<section class="experience" id="experience">
-            <div class="section-heading flexbox">
-                <div class="heading-box">
-                    <h2 class="heading flexbox">Experience</h2>
-                </div>
-                <div class="heading-tagline">
-                    <p class="section-tagline">Initiated by purpose, driven by impact — a team effort to uplift education</p>
-                </div>
-            </div>
-            <div class="container flexbox exp-container">
-                <div class="left-section ">
-                    <div class="efaprojhead">
-                        <h1>Education For All</h1>
-                    </div>
-                    <div class="efaaboutbox">
-                        <table>
-                            <tr>
-                                <td>Founder</td>
-                                <td>-</td>
-                                <td>Karan Kushwaha</td>
-                            </tr>
-                            <tr>
-                                <td>Place</td>
-                                <td>-</td>
-                                <td>South Extention, New Delhi</td>
-                            </tr>
-                            <tr>
-                                <td>Duration</td>
-                                <td>-</td>
-                                <td>9 November, 2022 to 9 January 2023</td>
-                            </tr>
-                            <tr>
-                                <td>Skills</td>
-                                <td>-</td>
-                                <td>Team Building | Leadership | Mentorship</td>
-                            </tr>
-                        </table>
-                        <p>
-                            It was a great project initiated by me in order to provide basic education to students coming from weak financial
-                            background. 🧑🏻‍🎓
-                        </p>
-                        <p>
-                            During this project, I learned how to teach students so that they can conceptually understand everything. 📚
-                        </p>
-                        <p>
-                            Moreover, I also experienced team building and how to manage a team in order to get work done in an efficient
-                            manner. 🤝
-                        </p>
-                    </div>
-                </div>
-                <div class="right-section">
-                    <div class="efa-webbox">
-                        <div class="webframe">
-                            <iframe src="https://iamkarankushwaha.github.io/Education_For_All/" frameborder="0"></iframe>
+            <!--<section class="experience" id="experience">
+                    <div class="section-heading flexbox">
+                        <div class="heading-box">
+                            <h2 class="heading flexbox">Experience</h2>
                         </div>
-                        <div class="btnbox flexbox">
-                            <p class="asidetext">Created and Maintained by Karan Kushwaha.</p>
-                            <a href="https://iamkarankushwaha.github.io/Education_For_All/" target="_blank" class="ctabtns">Visit the Website</a>
+                        <div class="heading-tagline">
+                            <p class="section-tagline">Initiated by purpose, driven by impact — a team effort to uplift education</p>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>-->
+                    <div class="container flexbox exp-container">
+                        <div class="left-section ">
+                            <div class="efaprojhead">
+                                <h1>Education For All</h1>
+                            </div>
+                            <div class="efaaboutbox">
+                                <table>
+                                    <tr>
+                                        <td>Founder</td>
+                                        <td>-</td>
+                                        <td>Karan Kushwaha</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Place</td>
+                                        <td>-</td>
+                                        <td>South Extention, New Delhi</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Duration</td>
+                                        <td>-</td>
+                                        <td>9 November, 2022 to 9 January 2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Skills</td>
+                                        <td>-</td>
+                                        <td>Team Building | Leadership | Mentorship</td>
+                                    </tr>
+                                </table>
+                                <p>
+                                    It was a great project initiated by me in order to provide basic education to students coming from weak financial
+                                    background. 🧑🏻‍🎓
+                                </p>
+                                <p>
+                                    During this project, I learned how to teach students so that they can conceptually understand everything. 📚
+                                </p>
+                                <p>
+                                    Moreover, I also experienced team building and how to manage a team in order to get work done in an efficient
+                                    manner. 🤝
+                                </p>
+                            </div>
+                        </div>
+                        <div class="right-section">
+                            <div class="efa-webbox">
+                                <div class="webframe">
+                                    <iframe src="https://iamkarankushwaha.github.io/Education_For_All/" frameborder="0"></iframe>
+                                </div>
+                                <div class="btnbox flexbox">
+                                    <p class="asidetext">Created and Maintained by Karan Kushwaha.</p>
+                                    <a href="https://iamkarankushwaha.github.io/Education_For_All/" target="_blank" class="ctabtns">Visit the Website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>-->
         <!-- Experience Ends -->
 
         <!-- Social-Media Section Starts -->
-        <!-- <section class="socialmedia">
+            <!-- <section class="socialmedia">
             <div class="section-heading flexbox">
                 <div class="heading-box">
                     <h2 class="heading flexbox">Community & Content</h2>
@@ -304,11 +349,11 @@
         
                 </div>
             </div>
-        </section> -->
+            </section> -->
         <!-- Social-Media Section Ends -->
 
         <!-- Contact Section Starts -->
-        <!--<section class="contact" id="contact">
+            <!-- <section class="contact" id="contact">
             <div class="section-heading flexbox">
                 <div class="heading-box">
                     <h2 class="heading flexbox">Contact</h2>
@@ -369,7 +414,7 @@
                     </form>
                 </div>
             </div>
-        </section>-->
+            </section> -->
         <!-- Contact Section Ends -->
     </main>
 
@@ -380,6 +425,7 @@
     <!-- SCRIPTS HERE -->
     <script src="JavaScripts/header.js"></script>
     <script src="JavaScripts/resume.js"></script>
+    <script src="JavaScripts/projects.js"></script>
     <script src="JavaScripts/contact.js"></script>
     <script src="JavaScripts/footer.js"></script>
 </body>

@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     </ul>
                     <div class="ctabox flexbox">
                         <ul class="ctawrapper flexbox">
-                            <li><a href="library.html" id="ctabag"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                            <li><a href="library.html" id="ctabag"><i class="fa-solid fa-shop"></i></a></li>
+                            <!--<li><a href="library.html" id="ctabag"><i class="fa-solid fa-cart-shopping"></i></a></li>-->
                             <li><a href="https://wa.me/9315540041?text=Hello Karan, I visited your website and checked some of your books and notes on library page. I wanted to know more about [ *WRITE HERE YOUR QUERY* ]" target="_blank" id="ctawtsp"><i class="fa-brands fa-whatsapp"></i></a></li>
                         </ul>
                     </div>
