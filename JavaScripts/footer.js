@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="footer-links">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a onclick="DownloadResume()">Resume</a></li>
+                        <li><a href="" onclick="event.preventDefault(); DownloadResume()">Resume</a></li>
                         <li><a href="library.html">Free Resources</a></li>
                         <li><a href="profile.html?#projects">Templates</a></li>
                         <li><a href="index.html?#socialmedia">Videos/Blogs</a></li>
@@ -32,13 +32,13 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="footer-bottom flexbox">
                 <p>&copy; 2025 karankushwaha.in | All rights reserved.</p>
                 <div class="ctalinks flexbox">
-                    <a href="tel:+919315540041" target="_blank"><i class="fa-solid fa-phone"></i></a>
-                    <a href="mailto:karankushwaha.in@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-                    <a href="?#message"><i class="fa-solid fa-message"></i></a>
-                    <a href="https://www.linkedin.com/in/karankushwaha" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://youtube.com/@karan_kushwaha09?si=UCfHJmEtm0ATgaMZ" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="https://wa.me/919315540041" target="_blank"><i class="fa-brands fa-solid fa-whatsapp"></i></a>
-                    <a href="https://t.me/karankushwaha04" target="_blank"><i class="fa-brands fa-solid fa-telegram"></i></a>
+                    <a href="tel:+919315540041" target="_blank"><i class="bi bi-telephone-fill"></i></a>
+                    <a href="mailto:karankushwaha.in@gmail.com"><i class="bi bi-envelope-at-fill"></i></a>
+                    <a href="index.html?#message"><i class="bi bi-chat-right-dots-fill"></i></a>
+                    <a href="https://www.linkedin.com/in/karankushwaha" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://youtube.com/@karan_kushwaha09?si=UCfHJmEtm0ATgaMZ" target="_blank"><i class="bi bi-youtube"></i></a>
+                    <a href="https://wa.me/919315540041" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://t.me/karankushwaha04" target="_blank"><i class="bi bi-telegram"></i></a>
                 </div>
             </div>
     `;

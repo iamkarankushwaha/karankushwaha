@@ -1,83 +1,46 @@
 document.addEventListener("DOMContentLoaded", function () {
     // ------- Header Element Injection -------
     document.getElementById("header").innerHTML = `
-    <div class="padcontainer">
-        <div class="headerwrapper flexbox">
-            <div class="logobox flexbox">
-                <a href="index.html">
-                    <img src="Img-Assets/main_logo.svg" alt="Logo Karan Kushwaha">
-                </a>
-            </div>
-            <div id="menucontainer">
-                <div id="menuwrapper" class="flexbox">
-                    <ul class="menubox flexbox">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html?#experience">Experience</a></li>
-                        <li><a href="profile.html?projects">Projects</a></li>
-                        <li class="p-profile-li flexbox" id="profileli"><a href="profile.html">Professional Profile</a></li>
-                        <li><a href="library.html">Library</a></li>
-                        <li><a href="index.html?#contact">Contact</a></li>
-                    </ul>
-                    <div class="ctabox flexbox">
-                        <ul class="ctawrapper flexbox">
-                            <li><a href="library.html" id="ctabag"><i class="fa-solid fa-shop"></i></a></li>
-                            <!--<li><a href="library.html" id="ctabag"><i class="fa-solid fa-cart-shopping"></i></a></li>-->
-                            <li><a href="https://wa.me/9315540041?text=Hello Karan, I visited your website and checked some of your books and notes on library page. I wanted to know more about [ *WRITE HERE YOUR QUERY* ]" target="_blank" id="ctawtsp"><i class="fa-brands fa-whatsapp"></i></a></li>
+    <div class="container bg-primary border-dark shadow">
+            <div class="flex justify-between items-center pt-2 pb-2">
+                <div class="flex p-4 pt-2 pb-2">
+                    <a href="index.html" style="width: 3rem; height: 3rem;">
+                        <img src="Img-Assets/main_logo.svg" alt="Logo-Karan-Kushwaha" style="width: 3rem; height: 3rem;">
+                    </a>
+                </div>
+                <nav class="w-full p-4 pt-2 pb-2 z-50 transition-all" id="navbar">
+                    <div class="nav-wrapper flex justify-between items-center gap-12 bg-primary">
+                        <ul class="w-full flex justify-center nav flex-wrap gap-2">
+                            <button class="btn btn-close z-50" role="button" style="display:none; ;" onclick="closeMenu()"><i class="fi fi-rr-cross"></i></button>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html?#experience">Experience</a></li>
+                            <li><a href="profile.html?projects">Projects</a></li>
+                            <li><a href="library.html">Library</a></li>
+                            <li><a href="index.html?#contact">Contact</a></li>
+                        </ul>
+                        <ul class="flex nav">
+                            <li><a href="library.html" id="ctabag" onclick="event.preventDefault(); OpenBag()"
+                                    class="btn btn-primary header-main-btn"><i class="fi fi-rr-backpack"></i><span
+                                        class="p-2" style="padding-right: 0px;">Back Pack</span>
+                                </a>
+                            </li>
+                            <!-- <li><a href="https://wa.me/9315540041?text=Hello Karan, I visited your website and checked some of your books and notes on library page. I wanted to know more about [ *WRITE HERE YOUR QUERY* ]" target="_blank" id="ctawtsp"><i class="fi fi-brands-whatsapp"></i></a></li> -->
                         </ul>
                     </div>
+                </nav>
+                <div class="menu-btn-box flex p-4 pt-2 pb-2 hidden">
+                    <button class="btn p-0 bg-transparant" role="menu" onclick="openMenu()"><i class="fi fi-rr-menu-burger text-base"></i></button>
                 </div>
             </div>
-            <div id="menuicon" class="flexbox"><i class="fa-solid fa-bars"></i></div>
         </div>
-    </div>`;
+    `;
     // ------- End Header Injection -------
 
-    // ------- Mobile Menu Toggle -------
-    const menuIcon = document.getElementById("menuicon");
-    const menucontainer = document.getElementById("menucontainer");
-
-    menuIcon.addEventListener("click", function (event) {
-        menucontainer.classList.toggle("openmenu");
-        event.stopPropagation();  // Prevent immediate closure
-    });
-
-    document.addEventListener("click", function (event) {
-        // Close menu only if clicked outside of menu elements
-        if (!menucontainer.contains(event.target) && event.target !== menuIcon) {
-            menucontainer.classList.remove("openmenu");
-        }
-    });
-    // ------- End Mobile Menu -------
-
-});
-// Opening and closing the tooltip
-// window.addEventListener("DOMContentLoaded", function () {
-//     const tooltip = document.getElementById("profiletooltip");
-//     const profilelink = document.getElementById("profileli")
-
-//     if (window.innerWidth>650) {
-//         // Show on load
-//         tooltip.style.visibility = "visible";
-//         tooltip.style.opacity = "1";
-    
-//         // hide after 4 sec
-//         setTimeout(() => {
-//             tooltip.style.visibility = "hidden";
-//             tooltip.style.opacity = "0";
-//         }, 2000);
-    
-//         // HOver effect
-//         profilelink.addEventListener("mouseenter", () => {
-//             tooltip.style.visibility = "visible";
-//             tooltip.style.opacity = "1";
-//         })
-//         profilelink.addEventListener("mouseleave", () => {
-//             tooltip.style.visibility = "hidden";
-//             tooltip.style.opacity = "0";
-//         })
-        
-//     } else {
-//         tooltip.style.visibility = "visible";
-//             tooltip.style.opacity = "1";
-//     }
-// })
+    // ------- Mobile Menu Toggle ------
+})
+function openMenu(){
+    document.getElementById("navbar").classList.add("mobileMenu");
+}
+function closeMenu(){
+    document.getElementById("navbar").classList.remove("mobileMenu");
+}

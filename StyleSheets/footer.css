@@ -61,10 +61,7 @@ footer{
     flex-wrap: wrap;
 }
 
-.footer-bottom .ctalinks a{
+.footer-bottom .ctalinks a i{
+    background-color: var(--secondary-bg);
     color: var(--text-muted);
-    &:hover{
-        color: var(--white);
-        background-color: var(--divider);
-    }
 }
