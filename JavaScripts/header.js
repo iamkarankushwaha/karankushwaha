@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="menu-btn-box flex p-4 pt-2 pb-2 hidden">
                     <button class="p-0 bg-transparant" role="menu" onclick="openMenu()" style="
     background: transparent;
-    color: var(--text-primary); border: 0;><i class="fi fi-rr-menu-burger text-base"></i></button>
+    color: var(--text-primary); border: 0;"><i class="fi fi-rr-menu-burger text-base"></i></button>
                 </div>
             </div>
         </div>
@@ -47,4 +47,5 @@ function closeMenu(){
     document.getElementById("navbar").classList.remove("mobileMenu");
 
 }
+
 
