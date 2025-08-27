@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <nav class="w-full p-4 pt-2 pb-2 z-50 transition-all" id="navbar">
                     <div class="nav-wrapper flex justify-between items-center gap-12 bg-primary">
                         <ul class="w-full flex justify-center nav flex-wrap gap-2">
-                            <button class="btn btn-close z-50" role="button" style="display:none; ;" onclick="closeMenu()"><i class="fi fi-rr-cross"></i></button>
+                            <button class="btn-close z-50" role="button" style="display:none; ;" onclick="closeMenu()"><i class="fi fi-rr-cross"></i></button>
                             <li><a href="index.html">Home</a></li>
                             <li><a href="index.html?#experience">Experience</a></li>
                             <li><a href="profile.html?projects">Projects</a></li>
@@ -29,7 +29,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                 </nav>
                 <div class="menu-btn-box flex p-4 pt-2 pb-2 hidden">
-                    <button class="btn p-0 bg-transparant" role="menu" onclick="openMenu()"><i class="fi fi-rr-menu-burger text-base"></i></button>
+                    <button class="p-0 bg-transparant" role="menu" onclick="openMenu()" style="
+    background: transparent;
+    color: var(--text-primary); border: 0;><i class="fi fi-rr-menu-burger text-base"></i></button>
                 </div>
             </div>
         </div>
@@ -43,4 +45,5 @@ function openMenu(){
 }
 function closeMenu(){
     document.getElementById("navbar").classList.remove("mobileMenu");
+
 }
