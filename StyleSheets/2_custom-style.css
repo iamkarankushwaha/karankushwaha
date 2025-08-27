@@ -1,3 +1,7 @@
+body{
+  overflow-x: hidden;
+}
+
 .container {
   width: 100%;
   max-width: 1500px;
@@ -124,4 +128,5 @@ i {
   .mobile-wrap{
     flex-wrap: wrap;
   }
+
 }
