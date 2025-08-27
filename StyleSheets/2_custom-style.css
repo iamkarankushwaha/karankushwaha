@@ -105,7 +105,7 @@ i {
 
   .nav-wrapper ul {
     flex-direction: column;
-    gap: var(--space-4);
+    gap: var(--space-8);
     position: relative;
   }
   .nav-wrapper ul li a {
@@ -125,5 +125,6 @@ i {
   }
 
 }
+
 
 
