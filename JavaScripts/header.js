@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <li><a href="library.html">Library</a></li>
                             <li><a href="index.html?#contact">Contact</a></li>
                         </ul>
-                        <ul class="flex nav">
+                        <ul class="flex nav w-full">
                             <li><a href="library.html" id="ctabag" onclick="event.preventDefault(); OpenBag()"
                                     class="btn btn-primary header-main-btn"><i class="fi fi-rr-backpack"></i><span
                                         class="p-2" style="padding-right: 0px;">Back Pack</span>
@@ -47,3 +47,4 @@ function closeMenu(){
     document.getElementById("navbar").classList.remove("mobileMenu");
 
 }
+
