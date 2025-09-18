@@ -1,0 +1,51 @@
+@media (max-width:1024px){
+    .nav-wrapper{
+        position: fixed;
+        top: 0;
+        right: -100vw;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100vw;
+        height: 100vh;
+        min-height: fit-content !important;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        transition: right 0.3s ease-in-out;
+    }
+    .nav-wrapper.openMenu{
+        right: 0;
+    }
+    .nav-wrapper nav{
+        width: 70%;
+        max-width: 300px;
+        height: 100%;
+        min-height: fit-content !important;
+        background-color: var(--bg-white);
+        flex-direction: column;
+        justify-content: flex-start !important;
+        padding-top: 3.5rem;
+    }
+    
+    .nav-wrapper nav ul{
+        width: 100%;
+        margin: 0 !important;
+        padding: 1rem 1.5rem !important;
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .nav-wrapper nav ul li, .nav-wrapper nav ul a{
+        width: 100%;
+        display: block;
+    }
+
+    .nav-wrapper nav ul .btn-close{
+        display: block !important;
+        position: absolute;
+        right: 20px;
+        top: 30px;
+    }
+    .menubtnbox{
+    display: block;
+}
+}
