@@ -12,12 +12,12 @@ window.addEventListener('scroll', function(){
 
 // menu works
 function openMenu(){
-    const navbar = document.getElementById('navbar');
-    navbar.classList.add('openMenu');
+    const navcontainer = document.getElementById('navcontainer');
+    navcontainer.classList.add('openMenu');
 }
 function closeMenu(){
-    const navbar = document.getElementById('navbar');
-    navbar.classList.remove('openMenu');
+    const navcontainer = document.getElementById('navcontainer');
+    navcontainer.classList.remove('openMenu');
 }
-const navbar = document.getElementById('navbar');
-navbar.addEventListener('click', closeMenu);
+const navcontainer = document.getElementById('navcontainer');
+navcontainer.addEventListener('click', closeMenu);
