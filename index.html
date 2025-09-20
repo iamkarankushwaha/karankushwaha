@@ -39,7 +39,7 @@
     <header id="header" class="container-fluid py-3">
         <div class="container d-flex justify-content-between align-items-center">
             <div class="logobox">
-                <a href="#" class="logocontainer d-flex align-items-center">
+                <a href="" class="logocontainer d-flex align-items-center">
                     <div class="logowrapper p-2 rounded-4">
                         <img src="Assets-Image/karan kushwaha-brand-logo.svg" alt="karan kushwaha-brand-logo.svg" class="logo-img" loading="eager">
                     </div>
@@ -50,7 +50,7 @@
                 <nav class="d-flex justify-content-center align-items-center" id="navbar">
                     <ul class="navbox d-flex justify-content-end align-items-center m-0 p-0 flex-wrap">
                         <button class="btn btn-close d-none" onclick="closeMenu()"></button>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="">Home</a></li>
                         <li><a href="#about">About Me</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#projects">Project</a></li>
@@ -82,16 +82,17 @@
                         <h1 class="myname">Karan Kushwaha</h1>
                     </div>
                     <div class="bio mb-4">
-                        <h3 class="mybio">CA Intermediate Aspirant 💼 | B.Com at University of Delhi 🎓 | Audit, Taxation & Finance Enthusiast 📊 | I'm work in progress - building myself from the ground up, and that's why it's taking time. 🌱</h3>
+                        <h3 class="mybio" style="text-align: justify;">CA Intermediate Aspirant 💼 | B.Com at University of Delhi 🎓 | Audit, Taxation & Finance Enthusiast 📊 | I'm work in progress - building myself from the ground up, and that's why it's taking time. 🌱</h3>
                     </div>
                     <div class="herobtnbox mb-5 d-flex justify-content-center align-items-center gap-3 flex-wrap">
                         <a href="#projects" class="primary-btn btn text-nowrap rounded-4">View My Work<i class="fa-solid fa-arrow-right ms-3"></i></a>
                         <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="secondary-btn btn text-nowrap rounded-4"><i class="fa-solid fa-file-pdf me-3"></i>Resume</button>
+                        <!-- Resume Model -->
                         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="backdrop-filter: blur(2px);">
-                            <div class="modal-dialog">
+                            <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                                        <h1 class="modal-title fs-5 fw-bold" id="staticBackdropLabel" style="color: var(--text-secondary);">Download Resume</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
@@ -99,7 +100,7 @@
                                         <p style="font-size: 1rem;" class="text-center"><b>Thank you for your interest!</b> You're about to download my comprehensive resume showcasing my CA journey, skills, and achievements etc.</p>
                                     </div>
                                     <div class="modal-footer d-flex justify-content-center">
-                                        <a href="Assets-Image/icon.png" class="btn success-btn" download><i class="fa-solid fa-download me-2"></i>Download Resume PDF</a>
+                                        <a href="resume.pdf" class="btn success-btn" download><i class="fa-solid fa-download me-2"></i>Download Resume PDF</a>
                                     </div>
                                 </div>
                             </div>
@@ -114,8 +115,130 @@
                     </div>
                 </div>
                 <div class="heroimgbox flex-shrink-1">
-                    <img src="Assets-Image/Karan Kushwaha - Profile.jpg" alt="hero-img.png" class="heroimg rounded-5 shadow" loading="eager">
+                    <img src="Assets-Image/Karan Kushwaha - Profile.png" alt="hero-img.png" class="heroimg rounded-5" loading="eager">
                 </div>
+            </div>
+        </section>
+
+        <section id="about" class="container-fluid">
+            <div class="about-container container d-flex justify-content-between align-items-center gap-5">
+                about
+            </div>
+        </section>
+
+        <section id="skills" class="container-fluid" style="background-color: var();">
+            <div class="section-heading-box mb-6 text-center">
+                <h2 class="section-heading">My Professional Toolkit</h2>
+                <p class="section-tagline">A curated collection of technical abilities and professional attributes that drive results.</p>
+            </div>
+            <div class="skills-container container d-flex justify-content-between align-items-start gap-5">
+                <div class="sub-container max-w-50 w-100">
+                    <div class="sub-heading-box mb-4">
+                        <h3 class="sub-heading pb-2">Core Competencies</h3>
+                    </div>
+                    <div class="content-box pt-2">
+                        <!-- Skill Cards -->
+                        <div class="card p-3 mb-3 d-flex flex-row align-items-center rounded-3" style="max-width: 400px;">
+                            <div class="blue-icon d-flex align-items-center justify-content-center rounded-3 p-3 me-3">
+                                <i class="fa-solid fa-book"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0 fw-semibold">Accounting Standards (AS)</h6>
+                            </div>
+                        </div>
+                        <div class="card p-3 mb-3 d-flex flex-row align-items-center rounded-3" style="max-width: 400px;">
+                            <div class="prpl-icon d-flex align-items-center justify-content-center rounded-3 p-3 me-3">
+                                <i class="fa-solid fa-magnifying-glass-dollar"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0 fw-semibold">Standards on Auditing (SA)</h6>
+                            </div>
+                        </div>
+                        <div class="card p-3 mb-3 d-flex flex-row align-items-center rounded-3" style="max-width: 400px;">
+                            <div class="red-icon d-flex align-items-center justify-content-center rounded-3 p-3 me-3">
+                                <i class="fa-solid fa-building-columns"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0 fw-semibold">Taxation Direct & Indirect</h6>
+                            </div>
+                        </div>
+                        <div class="card p-3 mb-3 d-flex flex-row align-items-center rounded-3" style="max-width: 400px;">
+                            <div class="green-icon d-flex align-items-center justify-content-center rounded-3 p-3 me-3">
+                                <i class="fa-solid fa-file-excel"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0 fw-semibold">MS Excel and MS Office</h6>
+                            </div>
+                        </div>
+                        <div class="card p-3 mb-3 d-flex flex-row align-items-center rounded-3" style="max-width: 400px;">
+                            <div class="yellow-icon d-flex align-items-center justify-content-center rounded-3 p-3 me-3">
+                                <i class="fa-solid fa-square-binary"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0 fw-semibold">Tally Prime & ERP</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-container max-w-50 w-100">
+                    <div class="sub-heading-box mb-4">
+                        <h3 class="sub-heading pb-2">Professional Attributes</h3>
+                    </div>
+                    <div class="content-box pt-2">
+                        <!-- Skill Cards -->
+                        <div class="icai-card card p-4 mb-4 d-flex flex-row align-items-start  rounded-3" style="max-width: 400px;">
+                            <div class="vrfd-icon d-flex align-items-center justify-content-center rounded-3 p-2 me-3">
+                                <i class="fa-solid fa-certificate"></i><i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold fs-4">ICAI Professional Development</h6>
+                                <p class="mb-0 fs-6">Completed 90+ hours of intensive training in IT (ICITSS-ITT) and soft-skills (ICITSS-OC) each, building a robust foundation in technical proficiency and professional decorum.</p>
+                            </div>
+                        </div>
+                        <div class="card p-3 mb-3 d-flex flex-row align-items-center rounded-3" style="max-width: 400px;">
+                            <div class="green-icon d-flex align-items-center justify-content-center rounded-3 p-3 me-3">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0 fw-semibold">Problem Solving Mindset</h6>
+                            </div>
+                        </div>
+                        <div class="card p-3 mb-3 d-flex flex-row align-items-center rounded-3" style="max-width: 400px;">
+                            <div class="blue-icon d-flex align-items-center justify-content-center rounded-3 p-3 me-3">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0 fw-semibold">Team Work & Collaboration</h6>
+                            </div>
+                        </div>
+                        <div class="card p-3 mb-3 d-flex flex-row align-items-center rounded-3" style="max-width: 400px;">
+                            <div class="orng-icon d-flex align-items-center justify-content-center rounded-3 p-3 me-3">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0 fw-semibold">Leadership & Initiative</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="container-fluid">
+            <div class="projects-container container d-flex justify-content-between align-items-center gap-5">
+                projects
+            </div>
+        </section>
+
+        <section id="experience" class="container-fluid">
+            <div class="experience-container container d-flex justify-content-between align-items-center gap-5">
+                experience
+            </div>
+        </section>
+
+        <section id="contact" class="container-fluid">
+            <div class="contact-container container d-flex justify-content-between align-items-center gap-5">
+                contact
             </div>
         </section>
     </main>

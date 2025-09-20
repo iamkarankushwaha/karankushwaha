@@ -58,7 +58,10 @@
 
 
 @media (max-width:768px){
-    .hero-container{
+    html{
+        font-size: 14px;
+    }
+    .hero-container, .skills-container, .projects-container, .contact-container{
         flex-direction: column;
         gap: 2rem;
         text-align: center;

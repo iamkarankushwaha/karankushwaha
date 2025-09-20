@@ -78,6 +78,7 @@ html {
     --green-600: #16a34a;
 
     /* Orange Variations */
+    --orange-100: #ffedd5;
     --orange-500: #f97316;
     --orange-600: #ea580c;
 
@@ -87,10 +88,12 @@ html {
     --purple-600: #9333ea;
 
     /* Yellow Variations */
+    --yellow-100: #fef3c7;
     --yellow-400: #facc15;
     --yellow-500: #eab308;
 
     /* Red Variations */
+    --red-100: #fee2e2;
     --red-500: #ef4444;
     --red-600: #dc2626;
 
@@ -271,7 +274,8 @@ header.scrolled {
 
 /* main */
 section {
-    padding-top: 4rem;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
 }
 
 .myname, .greet-text {
@@ -345,11 +349,18 @@ section {
 .max-w-600px{
     max-width: 600px;
 }
+.max-w-50{
+    max-width: 550px;
+}
 
+.mb-6{
+    margin-bottom: 4rem;
+}
 .heroimg{
     width: 100%;
     max-width: 350px;
     height: auto;
+    box-shadow: 0 10px 30px -10px var(--indigo-500);
 }
 
 .flex-shrink-2{
@@ -366,4 +377,100 @@ section {
     &:hover{
         background-color: var(--green-600) !important;
     }
+}
+
+
+.section-heading{
+    font-size: 3.5rem;
+    font-weight: 900 !important;
+    color: var(--text-primary);
+}
+.section-tagline{
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--text-tertiary);
+    margin-top: 0.5rem;
+}
+
+.sub-heading{
+    font-size: 2rem;
+    font-weight: 800 !important;
+    color: var(--text-secondary);
+    border-bottom: solid 2px var(--indigo-200);
+}
+#skills{
+    background-color: var(--bg-purple-light);
+}
+
+.content-box .card{
+    border-radius: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    transition: all 0.3s ease-in-out;
+    border: solid 1px var(--border-light);
+    box-shadow: 0px 3px 5px -1px var(--shadow-light);
+    cursor: pointer;
+    &:hover {
+        box-shadow: 0 4px 15px var(--shadow-medium);
+        transform: translateY(-3px);
+        border: solid 1px var(--hover-blue);
+    }
+}
+
+.content-box .card i{
+    font-size: 1.2rem;
+}
+.content-box .card h6{
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.blue-icon{
+    background-color: var(--blue-100);
+    color: var(--primary-blue);
+}
+.prpl-icon{
+    background-color: var(--purple-100);
+    color: var(--purple-600);
+}
+.orng-icon{
+    background-color: var(--orange-100);
+    color: var(--orange-600);
+}
+.green-icon{
+    background-color: var(--green-100);
+    color: var(--green-500);
+}
+.yellow-icon{
+    background-color: var(--yellow-100);
+    color: var(--yellow-500);
+}
+.red-icon{
+    background-color: var(--red-100);
+    color: var(--red-500);
+}
+
+.icai-card{
+    background: var(--gradient-primary-2);
+}
+.icai-card h6{
+    color: var(--bg-white) !important;
+}
+.icai-card p{
+    color: var(--slate-100) !important;
+}
+.vrfd-icon{
+    color: var(--text-white);
+    position: relative;
+    top: 0;
+}
+.vrfd-icon i{
+    font-size: 2.5rem !important;
+    font-weight: 900 !important;
+}
+.vrfd-icon .fa-check{
+    position: absolute;
+    top: 17px;
+    font-size: 1.2rem !important;
+    color: var(--blue-700);
 }
