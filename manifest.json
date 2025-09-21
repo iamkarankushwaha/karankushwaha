@@ -1,0 +1,15 @@
+{
+  "name": "Karan Kushwaha Portfolio",
+  "short_name": "Karan Kushwaha",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "Assets-image/icon.png",
+      "sizes": "60x60",
+      "type": "image/png"
+    }
+  ]
+}

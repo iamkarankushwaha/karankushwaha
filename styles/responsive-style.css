@@ -54,6 +54,9 @@
     .menubtnbox{
     display: block;
 }
+.blog-container{
+    flex-wrap: wrap;
+}
 }
 
 
@@ -61,13 +64,17 @@
     html{
         font-size: 14px;
     }
-    .hero-container, .skills-container, .projects-container, .contact-container{
+    .hero-container, .skills-container, .projects-container, .blog-container, .contact-container{
         flex-direction: column;
+        align-items: center;
         gap: 2rem;
         text-align: center;
         padding: 2rem 1rem;
     }
     .herobtnbox, .social-icons-box{
         width: 100%;
+    }
+    .text-left{
+        text-align: left !important;
     }
 }

@@ -52,7 +52,7 @@ window.onload = function(){
             </div>
         </div>
     `;
-    document.body.appendChild(workModel);
+    // document.body.appendChild(workModel);
 }
 function closeWorkModel(){
     const workModel = document.getElementById('workModel');
