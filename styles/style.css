@@ -58,6 +58,7 @@ html {
     --text-white: #ffffff;
 
     /* Blue Variations */
+    --blue-50: #eff6ff;
     --blue-100: #dbeafe;
     --blue-200: #bfdbfe;
     --blue-500: #3b82f6;
@@ -278,7 +279,7 @@ header.scrolled {
 /* main */
 section {
     padding-top: 5rem;
-    padding-bottom: 3rem;
+    padding-bottom: 6rem;
 }
 
 .myname, .greet-text {
@@ -298,7 +299,7 @@ section {
 }
 
 .mybio{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 400;
     line-height: 1.4;
     color: var(--slate-800);
@@ -358,6 +359,9 @@ section {
 }
 .max-w-40{
     max-width: 400px;
+}
+.max-w-30{
+    max-width: 300px;
 }
 
 .mb-6{
@@ -491,19 +495,27 @@ section {
         border: solid 1px var(--hover-blue);
     }
 }
-.blog-card-header{
-    color: var(--slate-500);
-    font-size: 0.9rem !important;
+
+.date{
+    font-size: 0.85rem !important;
+    color: var(--text-tertiary);
     font-weight: 500 !important;
+}
+.date i{
+    font-size: 0.85rem !important;
+    margin-right: 0.25rem;
 }
 .badge{
     background-color: var(--slate-100) !important;
     border: solid 1px var(--border-light) !important;
-    color: var(--slate-500) !important;
-    font-size: 0.9rem !important;
+    color: var(--text-tertiary) !important;
+    font-size: 0.85rem !important;
     font-weight: 500 !important;
     border-radius: 20px !important;
     padding: 0.35rem 0.85rem !important;
+}
+.badge i{
+    font-size: 0.85rem !important;
 }
 .blog-title{
     font-size: 1.2rem !important;
@@ -522,4 +534,30 @@ section {
 
 .blog-stats .badge{
     background-color: var(--bg-white) !important;
+}
+
+
+.blue-badge{
+    background-color: var(--blue-100) !important;
+    color: var(--primary-blue) !important;
+}
+.prpl-badge{
+    background-color: var(--purple-100) !important;
+    color: var(--purple-600) !important;
+}
+.orng-badge{
+    background-color: var(--orange-100) !important;
+    color: var(--orange-600) !important;
+}
+.green-badge{
+    background-color: var(--green-100) !important;
+    color: var(--green-500) !important;
+}
+.yellow-badge{
+    background-color: var(--yellow-100) !important;
+    color: var(--yellow-500) !important;
+}
+.red-badge{
+    background-color: var(--red-100) !important;
+    color: var(--red-500) !important;
 }

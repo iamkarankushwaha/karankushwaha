@@ -1,21 +1,21 @@
 // Header Switches
-window.addEventListener('scroll', function(){
+window.addEventListener('scroll', function () {
     const header = document.getElementById('header');
-    if(window.scrollY>80){
+    if (window.scrollY > 80) {
         header.classList.add('scrolled');
     }
-    else{
+    else {
         header.classList.remove('scrolled');
     }
 })
 
 
 // menu works
-function openMenu(){
+function openMenu() {
     const navcontainer = document.getElementById('navcontainer');
     navcontainer.classList.add('openMenu');
 }
-function closeMenu(){
+function closeMenu() {
     const navcontainer = document.getElementById('navcontainer');
     navcontainer.classList.remove('openMenu');
 }
@@ -24,7 +24,7 @@ navcontainer.addEventListener('click', closeMenu);
 
 
 // Onload open to work Model
-window.onload = function(){
+window.onload = function () {
     const workModel = document.createElement('div');
     workModel.id = 'workModel';
     workModel.classList.add('d-flex', 'justify-content-center', 'align-items-center', 'p-4');
@@ -54,7 +54,7 @@ window.onload = function(){
     `;
     // document.body.appendChild(workModel);
 }
-function closeWorkModel(){
+function closeWorkModel() {
     const workModel = document.getElementById('workModel');
     workModel.remove();
 }
@@ -62,7 +62,7 @@ function closeWorkModel(){
 
 
 // Resume Download
-function ResumeModel(){
+function ResumeModel() {
     const resumeModel = document.createElement('div');
     resumeModel.id = 'resumeModel';
     resumeModel.classList.add('d-flex', 'justify-content-center', 'align-items-center', 'p-4');
@@ -93,17 +93,47 @@ function ResumeModel(){
     `;
     document.body.appendChild(resumeModel);
 }
-function closeresumeModel(){
+function closeresumeModel() {
     const resumeModel = document.getElementById('resumeModel');
     resumeModel.remove();
 }
 
-function DownloadResume(){
+function DownloadResume() {
     const link = document.createElement('a');
-    link.href = 'resume.pdf'; 
+    link.href = 'resume.pdf';
     link.download = 'resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
     closeresumeModel();
 }
+
+
+// Contact Form
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  fetch("https://script.google.com/macros/s/AKfycbzL59g46mYLbpx2pFQYQmK-e5kPIiS_sqE4AZ4JAm8ffwhArgN-2EtGKUUKeYTzdAL7/exec", {  // replace with /exec URL
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      phone: document.getElementById("phone").value,
+      subject: document.getElementById("subject").value,
+      message: document.getElementById("message").value
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.status === "success") {
+      alert("Message sent successfully!");
+      document.getElementById("contactForm").reset();
+    } else {
+      alert("Error: " + data.message);
+    }
+  })
+  .catch(err => {
+    alert("Fetch error: " + err);
+  });
+});

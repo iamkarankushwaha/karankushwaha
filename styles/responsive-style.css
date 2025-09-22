@@ -64,7 +64,7 @@
     html{
         font-size: 14px;
     }
-    .hero-container, .skills-container, .projects-container, .blog-container, .contact-container{
+    .hero-container, .about-container, .skills-container, .projects-container, .blog-container, .contact-container{
         flex-direction: column;
         align-items: center;
         gap: 2rem;
@@ -76,5 +76,9 @@
     }
     .text-left{
         text-align: left !important;
+    }
+    .contact-container .sub-container{
+        position: unset !important;
+        max-width: unset !important;
     }
 }
