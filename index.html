@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,14 +76,14 @@
 </head>
 <body>
     <div id="PreLoader" class="d-flex justify-content-center flex-column align-items-center fixed-top w-100 h-100" style="background-color: white;">
-        <div class="loader border-0 d-flex justify-content-center align-items-center" role="status" style="color: var(--slate-800);">
-            <i class="fa fa-spinner" style="font-size: 40px;"></i>
+        <div class="loaderbox border-0 d-flex justify-content-center align-items-center" role="status" style="color: var(--slate-800);">
+            <div style="width: 50px; height: 50px; border :solid 5px var(--slate-200);  border-top: solid 5px var(--text-primary);  border-left: solid 5px var(--text-primary);  border-radius: 100%;"></div>
         </div>
         <h4 class="fw-bolder fs-4 mt-3" style="color: var(--slate-800);">Welcome</h4>
         <h4 class="fw-bolder fs-4 mb-3" style="color: var(--slate-800);">Karan Kushwaha</h4>
         <style>
-            .loader {
-                animation: spin 1.3s linear infinite;
+            .loaderbox {
+                animation: spin 1s linear infinite;
             }
             @keyframes spin {
                 0% { transform: rotate(0deg); }
@@ -593,24 +594,24 @@
                             <div class="form-box">
                                 <form id="contactForm" class=" d-flex justify-content-around align-items-start gap-3 flex-wrap">
                                     <div class="form-floating mb-3 w-100 max-w-30">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                        <label for="floatingInput">Your Name</label>
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required>
+                                        <label for="Name">Your Name</label>
                                     </div>
                                     <div class="form-floating mb-3 w-100 max-w-30">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                        <label for="floatingInput">Your Email</label>
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                                        <label for="Email">Your Email</label>
                                     </div>
                                     <div class="form-floating mb-3 w-100 max-w-30">
-                                        <input type="tele" class="form-control" id="phone" placeholder="Your Phone">
-                                        <label for="floatingInput">Your Phone</label>
+                                        <input type="tele" class="form-control" name="phone" id="phone" placeholder="Your Phone">
+                                        <label for="Phone">Your Phone</label>
                                     </div>
                                     <div class="form-floating mb-3 w-100 max-w-30">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject of Message">
-                                        <label for="floatingInput">Subject of Message</label>
+                                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject of Message">
+                                        <label for="Subject">Subject of Message</label>
                                     </div>
                                     <div class="form-floating mb-3 w-100">
-                                        <textarea type="text" class="form-control" id="message" placeholder="Type Your Message Here" style="height: 100px;"></textarea>
-                                        <label for="floatingInput">Type Your Message here</label>
+                                        <textarea type="text" class="form-control" name="message" id="message" placeholder="Type Your Message Here" style="height: 100px;" required></textarea>
+                                        <label for="Message">Type Your Message here</label>
                                     </div>
                                     <button type="submit" class="primary-btn btn text-nowrap rounded-4 w-100">Send Message<i class="fa-solid fa-paper-plane ms-2"></i></button>
                                 </form>
@@ -619,15 +620,24 @@
                     </div>
                 </div>
             </div>
+            <!-- Popup -->
+            <div id="popupOverlay">
+                <div id="popupBox">
+                    <div id="popupContent">
+                    <div class="loader"></div>
+                    <p>Sending...</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
     <!-- Scripts -->
     <script src="Scripts/script.js"></script>
-    <script>
+    <!-- <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.register("/service-worker.js");
         }
-    </script>
+    </script> -->
 </body>
 </html>

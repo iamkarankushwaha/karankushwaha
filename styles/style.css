@@ -561,3 +561,45 @@ section {
     background-color: var(--red-100) !important;
     color: var(--red-500) !important;
 }
+
+
+
+
+/* contact pop */
+#popupOverlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(2px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Popup box */
+#popupBox {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  max-width: 300px;
+}
+
+/* Spinner */
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 40px; height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 15px;
+}
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+/* Success icon */
+.success {
+  font-size: 40px;
+  color: green;
+}

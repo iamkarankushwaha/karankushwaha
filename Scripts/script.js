@@ -110,30 +110,39 @@ function DownloadResume() {
 
 
 // Contact Form
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+const form = document.getElementById("contactForm");
+const popupOverlay = document.getElementById("popupOverlay");
 
-  fetch("https://script.google.com/macros/s/AKfycbzL59g46mYLbpx2pFQYQmK-e5kPIiS_sqE4AZ4JAm8ffwhArgN-2EtGKUUKeYTzdAL7/exec", {  // replace with /exec URL
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      phone: document.getElementById("phone").value,
-      subject: document.getElementById("subject").value,
-      message: document.getElementById("message").value
-    })
+const popupContent = document.getElementById("popupContent");
+
+// Replace with your Apps Script URL
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyg4aK8mjbOYpkJ4diuyjyAPBRAvavFc3Q6LYK3rHhmFg6KjEmuGsHNTYOO44W9BSdiBQ/exec";
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault(); // Stop normal redirect
+
+  // Collect form data
+  const formData = new FormData(form);
+
+  // Show popup with spinner
+  popupOverlay.style.display = "flex";
+  popupContent.innerHTML = `<div class="loader"></div><p>Sending...</p>`;
+
+
+  // Send via fetch
+  fetch(SCRIPT_URL, { method: "POST", body: formData })
+  .then(res => {
+    if (res.ok) return res.text(); // or just return "OK"
+    throw new Error("Network response not ok");
   })
-  .then(res => res.json())
-  .then(data => {
-    if (data.status === "success") {
-      alert("Message sent successfully!");
-      document.getElementById("contactForm").reset();
-    } else {
-      alert("Error: " + data.message);
-    }
+  .then(() => {
+    popupContent.innerHTML = `<div class="success">✔</div><p>Message Sent!</p>`;
+    form.reset();
+    setTimeout(() => { popupOverlay.style.display = "none"; }, 2000);
   })
-  .catch(err => {
-    alert("Fetch error: " + err);
-  });
+//   .catch(err => {
+//     popupContent.innerHTML = `<p style="color:red;">Error! Try again.</p>`;
+//     console.error(err);
+//   });
+
 });
