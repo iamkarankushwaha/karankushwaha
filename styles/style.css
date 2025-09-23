@@ -352,16 +352,19 @@ section {
 }
 
 .max-w-600px{
-    max-width: 600px;
+    max-width: 600px !important;
 }
 .max-w-50{
-    max-width: 550px;
+    max-width: 550px !important;
 }
 .max-w-40{
-    max-width: 400px;
+    max-width: 400px !important;
 }
 .max-w-30{
-    max-width: 300px;
+    max-width: 300px !important;
+}
+.max-w-24{
+    max-width: 240px !important;
 }
 
 .mb-6{

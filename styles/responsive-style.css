@@ -84,8 +84,8 @@
     .form-box .row{
         flex-direction: column !important;
     }
-    .footer-row-wrap{
-        flex-direction: column;
-        gap: 2rem;
+
+    .footer-row{
+        flex-wrap: wrap;
     }
 }
