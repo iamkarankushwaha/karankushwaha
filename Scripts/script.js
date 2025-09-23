@@ -93,6 +93,10 @@ function ResumeModel() {
     `;
     document.body.appendChild(resumeModel);
 }
+
+// show automatically after 1 seconds
+// setTimeout(ResumeModel, 1000);
+
 function closeresumeModel() {
     const resumeModel = document.getElementById('resumeModel');
     resumeModel.remove();
@@ -107,42 +111,3 @@ function DownloadResume() {
     document.body.removeChild(link);
     closeresumeModel();
 }
-
-
-// Contact Form
-const form = document.getElementById("contactForm");
-const popupOverlay = document.getElementById("popupOverlay");
-
-const popupContent = document.getElementById("popupContent");
-
-// Replace with your Apps Script URL
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyg4aK8mjbOYpkJ4diuyjyAPBRAvavFc3Q6LYK3rHhmFg6KjEmuGsHNTYOO44W9BSdiBQ/exec";
-
-form.addEventListener("submit", function(e) {
-  e.preventDefault(); // Stop normal redirect
-
-  // Collect form data
-  const formData = new FormData(form);
-
-  // Show popup with spinner
-  popupOverlay.style.display = "flex";
-  popupContent.innerHTML = `<div class="loader"></div><p>Sending...</p>`;
-
-
-  // Send via fetch
-  fetch(SCRIPT_URL, { method: "POST", body: formData })
-  .then(res => {
-    if (res.ok) return res.text(); // or just return "OK"
-    throw new Error("Network response not ok");
-  })
-  .then(() => {
-    popupContent.innerHTML = `<div class="success">✔</div><p>Message Sent!</p>`;
-    form.reset();
-    setTimeout(() => { popupOverlay.style.display = "none"; }, 2000);
-  })
-//   .catch(err => {
-//     popupContent.innerHTML = `<p style="color:red;">Error! Try again.</p>`;
-//     console.error(err);
-//   });
-
-});

@@ -81,4 +81,11 @@
         position: unset !important;
         max-width: unset !important;
     }
+    .form-box .row{
+        flex-direction: column !important;
+    }
+    .footer-row-wrap{
+        flex-direction: column;
+        gap: 2rem;
+    }
 }
