@@ -594,27 +594,27 @@
                                 <form id="contactForm">
                                     <div class="row w-100 mb-3 ms-0 me-0 gap-3">
                                         <div class="form-floating col w-100 p-0">
-                                            <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required>
-                                            <label for="name">Your Name</label>
+                                            <input type="text" class="form-control" name="Name" id="Name" placeholder="Your Name" required autocomplete="on">
+                                            <label for="Name">Your Name</label>
                                         </div>
                                         <div class="form-floating col w-100 p-0">
-                                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                                            <label for="email">Your Email</label>
+                                            <input type="email" class="form-control" name="Email" id="Email" placeholder="Your Email" required autocomplete="on">
+                                            <label for="Email">Your Email</label>
                                         </div>
                                     </div>
                                     <div class="row w-100 mb-3 ms-0 me-0 gap-3">
                                         <div class="form-floating w-100 col p-0">
-                                            <input type="tele" class="form-control" name="phone" id="phone" placeholder="Your Phone">
-                                            <label for="phone">Your Phone</label>
+                                            <input type="tel" class="form-control" name="Phone" id="Phone" placeholder="Your Phone" autocomplete="on">
+                                            <label for="Phone">Your Phone</label>
                                         </div>
                                         <div class="form-floating w-100 col p-0">
-                                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject of Message">
-                                            <label for="subject">Subject of Message</label>
+                                            <input type="text" class="form-control" name="Subject" id="Subject" placeholder="Subject of Message">
+                                            <label for="Subject">Subject of Message</label>
                                         </div>
                                     </div>
                                     <div class="form-floating mb-3 w-100">
-                                        <textarea type="text" class="form-control" name="message" id="message" placeholder="Type Your Message Here" style="height: 100px;" required></textarea>
-                                        <label for="message">Type Your Message here</label>
+                                        <textarea type="text" class="form-control" name="Message" id="Message" placeholder="Type Your Message Here" style="height: 100px;" required></textarea>
+                                        <label for="Message">Type Your Message here</label>
                                     </div>
                                     <input type="text" name="_gotcha" style="display:none" />
                                     <button type="submit" class="primary-btn btn text-nowrap rounded-4 w-100">Send Message<i class="fa-solid fa-paper-plane ms-2"></i></button>
@@ -684,7 +684,7 @@
                 <div class="col w-100 text-left">
                     <p class="mb-0 w-100 d-inline-block" style="color: var(--slate-300);">© 2025 Karan Kushwaha - CA Vidyarthi. Made with 💙 for recruiters and the CA community.</p>
                     <div class="col justify-content-end d-flex w-100 text-right">
-                        <a href="/" type="button" class="btn fw-bold" style="color: var(--text-light);">Back to top<i class="fa fa-arrow-up ms-3"></i></a>
+                        <button onclick="window.scrollTo(0,0)" type="button" class="btn fw-bold" style="color: var(--text-light);">Back to top<i class="fa fa-arrow-up ms-3"></i></button>
                     </div>
                 </div>
             </div>
@@ -694,10 +694,10 @@
     <!-- Scripts -->
     <script src="Scripts/script.js"></script>
     <script src="Scripts/contact.js"></script>
-    <!-- <script>
+    <script>
         if ("serviceWorker" in navigator) {
-            navigator.serviceWorker.register("/service-worker.js");
+            navigator.serviceWorker.register("service-worker.js");
         }
-    </script> -->
+    </script>
 </body>
 </html>
