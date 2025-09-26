@@ -48,7 +48,7 @@ window.onload = function () {
                 <p style="font-size: 1rem; color: var(--text-secondary);" class="text-center mb-5">Excited to share - <strong>I'm open to CA Articleship opportunities.</strong></p>
             </div>
             <div class="modal-footer d-flex justify-content-center">
-                <button type="button" class="btn primary-btn" onclick="closeWorkModel()"><i class="fa-solid fa-thumbs-up me-2"></i>Let's Explore!</button>
+                <button type="button" class="btn primary-btn rounded-4" onclick="closeWorkModel()"><i class="fa-solid fa-thumbs-up me-2"></i>Let's Explore!</button>
             </div>
         </div>
     `;
@@ -86,8 +86,8 @@ function ResumeModel() {
                 <p style="font-size: 1rem; color: var(--text-secondary);" class="text-center mb-5">Download my resume for your perusal.</p>
             </div>
             <div class="modal-footer d-flex justify-content-center gap-4 flex-wrap">
-                <button type="button" class="btn primary-btn" onclick="DownloadResume()"><i class="fa-solid fa-download me-2"></i>Download Pdf</button>
-                <button type="button" class="btn secondary-btn" onclick="closeresumeModel()">Cancel</button>
+                <button type="button" class="btn primary-btn rounded-4" onclick="DownloadResume()"><i class="fa-solid fa-download me-2"></i>Download Pdf</button>
+                <button type="button" class="btn secondary-btn rounded-4" onclick="closeresumeModel()">Cancel</button>
             </div>
         </div>
     `;
@@ -111,3 +111,32 @@ function DownloadResume() {
     document.body.removeChild(link);
     closeresumeModel();
 }
+
+
+
+
+
+
+// expand project details
+document.addEventListener('click', function(e) {
+  const card = e.target.closest('.proj-card, .poj-card, .proj-exl');
+
+  if (card) {
+    // ✅ User clicked inside a card
+    const excerpt = card.querySelector('.proj-excerpt');
+    if (!excerpt) return;
+
+    // Collapse all other excerpts
+    document.querySelectorAll('.proj-excerpt.proj-excerpt-expanded')
+      .forEach(el => {
+        if (el !== excerpt) el.classList.remove('proj-excerpt-expanded');
+      });
+
+    // Toggle clicked one
+    excerpt.classList.toggle('proj-excerpt-expanded');
+  } else {
+    // ✅ User clicked outside any card → close all
+    document.querySelectorAll('.proj-excerpt.proj-excerpt-expanded')
+      .forEach(el => el.classList.remove('proj-excerpt-expanded'));
+  }
+});

@@ -45,7 +45,7 @@ contactModel.innerHTML = `
                 <p style="font-size: 1rem; color: var(--text-secondary);" class="text-center mb-5">Your message has been recieved successfully.</p>
             </div>
             <div class="modal-footer d-flex justify-content-center gap-4 flex-wrap">
-                <button type="button" class="btn primary-btn" onclick="CloseContactModel()"><i class="fa-solid fa-thumbs-up me-2"></i>Okay</button>
+                <button type="button" class="btn primary-btn rounded-3" onclick="CloseContactModel()"><i class="fa-solid fa-thumbs-up me-2"></i>Okay</button>
             </div>
         </div>
     `;
