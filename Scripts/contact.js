@@ -41,7 +41,7 @@ contactModel.innerHTML = `
                 <h1 class="modal-title fs-4 fw-bold text-center" style="color: var(--text-primary);">Thank you for your interest!</h1>
             </div>
             <div class="modal-body">
-                <p class="my-2 text-center"><i class="fa-solid fa-circle-check px-4 py-4 rounded-circle" style="font-size: 2rem; background-color: var(--green-100); color: var(--green-600);"></i></p>
+                <p class="my-3 text-center"><i class="fa-solid fa-circle-check px-4 py-4 rounded-circle" style="font-size: 2rem; background-color: var(--green-100); color: var(--green-600);"></i></p>
                 <p style="font-size: 1rem; color: var(--text-secondary);" class="text-center mb-5">Your message has been recieved successfully.</p>
             </div>
             <div class="modal-footer d-flex justify-content-center gap-4 flex-wrap">

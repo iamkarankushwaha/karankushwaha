@@ -44,7 +44,7 @@ window.onload = function () {
                 <h1 class="modal-title fs-4 fw-bold text-center" id="workModelLabel" style="color: var(--text-primary);">Welcome to My Portfolio!</h1>
             </div>
             <div class="modal-body">
-                <p class="my-2 text-center"><i class="fa-solid fa-briefcase px-4 py-4 rounded-circle" style="font-size: 2rem; background-color: var(--blue-100); color: var(--text-tertiary);"></i></p>
+                <p class="my-3 text-center"><i class="fa-solid fa-briefcase px-4 py-4 rounded-circle" style="font-size: 2rem; background-color: var(--blue-100); color: var(--text-tertiary);"></i></p>
                 <p style="font-size: 1rem; color: var(--text-secondary);" class="text-center mb-5">Excited to share - <strong>I'm open to CA Articleship opportunities.</strong></p>
             </div>
             <div class="modal-footer d-flex justify-content-center">
@@ -82,7 +82,7 @@ function ResumeModel() {
                 <h1 class="modal-title fs-4 fw-bold text-center" id="resumeModelLabel" style="color: var(--text-primary);">Thank you for your interest!</h1>
             </div>
             <div class="modal-body">
-                <p class="my-2 text-center"><i class="fa-solid fa-file-pdf px-4 py-4 rounded-circle" style="font-size: 2rem; background-color: var(--blue-100); color: var(--text-tertiary);"></i></p>
+                <p class="my-3 text-center"><i class="fa-solid fa-file-pdf px-4 py-4 rounded-circle" style="font-size: 2rem; background-color: var(--blue-100); color: var(--text-tertiary);"></i></p>
                 <p style="font-size: 1rem; color: var(--text-secondary);" class="text-center mb-5">Resume is not available, reason being - not looking for any opportunity</p>
                 <!--<p style="font-size: 1rem; color: var(--text-secondary);" class="text-center mb-5">Download my resume for your perusal.</p>-->
             </div>
@@ -142,3 +142,45 @@ document.addEventListener('click', function(e) {
       .forEach(el => el.classList.remove('proj-excerpt-expanded'));
   }
 });
+
+
+
+
+// PROJECT MODEL IS HERE
+function openProjectModel() {
+    const projectModel = document.createElement('div');
+    projectModel.id = 'projectModel';
+    projectModel.classList.add('d-flex', 'justify-content-center', 'align-items-center', 'p-4');
+    projectModel.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(2px);
+        z-index: 500;
+    `;
+    projectModel.innerHTML = `
+        <div class="p-4 rounded-4 shadow-lg w-100 max-w-50" style="background-color: var(--bg-primary);">
+            <div class="mb-3 text-center border-bottom pb-3">
+                <h1 class="modal-title fs-4 fw-bold text-center" id="projectModelLabel" style="color: var(--text-primary);">Apology!</h1>
+            </div>
+            <div class="modal-body">
+                <p class="my-3 text-center"><i class="fa-solid fa-user-lock px-4 py-4 rounded-circle" style="font-size: 2rem; background-color: var(--blue-100); color: var(--text-tertiary);"></i></p>
+                <p style="font-size: 1rem; color: var(--text-secondary);" class="text-center mb-0">Due to data privacy reasons actual project file is not available yet.</p>
+                <p style="font-size: 1rem; color: var(--text-secondary);" class="text-center mb-5">Once the demo file is ready you will be able to download/see.</p>
+            </div>
+            <div class="modal-footer d-flex justify-content-center gap-4 flex-wrap">
+                <button type="button" class="btn primary-btn rounded-4" onclick="closeprojectModel()"><i class="fa-solid fa-shield-alt me-2"></i>Okay</button>
+            </div>
+        </div>
+    `;
+    event.preventDefault(); 
+    document.body.appendChild(projectModel);
+}
+
+function closeprojectModel() {
+    const projectModel = document.getElementById('projectModel');
+    projectModel.remove();
+}
