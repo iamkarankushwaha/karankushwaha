@@ -1,12 +1,15 @@
 /* 
-  Cache everything for 1 year
-  (adjust if you’ll update frequently)
+  # Optional: default caching rules for all other files
   Cache-Control: public, max-age=31536000, immutable
 */
 
+/* Disable caching for development/testing (optional) */
+* 
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
 
-/* Disable caching (forces fresh download every time)*/
-
-Cache-Control: no-cache, no-store, must-revalidate
-Pragma: no-cache
-Expires: 0
+/sitemap.xml
+  Content-Type: application/xml
+  Cache-Control: no-cache
+  
