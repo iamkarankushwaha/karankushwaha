@@ -116,6 +116,13 @@
         font-size: 14px;
     }
 
+    .section-heading{
+    font-size: 3rem;
+}
+.myname{
+    font-size: 4.3rem;
+}
+
     .hero-container,
     .about-container,
     .skills-container,
@@ -144,5 +151,12 @@
 
     .footer-row {
         flex-wrap: wrap;
+    }
+
+    .edu-card-box{
+        overflow-x: scroll;
+    }
+    .edu-card-box .card{
+        min-width: fit-content !important;
     }
 }
