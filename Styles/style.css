@@ -631,6 +631,11 @@ section {
     color: var(--text-primary) !important;
 }
 
+.year, .score{
+    white-space: nowrap !important;
+    text-wrap: none !important;
+}
+
 .edu-card-box i{
     color: var(--text-secondary);
 }
