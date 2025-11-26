@@ -663,34 +663,34 @@
                                 <h6 class="fw-semi-bold fs-5 mb-0">Drop Me a Message</h6>
                             </div>
                             <div class="form-box">
-                                <form id="contactForm">
+                                <form id="contactForm" target="hidden_iframe">
                                     <div class="row w-100 mb-3 ms-0 me-0 gap-3">
                                         <div class="form-floating col w-100 p-0">
-                                            <input type="text" class="form-control" name="Name" id="Name" placeholder="Your Name" required autocomplete="on">
+                                            <input type="text" class="form-control" name="entry.947143976" id="Name" placeholder="Your Name" required autocomplete="on">
                                             <label for="Name">Your Name</label>
                                         </div>
                                         <div class="form-floating col w-100 p-0">
-                                            <input type="email" class="form-control" name="Email" id="Email" placeholder="Your Email" required autocomplete="on">
+                                            <input type="email" class="form-control" name="entry.774474783" id="Email" placeholder="Your Email" required autocomplete="on">
                                             <label for="Email">Your Email</label>
                                         </div>
                                     </div>
                                     <div class="row w-100 mb-3 ms-0 me-0 gap-3">
                                         <div class="form-floating w-100 col p-0">
-                                            <input type="tel" class="form-control" name="Phone" id="Phone" placeholder="Your Phone" autocomplete="on">
+                                            <input type="tel" class="form-control" name="entry.1462884379" id="Phone" placeholder="Your Phone" autocomplete="on">
                                             <label for="Phone">Your Phone</label>
                                         </div>
                                         <div class="form-floating w-100 col p-0">
-                                            <input type="text" class="form-control" name="Subject" id="Subject" placeholder="Subject of Message">
+                                            <input type="text" class="form-control" name="entry.1554586534" id="Subject" placeholder="Subject of Message">
                                             <label for="Subject">Subject of Message</label>
                                         </div>
                                     </div>
                                     <div class="form-floating mb-3 w-100">
-                                        <textarea type="text" class="form-control" name="Message" id="Message" placeholder="Type Your Message Here" style="height: 100px;" required></textarea>
+                                        <textarea type="text" class="form-control" name="entry.1567503880" id="Message" placeholder="Type Your Message Here" style="height: 100px;" required></textarea>
                                         <label for="Message">Type Your Message here</label>
                                     </div>
-                                    <input type="text" name="_gotcha" style="display:none" />
                                     <button type="submit" class="primary-btn btn text-nowrap rounded-4 w-100">Send Message<i class="fa-solid fa-paper-plane ms-2"></i></button>
                                 </form>
+                                <iframe name="hidden_iframe" style="display:none;"></iframe>
                             </div>
                         </div>
                     </div>
@@ -894,4 +894,5 @@
         }
     </script>
 </body>
+
 </html>
