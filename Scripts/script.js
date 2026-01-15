@@ -87,9 +87,9 @@ function ResumeModel() {
                 <!--<p style="font-size: 1rem; color: var(--text-secondary);" class="text-center mb-5">Download my resume for your perusal.</p>-->
             </div>
             <div class="modal-footer d-flex justify-content-center gap-4 flex-wrap">
-                <button type="button" class="btn primary-btn rounded-4" onclick="closeresumeModel()"><i class="fa-solid fa-thumbs-up me-2"></i>Okay</button>
-                <!--<button type="button" class="btn primary-btn rounded-4" onclick="DownloadResume()"><i class="fa-solid fa-download me-2"></i>Download Pdf</button>-->
-                <!--<button type="button" class="btn secondary-btn rounded-4" onclick="closeresumeModel()">Cancel</button>-->
+                <!-- <button type="button" class="btn primary-btn rounded-4" onclick="closeresumeModel()"><i class="fa-solid fa-thumbs-up me-2"></i>Okay</button> -->
+                <button type="button" class="btn primary-btn rounded-4" onclick="DownloadResume()"><i class="fa-solid fa-download me-2"></i>Download Pdf</button>
+                <button type="button" class="btn secondary-btn rounded-4" onclick="closeresumeModel()">Cancel</button>
             </div>
         </div>
     `;
@@ -106,8 +106,8 @@ function closeresumeModel() {
 
 function DownloadResume() {
     const link = document.createElement('a');
-    link.href = 'resume.pdf';
-    link.download = 'resume.pdf';
+    link.href = 'Karan_Kushwaha-Resume.pdf';
+    link.download = 'Karan_Kushwaha-Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
