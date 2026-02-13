@@ -1,2 +1,0 @@
-# Force sitemap.xml to serve with correct content-type and 200 status
-/sitemapv1.xml  /sitemapv1.xml  200!  Content-Type=application/xml

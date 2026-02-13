@@ -1,0 +1,397 @@
+/* ##################### INDEX PAGE STARTS ############################# */
+header {
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+header.scrolled {
+    box-shadow: var(--shadow-md);
+}
+
+.logo-box .logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+}
+
+.brand-wrapper .brand-name {
+    font-weight: 900;
+    font-size: 1.75rem;
+    line-height: 1;
+    background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.brand-wrapper .brand-text {
+    font-weight: 700;
+    font-size: 0.9rem;
+    line-height: 0.9;
+}
+
+
+/* navbar */
+.navbox li a {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 12px;
+    color: var(--text-muted);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background: var(--primary-50);
+        color: var(--primary);
+    }
+}
+
+.navbox li a i {
+    display: none;
+}
+
+.btn-close,
+.btn-menu {
+    border: initial !important;
+    padding: 10px !important;
+}
+
+
+/* hero */
+.my-name {
+    font-size: calc(3.5rem + 3vw);
+    font-weight: 900;
+    line-height: 1;
+    background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.welcome-text{
+    border-right: 2px var(--primary) solid;
+    width: fit-content;
+    min-height: 1.5rem;
+    animation: blinkpen infinite 0.5s;
+}
+@keyframes blinkpen{
+    0%{
+        border-color: var(--primary);
+    }
+    0%{
+        border-color: transparent;
+    }
+}
+
+#hero .secondary-btn i, #infocard .primary-btn i {
+    transition: all 0.3s linear;
+    left: 0;
+    top: 3px;
+    position: relative;
+}
+
+#hero .secondary-btn:hover i, #infocard .primary-btn:hover i {
+    left: 8px;
+}
+
+
+
+/* Skills */
+#skills .card {
+    max-width: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    &:hover {
+        border-color: var(--primary);
+    }
+}
+
+#skills .thumbnail-box {
+    width: 45px;
+    height: 45px;
+    border-radius: unset;
+    margin-bottom: 12px;
+}
+
+.skill-name{
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 12px;
+    line-height: 1;
+}
+.skill-text{
+    font-size: 0.80rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+progress {
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  border: none;
+}
+
+progress::-webkit-progress-bar {
+  background-color: var(--slate-300);
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background: var(--gradient-primary-2);
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+}
+
+progress::-moz-progress-bar {
+  background: var(--gradient-primary-2);
+  border-radius: 10px;
+}
+
+
+.belt-fade {
+    position: absolute;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.fade-left {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-alt) 0%, transparent 100%);
+}
+
+.fade-right {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-alt) 0%, transparent 100%);
+}
+
+.marquee {
+    width: 100%;
+    height: 210px;
+    overflow-x: hidden;
+    overflow-y: visible;
+    position: relative;
+
+}
+
+.marquee-track {
+    gap: 20px;
+    position: absolute;
+    overflow-y: visible;
+    left: 0;
+    animation: marqueeL2R 20s linear infinite;
+}
+
+@keyframes marqueeL2R {
+    0% {
+        left: calc(-230px * 5 - 20px * 5);
+    }
+    
+    100% {
+        left: 0;
+    }
+}
+
+.marquee .skill-card-holder {
+    gap: 20px;
+    width: calc(230px * 5 + 80px);
+}
+
+
+
+
+/* Info Card */
+#infocard .container-xl div {
+    position: relative;
+    overflow: hidden;
+}
+
+#infocard .container-xl div::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -40%;
+    width: 100%;
+    height: 200%;
+    background: var(--gradient-dark);
+    rotate: -45deg;
+}
+
+/* Footer */
+footer p,
+footer h6 {
+    font-size: 0.95rem;
+    font-weight: 500 !important;
+}
+
+/* Modal */
+.modal-content i {
+    font-size: 4rem;
+    width: 90px;
+    height: 90px;
+}
+
+/* ##################### INDEX PAGE ENDS ############################# */
+
+
+/* ##################### PROJECT PAGE STARTS ############################# */
+/* Proojects */
+#project .card {
+    max-width: 450px;
+    padding: 0;
+    overflow: hidden;
+
+    &:hover {
+        scale: initial;
+    }
+}
+
+#project .card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    transition: all 0.3s linear;
+    background: var(--gradient-dark);
+}
+
+#project .card:hover::after {
+    width: 100%;
+}
+#project .card-content{
+    padding-top: 8px;
+}
+/* ##################### PROJECT PAGE ENDS ############################# */
+
+
+/* ##################### CREATIVITY PAGE STARTS ############################# */
+
+.filter-btn {
+    background: transparent;
+    border: 1.5px solid var(--border-medium) !important;
+    color: var(--text-main);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--gradient-primary);
+    color: var(--text-white) !important;
+    border-color: var(--primary) !important;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-card) !important;
+}
+
+#posts-vdos .card {
+    max-width: 450px;
+
+    &:hover {
+        scale: unset;
+    }
+}
+
+.linkedin .card-text {
+    line-clamp: 10;
+    -webkit-line-clamp: 10;
+}
+
+.linkedin .card-content {
+    padding-top: 0px;
+}
+.youtube .card-content {
+    padding-top: 8px;
+}
+
+/* ##################### CREATIVITY PAGE ENDS ############################# */
+
+
+/* ##################### ABOUT PAGE STARTS ############################# */
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: var(--gradient-primary);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -4px;
+    border-radius: 10px;
+    z-index: 100;
+}
+
+.tmln-item {
+    position: relative;
+    width: 50%;
+    padding-bottom: 40px;
+}
+
+.tmln-item:last-child {
+    padding-bottom: 0;
+}
+
+.tmln-left {
+    left: 0;
+    padding-right: 40px;
+}
+
+.tmln-right {
+    left: 50%;
+    padding-left: 40px;
+}
+
+.iconbox {
+    position: absolute;
+    z-index: 150;
+    top: 5px;
+    background-color: var(--bg-white);
+    border-radius: 50%;
+    box-shadow: var(--shadow-sm);
+}
+
+.iconbox .icon {
+    width: 50px;
+    height: 50px;
+    top: 0;
+
+    &:hover {
+        border: none;
+        background-color: transparent;
+    }
+}
+
+.tmln-left .iconbox {
+    right: -23px;
+}
+
+.tmln-right .iconbox {
+    left: -27px;
+}
+
+.tmln-item .card {
+    position: relative;
+    overflow: visible;
+
+    &:hover {
+        scale: 1;
+    }
+}
+
+/* ##################### ABOUT PAGE ENDS ############################# */
+
+
+/* ##################### EDUCATION PAGE STARTS ############################# */
+#education .stat-md {
+    margin-bottom: 8px;
+}
+/* ##################### EDUCATION PAGE ENDS ############################# */
