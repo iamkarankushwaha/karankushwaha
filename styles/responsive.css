@@ -146,7 +146,7 @@
     }
 
     .marquee-track {
-        animation: marqueeL2R 15s linear infinite;
+        animation: marquee calc(2.5s * 6) linear infinite;
     }
 
     #infocard .container-xl div::after {

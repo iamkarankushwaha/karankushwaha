@@ -156,7 +156,7 @@ progress::-moz-progress-bar {
 
 
 .belt-fade {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     width: 20%;
     height: 100%;
@@ -173,40 +173,38 @@ progress::-moz-progress-bar {
     right: 0;
     background: linear-gradient(to left, var(--bg-alt) 0%, transparent 100%);
 }
-
-.marquee {
+.marquee{
     width: 100%;
-    height: 210px;
-    overflow-x: hidden;
-    overflow-y: visible;
+    height: 220px;
+    overflow: hidden;
     position: relative;
-
 }
 
-.marquee-track {
+.marquee-track{
+    display: flex;
+    align-items: center;
     gap: 20px;
+    width: max-content;
+    margin: 0 !important;
+    padding: 1rem 0rem;
     position: absolute;
-    overflow-y: visible;
-    left: 0;
-    animation: marqueeL2R 20s linear infinite;
+    animation: marquee calc(4s * 6) linear infinite;
 }
 
-@keyframes marqueeL2R {
-    0% {
-        left: calc(-230px * 5 - 20px * 5);
+@keyframes marquee {
+    0%{
+        left: calc(-230px * 6 - 20px * 6);
     }
-    
-    100% {
+    100%{
         left: 0;
     }
 }
 
-.marquee .skill-card-holder {
+.skill-card-holder{
+    display: flex;
     gap: 20px;
-    width: calc(230px * 5 + 80px);
+    align-items: center;
 }
-
-
 
 
 /* Info Card */
@@ -224,6 +222,21 @@ progress::-moz-progress-bar {
     height: 200%;
     background: var(--gradient-dark);
     rotate: -45deg;
+}
+
+.message-box label{
+    color: var(--text-ghost);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.message-box .form-control{
+    font-size: 1rem;
+    font-weight: 500;
+    border: solid 1px var(--border-soft);
+    &:focus-visible{
+        outline: solid 5px var(--primary-100);
+        box-shadow: none !important;
+    }
 }
 
 /* Footer */
@@ -298,11 +311,6 @@ footer h6 {
     &:hover {
         scale: unset;
     }
-}
-
-.linkedin .card-text {
-    line-clamp: 10;
-    -webkit-line-clamp: 10;
 }
 
 .linkedin .card-content {
